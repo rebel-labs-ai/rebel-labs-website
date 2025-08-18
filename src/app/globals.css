@@ -1,62 +1,166 @@
 @import "tailwindcss";
 
 :root {
-	--background: 0 0% 100%;
-	--foreground: 222.2 84% 4.9%;
+	/* Base theme colors using application palette */
+	--background: 206 0% 100%;
+	--foreground: 223 68% 8%;
 	--card: 0 0% 100%;
-	--card-foreground: 222.2 84% 4.9%;
+	--card-foreground: 223 68% 8%;
 	--popover: 0 0% 100%;
-	--popover-foreground: 222.2 84% 4.9%;
-	--primary: 221.2 83.2% 53.3%;
-	--primary-foreground: 210 40% 98%;
-	--secondary: 210 40% 96%;
-	--secondary-foreground: 222.2 84% 4.9%;
-	--muted: 210 40% 96%;
-	--muted-foreground: 215.4 16.3% 46.9%;
-	--accent: 210 40% 96%;
-	--accent-foreground: 222.2 84% 4.9%;
-	--destructive: 0 84.2% 60.2%;
-	--destructive-foreground: 210 40% 98%;
-	--border: 214.3 31.8% 91.4%;
-	--input: 214.3 31.8% 91.4%;
-	--ring: 221.2 83.2% 53.3%;
+	--popover-foreground: 223 68% 8%;
+	--primary: 223 68% 8%;
+	--primary-foreground: 0 0% 100%;
+	--secondary: 210 40% 98%;
+	--secondary-foreground: 215 25% 47%;
+	--muted: 210 40% 98%;
+	--muted-foreground: 215 16% 57%;
+	--accent: 206 34% 73%;
+	--accent-foreground: 0 0% 100%;
+	--destructive: 0 73% 50%;
+	--destructive-foreground: 0 0% 100%;
+	--border: 212 33% 97%;
+	--input: 210 40% 98%;
+	--ring: 210 26% 73%;
 	--radius: 0.5rem;
 	--chart-1: 12 76% 61%;
 	--chart-2: 173 58% 39%;
 	--chart-3: 197 37% 24%;
 	--chart-4: 43 74% 66%;
 	--chart-5: 27 87% 67%;
+
+	/* Application Color Palette */
+	/* Core Brand Colors */
+	--primary-blue: 223 68% 8%;
+	--secondary-blue: 215 25% 47%;
+	--accent-teal: 210 26% 73%;
+
+	/* Background Colors */
+	--main-background: 212 33% 97%;
+	--card-background: 215 15% 94%;
+	--section-background: 210 40% 98%;
+
+	/* Status Colors */
+	--hot-lead: 142 73% 74%;
+	--warm-lead: 55 100% 50%;
+	--cold-lead: 25 95% 53%;
+	--success-alive: 151 68% 57%;
+	--appointment-booked: 210 26% 73%;
+
+	/* Error & Warning Colors */
+	--error-red: 0 73% 50%;
+	--error-red-alt: 0 71% 59%;
+	--error-background: 0 93% 94%;
+	--error-text: 0 84% 35%;
+
+	/* Interactive Elements */
+	--primary-border: 212 33% 97%;
+	--card-border: 220 13% 91%;
+
+	/* Typography Colors */
+	--primary-text: 223 68% 8%;
+	--secondary-text: 215 25% 47%;
+	--muted-text: 214 15% 65%;
+	--placeholder-text: 215 11% 68%;
 }
 
 [data-theme="dark"] {
-	--background: 222.2 84% 4.9%;
-	--foreground: 210 40% 98%;
-	--card: 222.2 84% 4.9%;
-	--card-foreground: 210 40% 98%;
-	--popover: 222.2 84% 4.9%;
-	--popover-foreground: 210 40% 98%;
-	--primary: 217.2 91.2% 59.8%;
-	--primary-foreground: 222.2 84% 4.9%;
-	--secondary: 217.2 32.6% 17.5%;
-	--secondary-foreground: 210 40% 98%;
-	--muted: 217.2 32.6% 17.5%;
-	--muted-foreground: 215 20.2% 65.1%;
-	--accent: 217.2 32.6% 17.5%;
-	--accent-foreground: 210 40% 98%;
-	--destructive: 0 62.8% 30.6%;
-	--destructive-foreground: 210 40% 98%;
-	--border: 217.2 32.6% 17.5%;
-	--input: 217.2 32.6% 17.5%;
-	--ring: 224.3 76.3% 94.1%;
+	/* Dark theme using application palette */
+	--background: 223 68% 8%;
+	--foreground: 0 0% 100%;
+	--card: 215 32% 15%;
+	--card-foreground: 0 0% 100%;
+	--popover: 215 32% 15%;
+	--popover-foreground: 0 0% 100%;
+	--primary: 0 0% 100%;
+	--primary-foreground: 223 68% 8%;
+	--secondary: 215 32% 20%;
+	--secondary-foreground: 215 25% 75%;
+	--muted: 215 32% 20%;
+	--muted-foreground: 215 25% 65%;
+	--accent: 210 26% 73%;
+	--accent-foreground: 0 0% 100%;
+	--destructive: 0 73% 50%;
+	--destructive-foreground: 0 0% 100%;
+	--border: 215 32% 25%;
+	--input: 215 32% 20%;
+	--ring: 210 26% 73%;
 	--chart-1: 220 70% 50%;
 	--chart-2: 160 60% 45%;
 	--chart-3: 30 80% 55%;
 	--chart-4: 280 65% 60%;
 	--chart-5: 340 75% 55%;
+
+	/* Application Color Palette (Dark Theme) */
+	/* Core Brand Colors */
+	--primary-blue: 223 68% 8%;
+	--secondary-blue: 215 25% 75%;
+	--accent-teal: 210 26% 73%;
+
+	/* Background Colors */
+	--main-background: 223 68% 8%;
+	--card-background: 215 32% 15%;
+	--section-background: 215 32% 20%;
+
+	/* Status Colors (same across themes) */
+	--hot-lead: 142 73% 74%;
+	--warm-lead: 55 100% 50%;
+	--cold-lead: 25 95% 53%;
+	--success-alive: 151 68% 57%;
+	--appointment-booked: 210 26% 73%;
+
+	/* Error & Warning Colors */
+	--error-red: 0 73% 60%;
+	--error-red-alt: 0 71% 65%;
+	--error-background: 0 93% 8%;
+	--error-text: 0 84% 75%;
+
+	/* Interactive Elements */
+	--primary-border: 215 32% 25%;
+	--card-border: 215 32% 30%;
+
+	/* Typography Colors */
+	--primary-text: 0 0% 100%;
+	--secondary-text: 215 25% 75%;
+	--muted-text: 215 15% 65%;
+	--placeholder-text: 215 11% 50%;
 }
 
 body {
 	background: hsl(var(--background));
 	color: hsl(var(--foreground));
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* Headings use Nunito Sans with lighter weight */
+h1 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 300;
+}
+
+h2 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 400;
+}
+
+h3 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 600;
+}
+
+h4 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 400;
+}
+h5 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 400;
+}
+h6 {
+	font-family: var(--font-nunito-sans), sans-serif;
+	font-weight: 400;
+}
+
+/* Reddit Sans font */
+.font-reddit-sans {
+	font-family: var(--font-reddit-sans), sans-serif;
 }

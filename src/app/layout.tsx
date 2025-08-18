@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Nunito_Sans, Reddit_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 
@@ -10,6 +10,17 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
 	variable: "--font-geist-mono",
+	subsets: ["latin"],
+})
+
+const nunitoSans = Nunito_Sans({
+	variable: "--font-nunito-sans",
+	subsets: ["latin"],
+	weight: ["200", "300", "400", "600", "700", "800", "900"],
+})
+
+const redditSans = Reddit_Sans({
+	variable: "--font-reddit-sans",
 	subsets: ["latin"],
 })
 
@@ -26,7 +37,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable} ${redditSans.variable} antialiased`}
 			>
 				<ThemeProvider>{children}</ThemeProvider>
 			</body>
