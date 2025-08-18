@@ -5,7 +5,7 @@
 @layer base {
 	:root {
 	/* Base theme colors using application palette */
-	--background: 0 0% 98%; /* Light gray background */
+	--background: 0 0% 100%; /* Light gray background */
 	--foreground: 223 68% 8%;
 	--card: 0 0% 100%;
 	--card-foreground: 223 68% 8%;
@@ -39,7 +39,7 @@
 
 	/* Background Colors */
 	--main-background: 212 33% 97%;
-	--card-background: 215 15% 94%;
+	--card-background: 215 15% 99%;
 	--section-background: 210 40% 98%;
 
 	/* Status Colors */

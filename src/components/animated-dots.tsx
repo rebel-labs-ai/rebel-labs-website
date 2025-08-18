@@ -14,7 +14,7 @@ export function AnimatedDots() {
 
 		// Dot configuration
 		const dotSpacing = 40
-		const dotRadius = 1.5
+		const dotRadius = 2
 		const baseColor = "#A1BCD1"
 		const animatedColor = "#A8CDFF"
 
@@ -100,17 +100,28 @@ export function AnimatedDots() {
 				ctx.beginPath()
 				ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2)
 
-				// Apply pulsing effect with fade in/out
+				// Calculate position-based fading (only fade dots near very bottom)
+				const fadeStartY = canvas.height * 0.7 // Start fading at 70% from top
+				const fadeEndY = canvas.height * 0.95 // Full fade at 95% from top (very bottom)
+				let fadeAmount = 0
+				
+				if (dot.y > fadeStartY) {
+					fadeAmount = Math.min(1, (dot.y - fadeStartY) / (fadeEndY - fadeStartY))
+				}
+
+				// Apply pulsing effect with fade to transparent at bottom
 				if (dot.isAnimating) {
 					ctx.fillStyle = animatedColor
-					ctx.globalAlpha = 0.4 + dot.animationProgress * 0.6
+					// Fade to transparent near bottom
+					ctx.globalAlpha = (0.4 + dot.animationProgress * 0.6) * (1 - fadeAmount * 0.8)
 					
 					// Draw glow effect for animated dots
-					ctx.shadowBlur = dot.animationProgress * 10
+					ctx.shadowBlur = dot.animationProgress * 10 * (1 - fadeAmount * 0.7)
 					ctx.shadowColor = animatedColor
 				} else {
 					ctx.fillStyle = baseColor
-					ctx.globalAlpha = 0.4
+					// Fade to transparent near bottom
+					ctx.globalAlpha = 0.4 * (1 - fadeAmount * 0.9)
 					ctx.shadowBlur = 0
 				}
 
