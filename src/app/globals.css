@@ -1,14 +1,17 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
+@layer base {
+	:root {
 	/* Base theme colors using application palette */
-	--background: 206 0% 100%;
+	--background: 0 0% 98%; /* Light gray background */
 	--foreground: 223 68% 8%;
 	--card: 0 0% 100%;
 	--card-foreground: 223 68% 8%;
 	--popover: 0 0% 100%;
 	--popover-foreground: 223 68% 8%;
-	--primary: 223 68% 8%;
+	--primary: 220 90% 50%; /* Bright blue for testing */
 	--primary-foreground: 0 0% 100%;
 	--secondary: 210 40% 98%;
 	--secondary-foreground: 215 25% 47%;
@@ -32,7 +35,7 @@
 	/* Core Brand Colors */
 	--primary-blue: 223 68% 8%;
 	--secondary-blue: 215 25% 47%;
-	--accent-teal: 210 26% 73%;
+	--accent-teal: 206 34% 73%;
 
 	/* Background Colors */
 	--main-background: 212 33% 97%;
@@ -61,9 +64,9 @@
 	--secondary-text: 215 25% 47%;
 	--muted-text: 214 15% 65%;
 	--placeholder-text: 215 11% 68%;
-}
+	}
 
-[data-theme="dark"] {
+	[data-theme="dark"] {
 	/* Dark theme using application palette */
 	--background: 223 68% 8%;
 	--foreground: 0 0% 100%;
@@ -94,7 +97,7 @@
 	/* Core Brand Colors */
 	--primary-blue: 223 68% 8%;
 	--secondary-blue: 215 25% 75%;
-	--accent-teal: 210 26% 73%;
+	--accent-teal: 206 34% 73%;
 
 	/* Background Colors */
 	--main-background: 223 68% 8%;
@@ -123,6 +126,7 @@
 	--secondary-text: 215 25% 75%;
 	--muted-text: 215 15% 65%;
 	--placeholder-text: 215 11% 50%;
+	}
 }
 
 body {

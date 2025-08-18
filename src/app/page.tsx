@@ -9,7 +9,7 @@ export default function Home() {
 		<div className="min-h-screen bg-background">
 			{/* Navigation */}
 			<Navigation />
-			
+
 			{/* Theme Toggle */}
 			<div className="fixed top-4 right-4 z-50">
 				<ThemeToggle />
@@ -21,39 +21,51 @@ export default function Home() {
 				<div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full">
 					<AnimatedDots />
 				</div>
-				
+
 				{/* Section 1: Hero - The Declaration */}
 				<section className="pt-32 pb-24 px-4 text-center relative">
 					<div className="max-w-5xl mx-auto relative z-10">
-					<span className="bg-[#A1BCD1]/10 text-[#A1BCD1] font-semibold px-3 py-1 rounded-full text-sm border border-[#A1BCD1]/10">
-						Redefining the way your generate revenue
-					</span>
-					<h1 className="text-foreground text-5xl md:text-6xl font-bold tracking-tight mt-4">
-						Stop Managing Tools.
-					</h1>
-					<h1 className="text-foreground text-5xl md:text-6xl font-bold tracking-tight mt-2">
-						Start  <b className="text-[#A1BCD1]">Delivering Outcomes.</b>
-					</h1>
-					<p className="text-muted-foreground text-xl max-w-4xl mx-auto mt-6 leading-relaxed">
-						We deploy digital workforces into your business so you can generate revenue on autopilot.
-					</p>
-					<Button className="mt-6 bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200">Speak to us</Button>
-					<Button className="mt-6 bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200 ml-4">Try it now</Button>
-				</div>
+						<span className="bg-[#A1BCD1]/10 text-[#A1BCD1] font-semibold px-3 py-1 rounded-full text-sm border border-[#A1BCD1]/10">
+							Redefining the way your generate revenue
+						</span>	
+						<h1 className="text-foreground text-5xl md:text-6xl font-medium tracking-tight mt-4">
+							Stop Managing Tools.
+						</h1>
+						<h1 className="text-foreground text-5xl md:text-6xl font-medium tracking-tight mt-2">
+							Start <b className="text-[#A1BCD1] font-semibold font-italic">Delivering Outcomes.</b>
+						</h1>
+						<p className="text-muted-foreground text-xl max-w-4xl mx-auto mt-6 leading-relaxed">
+							We deploy digital workforces into your business so you can
+							generate revenue on autopilot.
+						</p>
+						<Button className="mt-6 bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200">
+							Speak to us
+						</Button>
+						<Button className="mt-6 bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200 ml-4">
+							Try it now
+						</Button>
+					</div>
+									{/* Hero Image - Above dots */}
+					<img
+						src="/image.png"
+						alt="Hero Image"
+						className="w-full max-w-[85%] mx-auto relative z-20 block"
+					/>
 				</section>
-				
-				{/* Hero Image - Above dots */}
-				<img src="/image.png" alt="Hero Image" className="w-full max-w-7xl mx-auto relative z-20 block" />
+
+
 			</div>
 
 			{/* Section 2: The Problem */}
-			<section className="px-4 bg-[#D1E6FA]/10 max-w-7xl mx-auto">
-				<div className="max-w-7xl mx-auto py-8">
+			<section className="mx-auto border-t border-[#A1BCD1]">
+				<div className="max-w-7xl mx-auto px-4 py-8 bg-[#A1BCD1]/10 rounded-xl mt-10">
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
 						Your Growth is Capped by a Broken Model
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation.
 					</p>
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 						<div className="p-6 text-center">
@@ -132,7 +144,8 @@ export default function Home() {
 								High Costs
 							</h3>
 							<p className="text-muted-foreground mt-2">
-								Salaries, benefits, and overhead drain resources without guaranteed ROI.
+								Salaries, benefits, and overhead drain resources without
+								guaranteed ROI.
 							</p>
 						</div>
 						<div className="p-6 text-center">
@@ -168,7 +181,8 @@ export default function Home() {
 								Limited Flexibility
 							</h3>
 							<p className="text-muted-foreground mt-2">
-								Rigid processes can't adapt quickly to changing market demands.
+								Rigid processes can&apos;t adapt quickly to changing market
+								demands.
 							</p>
 						</div>
 					</div>
@@ -178,7 +192,6 @@ export default function Home() {
 			{/* Section 3: The Solution */}
 			<section className="py-16 px-4 bg-background">
 				<div className="max-w-6xl mx-auto">
-					
 					<div className="text-center mb-12">
 						<p className="text-muted-foreground font-semibold uppercase tracking-widest text-sm">
 							THE SOLUTION
@@ -240,7 +253,7 @@ export default function Home() {
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
 						How We Do It
 					</h2>
-					
+
 					{/* Step 1: Text left, Image right */}
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
 						<div>
@@ -248,7 +261,10 @@ export default function Home() {
 								Step One: Discovery & Strategy
 							</h3>
 							<p className="text-muted-foreground text-xl leading-relaxed">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat.
 							</p>
 						</div>
 						<div className="bg-card-background border border-[#A1BCD1] rounded-lg p-8 shadow-lg">
@@ -270,7 +286,10 @@ export default function Home() {
 								Step Two: Implementation & Setup
 							</h3>
 							<p className="text-muted-foreground text-xl leading-relaxed">
-								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt
+								mollit anim id est laborum.
 							</p>
 						</div>
 					</div>
@@ -282,7 +301,10 @@ export default function Home() {
 								Step Three: Optimization & Results
 							</h3>
 							<p className="text-muted-foreground text-xl leading-relaxed">
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+								quae ab illo inventore veritatis et quasi architecto beatae
+								vitae dicta sunt.
 							</p>
 						</div>
 						<div className="bg-card-background border border-[#A1BCD1] rounded-lg p-8 shadow-lg">
@@ -301,9 +323,10 @@ export default function Home() {
 						Powerful Features
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-2xl mx-auto mb-16">
-						Everything you need to streamline your workflow and boost productivity.
+						Everything you need to streamline your workflow and boost
+						productivity.
 					</p>
-					
+
 					<div className="grid grid-cols-5 gap-4 h-[600px]">
 						{/* Left Large Card - 2/5 width, full height */}
 						<div className="col-span-2 row-span-2 bg-card-background border border-[#A1BCD1] shadow-lg rounded-xl p-6 flex flex-col">
@@ -311,7 +334,8 @@ export default function Home() {
 								Feature One
 							</h3>
 							<p className="text-muted-foreground text-sm leading-relaxed mb-4">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+								eiusmod tempor incididunt.
 							</p>
 							<div className="flex-1 bg-muted/30 rounded-lg flex items-center justify-center">
 								<div className="w-12 h-12 bg-muted rounded-lg"></div>
@@ -324,7 +348,8 @@ export default function Home() {
 								Feature Two
 							</h3>
 							<p className="text-muted-foreground text-sm leading-relaxed mb-4">
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris.
 							</p>
 							<div className="flex-1 bg-muted/30 rounded-lg flex items-center justify-center">
 								<div className="w-12 h-12 bg-muted rounded-lg"></div>
@@ -381,7 +406,10 @@ export default function Home() {
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 						{/* Before: Rigid Operations */}
-						<div className="bg-card-background border border-red-500 rounded-xl p-8 min-h-[400px]" style={{boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)"}}>
+						<div
+							className="bg-card-background border border-red-500 rounded-xl p-8 min-h-[400px]"
+							style={{ boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)" }}
+						>
 							<h3 className="text-foreground text-xl font-bold mb-6">
 								Before: Rigid Operations
 							</h3>
@@ -446,7 +474,10 @@ export default function Home() {
 						</div>
 
 						{/* After: Elastic Operations - Highlighted */}
-						<div className="bg-card-background border border-green-500 rounded-xl p-8 min-h-[400px]" style={{boxShadow: "0 8px 16px rgba(34, 197, 94, 0.25)"}}>
+						<div
+							className="bg-card-background border border-green-500 rounded-xl p-8 min-h-[400px]"
+							style={{ boxShadow: "0 8px 16px rgba(34, 197, 94, 0.25)" }}
+						>
 							<h3 className="text-foreground text-xl font-bold mb-6">
 								After: Elastic Operations
 							</h3>

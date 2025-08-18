@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button"
 
 export function Navigation() {
 	return (
-		<nav className="fixed top-0 left-0 right-0 z-50 bg-primary-blue">
+		<nav className="fixed top-0 left-0 right-0 z-50">
 			<div className="max-w-6xl mx-auto px-6 py-4">
 				<div className="flex items-center justify-center">
 					{/* Navigation Links with Logo */}
-					<div className="bg-primary-blue/20 backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-[#A1BCD1] items-center">
+					<div className=" backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-[#A1BCD1] items-center">
 						<div className="flex items-center space-x-2 px-3">
 							<img src="/logo.svg" alt="Novosapien Logo" className="w-6 h-6" />
 							<span className="text-lg font-reddit-sans lowercase font-medium">

@@ -17,32 +17,34 @@ export function AnimatedDots() {
 		const dotRadius = 1.5
 		const baseColor = "#A1BCD1"
 		const animatedColor = "#A8CDFF"
-		
+
 		// Create dots array with animation states
 		const dots: Array<{
 			x: number
 			y: number
 			isAnimating: boolean
 			animationProgress: number
+			fadePhase: "in" | "out"
 		}> = []
 
 		// Set canvas size and recreate dots
 		const setCanvasSize = () => {
 			canvas.width = canvas.offsetWidth
 			canvas.height = canvas.offsetHeight
-			
+
 			// Recreate dots array when canvas resizes
 			dots.length = 0
 			const startX = dotSpacing / 2
 			const startY = dotSpacing / 2
-			
+
 			for (let x = startX; x <= canvas.width + dotSpacing; x += dotSpacing) {
 				for (let y = startY; y <= canvas.height + dotSpacing; y += dotSpacing) {
 					dots.push({
 						x,
 						y,
 						isAnimating: false,
-						animationProgress: 0
+						animationProgress: 0,
+						fadePhase: "in",
 					})
 				}
 			}
@@ -65,43 +67,55 @@ export function AnimatedDots() {
 			// Randomly trigger new animations if under the limit
 			dots.forEach(dot => {
 				// Start new animation if we're under the limit
-				if (!dot.isAnimating && animatingCount < maxAnimatingDots && Math.random() < 0.004) {
+				if (
+					!dot.isAnimating &&
+					animatingCount < maxAnimatingDots &&
+					Math.random() < 0.004
+				) {
 					dot.isAnimating = true
 					dot.animationProgress = 0
+					dot.fadePhase = "in"
 					animatingCount++
 				}
 
-				// Update animation (slower for smoother pulse)
+				// Update animation with separate fade in and fade out phases
 				if (dot.isAnimating) {
-					dot.animationProgress += 0.01  // Slower animation
-					if (dot.animationProgress >= 1) {
-						dot.isAnimating = false
-						dot.animationProgress = 0
+					if (dot.fadePhase === "in") {
+						dot.animationProgress += 0.02 // Fast fade in
+						if (dot.animationProgress >= 1) {
+							dot.fadePhase = "out"
+							dot.animationProgress = 1
+						}
+					} else {
+						dot.animationProgress -= 0.005 // Much slower fade out
+						if (dot.animationProgress <= 0) {
+							dot.isAnimating = false
+							dot.animationProgress = 0
+							dot.fadePhase = "in"
+						}
 					}
 				}
 
 				// Draw dot
 				ctx.beginPath()
 				ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2)
-				
+
 				// Apply pulsing effect with fade in/out
 				if (dot.isAnimating) {
-					// Use sine wave for smooth fade in and out
-					const progress = Math.sin(dot.animationProgress * Math.PI)
-					ctx.fillStyle = animatedColor  // Always use the neon blue when animating
-					ctx.globalAlpha = 0.4 + progress * 0.6  // Fade from 0.4 to 1.0 and back
+					ctx.fillStyle = animatedColor
+					ctx.globalAlpha = 0.4 + dot.animationProgress * 0.6
 					
 					// Draw glow effect for animated dots
-					ctx.shadowBlur = progress * 10
+					ctx.shadowBlur = dot.animationProgress * 10
 					ctx.shadowColor = animatedColor
 				} else {
 					ctx.fillStyle = baseColor
 					ctx.globalAlpha = 0.4
 					ctx.shadowBlur = 0
 				}
-				
+
 				ctx.fill()
-				ctx.shadowBlur = 0  // Reset shadow for next dot
+				ctx.shadowBlur = 0 // Reset shadow for next dot
 			})
 
 			animationId = requestAnimationFrame(animate)

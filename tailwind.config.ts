@@ -79,6 +79,9 @@ export default {
 				"placeholder-text": "hsl(var(--placeholder-text))",
 				// Legacy aliases (for backward compatibility)
 				"success-green": "hsl(var(--accent-teal))",
+				// Direct hex colors for common use
+				"accent-hex": "#A1BCD1",
+				"primary-blue-hex": "#0066CC",
 			},
 			borderRadius: {
 				lg: "var(--radius)",
