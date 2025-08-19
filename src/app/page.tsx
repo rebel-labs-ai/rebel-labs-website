@@ -181,14 +181,23 @@ export default function Home() {
 									through intelligent lead scoring, nurturing sequences, and
 									automated follow-up.
 								</p>
+								{/* Light mode image */}
 								<img 
-									src="https://via.placeholder.com/400x200/A1BCD1/FFFFFF?text=Inbound+Conversion" 
+									src="/lead-workforce.png" 
 									alt="Inbound Conversion Workflow" 
-									className="w-full h-48 object-cover rounded-lg mb-6"
+									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
-								<a href="#" className="text-accent font-bold">
-									Explore This Workforce →
-								</a>
+								{/* Dark mode image */}
+								<img 
+									src="/lead-workforce-dark.png" 
+									alt="Inbound Conversion Workflow" 
+									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
+								/>
+								<div className="text-right">
+									<a href="#" className="text-muted-foreground font-semibold">
+										Explore This Workforce →
+									</a>
+								</div>
 							</div>
 						</Card>
 
@@ -202,14 +211,23 @@ export default function Home() {
 									from blog posts to social media, aligned with your brand and
 									strategy.
 								</p>
+								{/* Light mode image */}
 								<img 
-									src="https://via.placeholder.com/400x200/A1BCD1/FFFFFF?text=Content+Creation" 
+									src="/content-workforce.png" 
 									alt="Content Creation Workflow" 
-									className="w-full h-48 object-cover rounded-lg mb-6"
+									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
-								<a href="#" className="text-accent font-bold">
-									Explore This Workforce →
-								</a>
+								{/* Dark mode image */}
+								<img 
+									src="/content-workforce-dark.png" 
+									alt="Content Creation Workflow" 
+									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
+								/>
+								<div className="text-right">
+									<a href="#" className="text-muted-foreground font-semibold">
+										Explore This Workforce →
+									</a>
+								</div>
 							</div>
 						</Card>
 					</div>
@@ -457,14 +475,20 @@ export default function Home() {
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 						{/* Before: Rigid Operations */}
-						<div
-							className="bg-card-background border border-red-500 rounded-xl p-8 min-h-[400px]"
-							style={{ boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)" }}
-						>
-							<h3 className="text-foreground text-xl font-bold mb-6">
-								Before: Rigid Operations
-							</h3>
-							<ul className="space-y-4">
+						<div className="flex flex-col">
+							<div className="mb-4">
+								<span className="bg-red-500/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.4)] inline-block">
+									Before
+								</span>
+							</div>
+							<div
+								className="bg-card-background border border-red-500 rounded-xl p-8 flex-1"
+								style={{ boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)" }}
+							>
+								<h3 className="text-foreground text-xl font-bold mb-6">
+									Rigid Operations
+								</h3>
+								<ul className="space-y-4">
 								<li className="flex items-start">
 									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
 										<svg fill="currentColor" viewBox="0 0 20 20">
@@ -476,7 +500,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Fixed headcount limits growth potential
+										Locked into fixed costs for headcount and software.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -490,7 +514,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Manual processes create bottlenecks
+										Growth is capped by the linear speed of your team.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -504,7 +528,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Tool management consumes resources
+										Scaling requires slow, expensive hiring projects.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -518,21 +542,56 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Inconsistent execution across teams
+										Execution quality is subject to human error and inconsistency.
 									</span>
 								</li>
-							</ul>
+								<li className="flex items-start">
+									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+										<svg fill="currentColor" viewBox="0 0 20 20">
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+												clipRule="evenodd"
+											/>
+										</svg>
+									</div>
+									<span className="text-muted-foreground">
+										Pivoting strategy is slow, costly, and risks market momentum.
+									</span>
+								</li>
+								<li className="flex items-start">
+									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+										<svg fill="currentColor" viewBox="0 0 20 20">
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+												clipRule="evenodd"
+											/>
+										</svg>
+									</div>
+									<span className="text-muted-foreground">
+										Budget is spent on tasks, not the final result.
+									</span>
+								</li>
+								</ul>
+							</div>
 						</div>
 
 						{/* After: Elastic Operations - Highlighted */}
-						<div
-							className="bg-card-background border border-green-500 rounded-xl p-8 min-h-[400px]"
-							style={{ boxShadow: "0 8px 16px rgba(34, 197, 94, 0.25)" }}
-						>
-							<h3 className="text-foreground text-xl font-bold mb-6">
-								After: Elastic Operations
-							</h3>
-							<ul className="space-y-4">
+						<div className="flex flex-col">
+							<div className="mb-4">
+								<span className="bg-green-500/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-green-500 shadow-[0_0_15px_rgba(34,197,94,0.4)] inline-block">
+									After
+								</span>
+							</div>
+							<div
+								className="bg-card-background border border-green-500 rounded-xl p-8 flex-1"
+								style={{ boxShadow: "0 8px 16px rgba(34, 197, 94, 0.25)" }}
+							>
+								<h3 className="text-foreground text-xl font-bold mb-6">
+									Elastic Operations
+								</h3>
+								<ul className="space-y-4">
 								<li className="flex items-start">
 									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
 										<svg fill="currentColor" viewBox="0 0 20 20">
@@ -544,7 +603,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Unlimited capacity scales with demand
+										Pay for productive output, not for idle time.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -558,7 +617,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Automated end-to-end process execution
+										Growth is driven by 24/7 autonomous operations.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -572,7 +631,7 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Single platform orchestrates everything
+										Scale capacity instantly, on demand, without projects.
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -586,10 +645,39 @@ export default function Home() {
 										</svg>
 									</div>
 									<span className="text-muted-foreground">
-										Perfect consistency at infinite scale
+										Achieve inhuman consistency and precision in every action.
 									</span>
 								</li>
-							</ul>
+								<li className="flex items-start">
+									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+										<svg fill="currentColor" viewBox="0 0 20 20">
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+												clipRule="evenodd"
+											/>
+										</svg>
+									</div>
+									<span className="text-muted-foreground">
+										Adapt to market changes instantly with a fluid operational model.
+									</span>
+								</li>
+								<li className="flex items-start">
+									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+										<svg fill="currentColor" viewBox="0 0 20 20">
+											<path
+												fillRule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+												clipRule="evenodd"
+											/>
+										</svg>
+									</div>
+									<span className="text-muted-foreground">
+										Budget is spent directly on the revenue-generating outcome.
+									</span>
+								</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -108,7 +108,7 @@ export function ScrollAnimatedSteps() {
 						</div>
 
 						{/* Right side - Sticky image container */}
-						<div className="relative hidden lg:block mt-64 mb-24">
+						<div className="relative hidden lg:block mt-64 mb-20">
 							{/* Sticky container that stays centered */}
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[400px] w-full">
