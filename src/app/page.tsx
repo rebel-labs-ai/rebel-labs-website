@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Navigation } from "@/components/navigation"
 import { AnimatedDots } from "@/components/animated-dots"
 import { AnimatedText } from "@/components/animated-text"
+import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 
 export default function Home() {
 	return (
@@ -30,7 +31,7 @@ export default function Home() {
 				<section className="pt-32 pb-24 px-4 relative">
 					<div className="max-w-4xl mx-auto relative z-10 mt-36">
 						<div className="text-center mb-8">
-							<span className="bg-[#A8CDFF]/10 text-[#A8CDFF] dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 								Redefining the way your generate revenue
 							</span>
 						</div>
@@ -76,49 +77,78 @@ export default function Home() {
 			{/* Section 2: What is a Digital Workforce */}
 			<section className="mx-auto bg-accent/40 relative">
 				<div className="max-w-7xl mx-auto px-4 py-16 rounded-xl relative z-10">
-					<div className="text-center mb-8">
-						<span className="bg-white dark:bg-background text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,205,255,0.4)]">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-								<path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-								<path strokeLinecap="round" strokeLinejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" />
-							</svg>
-							In a nutshell
-						</span>
-					</div>
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
-						What is a Digital Workforce?
-					</h2>
-					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
-						A Digital Workforce is a collection of autonomous AI agents that work together to execute complete business processes from start to finish. Unlike traditional automation tools that handle single tasks, our digital workers manage entire workflows, make decisions, and deliver results 24/7.
-					</p>
-					{/* Key characteristics */}
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-						<div className="bg-card-background border border-accent/30 rounded-lg p-6 text-center">
-							<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-									<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.091zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-								</svg>
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+						{/* Left side - Content */}
+						<div>
+							<div className="mb-8">
+								<span className="bg-white dark:bg-transparent text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+										<path strokeLinecap="round" strokeLinejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" />
+									</svg>
+									In a nutshell
+								</span>
 							</div>
-							<h3 className="text-foreground text-lg font-semibold mb-2">Autonomous</h3>
-							<p className="text-muted-foreground text-sm">Makes decisions and adapts to situations without human intervention</p>
+							<h2 className="text-foreground text-4xl font-bold tracking-tight mb-6">
+								What is a Digital Workforce?
+							</h2>
+							<p className="text-muted-foreground text-lg mb-12 leading-relaxed">
+								A Digital Workforce is a collection of autonomous AI agents that work together to execute complete business processes from start to finish. Unlike traditional automation tools that handle single tasks, our digital workers manage entire workflows, make decisions, and deliver results 24/7.
+							</p>
+							{/* Key characteristics */}
+							<div className="space-y-6">
+								<div className="flex items-start gap-4">
+									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
+											<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.091zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+										</svg>
+									</div>
+									<div>
+										<h3 className="text-foreground text-lg font-semibold mb-2">Autonomous</h3>
+										<p className="text-muted-foreground text-sm">Makes decisions and adapts to situations without human intervention</p>
+									</div>
+								</div>
+								<div className="flex items-start gap-4">
+									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
+											<path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+										</svg>
+									</div>
+									<div>
+										<h3 className="text-foreground text-lg font-semibold mb-2">Scalable</h3>
+										<p className="text-muted-foreground text-sm">Instantly scales up or down based on demand and workload</p>
+									</div>
+								</div>
+								<div className="flex items-start gap-4">
+									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
+											<path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+										</svg>
+									</div>
+									<div>
+										<h3 className="text-foreground text-lg font-semibold mb-2">24/7 Operation</h3>
+										<p className="text-muted-foreground text-sm">Works continuously without breaks, holidays, or downtime</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div className="bg-card-background border border-accent/30 rounded-lg p-6 text-center">
-							<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-									<path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-								</svg>
+
+						{/* Right side - Digital Workforce Image */}
+						<div className="flex justify-center lg:justify-end">
+							<div className="max-w-4xl w-full mt-16">
+								{/* Light mode image */}
+								<img 
+									src="/digital-workforce.png" 
+									alt="Digital Workforce Illustration" 
+									className="w-full h-auto block dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<img 
+									src="/digital-workforce-dark.png" 
+									alt="Digital Workforce Illustration" 
+									className="w-full h-auto hidden dark:block"
+								/>
 							</div>
-							<h3 className="text-foreground text-lg font-semibold mb-2">Scalable</h3>
-							<p className="text-muted-foreground text-sm">Instantly scales up or down based on demand and workload</p>
-						</div>
-						<div className="bg-card-background border border-accent/30 rounded-lg p-6 text-center">
-							<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-									<path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
-							</div>
-							<h3 className="text-foreground text-lg font-semibold mb-2">24/7 Operation</h3>
-							<p className="text-muted-foreground text-sm">Works continuously without breaks, holidays, or downtime</p>
 						</div>
 					</div>
 				</div>
@@ -128,8 +158,8 @@ export default function Home() {
 			<section className="py-16 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-6xl mx-auto mt-40">
 					<div className="text-center mb-12">
-						<span className="bg-[#A8CDFF]/10 text-[#A8CDFF] dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
-							THE SOLUTION
+						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+							The Solution
 						</span>
 						<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
 							We Don&apos;t Sell Tools. We Deliver Outcomes.
@@ -334,161 +364,86 @@ export default function Home() {
 			</section>
 
 			{/* Section 4: How We Do It */}
-			<section className="py-40 px-4 ">
-				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-32">
-						How We Do It
-					</h2>
+			<ScrollAnimatedSteps />
 
-					{/* Step 1: Text left, Image right */}
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-48">
-						<div>
-							<h3 className="text-foreground text-3xl font-bold mb-6">
-								Step One: Discovery & Strategy
-							</h3>
-							<p className="text-muted-foreground text-xl leading-relaxed">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat.
-							</p>
-						</div>
-						<div className="bg-card-background border border-[#A1BCD1] rounded-lg p-8 shadow-lg">
-							<div className="w-full h-80 bg-muted/30 rounded-lg flex items-center justify-center">
-								<div className="w-24 h-24 bg-muted rounded-lg"></div>
-							</div>
-						</div>
-					</div>
-
-					{/* Step 2: Image left, Text right */}
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-48">
-						<div className="bg-card-background border border-[#A1BCD1] rounded-lg p-8 shadow-lg lg:order-first">
-							<div className="w-full h-80 bg-muted/30 rounded-lg flex items-center justify-center">
-								<div className="w-24 h-24 bg-muted rounded-lg"></div>
-							</div>
-						</div>
-						<div>
-							<h3 className="text-foreground text-3xl font-bold mb-6">
-								Step Two: Implementation & Setup
-							</h3>
-							<p className="text-muted-foreground text-xl leading-relaxed">
-								Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-								cupidatat non proident, sunt in culpa qui officia deserunt
-								mollit anim id est laborum.
-							</p>
-						</div>
-					</div>
-
-					{/* Step 3: Text left, Image right */}
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-						<div>
-							<h3 className="text-foreground text-3xl font-bold mb-6">
-								Step Three: Optimization & Results
-							</h3>
-							<p className="text-muted-foreground text-xl leading-relaxed">
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-								quae ab illo inventore veritatis et quasi architecto beatae
-								vitae dicta sunt.
-							</p>
-						</div>
-						<div className="bg-card-background border border-[#A1BCD1] rounded-lg p-8 shadow-lg">
-							<div className="w-full h-80 bg-muted/30 rounded-lg flex items-center justify-center">
-								<div className="w-24 h-24 bg-muted rounded-lg"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Section 5: Bento Grid Layout */}
+			{/* Section 5: Core Capabilities */}
 			<section className="py-16 px-4">
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
-						Powerful Features
+					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
+						Core Capabilities
 					</h2>
-					<p className="text-muted-foreground text-lg text-center max-w-2xl mx-auto mb-16">
-						Everything you need to streamline your workflow and boost
-						productivity.
+					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
+						Your Digital Workforce is built on an architecture designed to deliver outcomes, not just automate tasks. These are its core capabilities.
 					</p>
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto">
-						{/* Feature One - Large but not full height */}
+						{/* Feature One - Elastic Infrastructure (Primary - Large Card) */}
 						<div className="md:col-span-2 md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-8 min-h-[350px]">
 							<h3 className="text-foreground text-xl font-semibold mb-4">
-								Feature One
+								Elastic Infrastructure
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-6">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-								eiusmod tempor incididunt ut labore et dolore magna.
+								Your workforce dynamically scales from a single agent to a thousand in seconds to meet any demand. You pay for the work done, not for idle capacity.
 							</p>
 							<div className="h-40 bg-muted/20 rounded-lg flex items-center justify-center">
 								<div className="w-16 h-16 bg-muted rounded-lg"></div>
 							</div>
 						</div>
 
-						{/* Feature Two - Wide top right */}
+						{/* Feature Two - Collaborative Reasoning */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Feature Two
+								Collaborative Reasoning
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								laboris nisi ut aliquip.
+								Inside your workforce, specialized agents—like Researchers and Strategists—debate and critique each other's work to find the optimal path to your objective.
 							</p>
 						</div>
 
-						{/* Feature Three - Medium square */}
+						{/* Feature Three - Autonomous Execution */}
 						<div className="bg-card-background border border-accent/30 shadow-lg rounded-xl p-6 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Feature Three
+								Autonomous Execution
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Duis aute irure dolor in reprehenderit.
+								Your workforce manages complex, multi-step processes from end to end, executing its mission without the need for your constant intervention or management.
 							</p>
-							<div className="bg-muted/20 rounded-lg h-16 mt-4 flex items-center justify-center">
-								<div className="w-8 h-8 bg-muted rounded"></div>
-							</div>
 						</div>
 
-						{/* Feature Four - Tall, spans height of Three and Six */}
+						{/* Feature Four - Real-Time Optimization */}
 						<div className="md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[370px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Feature Four
+								Real-Time Optimization
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+								Your workforce doesn't just execute; it improves. It constantly analyzes its own performance, automatically eliminating bottlenecks and refining its approach to maximize your outcome.
 							</p>
 							<div className="bg-muted/20 rounded-lg h-48 mt-4 flex items-center justify-center">
 								<div className="w-12 h-12 bg-muted rounded"></div>
 							</div>
 						</div>
 
-						{/* Feature Five - Wide bottom */}
+						{/* Feature Five - Seamless Integration */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Feature Five
+								Seamless Integration
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
-								Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Your workforce connects natively to your core systems—CRM, marketing automation, and calendars—acting as a seamless extension of your existing tech stack.
 							</p>
 							<div className="bg-muted/20 rounded-lg h-20 flex items-center justify-center">
 								<div className="w-12 h-12 bg-muted rounded-lg"></div>
 							</div>
 						</div>
 
-						{/* Feature Six - Medium square */}
+						{/* Feature Six - Outcome-Centric Reporting */}
 						<div className="bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Feature Six
+								Outcome-Centric Reporting
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Sed ut perspiciatis unde omnis iste natus.
+								Get transparent reporting focused on the business outcomes your workforce delivers and the direct ROI, not on vanity metrics like "tasks completed."
 							</p>
-							<div className="bg-muted/20 rounded-lg h-20 mt-4 flex items-center justify-center">
-								<div className="w-10 h-10 bg-muted rounded"></div>
-							</div>
 						</div>
 					</div>
 				</div>
