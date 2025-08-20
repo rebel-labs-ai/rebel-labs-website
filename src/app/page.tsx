@@ -7,6 +7,7 @@ import { AnimatedDots } from "@/components/animated-dots"
 import { AnimatedText } from "@/components/animated-text"
 import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
 	return (
@@ -75,7 +76,7 @@ export default function Home() {
 			</div>
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
-			<section className="mx-auto bg-accent/40 relative py-20">
+			<section className="mx-auto bg-accent/40 relative py-24">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-12">
@@ -316,7 +317,7 @@ export default function Home() {
 			</section>
 
 			{/* Section 2: What is a Digital Workforce */}
-			<section className="py-16 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+			<section className="py-24 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-7xl mx-auto px-4 py-16 rounded-xl relative z-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 						{/* Left side - Content */}
@@ -383,8 +384,8 @@ export default function Home() {
 			</section>
 
 			{/* Section 3: The Solution */}
-			<section className="py-16 px-4 pb-40">
-				<div className="max-w-6xl mx-auto mt-40">
+			<section className="py-24 px-4">
+				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							The Solution
@@ -647,10 +648,12 @@ export default function Home() {
 			</section> */}
 
 			{/* Section 4: How We Do It */}
-			<ScrollAnimatedSteps />
+			<div className="pt-40">
+				<ScrollAnimatedSteps />
+			</div>
 
 			{/* Section 5: Core Capabilities */}
-			<section className=" px-4">
+			<section className="pt-0 pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
 						Core Capabilities
@@ -777,7 +780,7 @@ export default function Home() {
 			</section>
 
 			{/* Section 6: The New Equation of Value */}
-			<section className="py-16 px-4 bg-background">
+			<section className="py-24 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
 						The New Equation of Value
@@ -999,23 +1002,38 @@ export default function Home() {
 			</section>
 
 			{/* Section 7: Final CTA */}
-			<section className="py-20 px-4 bg-">
-				<div className="max-w-4xl mx-auto text-center">
-					<h2 className="text-primary-foreground text-4xl font-bold tracking-tight">
-						Stop Buying Smarter Shovels
-					</h2>
-					<p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
-						Deploy a workforce that delivers the outcome. Your first strategic
-						session is the starting point.
-					</p>
-					<Button
-						className="bg-accent text-accent-foreground hover:bg-accent/90 mt-8"
-						size="lg"
-					>
-						Book a Strategic Session
-					</Button>
+			<section className="py-24 px-4">
+				<div className="max-w-4xl mx-auto">
+					<Card className="p-12 text-center bg-card/80 backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+								Ready to Transform Your Operations?
+							</span>
+						</div>
+
+						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+							Stop Buying Smarter Shovels.
+							<br />
+							<span className="text-accent">Start Delivering Outcomes.</span>
+						</h2>
+
+						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+							Join forward-thinking companies who are achieving measurable results
+							with Digital Workforces. Your transformation starts with a single
+							conversation.
+						</p>
+
+						<div className="flex justify-center">
+							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+								Book a Demo
+							</Button>
+						</div>
+					</Card>
 				</div>
 			</section>
+
+			{/* Footer */}
+			<Footer />
 		</div>
 	)
 }

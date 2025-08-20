@@ -67,7 +67,7 @@ export function ScrollAnimatedSteps() {
 	}, [])
 
 	return (
-		<section ref={containerRef} className="relative py-20">
+		<section ref={containerRef} className="relative">
 			<div className="max-w-6xl mx-auto px-4">
 				<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
 					How We Do It
