@@ -17,25 +17,25 @@ export function Navigation() {
 						<div className="w-px h-6 bg-border mx-2"></div>
 						<Button
 							variant="outline"
-							className="rounded-md px-4 py-2 bg-card dark:bg-card text-foreground border-0 hover:bg-accent hover:text-accent-foreground transition-all duration-200 font-medium"
+							className="rounded-md px-4 py-1.5 bg-white/70 dark:bg-accent/10 text-foreground dark:text-white border border-accent dark:border-accent/30 hover:bg-accent/30 dark:hover:bg-accent/20 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 						>
 							Home
 						</Button>
 						<Button
 							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 font-medium"
+							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 						>
 							Mission
 						</Button>
 						<Button
 							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 font-medium"
+							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 						>
 							Workforces
 						</Button>
 						<Button
 							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 font-medium"
+							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 						>
 							Speak to us
 						</Button>

@@ -6,7 +6,6 @@ import { AnimatedDots } from "@/components/animated-dots"
 import { AnimatedText } from "@/components/animated-text"
 import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
-import CollaborativeReasoningGrid from "@/components/collaborative-reasoning-grid"
 
 export default function Home() {
 	return (
@@ -50,10 +49,10 @@ export default function Home() {
 							generate revenue on autopilot.
 						</p>
 						<div className="mt-8 text-center">
-							<Button className="bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200">
+							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 								Speak to us
 							</Button>
-							<Button className="bg-[#A1BCD1] text-white hover:bg-[#8AACCC] border border-[#A1BCD1] shadow-md hover:shadow-lg transition-all duration-200 ml-4">
+							<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 ml-4 hover:bg-accent/30 hover:dark:bg-accent/30">
 								Try it now
 							</Button>
 						</div>
@@ -695,24 +694,45 @@ export default function Home() {
 								Strategists—debate and critique each other&apos;s work to find
 								the optimal path to your objective.
 							</p>
-							<div className="bg-muted/20 rounded-lg h-48 mt-4 overflow-hidden">
-								<CollaborativeReasoningGrid />
+							<div className=" rounded-lg h-70 mt-4 overflow-hidden flex items-center justify-center">
+								{/* Light mode image */}
+								<img
+									src="/home/reasoning.svg"
+									alt="Collaborative Reasoning"
+									className="w-full h-auto max-w-full max-h-full object-contain mt-8 block dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<img
+									src="/home/reasoning-dark.svg"
+									alt="Collaborative Reasoning"
+									className="w-full h-auto max-w-full max-h-full object-contain mt-8 hidden dark:block"
+								/>
 							</div>
 						</div>
 
 						{/* Feature Five - Real-Time Optimization (moved from Feature Four) */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Real-Time Optimization
+								Understand the Why, Not Just the What
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
-								Your workforce doesn&apos;t just execute; it improves. It
-								constantly analyzes its own performance, automatically
-								eliminating bottlenecks and refining its approach to maximize
-								your outcome.
+								Your workforce doesn&apos;t just report on performance—it
+								explains it. Get clear, actionable insights and strategic
+								recommendations delivered automatically.
 							</p>
-							<div className="bg-muted/20 rounded-lg h-20 flex items-center justify-center">
-								<div className="w-12 h-12 bg-muted rounded-lg"></div>
+							<div className=" rounded-lg h-20 flex items-center justify-center">
+								{/* Light mode image */}
+								<img
+									src="/home/understand.svg"
+									alt="Understand the Why"
+									className="w-full h-auto max-w-full max-h-full object-contain block dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<img
+									src="/home/understand-dark.svg"
+									alt="Understand the Why"
+									className="w-full h-auto max-w-full max-h-full object-contain hidden dark:block"
+								/>
 							</div>
 						</div>
 
