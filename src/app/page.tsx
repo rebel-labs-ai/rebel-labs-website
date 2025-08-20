@@ -5,6 +5,8 @@ import { Navigation } from "@/components/navigation"
 import { AnimatedDots } from "@/components/animated-dots"
 import { AnimatedText } from "@/components/animated-text"
 import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
+import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
+import CollaborativeReasoningGrid from "@/components/collaborative-reasoning-grid"
 
 export default function Home() {
 	return (
@@ -23,7 +25,7 @@ export default function Home() {
 				<div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full">
 					<AnimatedDots />
 				</div>
-				
+
 				{/* Gradient overlay from bottom - matches problem section background */}
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
@@ -56,35 +58,285 @@ export default function Home() {
 							</Button>
 						</div>
 					</div>
-									{/* Hero Image - Above dots */}
+					{/* Hero Image - Above dots */}
 					{/* Light mode image */}
 					{/* <img
-						src="/image.png"
+						src="/home/image.png"
 						alt="Hero Image"
 						className="w-full max-w-[85%] mx-auto relative z-20 block dark:hidden mt-8"
 					 /> */}
 					{/* Dark mode image */}
- 					{/* <img
-						src="/image-dark.png"
+					{/* <img
+						src="/home/image-dark.png"
 						alt="Hero Image"
 						className="w-full max-w-[85%] mx-auto relative z-20 hidden dark:block mt-8"
 					/>  */}
 				</section>
-
-
 			</div>
 
+			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
+			<section className="mx-auto bg-accent/40 relative py-20">
+				<div className="max-w-8xl mx-auto px-4">
+					{/* Centered headline and subtext */}
+					<div className="text-center mb-12">
+						<h2
+							className="text-foreground text-4xl font-bold tracking-tight mb-6"
+							style={{
+								textShadow:
+									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
+							}}
+						>
+							We Automate the Full Stack of Revenue Operations
+						</h2>
+						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+							A Novosapien Digital Workforce isn&apos;t a point solution that
+							automates a single task. It&apos;s a complete operational layer
+							designed to execute, learn, and scale, freeing your human team to
+							focus on what matters most: growth.
+						</p>
+					</div>
+
+					{/* Content Grid - Three columns layout */}
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start max-w-7xl mx-auto">
+						{/* Left side - The Operational Power */}
+						<div className="space-y-6">
+							<div className="mb-4 text-right">
+								<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+									The Operational Power
+								</span>
+							</div>
+
+							{/* Element 1: 24/7 Operation */}
+							<div className="flex items-start gap-4 flex-row-reverse">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+										/>
+									</svg>
+								</div>
+								<div className="text-right">
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										24/7 Operation
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										Your workforce operates continuously without breaks,
+										holidays, or downtime.
+									</p>
+								</div>
+							</div>
+
+							{/* Element 2: Flawless Execution */}
+							<div className="flex items-start gap-4 flex-row-reverse">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										/>
+									</svg>
+								</div>
+								<div className="text-right">
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										Flawless Execution
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										Eliminate human error. Your workforce runs critical
+										processes with perfect consistency and reliability.
+									</p>
+								</div>
+							</div>
+
+							{/* Element 3: Continuous Improvement */}
+							<div className="flex items-start gap-4 flex-row-reverse">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M3 13.5l6.785 6.785A48.1 48.1 0 0021 4.5M3 13.5V21h7.5"
+										/>
+									</svg>
+								</div>
+								<div className="text-right">
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										Continuous Improvement
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										Your workforce analyzes every action, learns what works, and
+										systematically improves its performance over time.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{/* Middle - Workforce Stack Image */}
+						<div className="flex justify-center items-center">
+							<div className="max-w-xs w-full">
+								{/* Light mode image */}
+								<img
+									src="/home/workforce-stack.png"
+									alt="Digital Workforce Stack"
+									className="w-full h-auto block dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<img
+									src="/home/workforce-stack-dark.png"
+									alt="Digital Workforce Stack"
+									className="w-full h-auto hidden dark:block"
+								/>
+							</div>
+						</div>
+
+						{/* Right side - The Strategic Impact */}
+						<div className="space-y-6">
+							<div className="mb-4">
+								<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+									The Strategic Impact
+								</span>
+							</div>
+
+							{/* Element 4: Free Your Talent */}
+							<div className="flex items-start gap-4">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+										/>
+									</svg>
+								</div>
+								<div>
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										Free Your Talent
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										Automate the high-volume, repetitive work that frees your
+										team for strategic priorities.
+									</p>
+								</div>
+							</div>
+
+							{/* Element 5: Unlock Autonomy */}
+							<div className="flex items-start gap-4">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+										/>
+									</svg>
+								</div>
+								<div>
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										Unlock Autonomy
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										A workforce that makes decisions, solves problems, and
+										optimizes its own performance to deliver the result.
+									</p>
+								</div>
+							</div>
+
+							{/* Element 6: Scale On Demand */}
+							<div className="flex items-start gap-4">
+								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 text-[#A1BCD1]"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+										/>
+									</svg>
+								</div>
+								<div>
+									<h3 className="text-foreground text-lg font-semibold mb-2">
+										Scale On Demand
+									</h3>
+									<p className="text-muted-foreground text-sm">
+										Instantly scale your operations to meet any demand, paying
+										only for productive output.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* Section 2: What is a Digital Workforce */}
-			<section className="mx-auto bg-accent/40 relative">
+			<section className="py-16 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-7xl mx-auto px-4 py-16 rounded-xl relative z-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 						{/* Left side - Content */}
 						<div>
 							<div className="mb-8">
 								<span className="bg-white dark:bg-transparent text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,205,255,0.4)]">
-									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-										<path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-										<path strokeLinecap="round" strokeLinejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" />
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-4 h-4"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										/>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"
+										/>
 									</svg>
 									In a nutshell
 								</span>
@@ -92,60 +344,28 @@ export default function Home() {
 							<h2 className="text-foreground text-4xl font-bold tracking-tight mb-6">
 								What is a Digital Workforce?
 							</h2>
-							<p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-								A Digital Workforce is a collection of autonomous AI agents that work together to execute complete business processes from start to finish. Unlike traditional automation tools that handle single tasks, our digital workers manage entire workflows, make decisions, and deliver results 24/7.
+							<p className="text-muted-foreground text-lg leading-relaxed">
+								A Digital Workforce is a collection of autonomous AI agents that
+								work together to execute complete business processes from start
+								to finish. Unlike traditional automation tools that handle
+								single tasks, our digital workers manage entire workflows, make
+								decisions, and deliver results 24/7.
 							</p>
-							{/* Key characteristics */}
-							<div className="space-y-6">
-								<div className="flex items-start gap-4">
-									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-											<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.091zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-										</svg>
-									</div>
-									<div>
-										<h3 className="text-foreground text-lg font-semibold mb-2">Autonomous</h3>
-										<p className="text-muted-foreground text-sm">Makes decisions and adapts to situations without human intervention</p>
-									</div>
-								</div>
-								<div className="flex items-start gap-4">
-									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-											<path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-										</svg>
-									</div>
-									<div>
-										<h3 className="text-foreground text-lg font-semibold mb-2">Scalable</h3>
-										<p className="text-muted-foreground text-sm">Instantly scales up or down based on demand and workload</p>
-									</div>
-								</div>
-								<div className="flex items-start gap-4">
-									<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#A1BCD1]">
-											<path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-										</svg>
-									</div>
-									<div>
-										<h3 className="text-foreground text-lg font-semibold mb-2">24/7 Operation</h3>
-										<p className="text-muted-foreground text-sm">Works continuously without breaks, holidays, or downtime</p>
-									</div>
-								</div>
-							</div>
 						</div>
 
 						{/* Right side - Digital Workforce Image */}
 						<div className="flex justify-center lg:justify-end">
 							<div className="max-w-4xl w-full mt-16">
 								{/* Light mode image */}
-								<img 
-									src="/digital-workforce.png" 
-									alt="Digital Workforce Illustration" 
+								<img
+									src="/home/digital-workforce.png"
+									alt="Digital Workforce Illustration"
 									className="w-full h-auto block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img 
-									src="/digital-workforce-dark.png" 
-									alt="Digital Workforce Illustration" 
+								<img
+									src="/home/digital-workforce-dark.png"
+									alt="Digital Workforce Illustration"
 									className="w-full h-auto hidden dark:block"
 								/>
 							</div>
@@ -155,7 +375,7 @@ export default function Home() {
 			</section>
 
 			{/* Section 3: The Solution */}
-			<section className="py-16 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+			<section className="py-16 px-4 pb-40">
 				<div className="max-w-6xl mx-auto mt-40">
 					<div className="text-center mb-12">
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
@@ -182,15 +402,15 @@ export default function Home() {
 									automated follow-up.
 								</p>
 								{/* Light mode image */}
-								<img 
-									src="/lead-workforce.png" 
-									alt="Inbound Conversion Workflow" 
+								<img
+									src="/home/lead-workforce.png"
+									alt="Inbound Conversion Workflow"
 									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img 
-									src="/lead-workforce-dark.png" 
-									alt="Inbound Conversion Workflow" 
+								<img
+									src="/home/lead-workforce-dark.png"
+									alt="Inbound Conversion Workflow"
 									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
@@ -212,15 +432,15 @@ export default function Home() {
 									strategy.
 								</p>
 								{/* Light mode image */}
-								<img 
-									src="/content-workforce.png" 
-									alt="Content Creation Workflow" 
+								<img
+									src="/home/content-workforce.png"
+									alt="Content Creation Workflow"
 									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img 
-									src="/content-workforce-dark.png" 
-									alt="Content Creation Workflow" 
+								<img
+									src="/home/content-workforce-dark.png"
+									alt="Content Creation Workflow"
 									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
@@ -235,7 +455,7 @@ export default function Home() {
 			</section>
 
 			{/* Section 3.5: The Problem */}
-			<section className="py-16 px-4 relative">
+			{/* <section className="py-16 px-4 relative">
 				<div className="max-w-7xl mx-auto px-4 py-8 rounded-xl relative z-10">
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
 						Your Revenue is Capped by a Broken Model
@@ -245,13 +465,17 @@ export default function Home() {
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 						ad minim veniam, quis nostrud exercitation.
 					</p>
-					{/* Uniform 6-Square Grid */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-3xl mx-auto">
 						<div className="group relative overflow-hidden bg-card-background border border-accent/30 rounded-lg p-3 hover:border-accent transition-all duration-300 aspect-square flex flex-col justify-center">
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -263,7 +487,7 @@ export default function Home() {
 									Fixed Capacity
 								</h3>
 								<p className="text-muted-foreground text-sm">
-									You pay for idle time and can't scale instantly.
+									You pay for idle time and can&apos;t scale instantly.
 								</p>
 							</div>
 						</div>
@@ -272,7 +496,12 @@ export default function Home() {
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -298,7 +527,12 @@ export default function Home() {
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -319,7 +553,12 @@ export default function Home() {
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -340,7 +579,12 @@ export default function Home() {
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -361,7 +605,12 @@ export default function Home() {
 							<div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 							<div className="text-center">
 								<div className="w-10 h-10 text-accent/70 mx-auto mb-3">
-									<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+									>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -373,25 +622,27 @@ export default function Home() {
 									Limited Flexibility
 								</h3>
 								<p className="text-muted-foreground text-sm">
-									Rigid processes can't adapt to market changes.
+									Rigid processes can&apos;t adapt to market changes.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* Section 4: How We Do It */}
 			<ScrollAnimatedSteps />
 
 			{/* Section 5: Core Capabilities */}
-			<section className="py-16 px-4">
+			<section className=" px-4">
 				<div className="max-w-6xl mx-auto">
 					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
 						Core Capabilities
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
-						Your Digital Workforce is built on an architecture designed to deliver outcomes, not just automate tasks. These are its core capabilities.
+						Your Digital Workforce is built on an architecture designed to
+						deliver outcomes, not just automate tasks. These are its core
+						capabilities.
 					</p>
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto">
@@ -401,20 +652,24 @@ export default function Home() {
 								Elastic Infrastructure
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-6">
-								Your workforce dynamically scales from a single agent to a thousand in seconds to meet any demand. You pay for the work done, not for idle capacity.
+								Your workforce dynamically scales from a single agent to a
+								thousand in seconds to meet any demand. You pay for the work
+								done, not for idle capacity.
 							</p>
-							<div className="h-40 bg-muted/20 rounded-lg flex items-center justify-center">
-								<div className="w-16 h-16 bg-muted rounded-lg"></div>
+							<div className="h-56 rounded-lg overflow-hidden">
+								<ElasticInfrastructureGraph />
 							</div>
 						</div>
 
-						{/* Feature Two - Collaborative Reasoning */}
+						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Collaborative Reasoning
+								Seamless Integration
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Inside your workforce, specialized agents—like Researchers and Strategists—debate and critique each other's work to find the optimal path to your objective.
+								Your workforce connects natively to your core systems—CRM,
+								marketing automation, and calendars—acting as a seamless
+								extension of your existing tech stack.
 							</p>
 						</div>
 
@@ -424,30 +679,37 @@ export default function Home() {
 								Autonomous Execution
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Your workforce manages complex, multi-step processes from end to end, executing its mission without the need for your constant intervention or management.
+								Your workforce manages complex, multi-step processes from end to
+								end, executing its mission without the need for your constant
+								intervention or management.
 							</p>
 						</div>
 
-						{/* Feature Four - Real-Time Optimization */}
+						{/* Feature Four - Collaborative Reasoning (moved from Feature Two) */}
 						<div className="md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[370px]">
+							<h3 className="text-foreground text-xl font-semibold mb-3">
+								Collaborative Reasoning
+							</h3>
+							<p className="text-muted-foreground text-base leading-relaxed mb-4">
+								Inside your workforce, specialized agents—like Researchers and
+								Strategists—debate and critique each other&apos;s work to find
+								the optimal path to your objective.
+							</p>
+							<div className="bg-muted/20 rounded-lg h-48 mt-4 overflow-hidden">
+								<CollaborativeReasoningGrid />
+							</div>
+						</div>
+
+						{/* Feature Five - Real-Time Optimization (moved from Feature Four) */}
+						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
 								Real-Time Optimization
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
-								Your workforce doesn't just execute; it improves. It constantly analyzes its own performance, automatically eliminating bottlenecks and refining its approach to maximize your outcome.
-							</p>
-							<div className="bg-muted/20 rounded-lg h-48 mt-4 flex items-center justify-center">
-								<div className="w-12 h-12 bg-muted rounded"></div>
-							</div>
-						</div>
-
-						{/* Feature Five - Seamless Integration */}
-						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Seamless Integration
-							</h3>
-							<p className="text-muted-foreground text-base leading-relaxed mb-4">
-								Your workforce connects natively to your core systems—CRM, marketing automation, and calendars—acting as a seamless extension of your existing tech stack.
+								Your workforce doesn&apos;t just execute; it improves. It
+								constantly analyzes its own performance, automatically
+								eliminating bottlenecks and refining its approach to maximize
+								your outcome.
 							</p>
 							<div className="bg-muted/20 rounded-lg h-20 flex items-center justify-center">
 								<div className="w-12 h-12 bg-muted rounded-lg"></div>
@@ -460,7 +722,9 @@ export default function Home() {
 								Outcome-Centric Reporting
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Get transparent reporting focused on the business outcomes your workforce delivers and the direct ROI, not on vanity metrics like "tasks completed."
+								Get transparent reporting focused on the business outcomes your
+								workforce delivers and the direct ROI, not on vanity metrics
+								like &quot;tasks completed.&quot;
 							</p>
 						</div>
 					</div>
@@ -483,96 +747,100 @@ export default function Home() {
 							</div>
 							<div
 								className="bg-card-background border border-red-500 rounded-xl p-8 flex-1"
-								style={{ boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)" }}
+								style={{
+									boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)",
+								}}
 							>
 								<h3 className="text-foreground text-xl font-bold mb-6">
 									Rigid Operations
 								</h3>
 								<ul className="space-y-4">
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Locked into fixed costs for headcount and software.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Growth is capped by the linear speed of your team.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Scaling requires slow, expensive hiring projects.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Execution quality is subject to human error and inconsistency.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Pivoting strategy is slow, costly, and risks market momentum.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Budget is spent on tasks, not the final result.
-									</span>
-								</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Locked into fixed costs for headcount and software.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Growth is capped by the linear speed of your team.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Scaling requires slow, expensive hiring projects.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Execution quality is subject to human error and
+											inconsistency.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Pivoting strategy is slow, costly, and risks market
+											momentum.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Budget is spent on tasks, not the final result.
+										</span>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -592,90 +860,92 @@ export default function Home() {
 									Elastic Operations
 								</h3>
 								<ul className="space-y-4">
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Pay for productive output, not for idle time.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Growth is driven by 24/7 autonomous operations.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Scale capacity instantly, on demand, without projects.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Achieve inhuman consistency and precision in every action.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Adapt to market changes instantly with a fluid operational model.
-									</span>
-								</li>
-								<li className="flex items-start">
-									<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
-										<svg fill="currentColor" viewBox="0 0 20 20">
-											<path
-												fillRule="evenodd"
-												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-												clipRule="evenodd"
-											/>
-										</svg>
-									</div>
-									<span className="text-muted-foreground">
-										Budget is spent directly on the revenue-generating outcome.
-									</span>
-								</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Pay for productive output, not for idle time.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Growth is driven by 24/7 autonomous operations.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Scale capacity instantly, on demand, without projects.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Achieve inhuman consistency and precision in every action.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Adapt to market changes instantly with a fluid operational
+											model.
+										</span>
+									</li>
+									<li className="flex items-start">
+										<div className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0">
+											<svg fill="currentColor" viewBox="0 0 20 20">
+												<path
+													fillRule="evenodd"
+													d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+													clipRule="evenodd"
+												/>
+											</svg>
+										</div>
+										<span className="text-muted-foreground">
+											Budget is spent directly on the revenue-generating
+											outcome.
+										</span>
+									</li>
 								</ul>
 							</div>
 						</div>

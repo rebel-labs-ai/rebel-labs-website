@@ -6,7 +6,7 @@ const phrases = [
 	"Delivering Outcomes",
 	"Booking Meetings",
 	"Generating Pipeline",
-	"Increasing Revenue"
+	"Increasing Revenue",
 ]
 
 export function AnimatedText() {
@@ -17,7 +17,7 @@ export function AnimatedText() {
 	useEffect(() => {
 		const currentPhrase = phrases[currentPhraseIndex]
 		const typingSpeed = isDeleting ? 50 : 100
-		
+
 		const timeout = setTimeout(() => {
 			if (!isDeleting) {
 				// Typing
@@ -34,7 +34,7 @@ export function AnimatedText() {
 				} else {
 					// Finished deleting, move to next phrase
 					setIsDeleting(false)
-					setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length)
+					setCurrentPhraseIndex(prev => (prev + 1) % phrases.length)
 				}
 			}
 		}, typingSpeed)

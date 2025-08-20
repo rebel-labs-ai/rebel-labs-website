@@ -104,17 +104,21 @@ export function AnimatedDots() {
 				const fadeStartY = canvas.height * 0.7 // Start fading at 70% from top
 				const fadeEndY = canvas.height * 0.95 // Full fade at 95% from top (very bottom)
 				let fadeAmount = 0
-				
+
 				if (dot.y > fadeStartY) {
-					fadeAmount = Math.min(1, (dot.y - fadeStartY) / (fadeEndY - fadeStartY))
+					fadeAmount = Math.min(
+						1,
+						(dot.y - fadeStartY) / (fadeEndY - fadeStartY)
+					)
 				}
 
 				// Apply pulsing effect with fade to transparent at bottom
 				if (dot.isAnimating) {
 					ctx.fillStyle = animatedColor
 					// Fade to transparent near bottom
-					ctx.globalAlpha = (0.4 + dot.animationProgress * 0.6) * (1 - fadeAmount * 0.8)
-					
+					ctx.globalAlpha =
+						(0.4 + dot.animationProgress * 0.6) * (1 - fadeAmount * 0.8)
+
 					// Draw glow effect for animated dots
 					ctx.shadowBlur = dot.animationProgress * 10 * (1 - fadeAmount * 0.7)
 					ctx.shadowColor = animatedColor

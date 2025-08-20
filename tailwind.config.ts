@@ -88,6 +88,19 @@ export default {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			animation: {
+				"pulse-subtle": "pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+			},
+			keyframes: {
+				"pulse-subtle": {
+					"0%, 100%": {
+						opacity: "1",
+					},
+					"50%": {
+						opacity: "0.8",
+					},
+				},
+			},
 		},
 	},
 	plugins: [],
