@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 interface Step {
 	title: string
@@ -126,15 +127,19 @@ export function ScrollAnimatedSteps() {
 										}`}
 									>
 										{/* Light mode image */}
-										<img
-											src="/step1.png"
+										<Image
+											src="/home/step1.png"
 											alt="Mission & Blueprint"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain block dark:hidden"
 										/>
 										{/* Dark mode image */}
-										<img
-											src="/step1-dark.png"
+										<Image
+											src="/home/step1-dark.png"
 											alt="Mission & Blueprint"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain hidden dark:block"
 										/>
 									</div>
@@ -146,15 +151,19 @@ export function ScrollAnimatedSteps() {
 										}`}
 									>
 										{/* Light mode image */}
-										<img
-											src="/step2.png"
+										<Image
+											src="/home/step2.png"
 											alt="Deployment & Integration"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain block dark:hidden"
 										/>
 										{/* Dark mode image */}
-										<img
-											src="/step2-dark.png"
+										<Image
+											src="/home/step2-dark.png"
 											alt="Deployment & Integration"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain hidden dark:block"
 										/>
 									</div>
@@ -166,15 +175,19 @@ export function ScrollAnimatedSteps() {
 										}`}
 									>
 										{/* Light mode image */}
-										<img
-											src="/step3.png"
+										<Image
+											src="/home/step3.png"
 											alt="Optimization & Reporting"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain block dark:hidden"
 										/>
 										{/* Dark mode image */}
-										<img
-											src="/step3-dark.png"
+										<Image
+											src="/home/step3-dark.png"
 											alt="Optimization & Reporting"
+											width={600}
+											height={400}
 											className="w-full h-full object-contain hidden dark:block"
 										/>
 									</div>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -197,15 +198,19 @@ export default function Home() {
 						<div className="flex justify-center items-center">
 							<div className="max-w-xs w-full">
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/workforce-stack.png"
 									alt="Digital Workforce Stack"
+									width={400}
+									height={300}
 									className="w-full h-auto block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/workforce-stack-dark.png"
 									alt="Digital Workforce Stack"
+									width={400}
+									height={300}
 									className="w-full h-auto hidden dark:block"
 								/>
 							</div>
@@ -356,15 +361,19 @@ export default function Home() {
 						<div className="flex justify-center lg:justify-end">
 							<div className="max-w-4xl w-full mt-16">
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/digital-workforce.png"
 									alt="Digital Workforce Illustration"
+									width={400}
+									height={300}
 									className="w-full h-auto block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/digital-workforce-dark.png"
 									alt="Digital Workforce Illustration"
+									width={400}
+									height={300}
 									className="w-full h-auto hidden dark:block"
 								/>
 							</div>
@@ -401,15 +410,19 @@ export default function Home() {
 									automated follow-up.
 								</p>
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/lead-workforce.png"
 									alt="Inbound Conversion Workflow"
+									width={400}
+									height={320}
 									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/lead-workforce-dark.png"
 									alt="Inbound Conversion Workflow"
+									width={400}
+									height={320}
 									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
@@ -431,15 +444,19 @@ export default function Home() {
 									strategy.
 								</p>
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/content-workforce.png"
 									alt="Content Creation Workflow"
+									width={400}
+									height={320}
 									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/content-workforce-dark.png"
 									alt="Content Creation Workflow"
+									width={400}
+									height={320}
 									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
@@ -696,15 +713,19 @@ export default function Home() {
 							</p>
 							<div className=" rounded-lg h-70 mt-4 overflow-hidden flex items-center justify-center">
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/reasoning.svg"
 									alt="Collaborative Reasoning"
+									width={400}
+									height={300}
 									className="w-full h-auto max-w-full max-h-full object-contain mt-8 block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/reasoning-dark.svg"
 									alt="Collaborative Reasoning"
+									width={400}
+									height={300}
 									className="w-full h-auto max-w-full max-h-full object-contain mt-8 hidden dark:block"
 								/>
 							</div>
@@ -722,15 +743,19 @@ export default function Home() {
 							</p>
 							<div className=" rounded-lg h-20 flex items-center justify-center">
 								{/* Light mode image */}
-								<img
+								<Image
 									src="/home/understand.svg"
 									alt="Understand the Why"
+									width={400}
+									height={80}
 									className="w-full h-auto max-w-full max-h-full object-contain block dark:hidden"
 								/>
 								{/* Dark mode image */}
-								<img
+								<Image
 									src="/home/understand-dark.svg"
 									alt="Understand the Why"
+									width={400}
+									height={80}
 									className="w-full h-auto max-w-full max-h-full object-contain hidden dark:block"
 								/>
 							</div>

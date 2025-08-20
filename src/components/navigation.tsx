@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export function Navigation() {
@@ -8,7 +9,13 @@ export function Navigation() {
 					{/* Navigation Links with Logo */}
 					<div className="backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-accent bg-background/80 dark:bg-card/80 items-center">
 						<div className="flex items-center space-x-2 px-3">
-							<img src="/logo.svg" alt="Novosapien Logo" className="w-6 h-6" />
+							<Image
+								src="/logo.svg"
+								alt="Novosapien Logo"
+								width={24}
+								height={24}
+								className="w-6 h-6"
+							/>
 							<span className="text-lg font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
 								<span className="text-foreground">sapien</span>
