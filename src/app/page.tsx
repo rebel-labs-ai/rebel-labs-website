@@ -1018,9 +1018,9 @@ export default function Home() {
 						</h2>
 
 						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-							Join forward-thinking companies who are achieving measurable results
-							with Digital Workforces. Your transformation starts with a single
-							conversation.
+							Join forward-thinking companies who are achieving measurable
+							results with Digital Workforces. Your transformation starts with a
+							single conversation.
 						</p>
 
 						<div className="flex justify-center">
