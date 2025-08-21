@@ -396,7 +396,7 @@ export default function LeadWorkforcePage() {
 				</div>
 
 				{/* Gradient overlay from bottom - matches problem section background */}
-				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
+				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Part 1.A - The Promise (Hero) */}
 				<section className="pt-32 pb-24 px-4 relative">
@@ -426,7 +426,7 @@ export default function LeadWorkforcePage() {
 			</div>
 
 			{/* Section 1: Part 1.B - The Explanation */}
-			<section className="mx-auto bg-accent/40 relative py-24">
+			<section className="py-32 px-4 bg-accent/40">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Section Header */}
 					<div className="text-center mb-12">
@@ -542,7 +542,7 @@ export default function LeadWorkforcePage() {
 
 
 			{/* Section 3: The Interactive Roster (Your Digital Team) */}
-			<section className="py-24 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+			<section className="py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-5xl mx-auto px-4">
 					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-8">
 						<div className="text-center mb-12">
@@ -747,7 +747,7 @@ export default function LeadWorkforcePage() {
 			</section>
 
 						{/* Section 2: The Diagnosis - The Broken Funnel */}
-			<section className="py-24 px-4 ">
+			<section className="py-32 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
 					<div className="text-center mb-16">
@@ -968,12 +968,12 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 4: The Method - 4-Step Protocol with Sticky Scroll */}
-			<div className="py-24">
+			<div className="pt-32">
 				<MethodSection />
 			</div>
 
 			{/* Section 5: Results & ROI */}
-			<section className="py-24 px-4">
+			<section className="px-4">
 				<div className="max-w-6xl mx-auto">
 					{/* Section Header - Proven Results First */}
 					<div className="text-center mb-12">
@@ -1039,7 +1039,7 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 7: Final CTA */}
-			<section className="py-24 px-4 relative">
+			<section className="py-32 px-4">
 				<div className="max-w-4xl mx-auto">
 					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 						<div className="inline-block mb-6">
