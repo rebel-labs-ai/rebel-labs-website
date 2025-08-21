@@ -427,7 +427,10 @@ export default function Home() {
 									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
-									<a href="#" className="text-muted-foreground font-semibold">
+									<a
+										href="/workforces/lead"
+										className="text-muted-foreground font-semibold hover:text-accent transition-colors"
+									>
 										Explore This Workforce →
 									</a>
 								</div>
@@ -1004,7 +1007,7 @@ export default function Home() {
 			{/* Section 7: Final CTA */}
 			<section className="py-24 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-12 text-center bg-card/80 backdrop-blur-sm border-accent/20">
+					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 						<div className="inline-block mb-6">
 							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
 								Ready to Transform Your Operations?
