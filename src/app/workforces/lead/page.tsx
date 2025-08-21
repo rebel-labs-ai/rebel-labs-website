@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -23,7 +24,6 @@ import {
 	FileText,
 	Globe,
 	ArrowRight,
-	ArrowLeft,
 	ChevronLeft,
 	ChevronRight,
 	Users,
@@ -180,15 +180,19 @@ function MethodSection() {
 											}`}
 										>
 											{/* Light mode image */}
-											<img
+											<Image
 												src={`/workforces/leads/step${index + 1}.svg`}
 												alt={`${step.title} Visualization`}
+												width={400}
+												height={300}
 												className="w-full h-auto max-h-full object-contain dark:hidden"
 											/>
 											{/* Dark mode image */}
-											<img
+											<Image
 												src={`/workforces/leads/step${index + 1}-dark.svg`}
 												alt={`${step.title} Visualization`}
+												width={400}
+												height={300}
 												className="w-full h-auto max-h-full object-contain hidden dark:block"
 											/>
 										</div>
@@ -413,7 +417,8 @@ export default function LeadWorkforcePage() {
 								</h1>
 							</div>
 							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
-								Deploy an autonomous workforce that converts your raw leads into qualified, sales-ready meetings, 24/7.
+								Deploy an autonomous workforce that converts your raw leads into
+								qualified, sales-ready meetings, 24/7.
 							</p>
 							<div className="mt-8 text-center">
 								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">
@@ -430,7 +435,7 @@ export default function LeadWorkforcePage() {
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Section Header */}
 					<div className="text-center mb-12">
-						<h2 
+						<h2
 							className="text-foreground text-4xl font-bold tracking-tight mb-6"
 							style={{
 								textShadow:
@@ -440,7 +445,11 @@ export default function LeadWorkforcePage() {
 							A Self-Managing Team for Your Pipeline.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
-							This is not a chatbot or a simple automation tool. It is a complete, multi-agent system that autonomously manages the entire lead lifecycle—from deep research and strategic outreach to intelligent nurturing and appointment setting—delivering a flawless handoff to your human sales team.
+							This is not a chatbot or a simple automation tool. It is a
+							complete, multi-agent system that autonomously manages the entire
+							lead lifecycle—from deep research and strategic outreach to
+							intelligent nurturing and appointment setting—delivering a
+							flawless handoff to your human sales team.
 						</p>
 					</div>
 
@@ -490,19 +499,25 @@ export default function LeadWorkforcePage() {
 											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
 												<Search className="w-6 h-6 text-muted-foreground dark:text-white" />
 											</div>
-											<span className="text-xs text-foreground dark:text-white">Research</span>
+											<span className="text-xs text-foreground dark:text-white">
+												Research
+											</span>
 										</div>
 										<div className="text-center">
 											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
 												<LineChart className="w-6 h-6 text-muted-foreground dark:text-white" />
 											</div>
-											<span className="text-xs text-foreground dark:text-white">Strategy</span>
+											<span className="text-xs text-foreground dark:text-white">
+												Strategy
+											</span>
 										</div>
 										<div className="text-center">
 											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
 												<Mail className="w-6 h-6 text-muted-foreground dark:text-white" />
 											</div>
-											<span className="text-xs text-foreground dark:text-white ">Outreach</span>
+											<span className="text-xs text-foreground dark:text-white ">
+												Outreach
+											</span>
 										</div>
 									</div>
 								</div>
@@ -539,8 +554,6 @@ export default function LeadWorkforcePage() {
 				</div>
 			</section>
 
-
-
 			{/* Section 3: The Interactive Roster (Your Digital Team) */}
 			<section className="py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-5xl mx-auto px-4">
@@ -566,7 +579,9 @@ export default function LeadWorkforcePage() {
 									<button
 										key={tab.id}
 										onClick={() =>
-											setActiveTab(tab.id as "research" | "strategy" | "outreach")
+											setActiveTab(
+												tab.id as "research" | "strategy" | "outreach"
+											)
 										}
 										className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
 											activeTab === tab.id
@@ -586,9 +601,14 @@ export default function LeadWorkforcePage() {
 								{/* Left Arrow */}
 								<button
 									onClick={() => {
-										const currentIndex = tabs.findIndex(tab => tab.id === activeTab)
-										const prevIndex = currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
-										setActiveTab(tabs[prevIndex].id as "research" | "strategy" | "outreach")
+										const currentIndex = tabs.findIndex(
+											tab => tab.id === activeTab
+										)
+										const prevIndex =
+											currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
+										setActiveTab(
+											tabs[prevIndex].id as "research" | "strategy" | "outreach"
+										)
 									}}
 									className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
 									aria-label="Previous tab"
@@ -617,9 +637,7 @@ export default function LeadWorkforcePage() {
 
 												{/* Centered Icon */}
 												<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
-													<div className="scale-100">
-														{agent.icon}
-													</div>
+													<div className="scale-100">{agent.icon}</div>
 												</div>
 
 												{/* Description */}
@@ -639,9 +657,13 @@ export default function LeadWorkforcePage() {
 								{/* Right Arrow */}
 								<button
 									onClick={() => {
-										const currentIndex = tabs.findIndex(tab => tab.id === activeTab)
+										const currentIndex = tabs.findIndex(
+											tab => tab.id === activeTab
+										)
 										const nextIndex = (currentIndex + 1) % tabs.length
-										setActiveTab(tabs[nextIndex].id as "research" | "strategy" | "outreach")
+										setActiveTab(
+											tabs[nextIndex].id as "research" | "strategy" | "outreach"
+										)
 									}}
 									className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
 									aria-label="Next tab"
@@ -658,95 +680,95 @@ export default function LeadWorkforcePage() {
 									How They Work Together
 								</h3>
 								<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-									Your roster operates as a unified team, with each agent playing
-									a critical role in the lead conversion process. They communicate
-									in real-time, share insights, and coordinate actions to maximize
-									conversion rates.
+									Your roster operates as a unified team, with each agent
+									playing a critical role in the lead conversion process. They
+									communicate in real-time, share insights, and coordinate
+									actions to maximize conversion rates.
 								</p>
 							</div>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-							<div className="text-center">
-								<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="w-8 h-8 text-green-500"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-										/>
-									</svg>
+							<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+								<div className="text-center">
+									<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											strokeWidth={1.5}
+											stroke="currentColor"
+											className="w-8 h-8 text-green-500"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+											/>
+										</svg>
+									</div>
+									<h4 className="text-foreground text-lg font-semibold mb-2">
+										Instant Response
+									</h4>
+									<p className="text-muted-foreground text-sm">
+										Engage leads within 5 minutes of their first interaction,
+										24/7/365
+									</p>
 								</div>
-								<h4 className="text-foreground text-lg font-semibold mb-2">
-									Instant Response
-								</h4>
-								<p className="text-muted-foreground text-sm">
-									Engage leads within 5 minutes of their first interaction,
-									24/7/365
-								</p>
-							</div>
-							<div className="text-center">
-								<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="w-8 h-8 text-green-500"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
-										/>
-									</svg>
+								<div className="text-center">
+									<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											strokeWidth={1.5}
+											stroke="currentColor"
+											className="w-8 h-8 text-green-500"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+											/>
+										</svg>
+									</div>
+									<h4 className="text-foreground text-lg font-semibold mb-2">
+										Smart Prioritization
+									</h4>
+									<p className="text-muted-foreground text-sm">
+										Focus sales efforts on high-intent leads while nurturing
+										others automatically
+									</p>
 								</div>
-								<h4 className="text-foreground text-lg font-semibold mb-2">
-									Smart Prioritization
-								</h4>
-								<p className="text-muted-foreground text-sm">
-									Focus sales efforts on high-intent leads while nurturing
-									others automatically
-								</p>
-							</div>
-							<div className="text-center">
-								<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="w-8 h-8 text-green-500"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
-										/>
-									</svg>
+								<div className="text-center">
+									<div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											strokeWidth={1.5}
+											stroke="currentColor"
+											className="w-8 h-8 text-green-500"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+											/>
+										</svg>
+									</div>
+									<h4 className="text-foreground text-lg font-semibold mb-2">
+										Continuous Improvement
+									</h4>
+									<p className="text-muted-foreground text-sm">
+										Learn from every interaction to optimize conversion
+										strategies over time
+									</p>
 								</div>
-								<h4 className="text-foreground text-lg font-semibold mb-2">
-									Continuous Improvement
-								</h4>
-								<p className="text-muted-foreground text-sm">
-									Learn from every interaction to optimize conversion strategies
-									over time
-								</p>
 							</div>
-						</div>
 						</div>
 					</Card>
 				</div>
 			</section>
 
-						{/* Section 2: The Diagnosis - The Broken Funnel */}
+			{/* Section 2: The Diagnosis - The Broken Funnel */}
 			<section className="py-32 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
@@ -755,7 +777,10 @@ export default function LeadWorkforcePage() {
 							The Four Systemic Failures of Your Inbound Funnel.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
-							The traditional model of human-led follow-up is not just inefficient; it is a complete architectural failure. It breaks down at every critical stage, leaking revenue, wasting investment, and destroying your ability to forecast.
+							The traditional model of human-led follow-up is not just
+							inefficient; it is a complete architectural failure. It breaks
+							down at every critical stage, leaking revenue, wasting investment,
+							and destroying your ability to forecast.
 						</p>
 					</div>
 
@@ -766,9 +791,11 @@ export default function LeadWorkforcePage() {
 							{/* Left Column - Two Cards */}
 							<div className="space-y-24">
 								{/* Top Left - Failure of Speed */}
-								<Card 
+								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
-									onClick={() => setExpandedFailure(expandedFailure === 1 ? null : 1)}
+									onClick={() =>
+										setExpandedFailure(expandedFailure === 1 ? null : 1)
+									}
 								>
 									<div className="flex items-start gap-3">
 										<Clock className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
@@ -778,29 +805,41 @@ export default function LeadWorkforcePage() {
 													1. The Failure of Speed
 												</h3>
 												<span className="text-muted-foreground text-xl">
-													{expandedFailure === 1 ? '−' : '+'}
+													{expandedFailure === 1 ? "−" : "+"}
 												</span>
 											</div>
 											<p className="text-muted-foreground text-sm">
-												Slow follow-up costs you the deal before the conversation even begins.
+												Slow follow-up costs you the deal before the
+												conversation even begins.
 											</p>
 											{expandedFailure === 1 && (
 												<div className="mt-4 pt-4 border-t border-red-500/20">
 													<p className="text-muted-foreground text-sm mb-3">
-														Industry data is unequivocal: the first responder wins the deal. Every hour of delay systematically degrades the value of your marketing investment.
+														Industry data is unequivocal: the first responder
+														wins the deal. Every hour of delay systematically
+														degrades the value of your marketing investment.
 													</p>
 													<ul className="space-y-2 text-sm text-muted-foreground">
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															78% of customers buy from the company that responds first.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															78% of customers buy from the company that
+															responds first.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															A lead is 10x less likely to convert after the first hour.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															A lead is 10x less likely to convert after the
+															first hour.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															Your competitors are already engaged while you're still assigning the lead.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															Your competitors are already engaged while
+															you&apos;re still assigning the lead.
 														</li>
 													</ul>
 												</div>
@@ -810,9 +849,11 @@ export default function LeadWorkforcePage() {
 								</Card>
 
 								{/* Bottom Left - Failure of Scale */}
-								<Card 
+								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
-									onClick={() => setExpandedFailure(expandedFailure === 3 ? null : 3)}
+									onClick={() =>
+										setExpandedFailure(expandedFailure === 3 ? null : 3)
+									}
 								>
 									<div className="flex items-start gap-3">
 										<Users className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
@@ -822,29 +863,42 @@ export default function LeadWorkforcePage() {
 													3. The Failure of Scale
 												</h3>
 												<span className="text-muted-foreground text-xl">
-													{expandedFailure === 3 ? '−' : '+'}
+													{expandedFailure === 3 ? "−" : "+"}
 												</span>
 											</div>
 											<p className="text-muted-foreground text-sm">
-												Your growth is trapped in a linear, expensive cycle of hiring more headcount to handle more leads.
+												Your growth is trapped in a linear, expensive cycle of
+												hiring more headcount to handle more leads.
 											</p>
 											{expandedFailure === 3 && (
 												<div className="mt-4 pt-4 border-t border-red-500/20">
 													<p className="text-muted-foreground text-sm mb-3">
-														Scaling with headcount is the most expensive and least efficient way to grow. It is a model of diminishing returns due to the high costs of hiring, training, and churn.
+														Scaling with headcount is the most expensive and
+														least efficient way to grow. It is a model of
+														diminishing returns due to the high costs of hiring,
+														training, and churn.
 													</p>
 													<ul className="space-y-2 text-sm text-muted-foreground">
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															The average SDR costs $75k-$90k per year, before they book a single meeting.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															The average SDR costs $75k-$90k per year, before
+															they book a single meeting.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															It takes 3-6 months for a new hire to become fully productive.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															It takes 3-6 months for a new hire to become fully
+															productive.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															Annual SDR churn rates often exceed 30%, creating constant instability.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															Annual SDR churn rates often exceed 30%, creating
+															constant instability.
 														</li>
 													</ul>
 												</div>
@@ -858,15 +912,19 @@ export default function LeadWorkforcePage() {
 							<div className="flex justify-center px-4">
 								<div className="relative max-w-xs w-full">
 									{/* Light mode funnel */}
-									<img
+									<Image
 										src="/workforces/leads/funnel.svg"
 										alt="Inbound Funnel Diagram"
+										width={300}
+										height={400}
 										className="w-full h-auto dark:hidden"
 									/>
 									{/* Dark mode funnel */}
-									<img
+									<Image
 										src="/workforces/leads/funnel-dark.svg"
 										alt="Inbound Funnel Diagram"
+										width={300}
+										height={400}
 										className="w-full h-auto hidden dark:block"
 									/>
 								</div>
@@ -875,9 +933,11 @@ export default function LeadWorkforcePage() {
 							{/* Right Column - Two Cards */}
 							<div className="space-y-24">
 								{/* Top Right - Failure of Persistence & Quality */}
-								<Card 
+								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
-									onClick={() => setExpandedFailure(expandedFailure === 2 ? null : 2)}
+									onClick={() =>
+										setExpandedFailure(expandedFailure === 2 ? null : 2)
+									}
 								>
 									<div className="flex items-start gap-3">
 										<AlertCircle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
@@ -887,29 +947,41 @@ export default function LeadWorkforcePage() {
 													2. The Failure of Persistence & Quality
 												</h3>
 												<span className="text-muted-foreground text-xl">
-													{expandedFailure === 2 ? '−' : '+'}
+													{expandedFailure === 2 ? "−" : "+"}
 												</span>
 											</div>
 											<p className="text-muted-foreground text-sm">
-												Inconsistent nurturing and dropped follow-ups allow the majority of your pipeline to go cold.
+												Inconsistent nurturing and dropped follow-ups allow the
+												majority of your pipeline to go cold.
 											</p>
 											{expandedFailure === 2 && (
 												<div className="mt-4 pt-4 border-t border-red-500/20">
 													<p className="text-muted-foreground text-sm mb-3">
-														The average sale requires 8-12 touchpoints, yet the average salesperson gives up after 2. This gap is where the majority of your future revenue is lost.
+														The average sale requires 8-12 touchpoints, yet the
+														average salesperson gives up after 2. This gap is
+														where the majority of your future revenue is lost.
 													</p>
 													<ul className="space-y-2 text-sm text-muted-foreground">
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															80% of sales require five or more follow-ups to close.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															80% of sales require five or more follow-ups to
+															close.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															44% of salespeople give up after one "no."
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															44% of salespeople give up after one
+															&ldquo;no.&rdquo;
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															Inconsistent messaging and context erodes brand trust with every touchpoint.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															Inconsistent messaging and context erodes brand
+															trust with every touchpoint.
 														</li>
 													</ul>
 												</div>
@@ -919,9 +991,11 @@ export default function LeadWorkforcePage() {
 								</Card>
 
 								{/* Bottom Right - Failure of Intelligence */}
-								<Card 
+								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
-									onClick={() => setExpandedFailure(expandedFailure === 4 ? null : 4)}
+									onClick={() =>
+										setExpandedFailure(expandedFailure === 4 ? null : 4)
+									}
 								>
 									<div className="flex items-start gap-3">
 										<TrendingDown className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
@@ -931,29 +1005,42 @@ export default function LeadWorkforcePage() {
 													4. The Failure of Intelligence
 												</h3>
 												<span className="text-muted-foreground text-xl">
-													{expandedFailure === 4 ? '−' : '+'}
+													{expandedFailure === 4 ? "−" : "+"}
 												</span>
 											</div>
 											<p className="text-muted-foreground text-sm">
-												Without systemic learning, your team is forced to rely on guesswork, repeating the same mistakes.
+												Without systemic learning, your team is forced to rely
+												on guesswork, repeating the same mistakes.
 											</p>
 											{expandedFailure === 4 && (
 												<div className="mt-4 pt-4 border-t border-red-500/20">
 													<p className="text-muted-foreground text-sm mb-3">
-														Without a systemic way to learn from every interaction, your team is forced to rely on gut feel and anecdotal evidence, repeating the same mistakes indefinitely.
+														Without a systemic way to learn from every
+														interaction, your team is forced to rely on gut feel
+														and anecdotal evidence, repeating the same mistakes
+														indefinitely.
 													</p>
 													<ul className="space-y-2 text-sm text-muted-foreground">
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															Your best and worst performers are using different playbooks, with no way to codify what works.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															Your best and worst performers are using different
+															playbooks, with no way to codify what works.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															Sales and Marketing are misaligned due to a lack of objective data on lead quality.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															Sales and Marketing are misaligned due to a lack
+															of objective data on lead quality.
 														</li>
 														<li className="flex items-start">
-															<span className="text-muted-foreground mr-2">•</span>
-															High-stakes strategic decisions are being made on the basis of an unreliable pipeline.
+															<span className="text-muted-foreground mr-2">
+																•
+															</span>
+															High-stakes strategic decisions are being made on
+															the basis of an unreliable pipeline.
 														</li>
 													</ul>
 												</div>
@@ -981,57 +1068,68 @@ export default function LeadWorkforcePage() {
 							Proven Results
 						</span>
 						<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
-							Redefine Your Team's ROI
+							Redefine Your Team&apos;s ROI
 						</h2>
 					</div>
 
 					{/* Metrics Grid */}
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">85%</div>
+							<div className="text-4xl font-bold text-muted-foreground mb-2">
+								85%
+							</div>
 							<p className="text-foreground text-sm">
 								Faster Lead Response Time
 							</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">3.5x</div>
+							<div className="text-4xl font-bold text-muted-foreground mb-2">
+								3.5x
+							</div>
 							<p className="text-foreground text-sm">
 								Decrease in Human Wasted Time
 							</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">99.9%</div>
-							<p className="text-foreground text-sm">
-								Leads Contacted
-							</p>
+							<div className="text-4xl font-bold text-muted-foreground mb-2">
+								99.9%
+							</div>
+							<p className="text-foreground text-sm">Leads Contacted</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">24/7</div>
-							<p className="text-foreground text-sm">
-								Always-On Operations
-							</p>
+							<div className="text-4xl font-bold text-muted-foreground mb-2">
+								24/7
+							</div>
+							<p className="text-foreground text-sm">Always-On Operations</p>
 						</Card>
 					</div>
 
 					{/* Subtitle */}
 					<div className="text-center mb-16">
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-						The old model measures your team on effort and activity. The new model measures them on results. By systemically eliminating the manual process, we transform your sales operation from a high-cost activity center into a high-leverage growth engine.
+							The old model measures your team on effort and activity. The new
+							model measures them on results. By systemically eliminating the
+							manual process, we transform your sales operation from a high-cost
+							activity center into a high-leverage growth engine.
 						</p>
 					</div>
 
 					{/* Before/After Comparison */}
 					<div className="flex justify-center">
 						{/* Light mode image */}
-						<img
+						<Image
 							src="/workforces/leads/before-after.svg"
 							alt="Before and After Comparison"
+							width={1200}
+							height={600}
 							className="w-full max-w-6xl h-auto dark:hidden"
 						/>
 						{/* Dark mode image */}
-						<img
+						<Image
 							src="/workforces/leads/before-after-dark.svg"
 							alt="Before and After Comparison"
+							width={1200}
+							height={600}
 							className="w-full max-w-6xl h-auto hidden dark:block"
 						/>
 					</div>
