@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function Navigation() {
@@ -22,30 +23,38 @@ export function Navigation() {
 							</span>
 						</div>
 						<div className="w-px h-6 bg-border mx-2"></div>
-						<Button
-							variant="outline"
-							className="rounded-md px-4 py-1.5 bg-white/70 dark:bg-accent/10 text-foreground dark:text-white border border-accent dark:border-accent/30 hover:bg-accent/30 dark:hover:bg-accent/20 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
-						>
-							Home
-						</Button>
-						<Button
-							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
-						>
-							Mission
-						</Button>
-						<Button
-							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
-						>
-							Workforces
-						</Button>
-						<Button
-							variant="ghost"
-							className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
-						>
-							Speak to us
-						</Button>
+						<Link href="/">
+							<Button
+								variant="outline"
+								className="rounded-md px-4 py-1.5 bg-white/70 dark:bg-accent/10 text-foreground dark:text-white border border-accent dark:border-accent/30 hover:bg-accent/30 dark:hover:bg-accent/20 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
+							>
+								Home
+							</Button>
+						</Link>
+						<Link href="/#mission">
+							<Button
+								variant="ghost"
+								className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
+							>
+								Mission
+							</Button>
+						</Link>
+						<Link href="/workforces/lead">
+							<Button
+								variant="ghost"
+								className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
+							>
+								Workforces
+							</Button>
+						</Link>
+						<Link href="/#contact">
+							<Button
+								variant="ghost"
+								className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
+							>
+								Speak to us
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>
