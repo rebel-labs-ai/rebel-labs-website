@@ -32,7 +32,7 @@ export function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="#"
+									href="/workforces/lead"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Lead Workforce
@@ -40,7 +40,7 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/workforces/content"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Content Workforce
@@ -48,7 +48,7 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/workforces/custom"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Custom Solutions

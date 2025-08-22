@@ -407,8 +407,8 @@ export default function LeadWorkforcePage() {
 					<div className="max-w-5xl mx-auto relative z-10 mt-36">
 						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
 							<div className="text-center mb-8">
-								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm uppercase tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
-									Inbound Conversion Workforce
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+									Inbound Sales Workforce
 								</span>
 							</div>
 							<div className="text-center">
@@ -1075,7 +1075,7 @@ export default function LeadWorkforcePage() {
 					{/* Metrics Grid */}
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">
+							<div className="text-4xl font-bold text-foreground mb-2">
 								85%
 							</div>
 							<p className="text-foreground text-sm">
@@ -1083,7 +1083,7 @@ export default function LeadWorkforcePage() {
 							</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">
+							<div className="text-4xl font-bold text-foreground mb-2">
 								3.5x
 							</div>
 							<p className="text-foreground text-sm">
@@ -1091,13 +1091,13 @@ export default function LeadWorkforcePage() {
 							</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">
+							<div className="text-4xl font-bold text-foreground mb-2">
 								99.9%
 							</div>
 							<p className="text-foreground text-sm">Leads Contacted</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-muted-foreground mb-2">
+							<div className="text-4xl font-bold text-foreground mb-2">
 								24/7
 							</div>
 							<p className="text-foreground text-sm">Always-On Operations</p>
