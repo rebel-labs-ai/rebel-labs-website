@@ -63,7 +63,7 @@ export function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="#"
+									href="/about"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									About Us
@@ -71,7 +71,7 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/mission"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Mission
@@ -79,7 +79,7 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/careers"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Careers
@@ -87,7 +87,7 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/contact"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Contact
@@ -102,7 +102,7 @@ export function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="#"
+									href="/blog"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Blog
@@ -120,19 +120,19 @@ export function Footer() {
 						</p>
 						<div className="flex space-x-6">
 							<a
-								href="#"
+								href="/privacy"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Privacy Policy
 							</a>
 							<a
-								href="#"
+								href="/terms"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Terms of Service
 							</a>
 							<a
-								href="#"
+								href="/cookies"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Cookie Policy

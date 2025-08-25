@@ -34,7 +34,7 @@ export function Navigation() {
 								Home
 							</Button>
 						</Link>
-						<Link href="/#mission">
+						<Link href="/mission">
 							<Button
 								variant="ghost"
 								className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
@@ -77,7 +77,7 @@ export function Navigation() {
 								</div>
 							</div>
 						</div>
-						<Link href="/#contact">
+						<Link href="/contact">
 							<Button
 								variant="ghost"
 								className="rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
