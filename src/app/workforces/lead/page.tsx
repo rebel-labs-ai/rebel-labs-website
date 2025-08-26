@@ -421,9 +421,15 @@ export default function LeadWorkforcePage() {
 								qualified, sales-ready meetings, 24/7.
 							</p>
 							<div className="mt-8 text-center">
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">
-									See It In Action
-								</Button>
+								<a
+									href="https://demo.novosapien.ai"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">
+										See It In Action
+									</Button>
+								</a>
 							</div>
 						</Card>
 					</div>
@@ -1158,7 +1164,7 @@ export default function LeadWorkforcePage() {
 							within days.
 						</p>
 
-						<div className="flex justify-center gap-4">
+						<div className="flex justify-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
@@ -1166,15 +1172,6 @@ export default function LeadWorkforcePage() {
 							>
 								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 									Deploy This Workforce
-								</Button>
-							</a>
-							<a
-								href="https://cal.com/george-westbrook-novosapien/30min"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/30 hover:dark:bg-accent/30">
-									Schedule a Demo
 								</Button>
 							</a>
 						</div>
