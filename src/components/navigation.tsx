@@ -10,7 +10,7 @@ export function Navigation() {
 	const pathname = usePathname()
 
 	const isActive = (path: string) => pathname === path
-	const isWorkforceActive = () => pathname.startsWith("/workforces")
+	const isWorkforceActive = () => pathname?.startsWith("/workforces")
 
 	const getButtonVariant = (path: string) => {
 		if (path === "/workforces") {
