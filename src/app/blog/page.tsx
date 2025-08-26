@@ -7,7 +7,6 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight, User, Tag } from "lucide-react"
-import Image from "next/image"
 
 // Sample blog posts data
 const blogPosts = [

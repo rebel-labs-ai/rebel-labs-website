@@ -21,8 +21,7 @@ export function Footer() {
 							</span>
 						</div>
 						<p className="text-sm text-muted-foreground">
-							Building the future of work with intelligent Digital Workforces
-							that deliver measurable business outcomes.
+							Building the Digital Workforce to power the future of work.
 						</p>
 					</div>
 
@@ -51,7 +50,7 @@ export function Footer() {
 									href="/workforces/custom"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Custom Solutions
+									Custom Workforces
 								</a>
 							</li>
 						</ul>
@@ -61,14 +60,6 @@ export function Footer() {
 					<div>
 						<h3 className="font-semibold text-foreground mb-4">Company</h3>
 						<ul className="space-y-2">
-							<li>
-								<a
-									href="/about"
-									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-								>
-									About Us
-								</a>
-							</li>
 							<li>
 								<a
 									href="/mission"

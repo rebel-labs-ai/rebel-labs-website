@@ -2,14 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
-import {
-	ChevronDown,
-	Sparkles,
-	Zap,
-	Brain,
-	Rocket,
-	Target,
-} from "lucide-react"
+import { ChevronDown, Sparkles, Rocket } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -215,13 +208,13 @@ export default function MissionPage() {
 											<p className="text-lg text-muted-foreground">
 												For the last two decades, &quot;Software as a
 												Service&quot; has sold you a simple promise: a better
-												tool. A better CRM, a better spreadsheet, a better
-												email client.
+												tool. A better CRM, a better spreadsheet, a better email
+												client.
 											</p>
 											<p className="text-lg text-muted-foreground">
 												They gave your team better hammers and better shovels.
-												But your team was still in the ditch, digging. The
-												work itself didn&apos;t change. The human remained the
+												But your team was still in the ditch, digging. The work
+												itself didn&apos;t change. The human remained the
 												bottleneck.
 											</p>
 											<p className="text-lg font-semibold text-foreground border-l-4 border-accent pl-4 mt-6">
@@ -284,9 +277,9 @@ export default function MissionPage() {
 										<div className="space-y-4">
 											<p className="text-lg text-muted-foreground">
 												First, the old guard of SaaS began to sprinkle AI onto
-												their broken models. &quot;AI-powered&quot; features
-												and &quot;smarter&quot; suggestions were bolted onto
-												the same underlying tools.
+												their broken models. &quot;AI-powered&quot; features and
+												&quot;smarter&quot; suggestions were bolted onto the
+												same underlying tools.
 											</p>
 											<p className="text-lg text-muted-foreground">
 												The fundamental paradigm never changed. Your team was
@@ -329,16 +322,15 @@ export default function MissionPage() {
 											</p>
 											<p className="text-lg text-muted-foreground">
 												But this promise comes with a hidden cost. Their value
-												is not inherent in the tool; it is entirely dependent
-												on the skill of the user. The quality of the output is
-												a direct reflection of the quality of the input.
+												is not inherent in the tool; it is entirely dependent on
+												the skill of the user. The quality of the output is a
+												direct reflection of the quality of the input.
 											</p>
 											<p className="text-lg text-muted-foreground">
-												Your team&apos;s ability to extract value is now
-												capped by their ability to write the perfect prompt.
-												The human is still the strategic bottleneck, now
-												burdened with the new, specialized task of
-												&quot;prompt engineer.&quot;
+												Your team&apos;s ability to extract value is now capped
+												by their ability to write the perfect prompt. The human
+												is still the strategic bottleneck, now burdened with the
+												new, specialized task of &quot;prompt engineer.&quot;
 											</p>
 											<p className="mt-8 border-l-4 border-accent pl-4 text-xl font-bold text-foreground">
 												It is a tool of infinite potential, but a tool
@@ -386,8 +378,8 @@ export default function MissionPage() {
 											We Don&apos;t Sell Tools. We Deliver Outcomes.
 										</h2>
 										<p className="text-xl text-muted-foreground">
-											The world doesn&apos;t need another application to manage or
-											another prompt to write. It needs the job to be done.
+											The world doesn&apos;t need another application to manage
+											or another prompt to write. It needs the job to be done.
 										</p>
 									</div>
 
@@ -435,11 +427,10 @@ export default function MissionPage() {
 											We Build Digital Workforces.
 										</h3>
 										<p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-											A complete, self-managing digital
-											team. It is composed of specialized AI agents,
-											researchers, strategists, and executioners, that work
-											together as a single, cohesive unit to own a business
-											outcome from end to end.
+											A complete, self-managing digital team. It is composed of
+											specialized AI agents, researchers, strategists, and
+											executioners, that work together as a single, cohesive
+											unit to own a business outcome from end to end.
 										</p>
 									</div>
 								</div>
@@ -519,24 +510,28 @@ export default function MissionPage() {
 							</div>
 
 							<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
-							Stop Managing Tools.
-							<br />
-							<span className="text-accent">Start Commanding Outcomes.</span>
+								Stop Managing Tools.
+								<br />
+								<span className="text-accent">Start Commanding Outcomes.</span>
 							</h2>
 
 							<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-								Join the revolution of elastic operations. Experience how digital 
-								workforces transform your business or be part of building this future.
+								Join the revolution of elastic operations. Experience how
+								digital workforces transform your business or be part of
+								building this future.
 							</p>
 
 							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<Link href="/speak">
+								<Link href="/contact">
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 										Book a Demo
 									</Button>
 								</Link>
 								<Link href="/careers">
-									<Button variant="outline" className="border-accent/50 hover:bg-accent/10 hover:border-accent transition-all duration-200">
+									<Button
+										variant="outline"
+										className="border-accent/50 hover:bg-accent/10 hover:border-accent transition-all duration-200"
+									>
 										Join Our Team
 									</Button>
 								</Link>
@@ -551,37 +546,42 @@ export default function MissionPage() {
 	)
 }
 
-
 function HubSpokeGraphic() {
 	const spokes = [
 		{
 			title: "Elastic Operations",
-			description: "A new state where your execution capacity is no longer a fixed asset, but a fluid resource you summon on demand.",
+			description:
+				"A new state where your execution capacity is no longer a fixed asset, but a fluid resource you summon on demand.",
 			angle: 0,
 		},
 		{
 			title: "End Fixed Costs",
-			description: "Escape the prison of rigid headcount and software seats. Pay only for the productive output that is delivered.",
+			description:
+				"Escape the prison of rigid headcount and software seats. Pay only for the productive output that is delivered.",
 			angle: 60,
 		},
 		{
 			title: "Infinite Scalability",
-			description: "Instantly scale from one to a thousand agents to meet any market demand without the delays of hiring.",
+			description:
+				"Instantly scale from one to a thousand agents to meet any market demand without the delays of hiring.",
 			angle: 120,
 		},
 		{
 			title: "Liberate Your Talent",
-			description: "Free your best people from repetitive execution to focus exclusively on high-value strategy, creativity, and growth.",
+			description:
+				"Free your best people from repetitive execution to focus exclusively on high-value strategy, creativity, and growth.",
 			angle: 180,
 		},
 		{
 			title: "Eliminate All Waste",
-			description: "Create a business perfectly synchronized with reality, where you never pay for idle time or unused capacity.",
+			description:
+				"Create a business perfectly synchronized with reality, where you never pay for idle time or unused capacity.",
 			angle: 240,
 		},
 		{
 			title: "Invest Directly in Outcomes",
-			description: "Shift your budget from paying for effort and capacity to investing directly in the business results that matter.",
+			description:
+				"Shift your budget from paying for effort and capacity to investing directly in the business results that matter.",
 			angle: 300,
 		},
 	]

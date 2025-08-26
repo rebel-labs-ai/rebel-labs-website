@@ -63,7 +63,7 @@ export default function CareersPage() {
 							Join Our Team
 						</h1>
 						<p className="text-muted-foreground text-lg">
-							We're building the future of work with autonomous digital
+							We&apos;re building the future of work with autonomous digital
 							workforces. Join us on this journey.
 						</p>
 					</div>
