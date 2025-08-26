@@ -78,7 +78,9 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="/contact"
+									href="https://cal.com/george-westbrook-novosapien/30min"
+									target="_blank"
+									rel="noopener noreferrer"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Contact

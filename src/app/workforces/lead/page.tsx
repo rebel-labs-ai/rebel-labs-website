@@ -1159,12 +1159,24 @@ export default function LeadWorkforcePage() {
 						</p>
 
 						<div className="flex justify-center gap-4">
-							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
-								Deploy This Workforce
-							</Button>
-							<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/30 hover:dark:bg-accent/30">
-								Schedule a Demo
-							</Button>
+							<a
+								href="https://cal.com/george-westbrook-novosapien/30min"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+									Deploy This Workforce
+								</Button>
+							</a>
+							<a
+								href="https://cal.com/george-westbrook-novosapien/30min"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/30 hover:dark:bg-accent/30">
+									Schedule a Demo
+								</Button>
+							</a>
 						</div>
 					</Card>
 				</div>

@@ -1,31 +1,19 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { ThemeToggle } from "@/components/theme-toggle"
+"use client"
+
+import { useEffect } from "react"
 
 export default function ContactPage() {
+	useEffect(() => {
+		// Redirect to Cal.com booking page
+		window.location.href = "https://cal.com/george-westbrook-novosapien/30min"
+	}, [])
+
+	// Show a brief loading state while redirecting
 	return (
-		<div className="min-h-screen bg-background">
-			{/* Navigation */}
-			<Navigation />
-
-			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
-				<ThemeToggle />
+		<div className="min-h-screen bg-background flex items-center justify-center">
+			<div className="text-center">
+				<p className="text-muted-foreground">Redirecting to booking page...</p>
 			</div>
-
-			{/* Main Content */}
-			<main className="flex-1">
-				<div className="container mx-auto px-4 py-32">
-					<div className="flex items-center justify-center min-h-[60vh]">
-						<h1 className="text-foreground text-4xl md:text-6xl font-light tracking-tight font-geist-sans text-center">
-							Contact
-						</h1>
-					</div>
-				</div>
-			</main>
-
-			{/* Footer */}
-			<Footer />
 		</div>
 	)
 }

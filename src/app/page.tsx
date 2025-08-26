@@ -1027,9 +1027,15 @@ export default function Home() {
 						</p>
 
 						<div className="flex justify-center">
-							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
-								Book a Demo
-							</Button>
+							<a
+								href="https://cal.com/george-westbrook-novosapien/30min"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+									Book a Demo
+								</Button>
+							</a>
 						</div>
 					</Card>
 				</div>

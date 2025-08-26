@@ -100,14 +100,18 @@ export function Navigation() {
 								Mission
 							</Button>
 						</Link>
-						<Link href="/contact">
+						<a
+							href="https://cal.com/george-westbrook-novosapien/30min"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<Button
-								variant={getButtonVariant("/contact")}
+								variant="ghost"
 								className={getButtonClassName("/contact")}
 							>
 								Speak to us
 							</Button>
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>

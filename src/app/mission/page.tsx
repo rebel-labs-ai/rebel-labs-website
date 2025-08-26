@@ -522,11 +522,15 @@ export default function MissionPage() {
 							</p>
 
 							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<Link href="/contact">
+								<a
+									href="https://cal.com/george-westbrook-novosapien/30min"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 										Book a Demo
 									</Button>
-								</Link>
+								</a>
 								<Link href="/careers">
 									<Button
 										variant="outline"
