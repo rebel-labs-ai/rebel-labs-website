@@ -1075,9 +1075,7 @@ export default function LeadWorkforcePage() {
 					{/* Metrics Grid */}
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
 						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-foreground mb-2">
-								85%
-							</div>
+							<div className="text-4xl font-bold text-foreground mb-2">85%</div>
 							<p className="text-foreground text-sm">
 								Faster Lead Response Time
 							</p>

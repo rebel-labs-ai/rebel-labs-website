@@ -7,7 +7,7 @@ export default function TermsPage() {
 		<>
 			<Navigation />
 			<ThemeToggle />
-			
+
 			<main className="min-h-screen bg-background">
 				{/* Content area with proper spacing for fixed navigation */}
 				<div className="pt-24 pb-16 flex items-center justify-center">

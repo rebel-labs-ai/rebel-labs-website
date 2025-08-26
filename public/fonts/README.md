@@ -3,6 +3,7 @@
 To complete the Satoshi font implementation, you need to download the Satoshi font files and place them in this directory.
 
 ## Required Files:
+
 - Satoshi-Light.woff2
 - Satoshi-Regular.woff2
 - Satoshi-Medium.woff2
@@ -10,6 +11,7 @@ To complete the Satoshi font implementation, you need to download the Satoshi fo
 - Satoshi-Black.woff2
 
 ## Download Link:
+
 You can download the Satoshi font from:
 https://www.fontshare.com/fonts/satoshi
 

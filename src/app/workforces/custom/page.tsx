@@ -46,7 +46,8 @@ export default function CustomWorkforcePage() {
 									</h1>
 								</div>
 								<p className="text-muted-foreground text-lg mt-6 leading-relaxed text-center">
-									Tailored autonomous workforces designed specifically for your unique business requirements and processes.
+									Tailored autonomous workforces designed specifically for your
+									unique business requirements and processes.
 								</p>
 								<div className="mt-8 text-center">
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">

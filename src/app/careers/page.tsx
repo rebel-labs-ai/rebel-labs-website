@@ -21,7 +21,9 @@ export default function CareersPage() {
 	})
 	const [cvFileName, setCvFileName] = useState("")
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleInputChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		const { name, value } = e.target
 		setFormData(prev => ({
 			...prev,
@@ -61,7 +63,8 @@ export default function CareersPage() {
 							Join Our Team
 						</h1>
 						<p className="text-muted-foreground text-lg">
-							We're building the future of work with autonomous digital workforces. Join us on this journey.
+							We're building the future of work with autonomous digital
+							workforces. Join us on this journey.
 						</p>
 					</div>
 
@@ -70,7 +73,10 @@ export default function CareersPage() {
 						<form onSubmit={handleSubmit} className="space-y-6">
 							{/* Name Field - Required */}
 							<div>
-								<label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+								<label
+									htmlFor="name"
+									className="block text-sm font-medium text-foreground mb-2"
+								>
 									Name <span className="text-red-500">*</span>
 								</label>
 								<div className="relative">
@@ -90,7 +96,10 @@ export default function CareersPage() {
 
 							{/* Email Field */}
 							<div>
-								<label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+								<label
+									htmlFor="email"
+									className="block text-sm font-medium text-foreground mb-2"
+								>
 									Email
 								</label>
 								<div className="relative">
@@ -109,7 +118,10 @@ export default function CareersPage() {
 
 							{/* Phone Field */}
 							<div>
-								<label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+								<label
+									htmlFor="phone"
+									className="block text-sm font-medium text-foreground mb-2"
+								>
 									Phone
 								</label>
 								<div className="relative">
@@ -128,11 +140,16 @@ export default function CareersPage() {
 
 							{/* Social Profiles */}
 							<div className="space-y-4">
-								<h3 className="text-sm font-medium text-foreground">Social Profiles</h3>
-								
+								<h3 className="text-sm font-medium text-foreground">
+									Social Profiles
+								</h3>
+
 								{/* X (Twitter) Profile */}
 								<div>
-									<label htmlFor="xProfile" className="block text-sm font-medium text-muted-foreground mb-2">
+									<label
+										htmlFor="xProfile"
+										className="block text-sm font-medium text-muted-foreground mb-2"
+									>
 										X (Twitter) Profile
 									</label>
 									<div className="relative">
@@ -151,7 +168,10 @@ export default function CareersPage() {
 
 								{/* GitHub Profile */}
 								<div>
-									<label htmlFor="github" className="block text-sm font-medium text-muted-foreground mb-2">
+									<label
+										htmlFor="github"
+										className="block text-sm font-medium text-muted-foreground mb-2"
+									>
 										GitHub Profile
 									</label>
 									<div className="relative">
@@ -170,7 +190,10 @@ export default function CareersPage() {
 
 								{/* LinkedIn Profile */}
 								<div>
-									<label htmlFor="linkedin" className="block text-sm font-medium text-muted-foreground mb-2">
+									<label
+										htmlFor="linkedin"
+										className="block text-sm font-medium text-muted-foreground mb-2"
+									>
 										LinkedIn Profile
 									</label>
 									<div className="relative">
@@ -190,7 +213,10 @@ export default function CareersPage() {
 
 							{/* CV Upload */}
 							<div>
-								<label htmlFor="cv" className="block text-sm font-medium text-foreground mb-2">
+								<label
+									htmlFor="cv"
+									className="block text-sm font-medium text-foreground mb-2"
+								>
 									Upload CV/Resume
 								</label>
 								<div className="relative">
@@ -224,7 +250,10 @@ export default function CareersPage() {
 
 							{/* Message Field - Required */}
 							<div>
-								<label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+								<label
+									htmlFor="message"
+									className="block text-sm font-medium text-foreground mb-2"
+								>
 									Tell us about yourself <span className="text-red-500">*</span>
 								</label>
 								<textarea

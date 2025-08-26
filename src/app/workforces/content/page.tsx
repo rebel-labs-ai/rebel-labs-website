@@ -47,7 +47,8 @@ export default function ContentWorkforcePage() {
 										</h1>
 									</div>
 									<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center">
-										Deploy an autonomous workforce that creates, manages, and optimizes your content pipeline.
+										Deploy an autonomous workforce that creates, manages, and
+										optimizes your content pipeline.
 									</p>
 									<div className="mt-8 text-center">
 										<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">

@@ -45,79 +45,80 @@ It's a future where you are no longer paying for capacity. You are investing dir
 
 Mission Page: Definitive Functional Blueprint
 Concept: A "Digital Scrollytelling" experience.
+
 1. Global Mechanics
-Navbar: The standard site navbar is to remain fixed at the top of the viewport throughout the entire scroll experience.
-Layout Grid: The page content area is a two-column grid:
-Text Column (Left 60%): This column contains all text and scrolls vertically as the user scrolls.
-Visual Stage (Right 40%): This column is fixed ("sticky"). Its content does not scroll but transforms based on which section of the Text Column is currently in view.
+   Navbar: The standard site navbar is to remain fixed at the top of the viewport throughout the entire scroll experience.
+   Layout Grid: The page content area is a two-column grid:
+   Text Column (Left 60%): This column contains all text and scrolls vertically as the user scrolls.
+   Visual Stage (Right 40%): This column is fixed ("sticky"). Its content does not scroll but transforms based on which section of the Text Column is currently in view.
 2. Section 0: The Initial Viewport
-Objective: To present the core thesis and belief.
-Layout: Full-screen, minimalist.
-Content & Animation:
-On page load, the H1 fades into view, centered:
-The Future of Productive Work is Not Another, Better Tool.
-After the H1 is visible, the H2 fades in below it:
-It is a new means of production, where autonomous workforces deliver outcomes, not just assist with tasks.
-A Scroll Affordance (e.g., animated chevrons) with the text Unpack the Old World is present at the bottom of the viewport.
+   Objective: To present the core thesis and belief.
+   Layout: Full-screen, minimalist.
+   Content & Animation:
+   On page load, the H1 fades into view, centered:
+   The Future of Productive Work is Not Another, Better Tool.
+   After the H1 is visible, the H2 fades in below it:
+   It is a new means of production, where autonomous workforces deliver outcomes, not just assist with tasks.
+   A Scroll Affordance (e.g., animated chevrons) with the text Unpack the Old World is present at the bottom of the viewport.
 3. Act I: Deconstructing the Old World
-Objective: To demonstrate the inefficiency of the current model.
-Trigger: User's first scroll action. The content of Section 0 fades out.
-Text Column Content & Animation (Staggered Fade-In):
-H2: The Old World is Broken.
-P1: For the last two decades, "Software as a Service" has sold you a simple promise: a better tool...
-P2: They gave your team better hammers and better shovels. But your team was still in the ditch, digging...
-P3: This era is over.
-Visual Stage Graphic & Animation:
-Placeholder Name: [GRAPHIC PLACEHOLDER: 01_Assembly_Line]
-Functional Description: An animation of a conveyor belt. As the text scrolls, the visual builds sequentially:
-The belt appears.
-Blocks appear on the belt, each featuring a logo of a common business tool (e.g., Salesforce, Excel).
-A stick-figure icon appears, positioned as if trapped on the belt, repetitively interacting with the blocks. The animation must be a slow, monotonous, endless loop.
+   Objective: To demonstrate the inefficiency of the current model.
+   Trigger: User's first scroll action. The content of Section 0 fades out.
+   Text Column Content & Animation (Staggered Fade-In):
+   H2: The Old World is Broken.
+   P1: For the last two decades, "Software as a Service" has sold you a simple promise: a better tool...
+   P2: They gave your team better hammers and better shovels. But your team was still in the ditch, digging...
+   P3: This era is over.
+   Visual Stage Graphic & Animation:
+   Placeholder Name: [GRAPHIC PLACEHOLDER: 01_Assembly_Line]
+   Functional Description: An animation of a conveyor belt. As the text scrolls, the visual builds sequentially:
+   The belt appears.
+   Blocks appear on the belt, each featuring a logo of a common business tool (e.g., Salesforce, Excel).
+   A stick-figure icon appears, positioned as if trapped on the belt, repetitively interacting with the blocks. The animation must be a slow, monotonous, endless loop.
 4. Act II: Exposing the False Dawn
-Objective: To expose the "AI Co-pilot" trend as a minor iteration, not a revolution.
-Trigger: User scrolls past the Act I text. The Act I text fades out.
-Text Column Content & Animation (Staggered Fade-In):
-H2: The False Dawn.
-P1: Now, a new promise is being made: the "AI Agent" or the "AI Employee."...
-P2: This is a false dawn... It's a smarter shovel.
-P3: An AI employee is a commodity. It still requires a human manager...
-P4: It is a smarter tool, but it is a tool nonetheless.
-Visual Stage Graphic & Animation:
-Placeholder Name: [GRAPHIC PLACEHOLDER: 02_Smarter_Shovel]
-Functional Description: The 01_Assembly_Line graphic persists. As the Act II text appears, the graphic is modified:
-An "AI" chip icon is added to the stick figure.
-The stick figure's animation speed increases.
-The underlying system (the belt, the blocks, the linear process) must remain visually identical to its state in Act I.
+   Objective: To expose the "AI Co-pilot" trend as a minor iteration, not a revolution.
+   Trigger: User scrolls past the Act I text. The Act I text fades out.
+   Text Column Content & Animation (Staggered Fade-In):
+   H2: The False Dawn.
+   P1: Now, a new promise is being made: the "AI Agent" or the "AI Employee."...
+   P2: This is a false dawn... It's a smarter shovel.
+   P3: An AI employee is a commodity. It still requires a human manager...
+   P4: It is a smarter tool, but it is a tool nonetheless.
+   Visual Stage Graphic & Animation:
+   Placeholder Name: [GRAPHIC PLACEHOLDER: 02_Smarter_Shovel]
+   Functional Description: The 01_Assembly_Line graphic persists. As the Act II text appears, the graphic is modified:
+   An "AI" chip icon is added to the stick figure.
+   The stick figure's animation speed increases.
+   The underlying system (the belt, the blocks, the linear process) must remain visually identical to its state in Act I.
 5. Act III: Revealing Our Unbreakable Principle
-Objective: To introduce our singular focus on "outcomes."
-Trigger: User scrolls past the Act II text. The Act II text fades out.
-Text Column Content & Animation (Staggered Fade-In):
-H2: We Don't Sell Tools. We Deliver Outcomes.
-P1: This is the non-negotiable principle upon which Novosapien is founded...
-Bulleted List: (The outcome-focused text must be visually emphasized.)
-We don't sell a "smarter email assistant." We deliver a **booked sales meeting.**
-(etc.)
-P2: This is why we don't build AI Agents. We build **Digital Workforces.**
-P3: An AI Agent is a single employee. A Novosapien Digital Workforce is an entire, high-performance team...
-Visual Stage Graphic & Animation:
-Placeholder Name: [GRAPHIC PLACEHOLDER: 03_Paradigm_Shatter]
-Functional Description: A transition animation:
-The entire 02_Smarter_Shovel visual shatters into particles.
-The particles animate, coalescing into a single, distinct orb.
-The orb must be labeled Outcome.
+   Objective: To introduce our singular focus on "outcomes."
+   Trigger: User scrolls past the Act II text. The Act II text fades out.
+   Text Column Content & Animation (Staggered Fade-In):
+   H2: We Don't Sell Tools. We Deliver Outcomes.
+   P1: This is the non-negotiable principle upon which Novosapien is founded...
+   Bulleted List: (The outcome-focused text must be visually emphasized.)
+   We don't sell a "smarter email assistant." We deliver a **booked sales meeting.**
+   (etc.)
+   P2: This is why we don't build AI Agents. We build **Digital Workforces.**
+   P3: An AI Agent is a single employee. A Novosapien Digital Workforce is an entire, high-performance team...
+   Visual Stage Graphic & Animation:
+   Placeholder Name: [GRAPHIC PLACEHOLDER: 03_Paradigm_Shatter]
+   Functional Description: A transition animation:
+   The entire 02_Smarter_Shovel visual shatters into particles.
+   The particles animate, coalescing into a single, distinct orb.
+   The orb must be labeled Outcome.
 6. Act IV: The Promised Land
-Objective: To visualize the concept of Elastic Operations.
-Trigger: User scrolls past the Act III text. The Act III text fades out.
-Text Column Content & Animation (Staggered Fade-In):
-H2: The Promised Land: Elastic Operations.
-P1: The enemy of your ambition has always been the fixed cost of capacity...
-P2: We deliver **elastic operations.** This is a new state where your operational capacity is no longer a fixed asset...
-P3: It's the power to deploy a thousand-agent workforce...
-P4: This is a business that is perfectly synchronized with reality...
-P5: It's a future where you are no longer paying for capacity. You are investing directly in **outcomes.**
-Visual Stage Graphic & Animation:
-Placeholder Name: [GRAPH-PLACEHOLDER: 04_Elastic_System]
-Functional Description: The final state animation:
-The Outcome orb from Act III remains at the center.
-An unpredictable line graph labeled Demand animates across the background.
-The orb's outer boundary must dynamically animate, expanding and contracting in real-time to perfectly mirror the Demand line.
+   Objective: To visualize the concept of Elastic Operations.
+   Trigger: User scrolls past the Act III text. The Act III text fades out.
+   Text Column Content & Animation (Staggered Fade-In):
+   H2: The Promised Land: Elastic Operations.
+   P1: The enemy of your ambition has always been the fixed cost of capacity...
+   P2: We deliver **elastic operations.** This is a new state where your operational capacity is no longer a fixed asset...
+   P3: It's the power to deploy a thousand-agent workforce...
+   P4: This is a business that is perfectly synchronized with reality...
+   P5: It's a future where you are no longer paying for capacity. You are investing directly in **outcomes.**
+   Visual Stage Graphic & Animation:
+   Placeholder Name: [GRAPH-PLACEHOLDER: 04_Elastic_System]
+   Functional Description: The final state animation:
+   The Outcome orb from Act III remains at the center.
+   An unpredictable line graph labeled Demand animates across the background.
+   The orb's outer boundary must dynamically animate, expanding and contracting in real-time to perfectly mirror the Demand line.

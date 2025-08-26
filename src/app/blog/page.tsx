@@ -14,7 +14,8 @@ const blogPosts = [
 	{
 		id: 1,
 		title: "The Rise of Autonomous Digital Workforces",
-		excerpt: "Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
+		excerpt:
+			"Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
 		author: "Sarah Chen",
 		date: "December 15, 2024",
 		readTime: "5 min read",
@@ -25,7 +26,8 @@ const blogPosts = [
 	{
 		id: 2,
 		title: "Building Scalable Sales Teams with AI Agents",
-		excerpt: "Learn how companies are achieving 3.5x conversion rates by deploying intelligent sales automation systems.",
+		excerpt:
+			"Learn how companies are achieving 3.5x conversion rates by deploying intelligent sales automation systems.",
 		author: "Michael Rodriguez",
 		date: "December 12, 2024",
 		readTime: "8 min read",
@@ -36,7 +38,8 @@ const blogPosts = [
 	{
 		id: 3,
 		title: "The Future of Content Creation: AI Workforces",
-		excerpt: "Discover how AI content workforces are revolutionizing marketing departments and creative agencies worldwide.",
+		excerpt:
+			"Discover how AI content workforces are revolutionizing marketing departments and creative agencies worldwide.",
 		author: "Emily Watson",
 		date: "December 10, 2024",
 		readTime: "6 min read",
@@ -47,7 +50,8 @@ const blogPosts = [
 	{
 		id: 4,
 		title: "Case Study: 85% Faster Lead Response Times",
-		excerpt: "A deep dive into how NovoTech reduced their lead response time from hours to minutes with our lead workforce.",
+		excerpt:
+			"A deep dive into how NovoTech reduced their lead response time from hours to minutes with our lead workforce.",
 		author: "David Park",
 		date: "December 8, 2024",
 		readTime: "10 min read",
@@ -58,7 +62,8 @@ const blogPosts = [
 	{
 		id: 5,
 		title: "Understanding Multi-Agent Systems",
-		excerpt: "A technical overview of how multiple AI agents work together to solve complex business problems.",
+		excerpt:
+			"A technical overview of how multiple AI agents work together to solve complex business problems.",
 		author: "Alex Kumar",
 		date: "December 5, 2024",
 		readTime: "12 min read",
@@ -69,7 +74,8 @@ const blogPosts = [
 	{
 		id: 6,
 		title: "ROI of Digital Workforces: A Complete Guide",
-		excerpt: "Everything you need to know about calculating and maximizing the return on investment from AI workforces.",
+		excerpt:
+			"Everything you need to know about calculating and maximizing the return on investment from AI workforces.",
 		author: "Jessica Liu",
 		date: "December 3, 2024",
 		readTime: "7 min read",
@@ -79,14 +85,23 @@ const blogPosts = [
 	},
 ]
 
-const categories = ["All", "AI & Automation", "Sales", "Content", "Case Studies", "Technology", "Business"]
+const categories = [
+	"All",
+	"AI & Automation",
+	"Sales",
+	"Content",
+	"Case Studies",
+	"Technology",
+	"Business",
+]
 
 export default function BlogPage() {
 	const [selectedCategory, setSelectedCategory] = useState("All")
 
-	const filteredPosts = selectedCategory === "All"
-		? blogPosts
-		: blogPosts.filter(post => post.category === selectedCategory)
+	const filteredPosts =
+		selectedCategory === "All"
+			? blogPosts
+			: blogPosts.filter(post => post.category === selectedCategory)
 
 	const featuredPost = blogPosts.find(post => post.featured)
 
@@ -109,7 +124,9 @@ export default function BlogPage() {
 							Insights & Updates
 						</h1>
 						<p className="text-muted-foreground text-xl max-w-3xl mx-auto">
-							Explore the latest in AI workforces, automation strategies, and success stories from the frontier of autonomous business operations.
+							Explore the latest in AI workforces, automation strategies, and
+							success stories from the frontier of autonomous business
+							operations.
 						</p>
 					</div>
 
@@ -139,7 +156,9 @@ export default function BlogPage() {
 									{/* Featured Image */}
 									<div className="relative h-64 lg:h-full bg-gradient-to-br from-accent/20 to-accent/10">
 										<div className="absolute inset-0 flex items-center justify-center">
-											<span className="text-accent/50 text-6xl font-bold">Featured</span>
+											<span className="text-accent/50 text-6xl font-bold">
+												Featured
+											</span>
 										</div>
 									</div>
 									{/* Featured Content */}
@@ -197,11 +216,13 @@ export default function BlogPage() {
 									{/* Post Image */}
 									<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
 										<div className="absolute inset-0 flex items-center justify-center">
-											<span className="text-accent/30 text-4xl font-bold">{post.id}</span>
+											<span className="text-accent/30 text-4xl font-bold">
+												{post.id}
+											</span>
 										</div>
 										<div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 									</div>
-									
+
 									{/* Post Content */}
 									<div className="p-6">
 										{/* Category */}
@@ -210,17 +231,17 @@ export default function BlogPage() {
 												{post.category}
 											</span>
 										</div>
-										
+
 										{/* Title */}
 										<h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
 											{post.title}
 										</h3>
-										
+
 										{/* Excerpt */}
 										<p className="text-muted-foreground text-sm mb-4 line-clamp-2">
 											{post.excerpt}
 										</p>
-										
+
 										{/* Meta */}
 										<div className="flex items-center justify-between text-xs text-muted-foreground">
 											<div className="flex items-center gap-3">
@@ -238,7 +259,7 @@ export default function BlogPage() {
 												{post.date}
 											</span>
 										</div>
-										
+
 										{/* Read More Link */}
 										<div className="mt-4 pt-4 border-t border-accent/10">
 											<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors flex items-center gap-1">
@@ -270,7 +291,8 @@ export default function BlogPage() {
 								Stay Updated
 							</h2>
 							<p className="text-muted-foreground mb-6">
-								Get the latest insights on AI workforces and automation delivered to your inbox.
+								Get the latest insights on AI workforces and automation
+								delivered to your inbox.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
 								<input
