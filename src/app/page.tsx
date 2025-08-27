@@ -9,6 +9,12 @@ import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
 import { Footer } from "@/components/footer"
 
+export const metadata = {
+	title: "Stop Managing Tools, Start Scaling Revenue",
+	description:
+		"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue. Discover how AI automation can transform your operations.",
+}
+
 export default function Home() {
 	return (
 		<div className="min-h-screen bg-background">

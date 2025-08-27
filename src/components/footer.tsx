@@ -47,10 +47,10 @@ export function Footer() {
 							</li>
 							<li>
 								<a
-									href="/workforces/custom"
+									href="/workforces/lab"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Custom Workforces
+									The Lab
 								</a>
 							</li>
 						</ul>

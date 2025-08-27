@@ -84,10 +84,10 @@ export function Navigation() {
 										Content Creation
 									</Link>
 									<Link
-										href="/workforces/custom"
+										href="/workforces/lab"
 										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
 									>
-										Custom
+										The Lab
 									</Link>
 								</div>
 							</div>
