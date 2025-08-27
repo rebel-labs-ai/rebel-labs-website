@@ -4,133 +4,41 @@ import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight, User, Tag } from "lucide-react"
+import BlogCategoryFilter from "./BlogCategoryFilter"
 
-// Sample blog posts data
-const blogPosts = [
-	{
-		id: 1,
-		title: "The Rise of Autonomous Digital Workforces",
-		excerpt:
-			"Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
-		author: "Sarah Chen",
-		date: "December 15, 2024",
-		readTime: "5 min read",
-		category: "AI & Automation",
-		image: "/blog/post1.jpg",
-		featured: true,
-	},
-	{
-		id: 2,
-		title: "Building Scalable Sales Teams with AI Agents",
-		excerpt:
-			"Learn how companies are achieving 3.5x conversion rates by deploying intelligent sales automation systems.",
-		author: "Michael Rodriguez",
-		date: "December 12, 2024",
-		readTime: "8 min read",
-		category: "Sales",
-		image: "/blog/post2.jpg",
-		featured: false,
-	},
-	{
-		id: 3,
-		title: "The Future of Content Creation: AI Workforces",
-		excerpt:
-			"Discover how AI content workforces are revolutionizing marketing departments and creative agencies worldwide.",
-		author: "Emily Watson",
-		date: "December 10, 2024",
-		readTime: "6 min read",
-		category: "Content",
-		image: "/blog/post3.jpg",
-		featured: false,
-	},
-	{
-		id: 4,
-		title: "Case Study: 85% Faster Lead Response Times",
-		excerpt:
-			"A deep dive into how NovoTech reduced their lead response time from hours to minutes with our lead workforce.",
-		author: "David Park",
-		date: "December 8, 2024",
-		readTime: "10 min read",
-		category: "Case Studies",
-		image: "/blog/post4.jpg",
-		featured: false,
-	},
-	{
-		id: 5,
-		title: "Understanding Multi-Agent Systems",
-		excerpt:
-			"A technical overview of how multiple AI agents work together to solve complex business problems.",
-		author: "Alex Kumar",
-		date: "December 5, 2024",
-		readTime: "12 min read",
-		category: "Technology",
-		image: "/blog/post5.jpg",
-		featured: false,
-	},
-	{
-		id: 6,
-		title: "ROI of Digital Workforces: A Complete Guide",
-		excerpt:
-			"Everything you need to know about calculating and maximizing the return on investment from AI workforces.",
-		author: "Jessica Liu",
-		date: "December 3, 2024",
-		readTime: "7 min read",
-		category: "Business",
-		image: "/blog/post6.jpg",
-		featured: false,
-	},
-]
+interface BlogPost {
+	id: number
+	title: string
+	excerpt: string
+	author: string
+	date: string
+	readTime: string
+	category: string
+	image: string
+	featured: boolean
+}
 
-const categories = [
-	"All",
-	"AI & Automation",
-	"Sales",
-	"Content",
-	"Case Studies",
-	"Technology",
-	"Business",
-]
+interface BlogPostsGridProps {
+	posts: BlogPost[]
+}
 
-export default function BlogContent() {
+export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 	const [selectedCategory, setSelectedCategory] = useState("All")
 
 	const filteredPosts =
 		selectedCategory === "All"
-			? blogPosts
-			: blogPosts.filter(post => post.category === selectedCategory)
+			? posts
+			: posts.filter(post => post.category === selectedCategory)
 
-	const featuredPost = blogPosts.find(post => post.featured)
+	const featuredPost = posts.find(post => post.featured)
 
 	return (
 		<>
-			{/* Header */}
-			<div className="text-center mb-12">
-				<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans mb-4">
-					Insights & Updates
-				</h1>
-				<p className="text-muted-foreground text-xl max-w-3xl mx-auto">
-					Explore the latest in AI workforces, automation strategies, and
-					success stories from the frontier of autonomous business operations.
-				</p>
-			</div>
-
 			{/* Category Filters */}
-			<div className="flex flex-wrap justify-center gap-2 mb-12">
-				{categories.map(category => (
-					<Button
-						key={category}
-						onClick={() => setSelectedCategory(category)}
-						variant={selectedCategory === category ? "default" : "outline"}
-						className={
-							selectedCategory === category
-								? "bg-accent dark:bg-accent/60 text-white dark:text-white border-accent shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
-								: "bg-transparent text-foreground border-accent/30 hover:bg-accent/10 dark:hover:bg-accent/20"
-						}
-					>
-						{category}
-					</Button>
-				))}
-			</div>
+			<BlogCategoryFilter
+				selectedCategory={selectedCategory}
+				onCategoryChange={setSelectedCategory}
+			/>
 
 			{/* Featured Post */}
 			{featuredPost && selectedCategory === "All" && (
@@ -267,29 +175,6 @@ export default function BlogContent() {
 					</Button>
 				</div>
 			)}
-
-			{/* Newsletter Signup */}
-			<Card className="bg-gradient-to-r from-accent/10 to-accent/20 border border-accent/30 shadow-xl p-8 mt-16">
-				<div className="text-center max-w-2xl mx-auto">
-					<h2 className="text-2xl font-bold text-foreground mb-4">
-						Stay Updated
-					</h2>
-					<p className="text-muted-foreground mb-6">
-						Get the latest insights on AI workforces and automation delivered to
-						your inbox.
-					</p>
-					<div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-						<input
-							type="email"
-							placeholder="Enter your email"
-							className="flex-1 px-4 py-2 bg-background border border-accent/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-foreground placeholder-muted-foreground"
-						/>
-						<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
-							Subscribe
-						</Button>
-					</div>
-				</div>
-			</Card>
 		</>
 	)
 }

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Upload, User, Mail, Phone, FileText } from "lucide-react"
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
-export function CareersForm() {
+export function ApplicationForm() {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
