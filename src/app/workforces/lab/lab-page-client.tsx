@@ -179,11 +179,25 @@ function EngagementProtocol() {
 // UI Mockup Components for Section 3
 function MissionArchitectMockup() {
 	return (
-		<div className="p-8 h-full bg-gradient-to-br from-background via-background to-accent/5">
+		<div className="p-8 h-full bg-background relative overflow-hidden">
+			{/* Grid background - properly behind everything */}
+			<div className="absolute inset-0 opacity-5 pointer-events-none" style={{ zIndex: 0 }}>
+				<div className="absolute inset-0" style={{
+					backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
+					backgroundSize: '30px 30px'
+				}} />
+			</div>
+
+			{/* Content wrapper with higher z-index */}
+			<div className="relative" style={{ zIndex: 1 }}>
 			{/* Header with animated pulse */}
 			<div className="flex items-center justify-between mb-6">
 				<div className="flex items-center gap-3">
-					<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+					<div className="flex gap-1">
+						<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse" />
+						<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-75" />
+						<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-150" />
+					</div>
 					<h3 className="text-xl font-bold text-foreground">
 						Mission Architect
 					</h3>
@@ -192,118 +206,143 @@ function MissionArchitectMockup() {
 			</div>
 
 			{/* Main Content */}
-			<div className="space-y-6">
-				{/* Client Request with gradient border */}
-				<div className="relative">
-					<div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/50 to-accent rounded-lg blur-sm opacity-50" />
-					<div className="relative bg-background rounded-lg p-5 border border-accent/20">
-						<div className="flex items-center gap-2 mb-3">
-							<Target className="w-4 h-4 text-accent" />
-							<h4 className="text-sm font-bold text-foreground uppercase tracking-wider">
-								Mission Objective
-							</h4>
+			<div className="space-y-4">
+				{/* Mission Analysis Dashboard */}
+				<div className="rounded-lg p-5 bg-gray-50 dark:[background-color:hsl(216,23%,36%)]">
+					<div className="flex items-center justify-between mb-4">
+						<h4 className="text-sm font-bold text-foreground uppercase tracking-wider">
+							Mission Parameters
+						</h4>
+						<div className="flex items-center gap-2">
+							<div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+							<span className="text-xs text-green-500">Scanning</span>
 						</div>
-						<p className="text-base text-foreground font-medium italic">
-							&ldquo;Transform our enterprise deal desk into an autonomous revenue engine&rdquo;
-						</p>
 					</div>
-			</div>
-
-				{/* Analysis Grid with icons */}
-				<div className="grid grid-cols-3 gap-4">
-					{/* Bottlenecks */}
-					<div className="group relative overflow-hidden bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4 border border-red-500/20 dark:border-0">
-						<div className="absolute top-0 right-0 w-20 h-20 bg-red-500/10 rounded-full blur-2xl" />
-						<div className="relative">
-							<div className="flex items-center gap-2 mb-3">
-								<TrendingUp className="w-4 h-4 text-red-500" />
-								<h5 className="text-xs font-bold text-foreground">
-									Bottlenecks
-								</h5>
-							</div>
-							<div className="space-y-2">
-								<div className="flex items-center gap-2">
-									<div className="w-1 h-4 bg-red-500/50" />
-									<span className="text-xs text-muted-foreground">Manual quotes</span>
+					<div className="space-y-3 font-mono text-xs">
+						<div className="flex justify-between items-center">
+							<span className="text-muted-foreground">Target Process:</span>
+							<span className="text-foreground">Enterprise Deal Desk</span>
+						</div>
+						<div className="flex justify-between items-center">
+							<span className="text-muted-foreground">Current SLA:</span>
+							<span className="text-red-400">48-72 hours</span>
+						</div>
+						<div className="flex justify-between items-center">
+							<span className="text-muted-foreground">Target SLA:</span>
+							<span className="text-green-500">&lt; 2 minutes</span>
+						</div>
+						<div className="flex justify-between items-center">
+							<span className="text-muted-foreground">Complexity Score:</span>
+							<div className="flex items-center gap-2">
+								<div className="w-24 h-1.5 bg-muted/30 rounded-full overflow-hidden">
+									<div className="w-[85%] h-full bg-accent/50 rounded-full" />
 								</div>
-								<div className="flex items-center gap-2">
-									<div className="w-1 h-4 bg-red-500/50" />
-									<span className="text-xs text-muted-foreground">Data silos</span>
-								</div>
-								<div className="flex items-center gap-2">
-									<div className="w-1 h-4 bg-red-500/50" />
-									<span className="text-xs text-muted-foreground">48hr delays</span>
-								</div>
+								<span className="text-foreground font-bold">8.5/10</span>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					{/* Integrations */}
-					<div className="group relative overflow-hidden bg-gradient-to-br from-blue-500/10 to-transparent rounded-lg p-4 border border-blue-500/20 dark:border-0">
-						<div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-full blur-2xl" />
-						<div className="relative">
-							<div className="flex items-center gap-2 mb-3">
-								<Layers className="w-4 h-4 text-blue-500" />
-								<h5 className="text-xs font-bold text-foreground">
-									Integrations
-								</h5>
-							</div>
-							<div className="flex flex-wrap gap-1">
-								<span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full font-medium">
-									Salesforce
-								</span>
-								<span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full font-medium">
-									SAP
-								</span>
-								<span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full font-medium">
-									Slack
-								</span>
-							</div>
+				{/* Real-time Discovery Grid */}
+				<div className="grid grid-cols-2 gap-3">
+					{/* Workflow Map */}
+					<div className="rounded-lg p-4 bg-gray-100 dark:[background-color:hsl(221,31%,23%)]">
+						<div className="flex items-center justify-between mb-3">
+							<span className="text-xs font-bold text-foreground">Workflow Map</span>
+							<Search className="w-3 h-3 text-muted-foreground" />
+						</div>
+						<div className="space-y-2">
+							{['Quote Request', 'Validation', 'Pricing', 'Approval', 'Generation'].map((step, i) => (
+								<div key={step} className="flex items-center gap-2">
+									<div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+										i < 3 ? 'bg-accent/20 text-foreground' : 'bg-muted/30 text-muted-foreground'
+									}`}>
+										{i + 1}
+									</div>
+									<span className="text-xs text-muted-foreground">{step}</span>
+									{i < 3 && <div className="w-1 h-1 bg-green-500 rounded-full animate-pulse ml-auto" />}
+								</div>
+							))}
 						</div>
 					</div>
 
-					{/* Outcomes */}
-					<div className="group relative overflow-hidden bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4 border border-green-500/20 dark:border-0">
-						<div className="absolute top-0 right-0 w-20 h-20 bg-green-500/10 rounded-full blur-2xl" />
-						<div className="relative">
-							<div className="flex items-center gap-2 mb-3">
-								<BarChart3 className="w-4 h-4 text-green-500" />
-								<h5 className="text-xs font-bold text-foreground">
-									Outcomes
-								</h5>
+					{/* System Health */}
+					<div className="rounded-lg p-4 bg-gray-100 dark:[background-color:hsl(221,31%,23%)]">
+						<div className="flex items-center justify-between mb-3">
+							<span className="text-xs font-bold text-foreground">System Health</span>
+							<BarChart3 className="w-3 h-3 text-muted-foreground" />
+						</div>
+						<div className="space-y-3">
+							<div>
+								<div className="flex justify-between text-xs mb-1">
+									<span className="text-muted-foreground">Data Quality</span>
+									<span className="text-foreground">92%</span>
+								</div>
+								<div className="h-1 bg-muted/30 rounded-full overflow-hidden">
+									<div className="w-[92%] h-full bg-accent/50 rounded-full" />
+								</div>
 							</div>
-							<div className="space-y-2">
-								<div className="flex items-center justify-between">
-									<span className="text-xs text-muted-foreground">Speed</span>
-									<span className="text-xs font-bold text-green-500">+67%</span>
+							<div>
+								<div className="flex justify-between text-xs mb-1">
+									<span className="text-muted-foreground">Integration</span>
+									<span className="text-foreground">87%</span>
 								</div>
-								<div className="flex items-center justify-between">
-									<span className="text-xs text-muted-foreground">Errors</span>
-									<span className="text-xs font-bold text-green-500">-100%</span>
+								<div className="h-1 bg-muted/30 rounded-full overflow-hidden">
+									<div className="w-[87%] h-full bg-accent/40 rounded-full" />
 								</div>
-								<div className="flex items-center justify-between">
-									<span className="text-xs text-muted-foreground">ROI</span>
-									<span className="text-xs font-bold text-green-500">340%</span>
+							</div>
+							<div>
+								<div className="flex justify-between text-xs mb-1">
+									<span className="text-muted-foreground">Automation</span>
+									<span className="text-foreground">74%</span>
+								</div>
+								<div className="h-1 bg-muted/30 rounded-full overflow-hidden">
+									<div className="w-[74%] h-full bg-accent/30 rounded-full" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				{/* Status Bar */}
-				<div className="flex items-center justify-between pt-4 border-t border-accent/20">
-					<div className="flex items-center gap-3">
-						<span className="text-xs text-muted-foreground">Blueprint Status:</span>
-						<div className="flex gap-1">
-							<div className="w-2 h-2 bg-green-500 rounded-full" />
-							<div className="w-2 h-2 bg-green-500 rounded-full" />
-							<div className="w-2 h-2 bg-green-500 rounded-full" />
+				{/* Agent Discovery Feed */}
+				<div className="rounded-lg p-4 bg-gray-50 dark:[background-color:hsl(221,31%,23%)]">
+					<div className="flex items-center justify-between mb-3">
+						<div className="flex items-center gap-2">
+							<Brain className="w-4 h-4 text-muted-foreground" />
+							<span className="text-xs font-bold text-foreground uppercase tracking-wider">Agent Discovery</span>
+						</div>
+						<span className="text-xs text-muted-foreground">Live</span>
+					</div>
+					<div className="space-y-2 font-mono text-xs">
+						<div className="text-green-400">
+							✓ Identified 12 decision trees in pricing logic
+						</div>
+						<div className="text-blue-400">
+							→ Mapping approval matrix (7 levels detected)
+						</div>
+						<div className="text-yellow-500/80">
+							⚠ Complex discount rules require human validation
+						</div>
+						<div className="text-muted-foreground/60">
+							→ Building agent roster: 24 specialists needed...
 						</div>
 					</div>
-					<span className="text-sm font-bold text-green-500">
-						READY TO BUILD
+				</div>
+
+				{/* Blueprint Progress */}
+				<div className="flex items-center justify-between pt-3 border-t border-muted/30">
+					<div className="flex items-center gap-3">
+						<span className="text-xs text-muted-foreground">Blueprint Progress:</span>
+						<div className="w-32 h-1.5 bg-muted/30 rounded-full overflow-hidden">
+							<div className="w-[75%] h-full bg-accent/50 rounded-full" />
+						</div>
+						<span className="text-xs font-bold text-foreground">75%</span>
+					</div>
+					<span className="text-xs font-bold text-foreground uppercase">
+						READY IN 2:47
 					</span>
 				</div>
+			</div>
 			</div>
 		</div>
 	)

@@ -45,10 +45,10 @@ export default function Home() {
 							</span>
 						</div>
 						<div className="text-left">
-							<h1 className="text-foreground text-6xl md:text-7xl font-light tracking-tight font-geist-sans">
+							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight font-geist-sans">
 								Stop Managing Tools.
 							</h1>
-							<h1 className="text-foreground text-6xl md:text-7xl font-light tracking-tight mt-2 font-geist-sans">
+							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight mt-2 font-geist-sans">
 								Start <AnimatedText />
 							</h1>
 						</div>
@@ -93,7 +93,7 @@ export default function Home() {
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-12">
 						<h2
-							className="text-foreground text-4xl font-bold tracking-tight mb-6"
+							className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight mb-6"
 							style={{
 								textShadow:
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
@@ -138,7 +138,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										24/7 Operation
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -167,7 +167,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										Flawless Execution
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -196,7 +196,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										Continuous Improvement
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -256,7 +256,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										Free Your Talent
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -285,7 +285,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										Unlock Autonomy
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -314,7 +314,7 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-2">
 										Scale On Demand
 									</h3>
 									<p className="text-muted-foreground text-sm">
@@ -358,7 +358,7 @@ export default function Home() {
 									In a nutshell
 								</span>
 							</div>
-							<h2 className="text-foreground text-4xl font-bold tracking-tight mb-6">
+							<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight mb-6">
 								What is a Digital Workforce?
 							</h2>
 							<p className="text-muted-foreground text-lg leading-relaxed">
@@ -402,7 +402,7 @@ export default function Home() {
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							The Solution
 						</span>
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
+						<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight mt-4">
 							We Don&apos;t Sell Tools. We Deliver Outcomes.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
@@ -414,7 +414,7 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-2xl font-bold mb-4">
+								<h3 className="text-foreground text-xl sm:text-2xl font-bold mb-4">
 									Inbound Conversion Workforce
 								</h3>
 								<p className="text-muted-foreground mb-6 flex-1">
@@ -451,7 +451,7 @@ export default function Home() {
 
 						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-2xl font-bold mb-4">
+								<h3 className="text-foreground text-xl sm:text-2xl font-bold mb-4">
 									Content Creation Workforce
 								</h3>
 								<p className="text-muted-foreground mb-6 flex-1">
@@ -489,7 +489,7 @@ export default function Home() {
 			{/* Section 3.5: The Problem */}
 			{/* <section className="py-16 px-4 relative">
 				<div className="max-w-7xl mx-auto px-4 py-8 rounded-xl relative z-10">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight text-center mb-8">
 						Your Revenue is Capped by a Broken Model
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -670,7 +670,7 @@ export default function Home() {
 			{/* Section 5: Core Capabilities */}
 			<section className="pt-0 pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight text-center mb-8">
 						Core Capabilities
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -682,7 +682,7 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto">
 						{/* Feature One - Elastic Infrastructure (Primary - Large Card) */}
 						<div className="md:col-span-2 md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-8 min-h-[350px]">
-							<h3 className="text-foreground text-xl font-semibold mb-4">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-4">
 								Elastic Infrastructure
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-6">
@@ -697,7 +697,7 @@ export default function Home() {
 
 						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-3">
 								Seamless Integration
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
@@ -709,7 +709,7 @@ export default function Home() {
 
 						{/* Feature Three - Autonomous Execution */}
 						<div className="bg-card-background border border-accent/30 shadow-lg rounded-xl p-6 min-h-[170px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-3">
 								Autonomous Execution
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
@@ -721,7 +721,7 @@ export default function Home() {
 
 						{/* Feature Four - Collaborative Reasoning (moved from Feature Two) */}
 						<div className="md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[370px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-3">
 								Collaborative Reasoning
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
@@ -751,7 +751,7 @@ export default function Home() {
 
 						{/* Feature Five - Real-Time Optimization (moved from Feature Four) */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-3">
 								Understand the Why, Not Just the What
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
@@ -781,7 +781,7 @@ export default function Home() {
 
 						{/* Feature Six - Outcome-Centric Reporting */}
 						<div className="bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[200px]">
-							<h3 className="text-foreground text-xl font-semibold mb-3">
+							<h3 className="text-foreground text-lg sm:text-xl font-semibold mb-3">
 								Outcome-Centric Reporting
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
@@ -797,7 +797,7 @@ export default function Home() {
 			{/* Section 6: The New Equation of Value */}
 			<section className="py-24 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
+					<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight text-center mb-16">
 						The New Equation of Value
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -814,7 +814,7 @@ export default function Home() {
 									boxShadow: "inset 0 6px 12px rgba(239, 68, 68, 0.15)",
 								}}
 							>
-								<h3 className="text-foreground text-xl font-bold mb-6">
+								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-6">
 									Rigid Operations
 								</h3>
 								<ul className="space-y-4">
@@ -919,7 +919,7 @@ export default function Home() {
 								className="bg-card-background border border-green-500 rounded-xl p-8 flex-1"
 								style={{ boxShadow: "0 8px 16px rgba(34, 197, 94, 0.25)" }}
 							>
-								<h3 className="text-foreground text-xl font-bold mb-6">
+								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-6">
 									Elastic Operations
 								</h3>
 								<ul className="space-y-4">
@@ -1026,7 +1026,7 @@ export default function Home() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-4xl font-bold tracking-tight mb-4">
 							Stop Buying Smarter Shovels.
 							<br />
 							<span className="text-accent">Start Delivering Outcomes.</span>
