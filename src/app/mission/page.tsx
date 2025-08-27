@@ -191,13 +191,7 @@ export default function MissionPage() {
 							}}
 							className="scroll-mt-24"
 						>
-							<div
-								className={`transition-all duration-1000 ${
-									activeSection >= 1
-										? "translate-y-0 opacity-100"
-										: "translate-y-8 opacity-30"
-								}`}
-							>
+							<div>
 								<div className="grid gap-8 lg:grid-cols-2">
 									{/* Content */}
 									<div>
@@ -247,13 +241,7 @@ export default function MissionPage() {
 							}}
 							className="scroll-mt-24"
 						>
-							<div
-								className={`transition-all duration-1000 ${
-									activeSection >= 2
-										? "translate-y-0 opacity-100"
-										: "translate-y-8 opacity-30"
-								}`}
-							>
+							<div>
 								<div className="grid gap-8 lg:grid-cols-2">
 									{/* Visual Card */}
 									<div className="relative order-2 overflow-hidden rounded-2xl p-8 flex items-center justify-center lg:order-1">
@@ -302,13 +290,7 @@ export default function MissionPage() {
 							}}
 							className="scroll-mt-24"
 						>
-							<div
-								className={`transition-all duration-1000 ${
-									activeSection >= 3
-										? "translate-y-0 opacity-100"
-										: "translate-y-8 opacity-30"
-								}`}
-							>
+							<div>
 								<div className="grid gap-8 lg:grid-cols-[1fr_300px]">
 									<div>
 										<h2 className="text-foreground text-3xl md:text-4xl font-light tracking-tight mb-6">
@@ -364,13 +346,7 @@ export default function MissionPage() {
 							}}
 							className="scroll-mt-24 pt-12"
 						>
-							<div
-								className={`transition-all duration-1000 ${
-									activeSection >= 4
-										? "translate-y-0 opacity-100"
-										: "translate-y-8 opacity-30"
-								}`}
-							>
+							<div>
 								<div className="space-y-24">
 									{/* Main Content */}
 									<div className="text-center">
@@ -444,27 +420,18 @@ export default function MissionPage() {
 							}}
 							className="scroll-mt-24"
 						>
-							<div
-								className={`transition-all duration-1000 ${
-									activeSection >= 5
-										? "translate-y-0 opacity-100"
-										: "translate-y-8 opacity-30"
-								}`}
-							>
+							<div>
 								<div className="relative overflow-hidden rounded-3xl border border-accent/50 bg-gradient-to-br from-accent/5 via-card/80 to-accent/5 p-12 backdrop-blur-lg shadow-[0_0_50px_rgba(var(--accent),0.1)]">
 									<div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 									<div className="absolute -bottom-32 -right-32 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 
 									<div className="relative z-10">
-										<div className="mb-8 inline-flex rounded-lg bg-accent/10 p-4">
-											<Rocket className="h-8 w-8 text-accent" />
-										</div>
 										<h2 className="text-foreground text-4xl md:text-5xl font-light tracking-tight mb-8">
 											The Promised Land: Elastic Operations.
 										</h2>
 
 										{/* Introductory Paragraph */}
-										<div className="mb-12">
+										<div>
 											<p className="text-lg text-muted-foreground">
 												The enemy of your ambition has always been the fixed
 												cost of capacity. It is the iron law of the old world
@@ -476,7 +443,7 @@ export default function MissionPage() {
 										</div>
 
 										{/* Hub & Spoke Diagram */}
-										<div className="mb-12">
+										<div className="">
 											<HubSpokeGraphic />
 										</div>
 
@@ -500,10 +467,10 @@ export default function MissionPage() {
 				</div>
 
 				{/* CTA Section */}
-				<section className="py-24 px-4">
+				<section className="pb-24 px-4">
 					<div className="max-w-4xl mx-auto">
 						<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-							<div className="inline-block mb-6">
+							<div className="inline-block mb-4">
 								<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
 									Ready to Build the Future?
 								</span>
@@ -590,6 +557,17 @@ function HubSpokeGraphic() {
 		},
 	]
 
+	// Pre-calculate positions to avoid hydration mismatches
+	const spokePositions = spokes.map(spoke => {
+		const radiusX = 400 // Horizontal radius - wider for more spacing
+		const radiusY = 250 // Vertical radius - shorter to reduce vertical gaps
+		const angleInRadians = (spoke.angle * Math.PI) / 180
+		// Round to avoid floating point precision issues
+		const x = Math.round(Math.cos(angleInRadians) * radiusX)
+		const y = Math.round(Math.sin(angleInRadians) * radiusY)
+		return { x, y }
+	})
+
 	return (
 		<div className="flex items-center justify-center py-8">
 			<div className="relative h-[700px] w-full max-w-7xl px-4">
@@ -609,18 +587,13 @@ function HubSpokeGraphic() {
 
 				{/* Spoke Boxes positioned in an ellipse */}
 				{spokes.map((spoke, index) => {
-					const radiusX = 400 // Horizontal radius - wider for more spacing
-					const radiusY = 250 // Vertical radius - shorter to reduce vertical gaps
-					const angleInRadians = (spoke.angle * Math.PI) / 180
-					const x = Math.cos(angleInRadians) * radiusX
-					const y = Math.sin(angleInRadians) * radiusY
-
+					const position = spokePositions[index]
 					return (
 						<div
 							key={index}
 							className="absolute left-1/2 top-1/2"
 							style={{
-								transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+								transform: `translate(calc(-50% + ${position.x}px), calc(-50% + ${position.y}px))`,
 							}}
 						>
 							{/* Text Box - Wider and shorter */}

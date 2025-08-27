@@ -166,7 +166,7 @@ function MethodSection() {
 						</div>
 
 						{/* Right Column - Sticky Visual */}
-						<div className="relative hidden lg:block mt-64 mb-20">
+						<div className="relative hidden lg:block mt-64">
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[500px] w-full flex items-center justify-center">
 									{/* Step Images */}

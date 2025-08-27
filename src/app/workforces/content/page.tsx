@@ -381,8 +381,8 @@ function AnalysisMockup() {
 
 export default function ContentWorkforcePage() {
 	const [activeTab, setActiveTab] = useState<
-		"ideation" | "creation" | "distribution"
-	>("ideation")
+		"intelligence" | "creation" | "amplification"
+	>("intelligence")
 	const [selectedAgent, setSelectedAgent] = useState<{
 		icon: React.ReactNode
 		name: string
@@ -395,178 +395,178 @@ export default function ContentWorkforcePage() {
 	} | null>(null)
 
 	const tabs = [
-		{ id: "ideation", label: "Strategy & Ideation" },
-		{ id: "creation", label: "Creation & Refinement" },
-		{ id: "distribution", label: "Repurposing & Distribution" },
+		{ id: "intelligence", label: "The Intelligence Core" },
+		{ id: "creation", label: "The Creation Studio" },
+		{ id: "amplification", label: "The Amplification Factory" },
 	]
 
 	const agents = {
-		ideation: [
+		intelligence: [
 			{
 				icon: <Search className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Market Intelligence Agent",
-				role: "Trend Discovery",
+				name: "Research Agent",
+				role: "Scanning the Market",
 				coreFunction:
-					"Continuously monitors industry trends, competitor content, and audience engagement patterns to identify high-impact content opportunities.",
+					"Constantly scans the market, competitor landscape, and social trends for the raw data and insights that fuel your content strategy.",
 				introduction:
-					"I'm your always-on market researcher, scanning the digital landscape to ensure you never miss a content opportunity that matters.",
+					"I am your eyes and ears on the market. I provide the foundational intelligence that ensures your content is always relevant, timely, and strategically sound.",
 				responsibilities: [
-					"Monitor competitor content strategies and identify gaps",
-					"Track trending topics and emerging narratives in your industry",
-					"Analyze audience engagement patterns to predict content success",
+					"Monitors industry news, competitor content, and emerging narratives.",
+					"Identifies high-potential keywords and topics aligned with your strategic pillars.",
+					"Gathers the raw data and proof points required to build authoritative content.",
 				],
 				strategicImportance:
-					"By providing continuous market intelligence, I ensure your content strategy is always data-driven and ahead of the curve.",
+					"I ensure your strategy is built on data, not guesswork. By grounding every idea in market reality, I de-risk your content investment and maximize its potential for impact.",
 				collaboration:
-					"I feed insights directly to the Content Strategist Agent, ensuring every piece of content is grounded in market reality.",
+					"I provide a continuous stream of raw intelligence to the Idea Generation Agent, who synthesizes it into concrete content concepts.",
 			},
 			{
 				icon: <Brain className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Content Strategist Agent",
-				role: "Strategic Planning",
+				name: "Idea Generation Agent",
+				role: "Architecting Content Concepts",
 				coreFunction:
-					"Transforms market insights into actionable content strategies, ensuring every piece aligns with business objectives and brand positioning.",
+					"Synthesizes market research into a relentless stream of on-brand, high-potential content ideas, each justified with clear strategic intelligence.",
 				introduction:
-					"I bridge the gap between market opportunity and brand strategy, ensuring every content piece serves a strategic purpose.",
+					"I am the engine that kills the 'blank page' problem. I transform raw data into compelling content concepts and strategic briefs for the creation team.",
 				responsibilities: [
-					"Develop content calendars aligned with business goals",
-					"Create content briefs with clear objectives and messaging",
-					"Ensure brand consistency across all content initiatives",
+					"Synthesizes inputs from the Research Agent into unique angles and topics.",
+					"Develops the core thesis and strategic justification for each new content idea.",
+					"Creates the initial brief that guides the work of the Creation Studio agents.",
 				],
 				strategicImportance:
-					"My strategic framework ensures that content isn't just created—it's crafted with purpose, maximizing ROI on every piece.",
+					"I keep your content pipeline perpetually full of high-quality, strategically-aligned ideas, ensuring your brand maintains a consistent and authoritative market presence.",
 				collaboration:
-					"I work with the Market Intelligence Agent for insights and guide the Content Writer Agents to ensure strategic alignment.",
+					"I translate the intelligence from the Research Agent into actionable briefs for the Drafting and Media Generation Agents.",
 			},
 			{
-				icon: <Calendar className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Editorial Calendar Agent",
-				role: "Content Orchestration",
+				icon: <Users className="w-8 h-8 text-[#A1BCD1]" />,
+				name: "Critic Agent",
+				role: "Ensuring Quality & Coherence",
 				coreFunction:
-					"Manages the content pipeline, ensuring consistent publishing cadence and optimal timing for maximum audience engagement.",
+					"Acts as the universal quality control system, providing objective, data-driven feedback to all other agents to ensure strategic alignment and quality.",
 				introduction:
-					"I'm your content conductor, orchestrating the perfect rhythm of publishing to keep your audience engaged and your pipeline flowing.",
+					"I am the voice of reason and the guardian of quality. I provide objective, critical feedback at every stage of the process to ensure the final output is flawless.",
 				responsibilities: [
-					"Schedule content for optimal engagement times",
-					"Balance content types and themes for variety",
-					"Coordinate multi-channel content campaigns",
+					"Reviews first drafts for logical flow, clarity, and alignment with the initial brief.",
+					"Analyzes repurposed content to ensure it is contextually appropriate for its target platform.",
+					"Provides data-driven feedback to the Iteration Agent to guide the refinement process.",
 				],
 				strategicImportance:
-					"By maintaining a strategic publishing cadence, I ensure your brand maintains consistent market presence without content fatigue.",
+					"I am the mechanism that ensures quality at scale. By providing constant, intelligent critique, I allow the system to self-correct and improve, guaranteeing a high-quality output every time.",
 				collaboration:
-					"I coordinate with all agents to ensure smooth content flow from ideation through distribution.",
+					"I am a universal collaborator. I provide critical feedback to the Drafting, Iteration, and Repurposing agents to guide their work and ensure excellence.",
 			},
 		],
 		creation: [
 			{
 				icon: <PenTool className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Long-Form Writer Agent",
-				role: "Deep Content Creation",
+				name: "Drafting Agent",
+				role: "Producing Written Content",
 				coreFunction:
-					"Creates comprehensive, authoritative content pieces that establish thought leadership and drive organic search traffic.",
+					"Acts as the primary writer, generating complete, structured, and on-brand first drafts of articles, scripts, and posts.",
 				introduction:
-					"I craft the cornerstone content that positions your brand as the definitive voice in your industry.",
+					"I am your infinitely scalable writer. I handle the heavy lifting of transforming a strategic brief into a high-quality, well-structured written asset at machine speed.",
 				responsibilities: [
-					"Write in-depth articles, whitepapers, and guides",
-					"Incorporate SEO best practices without sacrificing quality",
-					"Maintain consistent brand voice across long-form content",
+					"Synthesizes the brief and research into a coherent narrative.",
+					"Writes the initial draft of the content, adhering to the specified brand and expert voice profiles.",
+					"Structures the content logically with clear headings, introductions, and conclusions.",
 				],
 				strategicImportance:
-					"My long-form content builds domain authority and creates assets that generate value for years, not just days.",
+					"I cut your idea-to-market time from weeks to hours. By automating the most time-consuming part of the content process, I free your human strategists from the production treadmill.",
 				collaboration:
-					"I work closely with the Content Strategist for direction and the Repurposing Agent to maximize content value.",
-			},
-			{
-				icon: <MessageSquare className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Social Content Agent",
-				role: "Social Media Optimization",
-				coreFunction:
-					"Crafts platform-specific social content that drives engagement, builds community, and amplifies your brand message.",
-				introduction:
-					"I speak the language of every social platform, ensuring your message resonates wherever your audience lives.",
-				responsibilities: [
-					"Create platform-optimized posts for LinkedIn, Twitter, Instagram",
-					"Develop engaging hooks and calls-to-action",
-					"Adapt tone and format for each platform's unique culture",
-				],
-				strategicImportance:
-					"By optimizing for each platform's algorithm and audience expectations, I maximize your social ROI and reach.",
-				collaboration:
-					"I transform insights from the Long-Form Writer into bite-sized, shareable content that drives traffic back to core assets.",
+					"I execute the brief from the Idea Generation Agent and work in a tight loop with the Critic and Iteration Agents to refine the final output.",
 			},
 			{
 				icon: <FileText className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Copy Editor Agent",
-				role: "Quality Assurance",
+				name: "Iteration Agent",
+				role: "Refining to Perfection",
 				coreFunction:
-					"Ensures every piece of content meets the highest standards of clarity, accuracy, and brand consistency before publication.",
+					"Rapidly revises both written and visual drafts based on simple, high-level feedback from your human creative directors.",
 				introduction:
-					"I'm your final line of defense, ensuring every word that represents your brand is polished to perfection.",
+					"I am built for seamless human-AI collaboration. I turn the painful, slow process of feedback and revision into a rapid, efficient workflow.",
 				responsibilities: [
-					"Edit for grammar, style, and brand voice consistency",
-					"Fact-check claims and verify source accuracy",
-					"Optimize readability and content structure",
+					"Parses simple, natural language feedback from your human strategists.",
+					"Makes precise, targeted revisions to drafts without altering the core structure.",
+					"Learns from feedback over time to reduce the number of required revisions on future projects.",
 				],
 				strategicImportance:
-					"My quality control ensures your brand maintains credibility and professionalism across every piece of content.",
+					"I empower your human team to act as true creative directors, not line editors. I amplify their creativity by handling the mechanical work of revision instantly.",
 				collaboration:
-					"I review all content from the Writer Agents before it moves to distribution, maintaining quality standards.",
-			},
-		],
-		distribution: [
-			{
-				icon: <Share2 className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Content Repurposing Agent",
-				role: "Asset Multiplication",
-				coreFunction:
-					"Transforms single content pieces into multi-format campaigns, maximizing the value of every strategic idea.",
-				introduction:
-					"I turn one great idea into a month of content, ensuring no value is left on the table.",
-				responsibilities: [
-					"Convert blog posts into social threads, videos scripts, and podcasts",
-					"Create derivative content for different audience segments",
-					"Develop content series from single cornerstone pieces",
-				],
-				strategicImportance:
-					"By multiplying content value, I dramatically improve your content ROI and ensure consistent market presence.",
-				collaboration:
-					"I work with all Content Agents to identify repurposing opportunities and the Distribution Agent to coordinate release.",
+					"I work in a tight loop with the Drafting and Media Generation Agents, guided by feedback from the Critic Agent and your human team.",
 			},
 			{
 				icon: <Video className="w-8 h-8 text-[#A1BCD1]" />,
-				name: "Multimedia Agent",
-				role: "Visual Content Creation",
+				name: "Media Generation Agent",
+				role: "Creating Visual Assets",
 				coreFunction:
-					"Creates visual and video content that captures attention and communicates complex ideas simply and memorably.",
+					"Creates on-brand visual assets—including images, carousels, and infographics—to accompany and enhance the core written content.",
 				introduction:
-					"I bring your content to life visually, ensuring your message cuts through the noise in our visual-first world.",
+					"I am your on-demand visual designer. I transform text-based concepts into compelling visual content that captures attention and communicates ideas more effectively.",
 				responsibilities: [
-					"Design infographics and visual content summaries",
-					"Create video scripts and coordinate production",
-					"Develop visual brand assets for content campaigns",
+					"Generates on-brand images and infographics to illustrate key points in an article.",
+					"Creates multi-image carousels for platforms like LinkedIn and Instagram.",
+					"(Coming Soon) Produces animated videos based on written scripts.",
 				],
 				strategicImportance:
-					"Visual content drives 40x more social shares, making my work critical for content virality and reach.",
+					"I increase the engagement and impact of every piece of content. By adding a powerful visual dimension, I ensure your message breaks through the noise and is more memorable.",
 				collaboration:
-					"I transform written content from all Writer Agents into visual formats that amplify engagement.",
+					"I work in parallel with the Drafting Agent to ensure the text and visuals are perfectly aligned, and with the Repurposing Agent to create platform-specific visual formats.",
+			},
+		],
+		amplification: [
+			{
+				icon: <Share2 className="w-8 h-8 text-[#A1BCD1]" />,
+				name: "Repurposing Agent",
+				role: "Maximizing Content Leverage",
+				coreFunction:
+					'Intelligently "atomizes" any single piece of pillar content into a complete arsenal of derivative assets for every channel.',
+				introduction:
+					"I am the engine of content leverage. I ensure that one hour of your expert's time is systematically transformed into a month's worth of high-impact marketing assets with zero waste.",
+				responsibilities: [
+					"Takes a single pillar asset (e.g., a blog post) as input.",
+					"Generates a complete campaign of derivative content (e.g., LinkedIn posts, tweet threads).",
+					"Perfectly formats each piece for the unique language and requirements of its target platform.",
+				],
+				strategicImportance:
+					"I fundamentally change the ROI of your content. By maximizing the value of every single idea, I allow you to dominate your market's conversation across all platforms.",
+				collaboration:
+					"I take the final, approved pillar content and create the full suite of assets for the Hook Generation and Distribution Agents to finalize.",
+			},
+			{
+				icon: <MessageSquare className="w-8 h-8 text-[#A1BCD1]" />,
+				name: "Hook Generation Agent",
+				role: "Crafting Compelling Hooks",
+				coreFunction:
+					"Generates a selection of compelling, platform-specific hooks and opening lines for every piece of repurposed content.",
+				introduction:
+					"I am the specialist in capturing attention. In a world of infinite scroll, the first line is everything. I craft the openings that make your audience stop and read.",
+				responsibilities: [
+					"Analyzes the core message of a piece of content.",
+					"Generates multiple hook variations tailored to different platform psychologies (e.g., LinkedIn vs. Twitter).",
+					"A/B tests hook performance over time to identify winning patterns.",
+				],
+				strategicImportance:
+					"I am the tip of the spear. By optimizing the most critical part of your social content, I dramatically increase the reach and engagement of your entire campaign.",
+				collaboration:
+					"I work directly on the outputs of the Repurposing Agent, providing the final layer of creative polish before the Distribution Agent takes over.",
 			},
 			{
 				icon: <Mail className="w-8 h-8 text-[#A1BCD1]" />,
 				name: "Distribution Agent",
-				role: "Channel Management",
+				role: "Engineering for Discovery & Distribution",
 				coreFunction:
-					"Manages the automated distribution of content across all channels, ensuring maximum reach and engagement.",
+					"Generates all necessary SEO and social metadata and then publishes the final, approved content across all your channels.",
 				introduction:
-					"I ensure your content reaches the right audience, on the right platform, at the perfect moment.",
+					"I am your central distribution hub. I handle the final, critical steps of optimizing for discovery and deploying your content to the market.",
 				responsibilities: [
-					"Publish content across all configured platforms",
-					"Optimize posting times for maximum engagement",
-					"Track distribution metrics and adjust strategies",
+					"Generates SEO-focused titles, meta descriptions, and relevant keywords.",
+					"Creates platform-specific tags and hashtags for social media.",
+					"Schedules and publishes all approved content to your integrated accounts.",
 				],
 				strategicImportance:
-					"My automated distribution ensures consistent brand presence without manual overhead, maximizing efficiency.",
+					"I provide speed, efficiency, and control over your entire distribution process, ensuring your message hits the market in a coordinated and technically sound manner.",
 				collaboration:
-					"I coordinate with the Editorial Calendar Agent and all content creators to ensure smooth, timely distribution.",
+					"I am the final step in the production line, taking the fully repurposed and hooked assets and deploying them to the world.",
 			},
 		],
 	}
@@ -644,7 +644,7 @@ export default function ContentWorkforcePage() {
 										key={tab.id}
 										onClick={() =>
 											setActiveTab(
-												tab.id as "ideation" | "creation" | "distribution"
+												tab.id as "intelligence" | "creation" | "amplification"
 											)
 										}
 										className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
@@ -672,9 +672,9 @@ export default function ContentWorkforcePage() {
 											currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
 										setActiveTab(
 											tabs[prevIndex].id as
-												| "ideation"
+												| "intelligence"
 												| "creation"
-												| "distribution"
+												| "amplification"
 										)
 									}}
 									className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
@@ -720,9 +720,9 @@ export default function ContentWorkforcePage() {
 										const nextIndex = (currentIndex + 1) % tabs.length
 										setActiveTab(
 											tabs[nextIndex].id as
-												| "ideation"
+												| "intelligence"
 												| "creation"
-												| "distribution"
+												| "amplification"
 										)
 									}}
 									className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
@@ -800,7 +800,7 @@ export default function ContentWorkforcePage() {
 
 					{/* Two-Step Configuration Visual */}
 					<div className="relative">
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-24">
 							{/* Step 1 Module */}
 							<Card className="bg-card-background border-2 border-accent shadow-xl p-8">
 								<div className="mb-6">
@@ -852,9 +852,9 @@ export default function ContentWorkforcePage() {
 
 							{/* Connecting Arrow */}
 							<div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-								<div className="relative">
-									<div className="w-16 h-0.5 bg-accent animate-pulse"></div>
-									<ChevronRight className="w-6 h-6 text-accent absolute -right-3 -top-3" />
+								<div className="relative flex items-center">
+									<div className="w-16 h-0.5 bg-accent"></div>
+									<ChevronRight className="w-6 h-6 text-accent absolute -right-3 top-1/2 -translate-y-1/2" />
 								</div>
 							</div>
 
