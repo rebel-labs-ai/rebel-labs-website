@@ -23,7 +23,7 @@ export function ThemeToggle() {
 					variant="ghost"
 					size="sm"
 					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-					className="rounded-md p-2 h-8 w-8 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 group relative"
+					className="rounded-md p-2 h-8 w-10 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 group relative"
 					aria-label="Toggle theme"
 				>
 					{theme === "dark" ? (

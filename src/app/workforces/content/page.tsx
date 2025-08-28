@@ -103,37 +103,24 @@ export default function ContentWorkforcePage() {
 			name: "Content Workforce Services",
 			itemListElement: [
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Blog Content Generation",
-						description: "Automated blog post creation and optimization",
-					},
+					"@type": "Service",
+					name: "Blog Content Generation",
+					description: "Automated blog post creation and optimization",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Social Media Content",
-						description: "Multi-platform social media content generation",
-					},
+					"@type": "Service",
+					name: "Social Media Content",
+					description: "Multi-platform social media content generation",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Content Repurposing",
-						description:
-							"Transform single content pieces into multi-format campaigns",
-					},
+					"@type": "Service",
+					name: "Content Repurposing",
+					description:
+						"Transform single content pieces into multi-format campaigns",
 				},
 			],
 		},
-		aggregateRating: {
-			"@type": "AggregateRating",
-			ratingValue: "4.9",
-			reviewCount: "127",
-		},
+		// Removed aggregateRating - will add back when we have real reviews
 	}
 
 	return (

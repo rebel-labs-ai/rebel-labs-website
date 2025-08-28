@@ -112,17 +112,15 @@ export default function Home() {
 		operatingSystem: "Web",
 		description:
 			"AI-powered digital workforce platform for automating revenue operations",
-		offers: {
-			"@type": "Offer",
-			price: "0",
-			priceCurrency: "USD",
-			description: "Book a demo to get started",
-		},
-		aggregateRating: {
-			"@type": "AggregateRating",
-			ratingValue: "4.9",
-			ratingCount: "150",
-		},
+		// Removed offers and aggregateRating until we have real pricing and reviews
+		featureList: [
+			"24/7 Autonomous Execution",
+			"Lead Generation Automation",
+			"Content Creation at Scale",
+			"Revenue Operations Optimization",
+			"Multi-Channel Integration",
+		],
+		screenshot: "https://novosapien.com/home/workforce-stack.png",
 	}
 
 	const combinedSchema = {

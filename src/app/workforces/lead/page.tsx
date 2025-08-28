@@ -275,29 +275,20 @@ export default function LeadWorkforcePage() {
 			name: "AI Sales Workforce Features",
 			itemListElement: [
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "24/7 Lead Response",
-						description:
-							"Instant response to all inbound leads within 5 minutes",
-					},
+					"@type": "Service",
+					name: "24/7 Lead Response",
+					description:
+						"Instant response to all inbound leads within 5 minutes",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Multi-Channel Outreach",
-						description: "Coordinated email and phone follow-up sequences",
-					},
+					"@type": "Service",
+					name: "Multi-Channel Outreach",
+					description: "Coordinated email and phone follow-up sequences",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Intelligent Lead Qualification",
-						description: "AI-powered lead scoring and qualification",
-					},
+					"@type": "Service",
+					name: "Intelligent Lead Qualification",
+					description: "AI-powered lead scoring and qualification",
 				},
 			],
 		},

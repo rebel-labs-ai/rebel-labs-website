@@ -112,38 +112,25 @@ export default function LabPage() {
 			name: "Custom Workforce Development Services",
 			itemListElement: [
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Enterprise Deal Desk Automation",
-						description:
-							"Custom workforce for complex quoting and deal approval workflows",
-					},
+					"@type": "Service",
+					name: "Enterprise Deal Desk Automation",
+					description:
+						"Custom workforce for complex quoting and deal approval workflows",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Pipeline Intelligence System",
-						description:
-							"AI-powered pipeline monitoring and intervention system",
-					},
+					"@type": "Service",
+					name: "Pipeline Intelligence System",
+					description:
+						"AI-powered pipeline monitoring and intervention system",
 				},
 				{
-					"@type": "Offer",
-					itemOffered: {
-						"@type": "Service",
-						name: "Custom Lead Scoring Engine",
-						description: "Proprietary lead scoring based on your unique data",
-					},
+					"@type": "Service",
+					name: "Custom Lead Scoring Engine",
+					description: "Proprietary lead scoring based on your unique data",
 				},
 			],
 		},
-		aggregateRating: {
-			"@type": "AggregateRating",
-			ratingValue: "4.9",
-			reviewCount: "47",
-		},
+		// Removed aggregateRating - will add back when we have real customer reviews
 	}
 
 	return (

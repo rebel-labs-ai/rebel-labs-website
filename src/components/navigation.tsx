@@ -54,7 +54,7 @@ export function Navigation() {
 								height={24}
 								className="w-6 h-6"
 							/>
-							<span className="text-lg font-reddit-sans lowercase font-medium">
+							<span className="text-xl font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
 								<span className="text-[#09142f] dark:text-[#09142f]/80-">
 									sapien
@@ -136,9 +136,11 @@ export function Navigation() {
 								height={24}
 								className="w-6 h-6"
 							/>
-							<span className="text-lg font-reddit-sans lowercase font-medium">
+							<span className="text-xl font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
-								<span className="text-foreground">sapien</span>
+								<span className="text-[#09142f] dark:text-[#09142f]/80">
+									sapien
+								</span>
 							</span>
 						</div>
 						<button
