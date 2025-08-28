@@ -9,7 +9,7 @@ export default function CookiesPage() {
 			<Navigation />
 
 			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 

@@ -43,7 +43,7 @@ export function AnimatedText() {
 	}, [displayedText, isDeleting, currentPhraseIndex])
 
 	return (
-		<span className="text-[#A1BCD1] font-normal">
+		<span className="text-[#A1BCD1] font-medium sm:font-normal inline-block min-w-[200px] sm:min-w-[280px] md:min-w-[320px]">
 			{displayedText}
 			<span className="animate-pulse text-[#A1BCD1]">|</span>
 		</span>

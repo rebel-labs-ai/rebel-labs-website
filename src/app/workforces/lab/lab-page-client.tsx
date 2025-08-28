@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -9,7 +10,6 @@ import { AnimatedDots } from "@/components/animated-dots"
 import { Footer } from "@/components/footer"
 import {
 	Brain,
-	ArrowDown,
 	Layers,
 	Target,
 	TrendingUp,
@@ -386,7 +386,7 @@ export function LabPageClient() {
 			<Navigation />
 
 			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
@@ -424,135 +424,170 @@ export function LabPageClient() {
 				</section>
 			</div>
 
-			{/* Section 2: The New Division of Labor */}
+			{/* Section 2: The New Division of Labor - Three Parts */}
 			<section className="pt-32 pb-48 px-4 bg-accent/40">
 				<div className="max-w-7xl mx-auto">
-					<div className="text-center mb-16">
+					{/* Part A: The Focus */}
+					<div className="text-center mb-20">
 						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-							The New Division of Labor
+							The New Division of Labor.
 						</h2>
 						<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-							Off-the-shelf automation fails because it doesn&apos;t respect the
-							role of your human talent. Our approach, developed in partnership
-							with the elite agentic systems specialists at{" "}
-							<span className="font-semibold text-foreground">Rebel Labs</span>,
-							is built on a simple but powerful principle: your best people
-							direct the strategy; the workforce delivers the outcome.
+							The Workforce Lab is exclusively focused on solving the most
+							complex challenges in revenue operations. Our approach is built on
+							a simple but powerful principle: your best people direct the
+							strategy; the workforce delivers the outcome.
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-						{/* Human Team Card */}
-						<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-							<div className="relative p-10">
-								<div className="flex items-start gap-4 mb-6">
-									<div className="p-3 rounded-lg bg-accent/10">
-										<Brain className="w-8 h-8 text-accent" />
+					{/* Part B: The Partnership - Single framed block */}
+					<div className="mb-20">
+						<Card className="bg-transparent border-none p-12">
+							<div className="text-center mb-8">
+								{/* Partnership Lockup with actual logos */}
+								<div className="flex justify-center items-center gap-8 mb-10">
+									<div className="relative">
+										<Image
+											src="/logo.svg"
+											alt="Novosapien"
+											width={100}
+											height={100}
+										/>
 									</div>
-									<div>
-										<h3 className="text-2xl font-bold text-foreground mb-1">
-											Your Team
-										</h3>
-										<p className="text-sm font-medium text-accent uppercase tracking-wider">
-											The Strategists
-										</p>
+									<span className="text-4xl text-accent font-light">+</span>
+									<div className="relative">
+										<Image
+											src="/rebel-labs-logo.svg"
+											alt="Rebel Labs"
+											width={200}
+											height={48}
+										/>
 									</div>
-								</div>
-								<p className="text-muted-foreground leading-relaxed text-base">
-									Freed from the burden of repetitive execution, your human
-									experts are elevated to their highest purpose. They provide
-									the strategic judgment, creative insights, and mission command
-									that guide the entire operation.
-								</p>
-								<div className="mt-6 pt-6 border-t border-accent/10">
-									<ul className="space-y-2">
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Define strategic objectives
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Provide creative solutions
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Make critical decisions
-										</li>
-									</ul>
 								</div>
 							</div>
-						</Card>
 
-						{/* Digital Workforce Card */}
-						<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-							<div className="relative p-10">
-								<div className="flex items-start gap-4 mb-6">
-									<div className="p-3 rounded-lg bg-accent/10">
-										<Layers className="w-8 h-8 text-accent" />
-									</div>
-									<div>
-										<h3 className="text-2xl font-bold text-foreground mb-1">
-											The Workforce
-										</h3>
-										<p className="text-sm font-medium text-accent uppercase tracking-wider">
-											The Operators
-										</p>
-									</div>
+							{/* Two-column partnership definition */}
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+								<div className="space-y-4">
+									<h4 className="text-lg font-bold text-foreground">
+										Novosapien - The Architects of the System
+									</h4>
+									<p className="text-muted-foreground leading-relaxed">
+										Novosapien provides the foundational architecture and the
+										productized, plug-and-play Digital Workforces that form the
+										backbone of modern revenue operations.
+									</p>
 								</div>
-								<p className="text-muted-foreground leading-relaxed text-base">
-									Your bespoke Digital Workforce operates as a tireless,
-									autonomous execution layer. It runs the complex, high-volume
-									workflows with perfect consistency, learning and optimizing
-									its performance 24/7 to achieve the mission you have set.
-								</p>
-								<div className="mt-6 pt-6 border-t border-accent/10">
-									<ul className="space-y-2">
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Execute workflows 24/7
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Maintain perfect consistency
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Learn and optimize continuously
-										</li>
-									</ul>
+								<div className="space-y-4">
+									<h4 className="text-lg font-bold text-foreground">
+										Rebel Labs - The Elite Forging & Deployment Partner
+									</h4>
+									<p className="text-muted-foreground leading-relaxed">
+										Rebel Labs provides the specialized agentic engineering to
+										both seamlessly deploy our productized solutions and to
+										forge bespoke workforces for unique, mission-critical
+										challenges.
+									</p>
 								</div>
 							</div>
 						</Card>
 					</div>
 
-					{/* Connection Visual */}
-					<div className="flex justify-center items-center mt-12">
-						<div className="flex items-center gap-8">
-							<div className="text-center">
-								<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
-									<Brain className="w-10 h-10 text-accent" />
+					{/* Part C: The Philosophy */}
+					<div>
+						{/* Center text */}
+						<div className="text-center mb-12">
+							<h3 className="text-3xl font-bold text-foreground mb-6">
+								Your Strategy, Autonomously Executed.
+							</h3>
+							<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+								This model is designed to liberate your most valuable asset—your
+								human team. By providing them with a dedicated, autonomous
+								execution layer, we free them from the operational
+								&apos;how&apos; so they can focus exclusively on the strategic
+								&apos;what&apos; and &apos;why&apos;.
+							</p>
+						</div>
+
+						{/* Cards in two columns */}
+						<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+							{/* Your Team Card - Left */}
+							<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
+								<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+								<div className="relative p-10">
+									<div className="flex items-start gap-4 mb-6">
+										<div className="p-3 rounded-lg bg-accent/10">
+											<Brain className="w-8 h-8 text-accent" />
+										</div>
+										<div>
+											<h4 className="text-2xl font-bold text-foreground mb-1">
+												Your Team: The Strategists
+											</h4>
+										</div>
+									</div>
+									<p className="text-muted-foreground leading-relaxed text-base">
+										Freed from the burden of repetitive execution, your human
+										experts are elevated to their highest purpose. They provide
+										the strategic judgment, creative insights, and mission
+										command that guide the entire operation.
+									</p>
+									<div className="mt-6 pt-6 border-t border-accent/10">
+										<ul className="space-y-2">
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Define strategic objectives
+											</li>
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Provide creative solutions
+											</li>
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Make critical decisions
+											</li>
+										</ul>
+									</div>
 								</div>
-								<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-									Strategy
-								</span>
-							</div>
-							<div className="flex flex-col items-center">
-								<ArrowDown className="w-8 h-8 text-accent" />
-								<span className="text-sm font-bold text-accent mt-2">
-									MISSION
-								</span>
-								<ArrowDown className="w-8 h-8 text-accent mt-2" />
-							</div>
-							<div className="text-center">
-								<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
-									<Layers className="w-10 h-10 text-accent" />
+							</Card>
+
+							{/* The Workforce Card - Right */}
+							<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
+								<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+								<div className="relative p-10">
+									<div className="flex items-start gap-4 mb-6">
+										<div className="p-3 rounded-lg bg-accent/10">
+											<Layers className="w-8 h-8 text-accent" />
+										</div>
+										<div>
+											<h4 className="text-2xl font-bold text-foreground mb-1">
+												The Workforce: The Operators
+											</h4>
+										</div>
+									</div>
+									<p className="text-muted-foreground leading-relaxed text-base">
+										Your bespoke Digital Workforce operates as a tireless,
+										autonomous execution layer. It runs the complex, high-volume
+										workflows with perfect consistency, learning and optimizing
+										its performance 24/7 to achieve the mission you have set.
+									</p>
+									<div className="mt-6 pt-6 border-t border-accent/10">
+										<ul className="space-y-2">
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Execute workflows 24/7
+											</li>
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Maintain perfect consistency
+											</li>
+											<li className="flex items-center gap-2 text-sm text-muted-foreground">
+												<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+												Learn and optimize continuously
+											</li>
+										</ul>
+									</div>
 								</div>
-								<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-									Execution
-								</span>
-							</div>
+							</Card>
 						</div>
 					</div>
 				</div>
@@ -562,15 +597,17 @@ export function LabPageClient() {
 			<EngagementProtocol />
 
 			{/* Section 4: The Art of the Possible */}
-			<section className="py-24 px-4">
+			<section className="py-24 px-4 bg-gradient-to-b from-transparent via-accent/10 to-transparent">
 				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+					<div className="text-center mb-16">
+						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
 							The Art of the Possible.
 						</h2>
-						<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-							The Lab exists to answer the question, &ldquo;What if you could
-							build an autonomous system for...?&rdquo;
+						<p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+							The Lab exists to answer a simple question:
+						</p>
+						<p className="text-2xl md:text-3xl font-bold text-foreground">
+							What if you could...
 						</p>
 					</div>
 
@@ -578,84 +615,60 @@ export function LabPageClient() {
 						{/* Sales Intelligence Card */}
 						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
 							<div className="mb-4">
-								<Search className="w-10 h-10 text-accent mb-4" />
-								<h3 className="text-lg font-semibold text-foreground mb-2">
-									The Sales Intelligence Prompt
-								</h3>
+								<Search className="w-10 h-10 text-accent" />
 							</div>
-							<p className="text-muted-foreground leading-relaxed">
-								<span className="font-semibold text-foreground">
-									What if you could...
+							<p className="text-lg text-muted-foreground leading-relaxed">
+								...create a workforce that{" "}
+								<span className="font-bold text-foreground">
+									analyzes every sales call
 								</span>{" "}
-								create a workforce that analyzes every sales call and customer
-								interaction to identify patterns, predict churn, and deliver
-								real-time coaching insights?
-							</p>
-							<p className="text-sm text-accent mt-4 font-semibold">
-								Strategic Focus: Weaponizing sales data.
+								and customer interaction to identify patterns, predict churn,
+								and deliver real-time coaching insights?
 							</p>
 						</Card>
 
 						{/* Pipeline Health Card */}
 						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
 							<div className="mb-4">
-								<TrendingUp className="w-10 h-10 text-accent mb-4" />
-								<h3 className="text-lg font-semibold text-foreground mb-2">
-									The Pipeline Health Prompt
-								</h3>
+								<TrendingUp className="w-10 h-10 text-accent" />
 							</div>
-							<p className="text-muted-foreground leading-relaxed">
-								<span className="font-semibold text-foreground">
-									What if you could...
-								</span>{" "}
-								forge a workforce that monitors your entire sales pipeline,
-								identifies at-risk deals based on behavioral data, and
+							<p className="text-lg text-muted-foreground leading-relaxed">
+								...forge a workforce that{" "}
+								<span className="font-bold text-foreground">
+									monitors your entire sales pipeline
+								</span>
+								, identifies at-risk deals based on behavioral data, and
 								autonomously launches intervention campaigns to save them?
-							</p>
-							<p className="text-sm text-accent mt-4 font-semibold">
-								Strategic Focus: Proactive revenue protection.
 							</p>
 						</Card>
 
 						{/* Prospecting Card */}
 						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
 							<div className="mb-4">
-								<Target className="w-10 h-10 text-accent mb-4" />
-								<h3 className="text-lg font-semibold text-foreground mb-2">
-									The Prospecting Prompt
-								</h3>
+								<Target className="w-10 h-10 text-accent" />
 							</div>
-							<p className="text-muted-foreground leading-relaxed">
-								<span className="font-semibold text-foreground">
-									What if you could...
+							<p className="text-lg text-muted-foreground leading-relaxed">
+								...create an ideal customer profile discovery engine that{" "}
+								<span className="font-bold text-foreground">
+									analyzes your best customers
 								</span>{" "}
-								create an &ldquo;Ideal Customer Profile&rdquo; discovery engine
-								that analyzes your best customers and then builds a complete,
-								autonomous outbound prospecting campaign to find more of them?
-							</p>
-							<p className="text-sm text-accent mt-4 font-semibold">
-								Strategic Focus: Autonomous customer acquisition.
+								and then builds a complete, autonomous outbound prospecting
+								campaign to find more of them?
 							</p>
 						</Card>
 
 						{/* Marketing Optimization Card */}
 						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
 							<div className="mb-4">
-								<BarChart3 className="w-10 h-10 text-accent mb-4" />
-								<h3 className="text-lg font-semibold text-foreground mb-2">
-									The Marketing Optimization Prompt
-								</h3>
+								<BarChart3 className="w-10 h-10 text-accent" />
 							</div>
-							<p className="text-muted-foreground leading-relaxed">
-								<span className="font-semibold text-foreground">
-									What if you could...
+							<p className="text-lg text-muted-foreground leading-relaxed">
+								...deploy a closed-loop marketing workforce that{" "}
+								<span className="font-bold text-foreground">
+									analyzes ad spend, content performance, and lead quality
 								</span>{" "}
-								deploy a closed-loop marketing workforce that analyzes ad spend,
-								content performance, and lead quality to autonomously reallocate
-								your budget in real-time to the highest-ROI activities?
-							</p>
-							<p className="text-sm text-accent mt-4 font-semibold">
-								Strategic Focus: Autonomous, ROI-driven marketing.
+								to autonomously reallocate your budget in real-time to the
+								highest-ROI activities?
 							</p>
 						</Card>
 					</div>
@@ -663,35 +676,40 @@ export function LabPageClient() {
 			</section>
 
 			{/* Section 5: The Next Step - Commission Your Workforce */}
-			<section className="py-32 px-4 bg-gradient-to-t from-transparent to-accent/20">
+			<section className="py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-16 text-center bg-card-background backdrop-blur-sm border-2 border-accent/30 shadow-2xl">
-						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+								Ready to Forge Your Workforce?
+							</span>
+						</div>
+
+						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
 							Commission Your Workforce.
 						</h2>
 
-						<p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
 							The journey begins with a direct conversation. A confidential,
-							strategic session with the leadership of{" "}
-							<span className="font-semibold text-foreground">
-								Novosapien and Rebel Labs
-							</span>{" "}
-							to determine if your challenge and our capabilities are a perfect
-							match.
+							strategic session with the leadership to determine if your
+							challenge and our capabilities are a perfect match.
 						</p>
 
-						<a href="https://cal.com/novosapien/demo" className="inline-block">
-							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/80 hover:dark:bg-accent/40 text-lg px-8 py-4">
+						<a
+							href="https://cal.com/novosapien/demo"
+							className="inline-block mb-8"
+						>
+							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 								Book a Lab Scoping Session
 							</Button>
 						</a>
 
-						{/* Logos */}
-						<div className="flex justify-center items-center gap-8 mt-12 opacity-70">
-							<span className="text-sm text-muted-foreground">Powered by</span>
-							<span className="font-semibold text-foreground">
+						{/* Powered by */}
+						<div className="pt-8 border-t border-accent/10">
+							<p className="text-sm text-muted-foreground mb-2">Powered by</p>
+							<p className="font-semibold text-foreground">
 								Novosapien × Rebel Labs
-							</span>
+							</p>
 						</div>
 					</Card>
 				</div>

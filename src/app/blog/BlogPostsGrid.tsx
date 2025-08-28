@@ -44,11 +44,11 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 			{featuredPost && selectedCategory === "All" && (
 				<div className="mb-16">
 					<Card className="bg-card-background border border-accent/20 shadow-xl overflow-hidden">
-						<div className="grid grid-cols-1 lg:grid-cols-2">
+						<div className="grid grid-cols-1 md:grid-cols-2">
 							{/* Featured Image */}
 							<div className="relative h-64 lg:h-full bg-gradient-to-br from-accent/20 to-accent/10">
 								<div className="absolute inset-0 flex items-center justify-center">
-									<span className="text-accent/50 text-6xl font-bold">
+									<span className="text-accent/50 text-5xl sm:text-6xl font-bold">
 										Featured
 									</span>
 								</div>
@@ -64,7 +64,7 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 										{featuredPost.category}
 									</span>
 								</div>
-								<h2 className="text-3xl font-bold text-foreground mb-4">
+								<h2 className="text-4xl sm:text-4xl font-bold text-foreground mb-4">
 									{featuredPost.title}
 								</h2>
 								<p className="text-muted-foreground text-lg mb-6">
@@ -108,7 +108,7 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 							{/* Post Image */}
 							<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center">
-									<span className="text-accent/30 text-4xl font-bold">
+									<span className="text-accent/30 text-3xl sm:text-4xl font-bold">
 										{post.id}
 									</span>
 								</div>

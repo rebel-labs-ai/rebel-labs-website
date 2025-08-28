@@ -109,13 +109,13 @@ export default function BlogPage() {
 			{/* Navigation */}
 			<Navigation />
 
-			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			{/* Theme Toggle - Hidden on mobile */}
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
 			{/* Main Content */}
-			<main className="pt-32 pb-24 px-4">
+			<main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header - Server-rendered for SEO */}
 					<div className="text-center mb-12">
