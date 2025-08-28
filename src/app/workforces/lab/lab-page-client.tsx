@@ -415,7 +415,9 @@ export function LabPageClient() {
 								</h1>
 							</div>
 							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
-							For the complex sales and marketing challenges that our standard workforces cannot solve, we forge your proprietary workflow into a fully autonomous operational asset.
+								For the complex sales and marketing challenges that our standard
+								workforces cannot solve, we forge your proprietary workflow into
+								a fully autonomous operational asset.
 							</p>
 						</Card>
 					</div>
