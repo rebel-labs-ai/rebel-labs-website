@@ -40,37 +40,33 @@ export default function Home() {
 				{/* Section 1: Hero - The Declaration */}
 				<section className="pt-48 sm:pt-24 md:pt-48 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
 					<div className="max-w-4xl mx-auto relative z-10 w-full md:mt-36">
-						<div className="text-center mb-6 sm:mb-8">
+						<div className="hidden sm:block text-center mb-6 sm:mb-6">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 								Redefining the way your generate revenue
 							</span>
 						</div>
-						<div className="text-left">
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font">
+						<div className="text-left ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
 								Stop Managing Tools.
 							</h1>
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font">
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
 								Start <AnimatedText />
 							</h1>
 						</div>
-						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-left">
+						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center">
 							We deploy digital workforces into your business so you can
 							generate revenue on autopilot.
 						</p>
-						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center">
+						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-full sm:w-auto"
 							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 w-full sm:w-auto">
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm px-4 py-2">
 									Speak to us
 								</Button>
 							</a>
-							<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/30 hover:dark:bg-accent/30 w-full sm:w-auto">
-								Try it now
-							</Button>
 						</div>
 					</div>
 					{/* Hero Image - Above dots */}
@@ -130,7 +126,7 @@ export default function Home() {
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground"
 									>
 										<path
 											strokeLinecap="round"
@@ -159,7 +155,7 @@ export default function Home() {
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground"
 									>
 										<path
 											strokeLinecap="round"
@@ -182,7 +178,7 @@ export default function Home() {
 							{/* Element 3: Continuous Improvement */}
 							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
 								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
-									<TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]" />
+									<TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground" />
 								</div>
 								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
@@ -201,7 +197,7 @@ export default function Home() {
 							<div className="max-w-xs w-full">
 								{/* Light mode image */}
 								<Image
-									src="/home/workforce-stack.png"
+									src="/home/workforce-stack.svg"
 									alt="Digital Workforce Stack"
 									width={400}
 									height={300}
@@ -209,7 +205,7 @@ export default function Home() {
 								/>
 								{/* Dark mode image */}
 								<Image
-									src="/home/workforce-stack-dark.png"
+									src="/home/workforce-stack-dark.svg"
 									alt="Digital Workforce Stack"
 									width={400}
 									height={300}
@@ -235,7 +231,7 @@ export default function Home() {
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground"
 									>
 										<path
 											strokeLinecap="round"
@@ -264,7 +260,7 @@ export default function Home() {
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground"
 									>
 										<path
 											strokeLinecap="round"
@@ -293,7 +289,7 @@ export default function Home() {
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground"
 									>
 										<path
 											strokeLinecap="round"

@@ -37,11 +37,11 @@ export function MissionControlMockup() {
 					{/* Primary Status - solid background to block grid */}
 					<div className="rounded-lg p-6 bg-gray-50 dark:[background-color:hsl(216,23%,36%)]">
 						<div className="flex items-center justify-between mb-4">
-							<span className="text-sm font-bold text-foreground uppercase tracking-wider">
+							<span className="text-xs sm:text-sm font-bold text-foreground uppercase tracking-wider">
 								Workforce Status
 							</span>
 							<div className="flex items-center gap-2">
-								<span className="text-xl font-bold text-foreground">
+								<span className="text-sm sm:text-xl font-bold text-foreground">
 									AUTONOMOUS
 								</span>
 								<div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" />

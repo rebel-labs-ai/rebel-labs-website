@@ -87,16 +87,41 @@ function EngagementProtocol() {
 	return (
 		<section
 			ref={containerRef}
-			className="relative px-4 bg-gradient-to-b from-accent/40 via-accent/20 to-transparent"
+			className="relative py-16 sm:py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 to-transparent"
 		>
 			<div className="max-w-6xl mx-auto">
-				<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
+				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-16">
 					The Engagement Protocol
 				</h2>
 
-				{/* Main container */}
-				<div className="relative">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+				{/* Mobile Layout - Phases with mockups below each */}
+				<div className="block lg:hidden">
+					{phases.map((phase, index) => (
+						<div key={index} className="mb-24">
+							<div className="mb-6">
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
+									{phase.indicator}
+								</span>
+								<h3 className="text-xl sm:text-2xl font-bold mb-3">
+									{phase.title}
+								</h3>
+								<p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+									{phase.description}
+								</p>
+							</div>
+							{/* Mockup below text on mobile */}
+							<Card className="bg-card-background dark:border-0 border border-accent/30 shadow-xl overflow-hidden">
+								<div className="h-[300px] sm:h-[400px]">
+									{phase.mockup}
+								</div>
+							</Card>
+						</div>
+					))}
+				</div>
+
+				{/* Desktop Layout - Original scrollytelling */}
+				<div className="relative hidden lg:block">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 						{/* Left side - Text phases */}
 						<div>
 							{phases.map((phase, index) => (
@@ -401,20 +426,20 @@ export function LabPageClient() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none" />
 
 				{/* Hero Content */}
-				<section className="pt-32 pb-24 px-4 relative">
-					<div className="max-w-5xl mx-auto relative z-10 mt-36">
-						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
+				<section className="pt-48 sm:pt-32 pb-24 px-4 relative">
+					<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
+						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
 							<div className="text-center mb-8">
-								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 									The Workforce Lab
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl sm:font-light tracking-tight font font-medium">
 									Forge Your Unfair Advantage.
 								</h1>
 							</div>
-							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
+							<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
 								For the complex sales and marketing challenges that our standard
 								workforces cannot solve, we forge your proprietary workflow into
 								a fully autonomous operational asset.
@@ -425,14 +450,14 @@ export function LabPageClient() {
 			</div>
 
 			{/* Section 2: The New Division of Labor - Three Parts */}
-			<section className="pt-32 pb-48 px-4 bg-accent/40">
+			<section className="pt-16 sm:pt-32 pb-16 sm:pb-48 px-4 bg-accent/40">
 				<div className="max-w-7xl mx-auto">
 					{/* Part A: The Focus */}
-					<div className="text-center mb-20">
-						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+					<div className="text-center mb-8 sm:mb-20">
+						<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-6">
 							The New Division of Labor.
 						</h2>
-						<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+						<p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
 							The Workforce Lab is exclusively focused on solving the most
 							complex challenges in revenue operations. Our approach is built on
 							a simple but powerful principle: your best people direct the
@@ -441,53 +466,109 @@ export function LabPageClient() {
 					</div>
 
 					{/* Part B: The Partnership - Single framed block */}
-					<div className="mb-20">
-						<Card className="bg-transparent border-none p-12">
-							<div className="text-center mb-8">
-								{/* Partnership Lockup with actual logos */}
-								<div className="flex justify-center items-center gap-8 mb-10">
+					<div className="mb-8 sm:mb-20">
+						<Card className="bg-transparent border-none p-6 sm:p-8 md:p-12">
+							{/* Mobile Layout - Both descriptions below logos */}
+							<div className="block sm:hidden">
+								{/* Logos at the top */}
+								<div className="flex justify-center items-center gap-4 mb-6">
 									<div className="relative">
 										<Image
 											src="/logo.svg"
 											alt="Novosapien"
-											width={100}
-											height={100}
+											width={60}
+											height={60}
+											className="w-[60px] h-[60px]"
 										/>
 									</div>
-									<span className="text-4xl text-accent font-light">+</span>
+									<span className="text-2xl text-accent font-light">+</span>
 									<div className="relative">
 										<Image
 											src="/rebel-labs-logo.svg"
 											alt="Rebel Labs"
-											width={200}
-											height={48}
+											width={120}
+											height={30}
+											className="w-[120px] h-auto"
 										/>
 									</div>
 								</div>
-							</div>
 
-							{/* Two-column partnership definition */}
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-								<div className="space-y-4">
-									<h4 className="text-lg font-bold text-foreground">
+								{/* Novosapien description - below logos on mobile */}
+								<div className="space-y-3 mb-6">
+									<h4 className="text-base font-bold text-foreground text-center">
 										Novosapien - The Architects of the System
 									</h4>
-									<p className="text-muted-foreground leading-relaxed">
+									<p className="text-sm text-muted-foreground leading-relaxed text-center">
 										Novosapien provides the foundational architecture and the
 										productized, plug-and-play Digital Workforces that form the
 										backbone of modern revenue operations.
 									</p>
 								</div>
-								<div className="space-y-4">
-									<h4 className="text-lg font-bold text-foreground">
+
+								{/* Rebel Labs description - at the bottom on mobile */}
+								<div className="space-y-3">
+									<h4 className="text-base font-bold text-foreground text-center">
 										Rebel Labs - The Elite Forging & Deployment Partner
 									</h4>
-									<p className="text-muted-foreground leading-relaxed">
+									<p className="text-sm text-muted-foreground leading-relaxed text-center">
 										Rebel Labs provides the specialized agentic engineering to
 										both seamlessly deploy our productized solutions and to
 										forge bespoke workforces for unique, mission-critical
 										challenges.
 									</p>
+								</div>
+							</div>
+
+							{/* Desktop Layout - Original side-by-side */}
+							<div className="hidden sm:block">
+								<div className="text-center mb-8">
+									{/* Partnership Lockup with actual logos */}
+									<div className="flex justify-center items-center gap-4 sm:gap-8 mb-6 sm:mb-10">
+										<div className="relative">
+											<Image
+												src="/logo.svg"
+												alt="Novosapien"
+												width={100}
+												height={100}
+												className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]"
+											/>
+										</div>
+										<span className="text-2xl sm:text-4xl text-accent font-light">+</span>
+										<div className="relative">
+											<Image
+												src="/rebel-labs-logo.svg"
+												alt="Rebel Labs"
+												width={200}
+												height={48}
+												className="w-[120px] h-auto sm:w-[160px] md:w-[200px]"
+											/>
+										</div>
+									</div>
+								</div>
+
+								{/* Two-column partnership definition */}
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+									<div className="space-y-3 sm:space-y-4">
+										<h4 className="text-base sm:text-lg font-bold text-foreground">
+											Novosapien - The Architects of the System
+										</h4>
+										<p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+											Novosapien provides the foundational architecture and the
+											productized, plug-and-play Digital Workforces that form the
+											backbone of modern revenue operations.
+										</p>
+									</div>
+									<div className="space-y-3 sm:space-y-4">
+										<h4 className="text-base sm:text-lg font-bold text-foreground">
+											Rebel Labs - The Elite Forging & Deployment Partner
+										</h4>
+										<p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+											Rebel Labs provides the specialized agentic engineering to
+											both seamlessly deploy our productized solutions and to
+											forge bespoke workforces for unique, mission-critical
+											challenges.
+										</p>
+									</div>
 								</div>
 							</div>
 						</Card>
@@ -496,11 +577,11 @@ export function LabPageClient() {
 					{/* Part C: The Philosophy */}
 					<div>
 						{/* Center text */}
-						<div className="text-center mb-12">
-							<h3 className="text-3xl font-bold text-foreground mb-6">
+						<div className="text-center mb-8 sm:mb-12">
+							<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-6">
 								Your Strategy, Autonomously Executed.
 							</h3>
-							<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+							<p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
 								This model is designed to liberate your most valuable asset—your
 								human team. By providing them with a dedicated, autonomous
 								execution layer, we free them from the operational
@@ -510,22 +591,22 @@ export function LabPageClient() {
 						</div>
 
 						{/* Cards in two columns */}
-						<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+						<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
 							{/* Your Team Card - Left */}
 							<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
 								<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-								<div className="relative p-10">
+								<div className="relative p-6 sm:p-8 md:p-10">
 									<div className="flex items-start gap-4 mb-6">
-										<div className="p-3 rounded-lg bg-accent/10">
-											<Brain className="w-8 h-8 text-accent" />
+										<div className="p-2 sm:p-3 rounded-lg bg-accent/10">
+											<Brain className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
 										</div>
 										<div>
-											<h4 className="text-2xl font-bold text-foreground mb-1">
+											<h4 className="text-xl sm:text-2xl font-bold text-foreground mb-1">
 												Your Team: The Strategists
 											</h4>
 										</div>
 									</div>
-									<p className="text-muted-foreground leading-relaxed text-base">
+									<p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
 										Freed from the burden of repetitive execution, your human
 										experts are elevated to their highest purpose. They provide
 										the strategic judgment, creative insights, and mission
@@ -553,18 +634,18 @@ export function LabPageClient() {
 							{/* The Workforce Card - Right */}
 							<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
 								<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-								<div className="relative p-10">
+								<div className="relative p-6 sm:p-8 md:p-10">
 									<div className="flex items-start gap-4 mb-6">
-										<div className="p-3 rounded-lg bg-accent/10">
-											<Layers className="w-8 h-8 text-accent" />
+										<div className="p-2 sm:p-3 rounded-lg bg-accent/10">
+											<Layers className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
 										</div>
 										<div>
-											<h4 className="text-2xl font-bold text-foreground mb-1">
+											<h4 className="text-xl sm:text-2xl font-bold text-foreground mb-1">
 												The Workforce: The Operators
 											</h4>
 										</div>
 									</div>
-									<p className="text-muted-foreground leading-relaxed text-base">
+									<p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
 										Your bespoke Digital Workforce operates as a tireless,
 										autonomous execution layer. It runs the complex, high-volume
 										workflows with perfect consistency, learning and optimizing
@@ -597,27 +678,27 @@ export function LabPageClient() {
 			<EngagementProtocol />
 
 			{/* Section 4: The Art of the Possible */}
-			<section className="py-24 px-4 bg-gradient-to-b from-transparent via-accent/10 to-transparent">
+			<section className="py-16 sm:py-24 px-4 bg-gradient-to-b from-transparent via-accent/10 to-transparent">
 				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-16">
-						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+					<div className="text-center mb-8 sm:mb-16">
+						<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-8">
 							The Art of the Possible.
 						</h2>
-						<p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+						<p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 sm:mb-12">
 							The Lab exists to answer a simple question:
 						</p>
-						<p className="text-2xl md:text-3xl font-bold text-foreground">
+						<p className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
 							What if you could...
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 						{/* Sales Intelligence Card */}
-						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
-							<div className="mb-4">
-								<Search className="w-10 h-10 text-accent" />
+						<Card className="p-6 sm:p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
+							<div className="mb-3 sm:mb-4">
+								<Search className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
 							</div>
-							<p className="text-lg text-muted-foreground leading-relaxed">
+							<p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 								...create a workforce that{" "}
 								<span className="font-bold text-foreground">
 									analyzes every sales call
@@ -628,11 +709,11 @@ export function LabPageClient() {
 						</Card>
 
 						{/* Pipeline Health Card */}
-						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
-							<div className="mb-4">
-								<TrendingUp className="w-10 h-10 text-accent" />
+						<Card className="p-6 sm:p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
+							<div className="mb-3 sm:mb-4">
+								<TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
 							</div>
-							<p className="text-lg text-muted-foreground leading-relaxed">
+							<p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 								...forge a workforce that{" "}
 								<span className="font-bold text-foreground">
 									monitors your entire sales pipeline
@@ -643,11 +724,11 @@ export function LabPageClient() {
 						</Card>
 
 						{/* Prospecting Card */}
-						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
-							<div className="mb-4">
-								<Target className="w-10 h-10 text-accent" />
+						<Card className="p-6 sm:p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
+							<div className="mb-3 sm:mb-4">
+								<Target className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
 							</div>
-							<p className="text-lg text-muted-foreground leading-relaxed">
+							<p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 								...create an ideal customer profile discovery engine that{" "}
 								<span className="font-bold text-foreground">
 									analyzes your best customers
@@ -658,11 +739,11 @@ export function LabPageClient() {
 						</Card>
 
 						{/* Marketing Optimization Card */}
-						<Card className="p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
-							<div className="mb-4">
-								<BarChart3 className="w-10 h-10 text-accent" />
+						<Card className="p-6 sm:p-8 bg-card-background border border-accent/30 hover:border-accent transition-colors group">
+							<div className="mb-3 sm:mb-4">
+								<BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
 							</div>
-							<p className="text-lg text-muted-foreground leading-relaxed">
+							<p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 								...deploy a closed-loop marketing workforce that{" "}
 								<span className="font-bold text-foreground">
 									analyzes ad spend, content performance, and lead quality
@@ -676,38 +757,38 @@ export function LabPageClient() {
 			</section>
 
 			{/* Section 5: The Next Step - Commission Your Workforce */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+					<Card className="p-6 sm:p-8 md:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-3 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
 								Ready to Forge Your Workforce?
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							Commission Your Workforce.
 						</h2>
 
-						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
 							The journey begins with a direct conversation. A confidential,
 							strategic session with the leadership to determine if your
 							challenge and our capabilities are a perfect match.
 						</p>
 
 						<a
-							href="https://cal.com/novosapien/demo"
-							className="inline-block mb-8"
+							href="https://cal.com/george-westbrook-novosapien/custom-workforce"
+							className="inline-block mb-6 sm:mb-8"
 						>
-							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 								Book a Lab Scoping Session
 							</Button>
 						</a>
 
 						{/* Powered by */}
-						<div className="pt-8 border-t border-accent/10">
-							<p className="text-sm text-muted-foreground mb-2">Powered by</p>
-							<p className="font-semibold text-foreground">
+						<div className="pt-6 sm:pt-8 border-t border-accent/10">
+							<p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Powered by</p>
+							<p className="text-sm sm:text-base font-semibold text-foreground">
 								Novosapien × Rebel Labs
 							</p>
 						</div>

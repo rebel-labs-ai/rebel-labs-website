@@ -625,21 +625,21 @@ export function ContentWorkforceClient() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Hero Content */}
-				<section className="pt-8 sm:pt-32 pb-24 px-4 relative">
+				<section className="pt-24 sm:pt-32 pb-24 px-4 relative">
 					<div className="max-w-5xl mx-auto relative z-10 mt-36">
-						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
-							<div className="text-center mb-8">
-								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-12">
+							<div className="text-center mb-4 sm:mb-8">
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semism:font-semibold px-3 py-1 rounded-full text-xs sm:text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 									Content Creation Workforce
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl sm:font-light tracking-tight font font-medium">
 									From Blank Page to Published Campaign.
 								</h1>
 							</div>
-							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
-								Deploy an autonomous content production team that transforms
+							<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto px-2 sm:px-0">
+									Deploy an autonomous content production team that transforms
 								your strategic directives into high-quality, on-brand
 								assets—from drafting and research to multi-platform repurposing.
 							</p>
@@ -1245,7 +1245,17 @@ export function ContentWorkforceClient() {
 						</p>
 
 						<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
-							Book a Strategic Session
+							Talk to Us
+							{/* Added link to book a strategic session */}
+							<a
+								href="https://cal.com/george-westbrook-novosapien/content-creation-workforce"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block w-full h-full"
+								tabIndex={-1}
+								aria-label="Book a Strategic Session"
+								style={{ position: "absolute", inset: 0, zIndex: 10 }}
+							></a>
 						</Button>
 					</Card>
 				</div>
