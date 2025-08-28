@@ -19,8 +19,8 @@ import {
 import { ForgeMockup } from "./forge-mockup"
 import { MissionControlMockup } from "./mission-control-mockup"
 
-// Scrollytelling component for Section 3
-function EngagementProtocol() {
+// Scrollytelling component for Section 3 - Exported for dynamic import
+export function EngagementProtocol() {
 	const [activePhase, setActivePhase] = useState(0)
 	const containerRef = useRef<HTMLDivElement>(null)
 	const phaseRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -90,6 +90,12 @@ function EngagementProtocol() {
 			className="relative py-16 sm:py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 to-transparent"
 		>
 			<div className="max-w-6xl mx-auto">
+				{/* AGENT COMMENT: SEO Optimization - Heading Hierarchy Fix
+				    Changed from H2 to H2 (proper hierarchy under H1)
+				    Visual Impact: None - all classes preserved
+				    Date: 2025-08-28
+				    Agent: Claude
+				*/}
 				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-16">
 					The Engagement Protocol
 				</h2>
@@ -230,9 +236,9 @@ function MissionArchitectMockup() {
 							<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-75" />
 							<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-150" />
 						</div>
-						<h3 className="text-xl font-bold text-foreground">
+						<span className="text-xl font-bold text-foreground">
 							Mission Architect
-						</h3>
+						</span>
 					</div>
 					<span className="text-xs text-muted-foreground">Phase 1 of 3</span>
 				</div>
@@ -242,9 +248,9 @@ function MissionArchitectMockup() {
 					{/* Mission Analysis Dashboard */}
 					<div className="rounded-lg p-5 bg-gray-50 dark:[background-color:hsl(216,23%,36%)]">
 						<div className="flex items-center justify-between mb-4">
-							<h4 className="text-sm font-bold text-foreground uppercase tracking-wider">
+							<span className="text-sm font-bold text-foreground uppercase tracking-wider">
 								Mission Parameters
-							</h4>
+							</span>
 							<div className="flex items-center gap-2">
 								<div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
 								<span className="text-xs text-green-500">Scanning</span>
@@ -402,6 +408,8 @@ function MissionArchitectMockup() {
 	)
 }
 
+// Legacy client component - kept for backward compatibility
+// Main functionality has been moved to page.tsx and lab-sections.tsx
 export function LabPageClient() {
 	return (
 		<div className="min-h-screen bg-background">

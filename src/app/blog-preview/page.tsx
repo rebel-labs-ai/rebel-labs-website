@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
 import BlogPostsGrid from "./BlogPostsGrid"
 import NewsletterForm from "./NewsletterForm"
+import Breadcrumbs from "@/components/seo/Breadcrumbs"
+import { BlogFAQSection } from "./faq-section"
 
 // Static blog posts data - moved from client component for SEO
 const blogPosts = [
@@ -87,8 +89,10 @@ const blogPosts = [
 	},
 ]
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+
 export const metadata: Metadata = {
-	title: "Blog - NovoSapien",
+	title: "AI Insights & Automation Blog | NovoSapien",
 	description:
 		"Stay updated with the latest insights on AI workforces, automation strategies, and digital transformation. Learn how to scale your business with intelligent automation.",
 	keywords: [
@@ -102,22 +106,99 @@ export const metadata: Metadata = {
 	].join(", "),
 	authors: [{ name: "NovoSapien Team" }],
 	openGraph: {
-		title: "Blog - NovoSapien",
+		type: "website",
+		locale: "en_US",
+		url: `${baseUrl}/blog-preview`,
+		siteName: "NovoSapien",
+		title: "AI Insights & Automation Blog | NovoSapien",
 		description:
 			"Explore the latest in AI workforces, automation strategies, and success stories from the frontier of autonomous business operations.",
-		type: "website",
+		images: [
+			{
+				url: "/og-blog.jpg",
+				width: 1200,
+				height: 630,
+				alt: "NovoSapien Blog - AI Insights & Automation",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@novosapien",
+		creator: "@novosapien",
+		title: "AI Insights & Automation Blog",
+		description:
+			"Latest insights on AI workforces, automation strategies, and digital transformation.",
+		images: ["/og-blog.jpg"],
+	},
+	alternates: {
+		canonical: `${baseUrl}/blog-preview`,
+	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
 	},
 }
 
 export default function BlogPage() {
+	// Schema markup for Blog
+	const schemaData = {
+		"@context": "https://schema.org",
+		"@type": "Blog",
+		"@id": `${baseUrl}/blog-preview#blog`,
+		url: `${baseUrl}/blog-preview`,
+		name: "NovoSapien AI Insights Blog",
+		description:
+			"Explore insights on AI workforces, automation strategies, and digital transformation",
+		publisher: {
+			"@type": "Organization",
+			name: "NovoSapien",
+			url: baseUrl,
+			logo: {
+				"@type": "ImageObject",
+				url: `${baseUrl}/logo.png`,
+			},
+		},
+		blogPost: blogPosts.map(post => ({
+			"@type": "BlogPosting",
+			headline: post.title,
+			description: post.excerpt,
+			author: {
+				"@type": "Person",
+				name: post.author,
+			},
+			datePublished: post.date,
+			articleSection: post.category,
+			url: `${baseUrl}/blog-preview/${post.slug}`,
+		})),
+	}
+
 	return (
 		<div className="min-h-screen bg-background">
+			{/* SEO: Schema Markup */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+			/>
+
 			{/* Navigation */}
 			<Navigation />
 
 			{/* Theme Toggle - Hidden on mobile */}
 			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
+			</div>
+
+			{/* SEO: Breadcrumbs (visually hidden) */}
+			<div className="sr-only">
+				<Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
 			</div>
 
 			{/* Main Content */}
@@ -142,6 +223,9 @@ export default function BlogPage() {
 					<NewsletterForm />
 				</div>
 			</main>
+
+			{/* FAQ Section */}
+			<BlogFAQSection />
 
 			{/* Footer */}
 			<Footer />

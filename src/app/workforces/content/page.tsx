@@ -151,18 +151,14 @@ export default function ContentWorkforcePage() {
 					<ThemeToggle />
 				</div>
 
-				{/* Breadcrumbs */}
-				<div className="absolute top-20 left-0 right-0 z-20 px-4 py-2">
-					<div className="max-w-7xl mx-auto">
-						<Breadcrumbs
-							items={[
-								{ name: "Home", href: "/" },
-								{ name: "AI Workforces", href: "/workforces" },
-								{ name: "Content Creation" },
-							]}
-						/>
-					</div>
-				</div>
+				{/* Breadcrumbs - hidden but present for SEO */}
+				<Breadcrumbs
+					items={[
+						{ name: "Home", href: "/" },
+						{ name: "AI Workforces", href: "/workforces" },
+						{ name: "Content Creation" },
+					]}
+				/>
 
 				{/* Hero Section - Server Component */}
 				<HeroSection />

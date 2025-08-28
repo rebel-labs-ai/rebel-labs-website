@@ -1201,3 +1201,5 @@ Notes
 8. **Mark complete** when all items addressed
 
 Remember: **Quality over speed.** Better to complete fewer optimizations correctly than rush and break the visual design. Every change must preserve the exact visual appearance while improving SEO.
+
+Please for the lab page add an FAQ

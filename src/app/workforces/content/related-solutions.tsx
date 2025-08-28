@@ -34,10 +34,10 @@ export function RelatedSolutionsSection() {
 						every aspect of your business operations.
 					</p>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
 					{relatedSolutions.map((solution, index) => (
 						<Link key={index} href={solution.href} className="block group">
-							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02]">
+							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 								<h3 className="text-xl font-semibold mb-2 text-foreground">
 									{solution.title}
 								</h3>

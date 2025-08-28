@@ -955,9 +955,9 @@ export default function LeadWorkforcePage() {
 							every aspect of your business operations.
 						</p>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
 						<Link href="/workforces/content" className="block group">
-							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02]">
+							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 								<h3 className="text-xl font-semibold mb-2 text-foreground">
 									Content Workforce
 								</h3>
@@ -971,23 +971,8 @@ export default function LeadWorkforcePage() {
 							</Card>
 						</Link>
 
-						<Link href="/workforces/custom" className="block group">
-							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02]">
-								<h3 className="text-xl font-semibold mb-2 text-foreground">
-									Custom Workforce
-								</h3>
-								<p className="text-muted-foreground text-sm mb-4">
-									Build a tailored AI workforce designed specifically for your
-									unique business processes and requirements.
-								</p>
-								<span className="text-accent font-semibold text-sm group-hover:text-accent/80">
-									Learn more →
-								</span>
-							</Card>
-						</Link>
-
 						<Link href="/workforces/lab" className="block group">
-							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02]">
+							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 								<h3 className="text-xl font-semibold mb-2 text-foreground">
 									Workforce Lab
 								</h3>

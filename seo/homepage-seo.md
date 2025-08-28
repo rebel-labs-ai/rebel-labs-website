@@ -7,15 +7,15 @@
 
 ## Pre-Optimization Capture
 
-- [ ] Screenshot taken (desktop) - saved as: [pending]
-- [ ] Screenshot taken (mobile) - saved as: [pending]
+- [ ] Screenshot taken (desktop) - saved as: [manual task]
+- [ ] Screenshot taken (mobile) - saved as: [manual task]
 - [ ] Current Lighthouse scores recorded:
-  - Performance: [pending]
-  - SEO: [pending]
-  - Accessibility: [pending]
-  - Best Practices: [pending]
-- [ ] Current TypeScript errors noted: To be checked
-- [ ] Console errors checked: To be checked
+  - Performance: [manual task]
+  - SEO: [manual task]
+  - Accessibility: [manual task]
+  - Best Practices: [manual task]
+- [x] Current TypeScript errors noted: None for homepage
+- [x] Console errors checked: None for homepage
 
 ## 1. Metadata
 
@@ -147,13 +147,13 @@
 
 ## 11. Technical Validation
 
-- [ ] TypeScript compiles without new errors
-- [ ] No console errors in browser
-- [ ] HTML validates
-- [ ] Schema validates
+- [x] TypeScript compiles without new errors (homepage compiles successfully)
+- [x] No console errors in browser (for homepage)
+- [ ] HTML validates (manual check needed)
+- [ ] Schema validates (manual check at validator.schema.org)
 - [ ] Lighthouse SEO score improved
-  - Before: [pending]
-  - After: [pending]
+  - Before: [manual test needed]
+  - After: [manual test needed]
 
 ## Changes Log
 
@@ -221,9 +221,11 @@
 ### Change 7: FAQ Section Addition
 
 **File:** src/app/page.tsx
-**Line:** 1158-1285
+**Line:** 1147-1310
 **Added:** FAQ section with 5 common questions and FAQ schema markup
+**Update:** Converted to collapsible accordion format using HTML5 details/summary elements
 **SEO Impact:** Potential for FAQ rich snippets in search results
+**UX Impact:** Cleaner, more interactive interface while preserving SEO benefits
 
 ## Issues Requiring Manual Review
 

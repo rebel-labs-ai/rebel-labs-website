@@ -22,7 +22,10 @@ export default function BlogCategoryFilter({
 	onCategoryChange,
 }: BlogCategoryFilterProps) {
 	return (
-		<div className="flex flex-wrap justify-center gap-2 mb-12">
+		<nav
+			aria-label="Blog categories"
+			className="flex flex-wrap justify-center gap-2 mb-12"
+		>
 			{categories.map(category => (
 				<Button
 					key={category}
@@ -30,13 +33,15 @@ export default function BlogCategoryFilter({
 					variant={selectedCategory === category ? "default" : "outline"}
 					className={
 						selectedCategory === category
-							? "bg-accent dark:bg-accent/60 text-white dark:text-white border-accent shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
-							: "bg-transparent text-foreground border-accent/30 hover:bg-accent/10 dark:hover:bg-accent/20"
+							? "min-h-[48px] px-4 py-2 bg-accent dark:bg-accent/60 text-white dark:text-white border-accent shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
+							: "min-h-[48px] px-4 py-2 bg-transparent text-foreground border-accent/30 hover:bg-accent/10 dark:hover:bg-accent/20"
 					}
+					aria-label={`Filter by ${category} category`}
+					aria-pressed={selectedCategory === category}
 				>
 					{category}
 				</Button>
 			))}
-		</div>
+		</nav>
 	)
 }

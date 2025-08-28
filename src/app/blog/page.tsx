@@ -3,22 +3,100 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ArrowRight, Bell, Sparkles, Calendar } from "lucide-react"
+import Breadcrumbs from "@/components/seo/Breadcrumbs"
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
 
 export const metadata: Metadata = {
 	title: "Blog - Coming Soon | NovoSapien",
 	description:
 		"Our blog is coming soon. Stay tuned for insights on AI workforces, automation strategies, and digital transformation.",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: `${baseUrl}/blog`,
+		siteName: "NovoSapien",
+		title: "Blog - Coming Soon | NovoSapien",
+		description:
+			"Stay tuned for insights on AI workforces, automation strategies, and digital transformation from NovoSapien.",
+		images: [
+			{
+				url: "/og-blog.jpg",
+				width: 1200,
+				height: 630,
+				alt: "NovoSapien Blog - Coming Soon",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@novosapien",
+		creator: "@novosapien",
+		title: "Blog - Coming Soon | NovoSapien",
+		description:
+			"Stay tuned for insights on AI workforces and automation strategies.",
+		images: ["/og-blog.jpg"],
+	},
+	alternates: {
+		canonical: `${baseUrl}/blog`,
+	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
 }
 
 export default function BlogComingSoonPage() {
+	// Schema markup for WebPage
+	const schemaData = {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": `${baseUrl}/blog#webpage`,
+		url: `${baseUrl}/blog`,
+		name: "Blog - Coming Soon",
+		description:
+			"Our blog is coming soon. Stay tuned for insights on AI workforces, automation strategies, and digital transformation.",
+		dateModified: new Date().toISOString(),
+		publisher: {
+			"@type": "Organization",
+			name: "NovoSapien",
+			url: baseUrl,
+		},
+		potentialAction: {
+			"@type": "SubscribeAction",
+			target: {
+				"@type": "EntryPoint",
+				urlTemplate: `${baseUrl}/blog#newsletter`,
+			},
+		},
+	}
+
 	return (
 		<div className="min-h-screen bg-background">
+			{/* SEO: Schema Markup */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+			/>
+
 			{/* Navigation */}
 			<Navigation />
 
 			{/* Theme Toggle */}
 			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
+			</div>
+
+			{/* SEO: Breadcrumbs (visually hidden) */}
+			<div className="sr-only">
+				<Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
 			</div>
 
 			{/* Main Content */}
@@ -80,7 +158,10 @@ export default function BlogComingSoonPage() {
 					</div>
 
 					{/* Newsletter Signup */}
-					<div className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl p-8 max-w-2xl mx-auto border border-accent/20">
+					<div
+						id="newsletter"
+						className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl p-8 max-w-2xl mx-auto border border-accent/20"
+					>
 						<h2 className="text-2xl font-light mb-4 text-foreground">
 							Be the First to Know
 						</h2>
@@ -88,16 +169,26 @@ export default function BlogComingSoonPage() {
 							Join our newsletter to get notified when we launch our blog and
 							receive exclusive insights.
 						</p>
-						<form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+						<form
+							className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+							aria-label="Newsletter signup"
+						>
+							<label htmlFor="email-input" className="sr-only">
+								Email address
+							</label>
 							<input
+								id="email-input"
 								type="email"
 								placeholder="Enter your email"
-								className="flex-1 px-4 py-2 rounded-lg bg-background border border-accent/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 text-sm"
+								className="flex-1 min-h-[48px] px-4 py-3 rounded-lg bg-background border border-accent/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 text-sm"
 								required
+								aria-required="true"
+								aria-label="Enter your email address"
 							/>
 							<button
 								type="submit"
-								className="px-4 py-2 bg-accent text-accent-foreground rounded-lg hover:bg-accent/80 transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap text-sm"
+								className="min-h-[48px] px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/80 transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap text-sm"
+								aria-label="Subscribe to newsletter"
 							>
 								Notify Me
 								<ArrowRight className="w-3 h-3" />
