@@ -14,7 +14,6 @@ import {
 	Search,
 	Brain,
 	Layers,
-	Calendar,
 	MessageSquare,
 	FileText,
 	Video,
@@ -82,7 +81,10 @@ function ContentProductionProtocol() {
 
 			{/* Stages */}
 			{protocolStages.map(stage => (
-				<section key={stage.id} className="py-12 sm:py-24 px-4 sm:px-6 lg:px-20">
+				<section
+					key={stage.id}
+					className="py-12 sm:py-24 px-4 sm:px-6 lg:px-20"
+				>
 					<div className="max-w-7xl mx-auto">
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
 							{/* Text Content */}
@@ -218,7 +220,8 @@ function CreationMockup() {
 				</div>
 				<div className="space-y-3">
 					<div className="text-sm text-muted-foreground mb-2">
-						Current<br className="sm:hidden" />
+						Current
+						<br className="sm:hidden" />
 						<span className="hidden sm:inline"> </span>
 						Draft
 					</div>
@@ -298,9 +301,7 @@ function AmplificationMockup() {
 								<span className="sm:hidden">
 									<span
 										className={`inline-block w-2 h-2 rounded-full ${
-											item.status === "Ready"
-												? "bg-green-500"
-												: "bg-amber-500"
+											item.status === "Ready" ? "bg-green-500" : "bg-amber-500"
 										}`}
 									/>
 								</span>

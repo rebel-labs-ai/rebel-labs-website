@@ -10,7 +10,6 @@ import { AnimatedDots } from "@/components/animated-dots"
 import { Footer } from "@/components/footer"
 import {
 	Brain,
-	ArrowDown,
 	Layers,
 	Target,
 	TrendingUp,
@@ -434,10 +433,10 @@ export function LabPageClient() {
 							The New Division of Labor.
 						</h2>
 						<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-							The Workforce Lab is exclusively focused on solving the most complex 
-							challenges in revenue operations. Our approach is built on a simple 
-							but powerful principle: your best people direct the strategy; 
-							the workforce delivers the outcome.
+							The Workforce Lab is exclusively focused on solving the most
+							complex challenges in revenue operations. Our approach is built on
+							a simple but powerful principle: your best people direct the
+							strategy; the workforce delivers the outcome.
 						</p>
 					</div>
 
@@ -448,19 +447,19 @@ export function LabPageClient() {
 								{/* Partnership Lockup with actual logos */}
 								<div className="flex justify-center items-center gap-8 mb-10">
 									<div className="relative">
-										<Image 
-											src="/logo.svg" 
-											alt="Novosapien" 
-											width={100} 
+										<Image
+											src="/logo.svg"
+											alt="Novosapien"
+											width={100}
 											height={100}
 										/>
 									</div>
 									<span className="text-4xl text-accent font-light">+</span>
 									<div className="relative">
-										<Image 
-											src="/rebel-labs-logo.svg" 
-											alt="Rebel Labs" 
-											width={200} 
+										<Image
+											src="/rebel-labs-logo.svg"
+											alt="Rebel Labs"
+											width={200}
 											height={48}
 										/>
 									</div>
@@ -474,9 +473,9 @@ export function LabPageClient() {
 										Novosapien - The Architects of the System
 									</h4>
 									<p className="text-muted-foreground leading-relaxed">
-										Novosapien provides the foundational architecture and the 
-										productized, plug-and-play Digital Workforces that form 
-										the backbone of modern revenue operations.
+										Novosapien provides the foundational architecture and the
+										productized, plug-and-play Digital Workforces that form the
+										backbone of modern revenue operations.
 									</p>
 								</div>
 								<div className="space-y-4">
@@ -484,9 +483,10 @@ export function LabPageClient() {
 										Rebel Labs - The Elite Forging & Deployment Partner
 									</h4>
 									<p className="text-muted-foreground leading-relaxed">
-										Rebel Labs provides the specialized agentic engineering to 
-										both seamlessly deploy our productized solutions and to forge 
-										bespoke workforces for unique, mission-critical challenges.
+										Rebel Labs provides the specialized agentic engineering to
+										both seamlessly deploy our productized solutions and to
+										forge bespoke workforces for unique, mission-critical
+										challenges.
 									</p>
 								</div>
 							</div>
@@ -501,10 +501,11 @@ export function LabPageClient() {
 								Your Strategy, Autonomously Executed.
 							</h3>
 							<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-								This model is designed to liberate your most valuable asset—your human team. 
-								By providing them with a dedicated, autonomous execution layer, we free them 
-								from the operational 'how' so they can focus exclusively on the strategic 
-								'what' and 'why'.
+								This model is designed to liberate your most valuable asset—your
+								human team. By providing them with a dedicated, autonomous
+								execution layer, we free them from the operational
+								&apos;how&apos; so they can focus exclusively on the strategic
+								&apos;what&apos; and &apos;why&apos;.
 							</p>
 						</div>
 
@@ -525,10 +526,10 @@ export function LabPageClient() {
 										</div>
 									</div>
 									<p className="text-muted-foreground leading-relaxed text-base">
-										Freed from the burden of repetitive execution, your human 
-										experts are elevated to their highest purpose. They provide 
-										the strategic judgment, creative insights, and mission command 
-										that guide the entire operation.
+										Freed from the burden of repetitive execution, your human
+										experts are elevated to their highest purpose. They provide
+										the strategic judgment, creative insights, and mission
+										command that guide the entire operation.
 									</p>
 									<div className="mt-6 pt-6 border-t border-accent/10">
 										<ul className="space-y-2">
@@ -564,9 +565,9 @@ export function LabPageClient() {
 										</div>
 									</div>
 									<p className="text-muted-foreground leading-relaxed text-base">
-										Your bespoke Digital Workforce operates as a tireless, 
-										autonomous execution layer. It runs the complex, high-volume 
-										workflows with perfect consistency, learning and optimizing 
+										Your bespoke Digital Workforce operates as a tireless,
+										autonomous execution layer. It runs the complex, high-volume
+										workflows with perfect consistency, learning and optimizing
 										its performance 24/7 to achieve the mission you have set.
 									</p>
 									<div className="mt-6 pt-6 border-t border-accent/10">
@@ -617,9 +618,12 @@ export function LabPageClient() {
 								<Search className="w-10 h-10 text-accent" />
 							</div>
 							<p className="text-lg text-muted-foreground leading-relaxed">
-								...create a workforce that <span className="font-bold text-foreground">analyzes every sales call</span> and customer
-								interaction to identify patterns, predict churn, and deliver
-								real-time coaching insights?
+								...create a workforce that{" "}
+								<span className="font-bold text-foreground">
+									analyzes every sales call
+								</span>{" "}
+								and customer interaction to identify patterns, predict churn,
+								and deliver real-time coaching insights?
 							</p>
 						</Card>
 
@@ -629,8 +633,11 @@ export function LabPageClient() {
 								<TrendingUp className="w-10 h-10 text-accent" />
 							</div>
 							<p className="text-lg text-muted-foreground leading-relaxed">
-								...forge a workforce that <span className="font-bold text-foreground">monitors your entire sales pipeline</span>,
-								identifies at-risk deals based on behavioral data, and
+								...forge a workforce that{" "}
+								<span className="font-bold text-foreground">
+									monitors your entire sales pipeline
+								</span>
+								, identifies at-risk deals based on behavioral data, and
 								autonomously launches intervention campaigns to save them?
 							</p>
 						</Card>
@@ -641,8 +648,12 @@ export function LabPageClient() {
 								<Target className="w-10 h-10 text-accent" />
 							</div>
 							<p className="text-lg text-muted-foreground leading-relaxed">
-								...create an ideal customer profile discovery engine that <span className="font-bold text-foreground">analyzes your best customers</span> and then builds a complete,
-								autonomous outbound prospecting campaign to find more of them?
+								...create an ideal customer profile discovery engine that{" "}
+								<span className="font-bold text-foreground">
+									analyzes your best customers
+								</span>{" "}
+								and then builds a complete, autonomous outbound prospecting
+								campaign to find more of them?
 							</p>
 						</Card>
 
@@ -652,9 +663,12 @@ export function LabPageClient() {
 								<BarChart3 className="w-10 h-10 text-accent" />
 							</div>
 							<p className="text-lg text-muted-foreground leading-relaxed">
-								...deploy a closed-loop marketing workforce that <span className="font-bold text-foreground">analyzes ad spend,
-								content performance, and lead quality</span> to autonomously reallocate
-								your budget in real-time to the highest-ROI activities?
+								...deploy a closed-loop marketing workforce that{" "}
+								<span className="font-bold text-foreground">
+									analyzes ad spend, content performance, and lead quality
+								</span>{" "}
+								to autonomously reallocate your budget in real-time to the
+								highest-ROI activities?
 							</p>
 						</Card>
 					</div>
@@ -677,11 +691,14 @@ export function LabPageClient() {
 
 						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
 							The journey begins with a direct conversation. A confidential,
-							strategic session with the leadership to determine if your 
+							strategic session with the leadership to determine if your
 							challenge and our capabilities are a perfect match.
 						</p>
 
-						<a href="https://cal.com/novosapien/demo" className="inline-block mb-8">
+						<a
+							href="https://cal.com/novosapien/demo"
+							className="inline-block mb-8"
+						>
 							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 								Book a Lab Scoping Session
 							</Button>
