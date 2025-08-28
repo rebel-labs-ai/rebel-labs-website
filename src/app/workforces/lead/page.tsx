@@ -113,14 +113,14 @@ function MethodSection() {
 		<section className="px-4">
 			<div className="max-w-6xl mx-auto">
 				{/* Section Header */}
-				<div className="text-center mb-16">
-					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
+				<div className="text-left sm:text-center mb-16">
+					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
 						Our Method
 					</span>
-					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
-					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
+					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto px-4 sm:px-0">
 						Your workforce follows a proven, four-step protocol to ensure every
 						lead is converted with maximum efficiency and intelligence, from
 						initial contact to the final handoff.
@@ -232,7 +232,7 @@ export default function LeadWorkforcePage() {
 	const agents = {
 		research: [
 			{
-				icon: <Search className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Search className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Individual Profile Agent",
 				role: "Building Lead Blueprints",
 				coreFunction:
@@ -250,7 +250,7 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Company Profile Agent to create a holistic view of each lead, which the Strategy Agents then use to craft tailored approaches.",
 			},
 			{
-				icon: <Building className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Building className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Company Profile Agent",
 				role: "Mapping Business Landscapes",
 				coreFunction:
@@ -268,7 +268,7 @@ export default function LeadWorkforcePage() {
 					"I provide crucial business context that complements the Individual Profile Agent's data, helping create more targeted and effective engagement plans.",
 			},
 			{
-				icon: <Gift className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Gift className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Personalized Offering Agent",
 				role: "Crafting Tailored Solutions",
 				coreFunction:
@@ -288,7 +288,7 @@ export default function LeadWorkforcePage() {
 		],
 		strategy: [
 			{
-				icon: <Calendar className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Calendar className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Initial Strategy Agent",
 				role: "Crafting Engagement Blueprints",
 				coreFunction:
@@ -306,7 +306,7 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Research Agents to translate their insights into actionable strategies, which are then executed by the Outreach Agents.",
 			},
 			{
-				icon: <Settings className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Settings className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Strategy Optimization Agent",
 				role: "Refining Engagement Approaches",
 				coreFunction:
@@ -324,7 +324,7 @@ export default function LeadWorkforcePage() {
 					"I work hand-in-hand with the Interactions Analysis Agent, using their insights to make data-driven improvements to our strategies.",
 			},
 			{
-				icon: <LineChart className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <LineChart className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Interactions Analysis Agent",
 				role: "Decoding Engagement",
 				coreFunction:
@@ -344,7 +344,7 @@ export default function LeadWorkforcePage() {
 		],
 		outreach: [
 			{
-				icon: <Phone className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Phone className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Phone Call Agent",
 				role: "Orchestrating Targeted Conversations",
 				coreFunction:
@@ -362,7 +362,7 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Email Agent to coordinate multi-channel outreach, and rely on the Strategy Agents for guidance on timing and content.",
 			},
 			{
-				icon: <Mail className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Mail className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Email Agent",
 				role: "Delivering Personalized Messaging",
 				coreFunction:
@@ -403,30 +403,30 @@ export default function LeadWorkforcePage() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Part 1.A - The Promise (Hero) */}
-				<section className="pt-32 pb-24 px-4 relative">
-					<div className="max-w-5xl mx-auto relative z-10 mt-36">
-						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
-							<div className="text-center mb-8">
-								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+				<section className="pt-20 sm:pt-32 pb-24 px-4 relative">
+					<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
+						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
+							<div className="text-center mb-6 sm:mb-8">
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 									Inbound Sales Workforce
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
 									Never Lose an Inbound Lead Again.
 								</h1>
 							</div>
-							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
+							<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto px-2 sm:px-0">
 								Deploy an autonomous workforce that converts your raw leads into
 								qualified, sales-ready meetings, 24/7.
 							</p>
-							<div className="mt-8 text-center">
+							<div className="mt-6 sm:mt-8 text-center">
 								<a
 									href="https://demo.novosapien.ai"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-base px-6 py-3">
+									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
 										See It In Action
 									</Button>
 								</a>
@@ -437,12 +437,12 @@ export default function LeadWorkforcePage() {
 			</div>
 
 			{/* Section 1: Part 1.B - The Explanation */}
-			<section className="py-32 px-4 bg-accent/40">
+			<section className="py-16 sm:py-32 px-4 bg-accent/40">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Section Header */}
-					<div className="text-center mb-12">
+					<div className="text-left sm:text-center mb-12">
 						<h2
-							className="text-foreground text-4xl font-bold tracking-tight mb-6"
+							className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-4 sm:mb-6"
 							style={{
 								textShadow:
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
@@ -450,7 +450,7 @@ export default function LeadWorkforcePage() {
 						>
 							A Self-Managing Team for Your Pipeline.
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl sm:mx-auto leading-relaxed">
 							This is not a chatbot or a simple automation tool. It is a
 							complete, multi-agent system that autonomously manages the entire
 							lead lifecycle—from deep research and strategic outreach to
@@ -460,8 +460,106 @@ export default function LeadWorkforcePage() {
 					</div>
 
 					{/* Visual Process Diagram */}
-					<div className=" max-w-7xl mx-auto">
-						<div className="flex items-center justify-between max-w-6xl mx-auto">
+					<div className="max-w-7xl mx-auto">
+						{/* Mobile Layout - Vertical */}
+						<div className="flex flex-col items-center gap-6 sm:hidden">
+							{/* Input Sources (Top) */}
+							<div className="w-full max-w-sm">
+								<div className="text-center mb-4">
+									<h3 className="text-sm font-semibold text-muted-foreground dark:text-white uppercase tracking-wider">
+										Inputs
+									</h3>
+								</div>
+								<div className="flex flex-col gap-3">
+									<div className="flex items-center gap-3 bg-background/50 border border-accent/20 rounded-lg px-4 py-3">
+										<Globe className="w-5 h-5 text-accent" />
+										<span className="text-sm font-medium">Website Form</span>
+									</div>
+									<div className="flex items-center gap-3 bg-background/50 border border-accent/20 rounded-lg px-4 py-3">
+										<Megaphone className="w-5 h-5 text-accent" />
+										<span className="text-sm font-medium">Ads</span>
+									</div>
+									<div className="flex items-center gap-3 bg-background/50 border border-accent/20 rounded-lg px-4 py-3">
+										<Database className="w-5 h-5 text-accent" />
+										<span className="text-sm font-medium">CRM</span>
+									</div>
+									<div className="flex items-center gap-3 bg-background/50 border border-accent/20 rounded-lg px-4 py-3">
+										<Zap className="w-5 h-5 text-accent" />
+										<span className="text-sm font-medium">API</span>
+									</div>
+								</div>
+							</div>
+
+							{/* Arrow Down */}
+							<div className="flex justify-center">
+								<ArrowRight className="w-8 h-8 text-muted-foreground dark:text-white rotate-90" />
+							</div>
+
+							{/* Central Workforce (Middle) */}
+							<div className="w-full max-w-sm">
+								<div className="bg-accent/10 border-2 border-accent rounded-xl p-6 shadow-xl">
+									<h3 className="text-lg font-bold text-center mb-4 text-foreground">
+										Inbound Conversion Workforce
+									</h3>
+									<div className="grid grid-cols-3 gap-4">
+										<div className="text-center">
+											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
+												<Search className="w-6 h-6 text-muted-foreground dark:text-white" />
+											</div>
+											<span className="text-xs text-foreground dark:text-white">
+												Research
+											</span>
+										</div>
+										<div className="text-center">
+											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
+												<LineChart className="w-6 h-6 text-muted-foreground dark:text-white" />
+											</div>
+											<span className="text-xs text-foreground dark:text-white">
+												Strategy
+											</span>
+										</div>
+										<div className="text-center">
+											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
+												<Mail className="w-6 h-6 text-muted-foreground dark:text-white" />
+											</div>
+											<span className="text-xs text-foreground dark:text-white">
+												Outreach
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							{/* Arrow Down */}
+							<div className="flex justify-center">
+								<ArrowRight className="w-8 h-8 text-muted-foreground dark:text-white rotate-90" />
+							</div>
+
+							{/* Output (Bottom) */}
+							<div className="w-full max-w-sm">
+								<div className="text-center mb-4">
+									<h3 className="text-sm font-semibold text-muted-foreground dark:text-white uppercase tracking-wider">
+										Output
+									</h3>
+								</div>
+								<div className="bg-green-500/10 border-2 border-green-500 rounded-lg px-6 py-4">
+									<div className="flex items-center gap-3">
+										<Calendar className="w-6 h-6 text-green-500" />
+										<div>
+											<span className="text-sm font-bold text-foreground block">
+												Qualified Meeting
+											</span>
+											<span className="text-xs text-muted-foreground">
+												Booked & Briefed
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Desktop Layout - Horizontal (unchanged) */}
+						<div className="hidden sm:flex items-center justify-between max-w-6xl mx-auto">
 							{/* Input Sources (Left) */}
 							<div className="flex flex-col gap-4">
 								<div className="text-center">
@@ -521,7 +619,7 @@ export default function LeadWorkforcePage() {
 											<div className="w-12 h-12 bg-background/50 rounded-full flex items-center justify-center mx-auto mb-2">
 												<Mail className="w-6 h-6 text-muted-foreground dark:text-white" />
 											</div>
-											<span className="text-xs text-foreground dark:text-white ">
+											<span className="text-xs text-foreground dark:text-white">
 												Outreach
 											</span>
 										</div>
@@ -561,121 +659,220 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 3: The Interactive Roster (Your Digital Team) */}
-			<section className="py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
-				<div className="max-w-5xl mx-auto px-4">
-					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-8">
-						<div className="text-center mb-12">
-							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+			<section className="py-32 px-2 sm:px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+				<div className="max-w-5xl mx-auto px-2 sm:px-4">
+					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-4 sm:p-8">
+						<div className="text-left sm:text-center mb-12">
+							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 								Meet Your Team
 							</span>
-							<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
+							<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mt-4">
 								Meet Your Autonomous Sales Team
 							</h2>
-							<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
+							<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto mt-4 leading-relaxed">
 								Your workforce is not a monolith. It is a coordinated team of
 								specialized AI agents, each a master of its domain, working in
 								concert to deliver your outcome.
 							</p>
 						</div>
 
-						{/* Tab Navigation */}
-						<div className="flex justify-center mb-12">
-							<div className="inline-flex bg-background border border-accent/30 rounded-lg p-1">
-								{tabs.map(tab => (
-									<button
-										key={tab.id}
-										onClick={() =>
-											setActiveTab(
-												tab.id as "research" | "strategy" | "outreach"
-											)
-										}
-										className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-											activeTab === tab.id
-												? "bg-accent dark:bg-accent/60 text-white dark:text-white shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
-												: "text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20"
-										}`}
-									>
-										{tab.label}
-									</button>
-								))}
+						{/* Mobile Layout - All agents in vertical list */}
+						<div className="block sm:hidden space-y-6 -mx-2">
+							{/* Research & Planning Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Research & Planning</h3>
+								<div className="space-y-2 px-1">
+									{agents.research.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-2">
+												{/* Icon on the left */}
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
+							</div>
+
+							{/* Strategy & Analysis Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Strategy & Analysis</h3>
+								<div className="space-y-2 px-1">
+									{agents.strategy.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-2">
+												{/* Icon on the left */}
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
+							</div>
+
+							{/* Outreach & Execution Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Outreach & Execution</h3>
+								<div className="space-y-2 px-1">
+									{agents.outreach.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-2">
+												{/* Icon on the left */}
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
 							</div>
 						</div>
 
-						{/* Agent Cards Grid - Fenced Section with Arrows */}
-						<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
-							<div className="flex items-center justify-between">
-								{/* Left Arrow */}
-								<button
-									onClick={() => {
-										const currentIndex = tabs.findIndex(
-											tab => tab.id === activeTab
-										)
-										const prevIndex =
-											currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
-										setActiveTab(
-											tabs[prevIndex].id as "research" | "strategy" | "outreach"
-										)
-									}}
-									className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
-									aria-label="Previous tab"
-								>
-									<ChevronLeft className="w-6 h-6" />
-								</button>
-
-								{/* Cards Grid with padding to account for arrows */}
-								<div className="w-full px-12 py-8">
-									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center max-w-7xl mx-auto">
-										{agents[activeTab].map((agent, index) => (
-											<Card
-												key={index}
-												onClick={() => setSelectedAgent(agent)}
-												className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-5 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[360px] w-[260px]"
-											>
-												{/* Title */}
-												<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
-													{agent.name}
-												</h3>
-
-												{/* Subtitle */}
-												<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
-													{agent.role}
-												</span>
-
-												{/* Centered Icon */}
-												<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
-													<div className="scale-100">{agent.icon}</div>
-												</div>
-
-												{/* Description */}
-												<p className="text-muted-foreground text-sm mb-2 flex-1">
-													{agent.coreFunction}
-												</p>
-
-												{/* Learn More Button - No background, just text */}
-												<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
-													Learn More →
-												</button>
-											</Card>
-										))}
-									</div>
+						{/* Desktop Layout - Tab Navigation and Grid (unchanged) */}
+						<div className="hidden sm:block">
+							{/* Tab Navigation */}
+							<div className="flex justify-center mb-12">
+								<div className="inline-flex bg-background border border-accent/30 rounded-lg p-1">
+									{tabs.map(tab => (
+										<button
+											key={tab.id}
+											onClick={() =>
+												setActiveTab(
+													tab.id as "research" | "strategy" | "outreach"
+												)
+											}
+											className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+												activeTab === tab.id
+													? "bg-accent dark:bg-accent/60 text-white dark:text-white shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
+													: "text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20"
+											}`}
+										>
+											{tab.label}
+										</button>
+									))}
 								</div>
+							</div>
 
-								{/* Right Arrow */}
-								<button
-									onClick={() => {
-										const currentIndex = tabs.findIndex(
-											tab => tab.id === activeTab
-										)
-										const nextIndex = (currentIndex + 1) % tabs.length
-										setActiveTab(
-											tabs[nextIndex].id as "research" | "strategy" | "outreach"
-										)
-									}}
-									className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
-									aria-label="Next tab"
-								>
-									<ChevronRight className="w-6 h-6" />
-								</button>
+							{/* Agent Cards Grid - Fenced Section with Arrows */}
+							<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
+								<div className="flex items-center justify-between">
+									{/* Left Arrow */}
+									<button
+										onClick={() => {
+											const currentIndex = tabs.findIndex(
+												tab => tab.id === activeTab
+											)
+											const prevIndex =
+												currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
+											setActiveTab(
+												tabs[prevIndex].id as "research" | "strategy" | "outreach"
+											)
+										}}
+										className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+										aria-label="Previous tab"
+									>
+										<ChevronLeft className="w-6 h-6" />
+									</button>
+
+									{/* Cards Grid with padding to account for arrows */}
+									<div className="w-full px-12 py-8">
+										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center max-w-7xl mx-auto">
+											{agents[activeTab].map((agent, index) => (
+												<Card
+													key={index}
+													onClick={() => setSelectedAgent(agent)}
+													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-5 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[360px] w-[260px]"
+												>
+													{/* Title */}
+													<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
+														{agent.name}
+													</h3>
+
+													{/* Subtitle */}
+													<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
+														{agent.role}
+													</span>
+
+													{/* Centered Icon */}
+													<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
+														<div className="scale-100">{agent.icon}</div>
+													</div>
+
+													{/* Description */}
+													<p className="text-muted-foreground text-sm mb-2 flex-1">
+														{agent.coreFunction}
+													</p>
+
+													{/* Learn More Button - No background, just text */}
+													<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
+														Learn More →
+													</button>
+												</Card>
+											))}
+										</div>
+									</div>
+
+									{/* Right Arrow */}
+									<button
+										onClick={() => {
+											const currentIndex = tabs.findIndex(
+												tab => tab.id === activeTab
+											)
+											const nextIndex = (currentIndex + 1) % tabs.length
+											setActiveTab(
+												tabs[nextIndex].id as "research" | "strategy" | "outreach"
+											)
+										}}
+										className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+										aria-label="Next tab"
+									>
+										<ChevronRight className="w-6 h-6" />
+									</button>
+								</div>
 							</div>
 						</div>
 
@@ -778,11 +975,11 @@ export default function LeadWorkforcePage() {
 			<section className="py-32 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
-					<div className="text-center mb-16">
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<div className="text-left sm:text-center mb-16">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The Four Systemic Failures of Your Inbound Funnel.
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl sm:mx-auto leading-relaxed">
 							The traditional model of human-led follow-up is not just
 							inefficient; it is a complete architectural failure. It breaks
 							down at every critical stage, leaking revenue, wasting investment,
@@ -1069,11 +1266,11 @@ export default function LeadWorkforcePage() {
 			<section className="px-4">
 				<div className="max-w-6xl mx-auto">
 					{/* Section Header - Proven Results First */}
-					<div className="text-center mb-12">
-						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+					<div className="text-left sm:text-center mb-12">
+						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							Proven Results
 						</span>
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mt-4">
 							Redefine Your Team&apos;s ROI
 						</h2>
 					</div>
