@@ -40,7 +40,7 @@ export default function CustomWorkforcePage() {
 									</span>
 								</div>
 								<div className="text-center">
-									<h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-light tracking-tight font-geist-sans">
+									<h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-light tracking-tight font">
 										Custom Workforce Solutions
 									</h1>
 								</div>

@@ -11,14 +11,14 @@
 		--card-foreground: 223 68% 8%;
 		--popover: 0 0% 100%;
 		--popover-foreground: 223 68% 8%;
-		--primary: 220 90% 50%; /* Bright blue for testing */
+		--primary: 223 68% 8%; /* Dark navy matching brand */
 		--primary-foreground: 0 0% 100%;
 		--secondary: 210 40% 98%;
 		--secondary-foreground: 215 25% 47%;
 		--muted: 210 40% 98%;
 		--muted-foreground: 215 16% 57%;
 		--accent: 206 34% 73%;
-		--accent-foreground: 0 0% 100%;
+		--accent-foreground: 223 68% 8%;
 		--destructive: 0 73% 50%;
 		--destructive-foreground: 0 0% 100%;
 		--border: 212 33% 97%;

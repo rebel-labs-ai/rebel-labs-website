@@ -457,7 +457,7 @@ export default function LeadWorkforcePage() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Part 1.A - The Promise (Hero) */}
-				<section className="pt-20 sm:pt-32 pb-24 px-4 relative">
+				<section className="pt-48 sm:pt-32 pb-24 px-4 relative">
 					<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
 						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
 							<div className="text-center mb-6 sm:mb-8">
@@ -466,7 +466,7 @@ export default function LeadWorkforcePage() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl sm:font-light tracking-tight font font-medium">
 									Never Lose an Inbound Lead Again.
 								</h1>
 							</div>
@@ -474,7 +474,7 @@ export default function LeadWorkforcePage() {
 								Deploy an autonomous workforce that converts your raw leads into
 								qualified, sales-ready meetings, 24/7.
 							</p>
-							<div className="mt-6 sm:mt-8 text-center">
+							<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
 								<a
 									href="https://demo.novosapien.ai"
 									target="_blank"
@@ -482,6 +482,15 @@ export default function LeadWorkforcePage() {
 								>
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
 										See It In Action
+									</Button>
+								</a>
+								<a
+									href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+										Talk to Us
 									</Button>
 								</a>
 							</div>
@@ -1433,14 +1442,23 @@ export default function LeadWorkforcePage() {
 							within days.
 						</p>
 
-						<div className="flex justify-center">
+						<div className="flex justify-center gap-3 sm:gap-4">
 							<a
-								href="https://cal.com/george-westbrook-novosapien/30min"
+								href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 									Deploy This Workforce
+								</Button>
+							</a>
+							<a
+								href="https://demo.novosapien.ai"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+									See It In Action
 								</Button>
 							</a>
 						</div>
