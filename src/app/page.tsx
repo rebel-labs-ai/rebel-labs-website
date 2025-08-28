@@ -44,15 +44,15 @@ export default function Home() {
 								Redefining the way your generate revenue
 							</span>
 						</div>
-						<div className="text-left">
-							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight font-geist-sans">
+						<div className="text-left pl-8 md:pl-16 lg:pl-24">
+							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight font">
 								Stop Managing Tools.
 							</h1>
-							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight mt-2 font-geist-sans">
+							<h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl font-light tracking-tight font mt-2">
 								Start <AnimatedText />
 							</h1>
 						</div>
-						<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-left">
+						<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center">
 							We deploy digital workforces into your business so you can
 							generate revenue on autopilot.
 						</p>

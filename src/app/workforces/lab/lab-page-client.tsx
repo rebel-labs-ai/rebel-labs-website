@@ -406,7 +406,7 @@ export function LabPageClient() {
 						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
 							<div className="text-center mb-8">
 								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
-									THE WORKFORCE LAB
+									The Workforce Lab
 								</span>
 							</div>
 							<div className="text-center">
@@ -415,8 +415,7 @@ export function LabPageClient() {
 								</h1>
 							</div>
 							<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
-								Deploy a mission-specific Digital Workforce for your most
-								complex revenue operations.
+							For the complex sales and marketing challenges that our standard workforces cannot solve, we forge your proprietary workflow into a fully autonomous operational asset.
 							</p>
 						</Card>
 					</div>
