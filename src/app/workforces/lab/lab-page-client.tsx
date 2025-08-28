@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -424,134 +425,203 @@ export function LabPageClient() {
 				</section>
 			</div>
 
-			{/* Section 2: The New Division of Labor */}
+			{/* Section 2: The New Division of Labor - Three Parts */}
 			<section className="pt-32 pb-48 px-4 bg-accent/40">
 				<div className="max-w-7xl mx-auto">
-					<div className="text-center mb-16">
+					{/* Part A: The Focus */}
+					<div className="text-center mb-20">
 						<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-							The New Division of Labor
+							The New Division of Labor.
 						</h2>
 						<p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-							Off-the-shelf automation fails because it doesn&apos;t respect the
-							role of your human talent. Our approach, developed in partnership
-							with the elite agentic systems specialists at{" "}
-							<span className="font-semibold text-foreground">Rebel Labs</span>,
-							is built on a simple but powerful principle: your best people
-							direct the strategy; the workforce delivers the outcome.
+							The Workforce Lab is exclusively focused on solving the most complex 
+							challenges in revenue operations. Our approach is built on a simple 
+							but powerful principle: your best people direct the strategy; 
+							the workforce delivers the outcome.
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-						{/* Human Team Card */}
-						<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-							<div className="relative p-10">
-								<div className="flex items-start gap-4 mb-6">
-									<div className="p-3 rounded-lg bg-accent/10">
-										<Brain className="w-8 h-8 text-accent" />
+					{/* Part B: The Partnership - Single framed block */}
+					<div className="mb-20">
+						<Card className="bg-transparent border-none p-12">
+							<div className="text-center mb-8">
+								{/* Partnership Lockup with actual logos */}
+								<div className="flex justify-center items-center gap-8 mb-10">
+									<div className="relative">
+										<Image 
+											src="/logo.svg" 
+											alt="Novosapien" 
+											width={100} 
+											height={100}
+										/>
 									</div>
-									<div>
-										<h3 className="text-2xl font-bold text-foreground mb-1">
-											Your Team
-										</h3>
-										<p className="text-sm font-medium text-accent uppercase tracking-wider">
-											The Strategists
-										</p>
+									<span className="text-4xl text-accent font-light">+</span>
+									<div className="relative">
+										<Image 
+											src="/rebel-labs-logo.svg" 
+											alt="Rebel Labs" 
+											width={200} 
+											height={48}
+										/>
 									</div>
-								</div>
-								<p className="text-muted-foreground leading-relaxed text-base">
-									Freed from the burden of repetitive execution, your human
-									experts are elevated to their highest purpose. They provide
-									the strategic judgment, creative insights, and mission command
-									that guide the entire operation.
-								</p>
-								<div className="mt-6 pt-6 border-t border-accent/10">
-									<ul className="space-y-2">
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Define strategic objectives
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Provide creative solutions
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Make critical decisions
-										</li>
-									</ul>
 								</div>
 							</div>
-						</Card>
 
-						{/* Digital Workforce Card */}
-						<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
-							<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-							<div className="relative p-10">
-								<div className="flex items-start gap-4 mb-6">
-									<div className="p-3 rounded-lg bg-accent/10">
-										<Layers className="w-8 h-8 text-accent" />
-									</div>
-									<div>
-										<h3 className="text-2xl font-bold text-foreground mb-1">
-											The Workforce
-										</h3>
-										<p className="text-sm font-medium text-accent uppercase tracking-wider">
-											The Operators
-										</p>
-									</div>
+							{/* Two-column partnership definition */}
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+								<div className="space-y-4">
+									<h4 className="text-lg font-bold text-foreground">
+										Novosapien - The Architects of the System
+									</h4>
+									<p className="text-muted-foreground leading-relaxed">
+										Novosapien provides the foundational architecture and the 
+										productized, plug-and-play Digital Workforces that form 
+										the backbone of modern revenue operations.
+									</p>
 								</div>
-								<p className="text-muted-foreground leading-relaxed text-base">
-									Your bespoke Digital Workforce operates as a tireless,
-									autonomous execution layer. It runs the complex, high-volume
-									workflows with perfect consistency, learning and optimizing
-									its performance 24/7 to achieve the mission you have set.
-								</p>
-								<div className="mt-6 pt-6 border-t border-accent/10">
-									<ul className="space-y-2">
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Execute workflows 24/7
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Maintain perfect consistency
-										</li>
-										<li className="flex items-center gap-2 text-sm text-muted-foreground">
-											<div className="w-1.5 h-1.5 rounded-full bg-accent" />
-											Learn and optimize continuously
-										</li>
-									</ul>
+								<div className="space-y-4">
+									<h4 className="text-lg font-bold text-foreground">
+										Rebel Labs - The Elite Forging & Deployment Partner
+									</h4>
+									<p className="text-muted-foreground leading-relaxed">
+										Rebel Labs provides the specialized agentic engineering to 
+										both seamlessly deploy our productized solutions and to forge 
+										bespoke workforces for unique, mission-critical challenges.
+									</p>
 								</div>
 							</div>
 						</Card>
 					</div>
 
-					{/* Connection Visual */}
-					<div className="flex justify-center items-center mt-12">
-						<div className="flex items-center gap-8">
-							<div className="text-center">
-								<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
-									<Brain className="w-10 h-10 text-accent" />
-								</div>
-								<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-									Strategy
-								</span>
+					{/* Part C: The Philosophy */}
+					<div>
+						<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+							{/* Left side - Two cards stacked */}
+							<div className="space-y-6">
+								{/* Your Team Card */}
+								<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
+									<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+									<div className="relative p-8">
+										<div className="flex items-start gap-4 mb-4">
+											<div className="p-3 rounded-lg bg-accent/10">
+												<Brain className="w-6 h-6 text-accent" />
+											</div>
+											<div>
+												<h4 className="text-xl font-bold text-foreground mb-1">
+													Your Team: The Strategists
+												</h4>
+											</div>
+										</div>
+										<p className="text-muted-foreground leading-relaxed text-sm">
+											Freed from the burden of repetitive execution, your human 
+											experts are elevated to their highest purpose. They provide 
+											the strategic judgment, creative insights, and mission command 
+											that guide the entire operation.
+										</p>
+										<div className="mt-4 pt-4 border-t border-accent/10">
+											<ul className="space-y-2">
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Define strategic objectives
+												</li>
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Provide creative solutions
+												</li>
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Make critical decisions
+												</li>
+											</ul>
+										</div>
+									</div>
+								</Card>
+
+								{/* The Workforce Card */}
+								<Card className="group relative overflow-hidden bg-card-background/95 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
+									<div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+									<div className="relative p-8">
+										<div className="flex items-start gap-4 mb-4">
+											<div className="p-3 rounded-lg bg-accent/10">
+												<Layers className="w-6 h-6 text-accent" />
+											</div>
+											<div>
+												<h4 className="text-xl font-bold text-foreground mb-1">
+													The Workforce: The Operators
+												</h4>
+											</div>
+										</div>
+										<p className="text-muted-foreground leading-relaxed text-sm">
+											Your bespoke Digital Workforce operates as a tireless, 
+											autonomous execution layer. It runs the complex, high-volume 
+											workflows with perfect consistency, learning and optimizing 
+											its performance 24/7 to achieve the mission you have set.
+										</p>
+										<div className="mt-4 pt-4 border-t border-accent/10">
+											<ul className="space-y-2">
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Execute workflows 24/7
+												</li>
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Maintain perfect consistency
+												</li>
+												<li className="flex items-center gap-2 text-xs text-muted-foreground">
+													<div className="w-1.5 h-1.5 rounded-full bg-accent" />
+													Learn and optimize continuously
+												</li>
+											</ul>
+										</div>
+									</div>
+								</Card>
 							</div>
-							<div className="flex flex-col items-center">
-								<ArrowDown className="w-8 h-8 text-accent" />
-								<span className="text-sm font-bold text-accent mt-2">
-									MISSION
-								</span>
-								<ArrowDown className="w-8 h-8 text-accent mt-2" />
+
+							{/* Right side - Text content */}
+							<div className="flex flex-col justify-center">
+								<h3 className="text-3xl font-bold text-foreground mb-6">
+									Your Strategy, Autonomously Executed.
+								</h3>
+								<p className="text-lg text-muted-foreground leading-relaxed">
+									This model is designed to liberate your most valuable asset—your human team. 
+									By providing them with a dedicated, autonomous execution layer, we free them 
+									from the operational 'how' so they can focus exclusively on the strategic 
+									'what' and 'why'.
+								</p>
 							</div>
+						</div>
+
+						{/* Center Graphic Placeholder */}
+						<div className="flex justify-center items-center mt-12">
 							<div className="text-center">
-								<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
-									<Layers className="w-10 h-10 text-accent" />
+								<div className="flex items-center gap-8 mb-4">
+									<div className="text-center">
+										<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
+											<Brain className="w-10 h-10 text-accent" />
+										</div>
+										<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+											Strategy
+										</span>
+									</div>
+									<div className="flex flex-col items-center">
+										<ArrowDown className="w-8 h-8 text-accent" />
+										<span className="text-sm font-bold text-accent mt-2">
+											MISSION
+										</span>
+										<ArrowDown className="w-8 h-8 text-accent mt-2" />
+									</div>
+									<div className="text-center">
+										<div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-2">
+											<Layers className="w-10 h-10 text-accent" />
+										</div>
+										<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+											Execution
+										</span>
+									</div>
 								</div>
-								<span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-									Execution
-								</span>
+								<p className="text-xs text-muted-foreground uppercase tracking-wider">
+									[GRAPHIC PLACEHOLDER: LAB_02b_Architectural_Directive_Static]
+								</p>
 							</div>
 						</div>
 					</div>
