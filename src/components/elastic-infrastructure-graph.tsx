@@ -22,9 +22,14 @@ export function ElasticInfrastructureGraph() {
 		// Set canvas size
 		const resizeCanvas = () => {
 			const rect = canvas.getBoundingClientRect()
-			canvas.width = rect.width * window.devicePixelRatio
-			canvas.height = rect.height * window.devicePixelRatio
-			ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
+			const dpr = window.devicePixelRatio || 1
+
+			// Set actual size in memory
+			canvas.width = rect.width * dpr
+			canvas.height = rect.height * dpr
+
+			// Scale context to ensure correct drawing operations
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 		}
 		resizeCanvas()
 		window.addEventListener("resize", resizeCanvas)
@@ -44,8 +49,9 @@ export function ElasticInfrastructureGraph() {
 		}
 
 		const animate = () => {
-			const width = canvas.width / window.devicePixelRatio
-			const height = canvas.height / window.devicePixelRatio
+			const dpr = window.devicePixelRatio || 1
+			const width = canvas.width / dpr
+			const height = canvas.height / dpr
 
 			// Clear canvas
 			ctx.clearRect(0, 0, width, height)
@@ -197,11 +203,5 @@ export function ElasticInfrastructureGraph() {
 		}
 	}, [])
 
-	return (
-		<canvas
-			ref={canvasRef}
-			className="w-full h-full"
-			style={{ width: "100%", height: "100%" }}
-		/>
-	)
+	return <canvas ref={canvasRef} className="w-full h-full" />
 }

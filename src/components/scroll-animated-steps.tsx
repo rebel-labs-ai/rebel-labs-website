@@ -69,7 +69,7 @@ export function ScrollAnimatedSteps() {
 	return (
 		<section ref={containerRef} className="relative">
 			<div className="max-w-6xl mx-auto px-4">
-				<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
+				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
 					How We Do It
 				</h2>
 
@@ -85,18 +85,20 @@ export function ScrollAnimatedSteps() {
 										stepRefs.current[index] = el
 									}}
 									className={`${
-										index === 0 ? "min-h-[50vh]" : "min-h-screen"
-									} flex items-center`}
+										index === 0
+											? "min-h-[50vh] lg:min-h-[50vh]"
+											: "min-h-0 lg:min-h-screen"
+									} mb-32 lg:mb-0 lg:flex lg:items-center`}
 								>
 									<div
 										className={`transition-all duration-500 ${
 											activeStep === index
-												? "opacity-100 scale-100"
-												: "opacity-30 scale-95"
+												? "opacity-100 scale-100 lg:opacity-100 lg:scale-100"
+												: "opacity-100 scale-100 lg:opacity-30 lg:scale-95"
 										}`}
 									>
-										<div className="mb-6">
-											<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+										<div className="mb-3 sm:mb-6">
+											<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 												{index === 0
 													? "Step One"
 													: index === 1
@@ -104,10 +106,71 @@ export function ScrollAnimatedSteps() {
 														: "Step Three"}
 											</span>
 										</div>
-										<h3 className="text-3xl font-bold mb-6">{step.title}</h3>
-										<p className="text-xl leading-relaxed text-muted-foreground">
+										<h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-6">
+											{step.title}
+										</h3>
+										<p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
+
+										{/* Mobile image - shown under text */}
+										<div className="mt-6 lg:hidden">
+											{/* Show the image for this specific step */}
+											{index === 0 && (
+												<>
+													<Image
+														src="/home/step1.png"
+														alt="Mission & Blueprint"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain block dark:hidden"
+													/>
+													<Image
+														src="/home/step1-dark.png"
+														alt="Mission & Blueprint"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain hidden dark:block"
+													/>
+												</>
+											)}
+											{index === 1 && (
+												<>
+													<Image
+														src="/home/step2.png"
+														alt="Deployment & Integration"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain block dark:hidden"
+													/>
+													<Image
+														src="/home/step2-dark.png"
+														alt="Deployment & Integration"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain hidden dark:block"
+													/>
+												</>
+											)}
+											{index === 2 && (
+												<>
+													<Image
+														src="/home/step3.png"
+														alt="Optimization & Reporting"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain block dark:hidden"
+													/>
+													<Image
+														src="/home/step3-dark.png"
+														alt="Optimization & Reporting"
+														width={600}
+														height={400}
+														className="w-full h-auto object-contain hidden dark:block"
+													/>
+												</>
+											)}
+										</div>
 									</div>
 								</div>
 							))}
