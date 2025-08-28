@@ -219,12 +219,7 @@ function CreationMockup() {
 					</div>
 				</div>
 				<div className="space-y-3">
-					<div className="text-sm text-muted-foreground mb-2">
-						Current
-						<br className="sm:hidden" />
-						<span className="hidden sm:inline"> </span>
-						Draft
-					</div>
+					<div className="text-sm text-muted-foreground mb-2">Draft</div>
 					<div className="p-4 bg-muted rounded-lg h-full overflow-hidden">
 						<p className="text-xs text-foreground font-semibold mb-2">
 							The AI Revolution in Healthcare: Beyond the Hype

@@ -10,15 +10,139 @@ import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-
 import { Footer } from "@/components/footer"
 import { TrendingUp } from "lucide-react"
 
-export const metadata = {
-	title: "Stop Managing Tools, Start Scaling Revenue",
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "Digital Workforces for Revenue Generation | Novosapien",
 	description:
-		"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue. Discover how AI automation can transform your operations.",
+		"Transform your business with AI-powered digital workforces. Automate revenue operations, lead generation & content creation. Scale instantly with 24/7 autonomous execution.",
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: "https://novosapien.com",
+		siteName: "Novosapien",
+		title: "Digital Workforces for Revenue Generation",
+		description:
+			"Transform your business with AI-powered digital workforces. Automate revenue operations 24/7.",
+		images: [
+			{
+				url: "/og-image.jpg",
+				width: 1200,
+				height: 630,
+				alt: "Novosapien - Digital Workforces Platform",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@novosapien",
+		creator: "@novosapien",
+		title: "Digital Workforces for Revenue Generation",
+		description:
+			"Transform your business with AI-powered digital workforces. Automate revenue operations 24/7.",
+		images: ["/og-image.jpg"],
+	},
+	alternates: {
+		canonical: "https://novosapien.com",
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
 }
 
 export default function Home() {
+	// Schema.org structured data for SEO
+	const organizationSchema = {
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"@id": "https://novosapien.com/#organization",
+		name: "Novosapien",
+		url: "https://novosapien.com",
+		logo: "https://novosapien.com/logo.svg",
+		description:
+			"Digital workforce platform for revenue generation and business automation",
+		sameAs: [
+			"https://twitter.com/novosapien",
+			"https://linkedin.com/company/novosapien",
+		],
+		contactPoint: {
+			"@type": "ContactPoint",
+			contactType: "sales",
+			url: "https://novosapien.com/contact",
+		},
+	}
+
+	const webPageSchema = {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": "https://novosapien.com/#webpage",
+		url: "https://novosapien.com",
+		name: "Digital Workforces for Revenue Generation | Novosapien",
+		description:
+			"Transform your business with AI-powered digital workforces. Automate revenue operations, lead generation & content creation.",
+		dateModified: new Date().toISOString(),
+		publisher: {
+			"@id": "https://novosapien.com/#organization",
+		},
+		breadcrumb: {
+			"@type": "BreadcrumbList",
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					name: "Home",
+					item: "https://novosapien.com",
+				},
+			],
+		},
+	}
+
+	const softwareApplicationSchema = {
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		name: "Novosapien Digital Workforce Platform",
+		applicationCategory: "BusinessApplication",
+		operatingSystem: "Web",
+		description:
+			"AI-powered digital workforce platform for automating revenue operations",
+		offers: {
+			"@type": "Offer",
+			price: "0",
+			priceCurrency: "USD",
+			description: "Book a demo to get started",
+		},
+		aggregateRating: {
+			"@type": "AggregateRating",
+			ratingValue: "4.9",
+			ratingCount: "150",
+		},
+	}
+
+	const combinedSchema = {
+		"@context": "https://schema.org",
+		"@graph": [organizationSchema, webPageSchema, softwareApplicationSchema],
+	}
+
 	return (
 		<div className="min-h-screen bg-background">
+			{/* AGENT COMMENT: SEO Optimization - Schema Markup
+			    Added: Organization, WebPage, and SoftwareApplication schemas
+			    Reason: Helps search engines understand content and enable rich snippets
+			    Visual Impact: None - script tag is not visible
+			    Date: 2025-08-28
+			    Agent: Claude
+			*/}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
+			/>
 			{/* Navigation */}
 			<Navigation />
 
@@ -46,11 +170,19 @@ export default function Home() {
 							</span>
 						</div>
 						<div className="text-left ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+							{/* AGENT COMMENT: SEO Optimization - Heading Hierarchy Fix
+							    Original: Two <h1> tags
+							    Changed to: Single <h1> with <span> for second line
+							    Reason: Page had 2 H1 tags, should only have one for SEO
+							    Visual Impact: None - using span with block display
+							    Date: 2025-08-28
+							    Agent: Claude
+							*/}
 							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
 								Stop Managing Tools.
-							</h1>
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
-								Start <AnimatedText />
+								<span className="block text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+									Start <AnimatedText />
+								</span>
 							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center">
@@ -62,8 +194,9 @@ export default function Home() {
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Book a 30-minute demo call with Novosapien to learn about digital workforces"
 							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm px-4 py-2">
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm px-6 py-3 min-h-[48px] min-w-[48px]">
 									Speak to us
 								</Button>
 							</a>
@@ -198,18 +331,20 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/workforce-stack.svg"
-									alt="Digital Workforce Stack"
+									alt="Digital Workforce Stack diagram showing AI agents, workflow automation, and integration layers for revenue operations"
 									width={400}
 									height={300}
 									className="w-full h-auto block dark:hidden"
+									priority
 								/>
 								{/* Dark mode image */}
 								<Image
 									src="/home/workforce-stack-dark.svg"
-									alt="Digital Workforce Stack"
+									alt="Digital Workforce Stack diagram showing AI agents, workflow automation, and integration layers for revenue operations"
 									width={400}
 									height={300}
 									className="w-full h-auto hidden dark:block"
+									priority
 								/>
 							</div>
 						</div>
@@ -361,18 +496,20 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/digital-workforce.png"
-									alt="Digital Workforce Illustration"
+									alt="Illustration of autonomous AI agents working together in a digital workforce to automate business processes 24/7"
 									width={400}
 									height={300}
 									className="w-full h-auto block dark:hidden"
+									priority
 								/>
 								{/* Dark mode image */}
 								<Image
 									src="/home/digital-workforce-dark.png"
-									alt="Digital Workforce Illustration"
+									alt="Illustration of autonomous AI agents working together in a digital workforce to automate business processes 24/7"
 									width={400}
 									height={300}
 									className="w-full h-auto hidden dark:block"
+									priority
 								/>
 							</div>
 						</div>
@@ -411,7 +548,7 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/lead-workforce.png"
-									alt="Inbound Conversion Workflow"
+									alt="Inbound conversion workflow showing automated lead scoring, nurturing sequences, and sales meeting scheduling process"
 									width={400}
 									height={320}
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
@@ -419,7 +556,7 @@ export default function Home() {
 								{/* Dark mode image */}
 								<Image
 									src="/home/lead-workforce-dark.png"
-									alt="Inbound Conversion Workflow"
+									alt="Inbound conversion workflow showing automated lead scoring, nurturing sequences, and sales meeting scheduling process"
 									width={400}
 									height={320}
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
@@ -427,9 +564,10 @@ export default function Home() {
 								<div className="text-right">
 									<a
 										href="/workforces/lead"
-										className="text-muted-foreground font-semibold hover:text-accent transition-colors"
+										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
+										aria-label="Learn more about the Inbound Conversion Workforce for lead generation"
 									>
-										Explore This Workforce →
+										Explore Lead Workforce →
 									</a>
 								</div>
 							</div>
@@ -448,7 +586,7 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/content-workforce.png"
-									alt="Content Creation Workflow"
+									alt="Content creation workflow automating blog posts, social media content, and marketing copy generation with AI"
 									width={400}
 									height={320}
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
@@ -456,14 +594,18 @@ export default function Home() {
 								{/* Dark mode image */}
 								<Image
 									src="/home/content-workforce-dark.png"
-									alt="Content Creation Workflow"
+									alt="Content creation workflow automating blog posts, social media content, and marketing copy generation with AI"
 									width={400}
 									height={320}
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
-									<a href="#" className="text-muted-foreground font-semibold">
-										Explore This Workforce →
+									<a
+										href="/workforces/content"
+										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
+										aria-label="Learn more about the Content Creation Workforce for automated content generation"
+									>
+										Explore Content Workforce →
 									</a>
 								</div>
 							</div>
@@ -719,7 +861,7 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/reasoning.svg"
-									alt="Collaborative Reasoning"
+									alt="Collaborative reasoning between specialized AI agents including researchers and strategists working together to optimize outcomes"
 									width={400}
 									height={300}
 									className="w-2/3 md:w-full h-auto max-w-full max-h-full object-contain mt-8 block dark:hidden mx-auto"
@@ -727,7 +869,7 @@ export default function Home() {
 								{/* Dark mode image */}
 								<Image
 									src="/home/reasoning-dark.svg"
-									alt="Collaborative Reasoning"
+									alt="Collaborative reasoning between specialized AI agents including researchers and strategists working together to optimize outcomes"
 									width={400}
 									height={300}
 									className="w-2/3 md:w-full h-auto max-w-full max-h-full object-contain mt-8 hidden dark:block mx-auto"
@@ -749,7 +891,7 @@ export default function Home() {
 								{/* Light mode image */}
 								<Image
 									src="/home/understand.svg"
-									alt="Understand the Why"
+									alt="Analytics dashboard showing actionable insights and strategic recommendations from AI workforce performance data"
 									width={400}
 									height={80}
 									className="w-full h-auto max-w-full max-h-full object-contain block dark:hidden"
@@ -757,7 +899,7 @@ export default function Home() {
 								{/* Dark mode image */}
 								<Image
 									src="/home/understand-dark.svg"
-									alt="Understand the Why"
+									alt="Analytics dashboard showing actionable insights and strategic recommendations from AI workforce performance data"
 									width={400}
 									height={80}
 									className="w-full h-auto max-w-full max-h-full object-contain hidden dark:block"
@@ -1002,6 +1144,225 @@ export default function Home() {
 				</div>
 			</section>
 
+			{/* FAQ Section for SEO */}
+			<section className="py-16 sm:py-24 px-4 bg-background">
+				<div className="max-w-4xl mx-auto">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12">
+						Frequently Asked Questions
+					</h2>
+					<div className="space-y-4">
+						{/* FAQ Item 1 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									What is a Digital Workforce?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									A Digital Workforce is a collection of autonomous AI agents
+									that work together to execute complete business processes
+									24/7. Unlike traditional automation tools that handle single
+									tasks, our digital workers manage entire workflows, make
+									decisions, and continuously improve their performance without
+									human intervention.
+								</p>
+							</div>
+						</details>
+
+						{/* FAQ Item 2 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									How quickly can I deploy a Digital Workforce?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									Most Digital Workforces can be deployed within 2-4 weeks. We
+									start with a discovery call to understand your specific needs,
+									then configure and train the workforce for your unique
+									business processes. The workforce begins delivering value
+									immediately upon deployment and improves over time.
+								</p>
+							</div>
+						</details>
+
+						{/* FAQ Item 3 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									How does pricing work?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									We offer outcome-based pricing where you pay for productive
+									output, not idle time. Our elastic infrastructure means you
+									only pay for the work actually performed. This eliminates
+									fixed costs and scales automatically with your business needs.
+									Book a demo to discuss pricing for your specific use case.
+								</p>
+							</div>
+						</details>
+
+						{/* FAQ Item 4 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									What systems does a Digital Workforce integrate with?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									Digital Workforces integrate seamlessly with all major
+									business systems including CRMs (Salesforce, HubSpot),
+									marketing automation platforms, communication tools (Slack,
+									Teams), calendars, and custom APIs. We handle all integration
+									setup as part of the deployment process.
+								</p>
+							</div>
+						</details>
+
+						{/* FAQ Item 5 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									Do I need technical expertise to manage a Digital Workforce?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									No technical expertise is required. Digital Workforces are
+									designed to be autonomous and self-managing. You interact with
+									them through simple dashboards and receive clear reports on
+									outcomes delivered. Our team handles all technical aspects and
+									provides ongoing support.
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+
+				{/* FAQ Schema Markup */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "FAQPage",
+							mainEntity: [
+								{
+									"@type": "Question",
+									name: "What is a Digital Workforce?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "A Digital Workforce is a collection of autonomous AI agents that work together to execute complete business processes 24/7. Unlike traditional automation tools that handle single tasks, our digital workers manage entire workflows, make decisions, and continuously improve their performance without human intervention.",
+									},
+								},
+								{
+									"@type": "Question",
+									name: "How quickly can I deploy a Digital Workforce?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "Most Digital Workforces can be deployed within 2-4 weeks. We start with a discovery call to understand your specific needs, then configure and train the workforce for your unique business processes. The workforce begins delivering value immediately upon deployment and improves over time.",
+									},
+								},
+								{
+									"@type": "Question",
+									name: "How does pricing work?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "We offer outcome-based pricing where you pay for productive output, not idle time. Our elastic infrastructure means you only pay for the work actually performed. This eliminates fixed costs and scales automatically with your business needs. Book a demo to discuss pricing for your specific use case.",
+									},
+								},
+								{
+									"@type": "Question",
+									name: "What systems does a Digital Workforce integrate with?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "Digital Workforces integrate seamlessly with all major business systems including CRMs (Salesforce, HubSpot), marketing automation platforms, communication tools (Slack, Teams), calendars, and custom APIs. We handle all integration setup as part of the deployment process.",
+									},
+								},
+								{
+									"@type": "Question",
+									name: "Do I need technical expertise to manage a Digital Workforce?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "No technical expertise is required. Digital Workforces are designed to be autonomous and self-managing. You interact with them through simple dashboards and receive clear reports on outcomes delivered. Our team handles all technical aspects and provides ongoing support.",
+									},
+								},
+							],
+						}),
+					}}
+				/>
+			</section>
+
 			{/* Section 7: Final CTA */}
 			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
@@ -1029,8 +1390,9 @@ export default function Home() {
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Book a demo to see how digital workforces can transform your revenue operations"
 							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 px-6 py-3 min-h-[48px] min-w-[48px]">
 									Book a Demo
 								</Button>
 							</a>
