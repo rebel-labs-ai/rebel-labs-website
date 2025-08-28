@@ -1,0 +1,23 @@
+### **Section 2: The Diagnosis (The Broken Funnel) | Definitive Blueprint**
+
+- **Objective:** To present a damning diagnosis of the visitor's current reality, making the need for our solution feel urgent and inevitable by showing the systemic failures of the traditional model.
+- **Layout:** A "Thesis > Annotated Diagram" structure. This presents our diagnosis as a single, cohesive, and authoritative argument.
+- **Component Breakdown:**
+  - **H2 (Section Headline)**:
+    - **Style:** A centered, impactful headline that frames the core problem.
+    - **Copy:** Your Inbound Funnel is Leaking Revenue at Three Critical Points.
+  - **P (Subtext)**:
+    - **Style:** A short, clarifying paragraph that sets the stage for the diagnosis.
+    - **Copy:** The traditional model of human-led follow-up and basic automation is a systemic failure. It creates waste, stalls growth, and makes forecasting impossible. Here’s why:
+  - **Annotated Funnel Diagram**:
+    - **Concept:** A large, clean, central visual of a sales funnel. The funnel will have three clear "break points" or "leaks" highlighted (e.g., with a red glow or a crack visual). Each break point will have a line connecting to a text block that explains the failure.
+    - **Specification:**
+      - **Annotation 1 (Top of Funnel):**
+        - **Title:** The Failure of Speed & Investment
+        - **Description:** Hard-won leads from marketing are lost to slow follow-up and inconsistent nurturing, wasting your investment and losing winnable deals to more responsive competitors.
+      - **Annotation 2 (Middle of Funnel):**
+        - **Title:** The Failure of Scale & Headcount
+        - **Description:** Scaling your team to handle lead volume is a costly, inefficient cycle of hiring and training. Your best people are trapped in repetitive work instead of high-value selling.
+      - **Annotation 3 (Bottom of Funnel):**
+        - **Title:** The Failure of Intelligence & Data
+        - **Description:** Inconsistent data and a lack of real insight turn your revenue growth into a guessing game, making it impossible to forecast accurately or make confident strategic decisions.

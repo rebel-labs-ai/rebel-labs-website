@@ -50,11 +50,56 @@ export default {
 					"4": "hsl(var(--chart-4))",
 					"5": "hsl(var(--chart-5))",
 				},
+				// Core Brand Colors
+				"primary-blue": "hsl(var(--primary-blue))",
+				"secondary-blue": "hsl(var(--secondary-blue))",
+				"accent-teal": "hsl(var(--accent-teal))",
+				// Background Colors
+				"main-background": "hsl(var(--main-background))",
+				"card-background": "hsl(var(--card-background))",
+				"section-background": "hsl(var(--section-background))",
+				// Status Colors
+				"hot-lead": "hsl(var(--hot-lead))",
+				"warm-lead": "hsl(var(--warm-lead))",
+				"cold-lead": "hsl(var(--cold-lead))",
+				"success-alive": "hsl(var(--success-alive))",
+				"appointment-booked": "hsl(var(--appointment-booked))",
+				// Error & Warning Colors
+				"error-red": "hsl(var(--error-red))",
+				"error-red-alt": "hsl(var(--error-red-alt))",
+				"error-background": "hsl(var(--error-background))",
+				"error-text": "hsl(var(--error-text))",
+				// Interactive Elements
+				"primary-border": "hsl(var(--primary-border))",
+				"card-border": "hsl(var(--card-border))",
+				// Typography Colors
+				"primary-text": "hsl(var(--primary-text))",
+				"secondary-text": "hsl(var(--secondary-text))",
+				"muted-text": "hsl(var(--muted-text))",
+				"placeholder-text": "hsl(var(--placeholder-text))",
+				// Legacy aliases (for backward compatibility)
+				"success-green": "hsl(var(--accent-teal))",
+				// Direct hex colors for common use
+				"accent-hex": "#A1BCD1",
+				"primary-blue-hex": "#0066CC",
 			},
 			borderRadius: {
 				lg: "var(--radius)",
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
+			},
+			animation: {
+				"pulse-subtle": "pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+			},
+			keyframes: {
+				"pulse-subtle": {
+					"0%, 100%": {
+						opacity: "1",
+					},
+					"50%": {
+						opacity: "0.8",
+					},
+				},
 			},
 		},
 	},
