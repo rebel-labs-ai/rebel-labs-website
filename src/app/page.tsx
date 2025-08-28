@@ -8,6 +8,7 @@ import { AnimatedText } from "@/components/animated-text"
 import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
 import { Footer } from "@/components/footer"
+import { TrendingUp } from "lucide-react"
 
 export const metadata = {
 	title: "Stop Managing Tools, Start Scaling Revenue",
@@ -122,7 +123,7 @@ export default function Home() {
 
 							{/* Element 1: 24/7 Operation */}
 							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -151,7 +152,7 @@ export default function Home() {
 
 							{/* Element 2: Flawless Execution */}
 							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -180,21 +181,8 @@ export default function Home() {
 
 							{/* Element 3: Continuous Improvement */}
 							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M3 13.5l6.785 6.785A48.1 48.1 0 0021 4.5M3 13.5V21h7.5"
-										/>
-									</svg>
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
+									<TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]" />
 								</div>
 								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
@@ -240,7 +228,7 @@ export default function Home() {
 
 							{/* Element 4: Free Your Talent */}
 							<div className="flex items-start gap-3 sm:gap-4">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -269,7 +257,7 @@ export default function Home() {
 
 							{/* Element 5: Unlock Autonomy */}
 							<div className="flex items-start gap-3 sm:gap-4">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -298,7 +286,7 @@ export default function Home() {
 
 							{/* Element 6: Scale On Demand */}
 							<div className="flex items-start gap-3 sm:gap-4">
-								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/10 dark:bg-[#A1BCD1]/20 border border-accent dark:border-transparent rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"

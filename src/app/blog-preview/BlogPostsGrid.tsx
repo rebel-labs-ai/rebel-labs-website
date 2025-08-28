@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight, User, Tag } from "lucide-react"
@@ -16,6 +17,7 @@ interface BlogPost {
 	category: string
 	image: string
 	featured: boolean
+	slug?: string
 }
 
 interface BlogPostsGridProps {
@@ -86,10 +88,12 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 										</span>
 									</div>
 								</div>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
-									Read More
-									<ArrowRight className="ml-2 w-4 h-4" />
-								</Button>
+								<Link href={`/blog/${featuredPost.slug || 'rise-of-autonomous-digital-workforces'}`}>
+									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+										Read More
+										<ArrowRight className="ml-2 w-4 h-4" />
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</Card>
@@ -100,11 +104,11 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{filteredPosts
 					.filter(post => selectedCategory !== "All" || !post.featured)
-					.map(post => (
-						<Card
-							key={post.id}
-							className="bg-card-background border border-accent/20 shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group cursor-pointer"
-						>
+					.map(post => {
+						const postSlug = post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+						return (
+							<Link key={post.id} href={`/blog/${postSlug}`}>
+								<Card className="bg-card-background border border-accent/20 shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group cursor-pointer h-full">
 							{/* Post Image */}
 							<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
 								<div className="absolute inset-0 flex items-center justify-center">
@@ -152,16 +156,18 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 									</span>
 								</div>
 
-								{/* Read More Link */}
-								<div className="mt-4 pt-4 border-t border-accent/10">
-									<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors flex items-center gap-1">
-										Read Article
-										<ArrowRight className="w-3 h-3" />
-									</button>
+									{/* Read More Link */}
+									<div className="mt-4 pt-4 border-t border-accent/10">
+										<span className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors flex items-center gap-1">
+											Read Article
+											<ArrowRight className="w-3 h-3" />
+										</span>
+									</div>
 								</div>
-							</div>
-						</Card>
-					))}
+							</Card>
+						</Link>
+						)
+					})}
 			</div>
 
 			{/* Load More */}

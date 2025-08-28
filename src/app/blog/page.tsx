@@ -2,138 +2,103 @@ import { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
-import BlogPostsGrid from "./BlogPostsGrid"
-import NewsletterForm from "./NewsletterForm"
-
-// Static blog posts data - moved from client component for SEO
-const blogPosts = [
-	{
-		id: 1,
-		title: "The Rise of Autonomous Digital Workforces",
-		excerpt:
-			"Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
-		author: "Sarah Chen",
-		date: "December 15, 2024",
-		readTime: "5 min read",
-		category: "AI & Automation",
-		image: "/blog/post1.jpg",
-		featured: true,
-	},
-	{
-		id: 2,
-		title: "Building Scalable Sales Teams with AI Agents",
-		excerpt:
-			"Learn how companies are achieving 3.5x conversion rates by deploying intelligent sales automation systems.",
-		author: "Michael Rodriguez",
-		date: "December 12, 2024",
-		readTime: "8 min read",
-		category: "Sales",
-		image: "/blog/post2.jpg",
-		featured: false,
-	},
-	{
-		id: 3,
-		title: "The Future of Content Creation: AI Workforces",
-		excerpt:
-			"Discover how AI content workforces are revolutionizing marketing departments and creative agencies worldwide.",
-		author: "Emily Watson",
-		date: "December 10, 2024",
-		readTime: "6 min read",
-		category: "Content",
-		image: "/blog/post3.jpg",
-		featured: false,
-	},
-	{
-		id: 4,
-		title: "Case Study: 85% Faster Lead Response Times",
-		excerpt:
-			"A deep dive into how NovoTech reduced their lead response time from hours to minutes with our lead workforce.",
-		author: "David Park",
-		date: "December 8, 2024",
-		readTime: "10 min read",
-		category: "Case Studies",
-		image: "/blog/post4.jpg",
-		featured: false,
-	},
-	{
-		id: 5,
-		title: "Understanding Multi-Agent Systems",
-		excerpt:
-			"A technical overview of how multiple AI agents work together to solve complex business problems.",
-		author: "Alex Kumar",
-		date: "December 5, 2024",
-		readTime: "12 min read",
-		category: "Technology",
-		image: "/blog/post5.jpg",
-		featured: false,
-	},
-	{
-		id: 6,
-		title: "ROI of Digital Workforces: A Complete Guide",
-		excerpt:
-			"Everything you need to know about calculating and maximizing the return on investment from AI workforces.",
-		author: "Jessica Liu",
-		date: "December 3, 2024",
-		readTime: "7 min read",
-		category: "Business",
-		image: "/blog/post6.jpg",
-		featured: false,
-	},
-]
+import { ArrowRight, Bell, Sparkles, Calendar } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-	title: "Blog - NovoSapien",
+	title: "Blog - Coming Soon | NovoSapien",
 	description:
-		"Stay updated with the latest insights on AI workforces, automation strategies, and digital transformation. Learn how to scale your business with intelligent automation.",
-	keywords: [
-		"AI workforces",
-		"automation",
-		"digital transformation",
-		"AI agents",
-		"business automation",
-		"lead generation",
-		"sales automation",
-	].join(", "),
-	authors: [{ name: "NovoSapien Team" }],
-	openGraph: {
-		title: "Blog - NovoSapien",
-		description:
-			"Explore the latest in AI workforces, automation strategies, and success stories from the frontier of autonomous business operations.",
-		type: "website",
-	},
+		"Our blog is coming soon. Stay tuned for insights on AI workforces, automation strategies, and digital transformation.",
 }
 
-export default function BlogPage() {
+export default function BlogComingSoonPage() {
 	return (
 		<div className="min-h-screen bg-background">
 			{/* Navigation */}
 			<Navigation />
 
-			{/* Theme Toggle - Hidden on mobile */}
+			{/* Theme Toggle */}
 			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
 			{/* Main Content */}
-			<main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4">
-				<div className="max-w-7xl mx-auto">
-					{/* Header - Server-rendered for SEO */}
-					<div className="text-center mb-12">
-						<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans mb-4">
-							Insights & Updates
-						</h1>
-						<p className="text-muted-foreground text-xl max-w-3xl mx-auto">
-							Explore the latest in AI workforces, automation strategies, and
-							success stories from the frontier of autonomous business
-							operations.
-						</p>
+			<main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 min-h-[80vh] flex items-center justify-center">
+				<div className="max-w-4xl mx-auto text-center">
+					{/* Animated Icon */}
+					<div className="mb-8 relative">
+						<div className="w-24 h-24 mx-auto bg-gradient-to-br from-accent/20 to-accent/30 rounded-full flex items-center justify-center animate-pulse">
+							<Sparkles className="w-12 h-12 text-accent" />
+						</div>
+						<div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-br from-accent/10 to-accent/20 rounded-full animate-ping" />
 					</div>
 
-					{/* Blog Posts with Client-side Filtering */}
-					<BlogPostsGrid posts={blogPosts} />
+					{/* Coming Soon Text */}
+					<h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground mb-4">
+						Coming Soon
+					</h1>
+					
+					<p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+						We're crafting insightful content about AI workforces, automation strategies, and the future of digital transformation.
+					</p>
+
+					{/* Feature Preview */}
+					<div className="grid md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+						<div className="p-6 bg-muted/30 rounded-lg border border-accent/20">
+							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+								<Sparkles className="w-5 h-5 text-accent" />
+							</div>
+							<h3 className="font-medium text-foreground mb-2">Expert Insights</h3>
+							<p className="text-sm text-muted-foreground">
+								Deep dives into AI technology and automation strategies
+							</p>
+						</div>
+						
+						<div className="p-6 bg-muted/30 rounded-lg border border-accent/20">
+							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+								<Calendar className="w-5 h-5 text-accent" />
+							</div>
+							<h3 className="font-medium text-foreground mb-2">Weekly Updates</h3>
+							<p className="text-sm text-muted-foreground">
+								Fresh content on the latest in digital workforce innovation
+							</p>
+						</div>
+						
+						<div className="p-6 bg-muted/30 rounded-lg border border-accent/20">
+							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+								<Bell className="w-5 h-5 text-accent" />
+							</div>
+							<h3 className="font-medium text-foreground mb-2">Case Studies</h3>
+							<p className="text-sm text-muted-foreground">
+								Real success stories from companies using AI workforces
+							</p>
+						</div>
+					</div>
 
 					{/* Newsletter Signup */}
-					<NewsletterForm />
+					<div className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl p-8 max-w-2xl mx-auto border border-accent/20">
+						<h2 className="text-2xl font-light mb-4 text-foreground">
+							Be the First to Know
+						</h2>
+						<p className="text-muted-foreground mb-6">
+							Join our newsletter to get notified when we launch our blog and receive exclusive insights.
+						</p>
+						<form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+							<input
+								type="email"
+								placeholder="Enter your email"
+								className="flex-1 px-4 py-2 rounded-lg bg-background border border-accent/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 text-sm"
+								required
+							/>
+							<button
+								type="submit"
+								className="px-4 py-2 bg-accent text-accent-foreground rounded-lg hover:bg-accent/80 transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap text-sm"
+							>
+								Notify Me
+								<ArrowRight className="w-3 h-3" />
+							</button>
+						</form>
+					</div>
 				</div>
 			</main>
 
