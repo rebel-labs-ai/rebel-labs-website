@@ -16,8 +16,8 @@ export default function BlogPage() {
 			{/* Navigation */}
 			<Navigation />
 
-			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			{/* Theme Toggle - Hidden on mobile */}
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 

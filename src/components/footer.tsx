@@ -4,7 +4,28 @@ export function Footer() {
 	return (
 		<footer className="bg-card/50 border-t border-accent/40">
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+				{/* Mobile: simplified brand and tagline */}
+				<div className="md:hidden mb-6">
+					<div className="flex items-center space-x-2 mb-3">
+						<Image
+							src="/logo.svg"
+							alt="Novosapien Logo"
+							width={32}
+							height={32}
+							className="w-8 h-8"
+						/>
+						<span className="text-xl font-reddit-sans lowercase font-medium">
+							<span className="text-accent">novo</span>
+							<span className="text-foreground">sapien</span>
+						</span>
+					</div>
+					<p className="text-sm text-muted-foreground">
+						Building the Future. Building digital workforces.
+					</p>
+				</div>
+
+				{/* Desktop & tablet: full footer columns */}
+				<div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 					{/* Company Info */}
 					<div className="sm:col-span-2 md:col-span-1">
 						<div className="flex items-center space-x-2 mb-4">

@@ -68,7 +68,7 @@ function ContentProductionProtocol() {
 			<section className="py-16 px-4">
 				<div className="max-w-5xl mx-auto">
 					<div className="text-center">
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The Autonomous Content Lifecycle
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -403,7 +403,7 @@ export function ContentWorkforceClient() {
 	const agents = {
 		intelligence: [
 			{
-				icon: <Search className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Search className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Research Agent",
 				role: "Scanning the Market",
 				coreFunction:
@@ -421,7 +421,7 @@ export function ContentWorkforceClient() {
 					"I provide a continuous stream of raw intelligence to the Idea Generation Agent, who synthesizes it into concrete content concepts.",
 			},
 			{
-				icon: <Brain className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Brain className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Idea Generation Agent",
 				role: "Architecting Content Concepts",
 				coreFunction:
@@ -439,7 +439,7 @@ export function ContentWorkforceClient() {
 					"I translate the intelligence from the Research Agent into actionable briefs for the Drafting and Media Generation Agents.",
 			},
 			{
-				icon: <Users className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Users className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Critic Agent",
 				role: "Ensuring Quality & Coherence",
 				coreFunction:
@@ -459,7 +459,7 @@ export function ContentWorkforceClient() {
 		],
 		creation: [
 			{
-				icon: <PenTool className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <PenTool className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Drafting Agent",
 				role: "Producing Written Content",
 				coreFunction:
@@ -477,7 +477,7 @@ export function ContentWorkforceClient() {
 					"I execute the brief from the Idea Generation Agent and work in a tight loop with the Critic and Iteration Agents to refine the final output.",
 			},
 			{
-				icon: <FileText className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <FileText className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Iteration Agent",
 				role: "Refining to Perfection",
 				coreFunction:
@@ -495,7 +495,7 @@ export function ContentWorkforceClient() {
 					"I work in a tight loop with the Drafting and Media Generation Agents, guided by feedback from the Critic Agent and your human team.",
 			},
 			{
-				icon: <Video className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Video className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Media Generation Agent",
 				role: "Creating Visual Assets",
 				coreFunction:
@@ -515,7 +515,7 @@ export function ContentWorkforceClient() {
 		],
 		amplification: [
 			{
-				icon: <Share2 className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Share2 className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Repurposing Agent",
 				role: "Maximizing Content Leverage",
 				coreFunction:
@@ -533,7 +533,7 @@ export function ContentWorkforceClient() {
 					"I take the final, approved pillar content and create the full suite of assets for the Hook Generation and Distribution Agents to finalize.",
 			},
 			{
-				icon: <MessageSquare className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <MessageSquare className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Hook Generation Agent",
 				role: "Crafting Compelling Hooks",
 				coreFunction:
@@ -551,7 +551,7 @@ export function ContentWorkforceClient() {
 					"I work directly on the outputs of the Repurposing Agent, providing the final layer of creative polish before the Distribution Agent takes over.",
 			},
 			{
-				icon: <Mail className="w-8 h-8 text-[#A1BCD1]" />,
+				icon: <Mail className="w-10 h-10 text-[#A1BCD1]" />,
 				name: "Distribution Agent",
 				role: "Engineering for Discovery & Distribution",
 				coreFunction:
@@ -577,7 +577,7 @@ export function ContentWorkforceClient() {
 			<Navigation />
 
 			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
@@ -601,7 +601,7 @@ export function ContentWorkforceClient() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
 									From Blank Page to Published Campaign.
 								</h1>
 							</div>
@@ -689,7 +689,7 @@ export function ContentWorkforceClient() {
 											<Card
 												key={index}
 												onClick={() => setSelectedAgent(agent)}
-												className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-5 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[360px] w-[260px]"
+												className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-6 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[400px] w-[280px]"
 											>
 												<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
 													{agent.name}
@@ -697,7 +697,7 @@ export function ContentWorkforceClient() {
 												<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
 													{agent.role}
 												</span>
-												<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
+												<div className="w-20 h-20 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
 													{agent.icon}
 												</div>
 												<p className="text-muted-foreground text-sm mb-2 flex-1">
@@ -739,7 +739,7 @@ export function ContentWorkforceClient() {
 			<section className="py-32 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							We Build Your Custom Content Operating System.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -867,7 +867,7 @@ export function ContentWorkforceClient() {
 			<section className="py-32 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The New Definition of Leverage.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -1002,7 +1002,7 @@ export function ContentWorkforceClient() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Feeding the Content Treadmill.
 						</h2>
 

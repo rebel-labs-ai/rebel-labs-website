@@ -17,7 +17,7 @@ export default function CareersPage() {
 			<Navigation />
 
 			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
@@ -26,7 +26,7 @@ export default function CareersPage() {
 				<div className="max-w-3xl mx-auto">
 					{/* Header */}
 					<div className="text-center mb-12">
-						<h1 className="text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight font-geist-sans mb-4">
+						<h1 className="text-foreground text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight font-geist-sans mb-4">
 							Join Our Team
 						</h1>
 						<p className="text-muted-foreground text-base sm:text-lg px-4 sm:px-0">

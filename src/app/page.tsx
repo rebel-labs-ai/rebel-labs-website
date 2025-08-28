@@ -21,13 +21,13 @@ export default function Home() {
 			{/* Navigation */}
 			<Navigation />
 
-			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			{/* Theme Toggle - Hidden on mobile */}
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
 			{/* Hero Section with Animated Dots Background */}
-			<div className="relative min-h-screen">
+				<div className="relative min-h-[85vh] md:min-h-screen md:mb-0">
 				{/* Animated Dot Pattern Background for entire hero area */}
 				<div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full">
 					<AnimatedDots />
@@ -37,22 +37,22 @@ export default function Home() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Hero - The Declaration */}
-				<section className="pt-32 pb-24 px-4 relative">
-					<div className="max-w-4xl mx-auto relative z-10 mt-36">
+				<section className="pt-24 pb-16 md:pt-48 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
+					<div className="max-w-4xl mx-auto relative z-10 w-full md:mt-36">
 						<div className="text-center mb-8">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 								Redefining the way your generate revenue
 							</span>
 						</div>
 						<div className="text-left">
-							<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
-								Stop Managing Tools.
-							</h1>
-							<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mt-2 font-geist-sans">
-								Start <AnimatedText />
-							</h1>
+								<h1 className="text-foreground text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
+									Stop Managing Tools.
+								</h1>
+								<h1 className="text-foreground text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
+									Start <AnimatedText />
+								</h1>
 						</div>
-						<p className="text-muted-foreground text-lg sm:text-xl mt-6 leading-relaxed text-left">
+						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-left">
 							We deploy digital workforces into your business so you can
 							generate revenue on autopilot.
 						</p>
@@ -90,11 +90,11 @@ export default function Home() {
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
 			<section className="mx-auto bg-accent/40 relative py-16 sm:py-20 md:py-24">
-				<div className="max-w-8xl mx-auto px-4">
+				<div className="max-w-8xl mx-auto px-4 mt-32">
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-12">
 						<h2
-							className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6"
+							className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6"
 							style={{
 								textShadow:
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
@@ -114,14 +114,14 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
 						{/* Left side - The Operational Power */}
 						<div className="space-y-6">
-							<div className="mb-4 text-right">
+							<div className="mb-4 text-left md:text-right">
 								<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
 									The Operational Power
 								</span>
 							</div>
 
 							{/* Element 1: 24/7 Operation */}
-							<div className="flex items-start gap-4 flex-row-reverse">
+							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
 								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ export default function Home() {
 										/>
 									</svg>
 								</div>
-								<div className="text-right">
+								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-lg font-semibold mb-2">
 										24/7 Operation
 									</h3>
@@ -150,7 +150,7 @@ export default function Home() {
 							</div>
 
 							{/* Element 2: Flawless Execution */}
-							<div className="flex items-start gap-4 flex-row-reverse">
+							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
 								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +167,7 @@ export default function Home() {
 										/>
 									</svg>
 								</div>
-								<div className="text-right">
+								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-lg font-semibold mb-2">
 										Flawless Execution
 									</h3>
@@ -179,7 +179,7 @@ export default function Home() {
 							</div>
 
 							{/* Element 3: Continuous Improvement */}
-							<div className="flex items-start gap-4 flex-row-reverse">
+							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
 								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +196,7 @@ export default function Home() {
 										/>
 									</svg>
 								</div>
-								<div className="text-right">
+								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-lg font-semibold mb-2">
 										Continuous Improvement
 									</h3>
@@ -359,7 +359,7 @@ export default function Home() {
 									In a nutshell
 								</span>
 							</div>
-							<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6">
+							<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6">
 								What is a Digital Workforce?
 							</h2>
 							<p className="text-muted-foreground text-lg leading-relaxed">
@@ -373,7 +373,7 @@ export default function Home() {
 
 						{/* Right side - Digital Workforce Image */}
 						<div className="flex justify-center lg:justify-end">
-							<div className="max-w-4xl w-full mt-16">
+							<div className="w-full md:max-w-4xl mt-8 md:mt-16">
 								{/* Light mode image */}
 								<Image
 									src="/home/digital-workforce.png"
@@ -403,7 +403,7 @@ export default function Home() {
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							The Solution
 						</span>
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4">
 							We Don&apos;t Sell Tools. We Deliver Outcomes.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
@@ -415,10 +415,10 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-2xl font-bold mb-4">
+								<h3 className="text-foreground text-xl font-bold mb-4 text-center md:text-left">
 									Inbound Conversion Workforce
 								</h3>
-								<p className="text-muted-foreground mb-6 flex-1">
+								<p className="text-muted-foreground mb-6 flex-1 text-center md:text-left">
 									Transforms website visitors into qualified sales meetings
 									through intelligent lead scoring, nurturing sequences, and
 									automated follow-up.
@@ -429,7 +429,7 @@ export default function Home() {
 									alt="Inbound Conversion Workflow"
 									width={400}
 									height={320}
-									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
+									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
 								<Image
@@ -437,7 +437,7 @@ export default function Home() {
 									alt="Inbound Conversion Workflow"
 									width={400}
 									height={320}
-									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
+									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
 									<a
@@ -452,10 +452,10 @@ export default function Home() {
 
 						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-2xl font-bold mb-4">
+								<h3 className="text-foreground text-xl font-bold mb-4 text-center md:text-left">
 									Content Creation Workforce
 								</h3>
-								<p className="text-muted-foreground mb-6 flex-1">
+								<p className="text-muted-foreground mb-6 flex-1 text-center md:text-left">
 									Produces consistent, high-quality content across all channels,
 									from blog posts to social media, aligned with your brand and
 									strategy.
@@ -466,7 +466,7 @@ export default function Home() {
 									alt="Content Creation Workflow"
 									width={400}
 									height={320}
-									className="w-full h-80 object-contain rounded-lg mb-6 block dark:hidden"
+									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
 								<Image
@@ -474,7 +474,7 @@ export default function Home() {
 									alt="Content Creation Workflow"
 									width={400}
 									height={320}
-									className="w-full h-80 object-contain rounded-lg mb-6 hidden dark:block"
+									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
 									<a href="#" className="text-muted-foreground font-semibold">
@@ -490,7 +490,7 @@ export default function Home() {
 			{/* Section 3.5: The Problem */}
 			{/* <section className="py-16 px-4 relative">
 				<div className="max-w-7xl mx-auto px-4 py-8 rounded-xl relative z-10">
-					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
 						Your Revenue is Capped by a Broken Model
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -671,7 +671,7 @@ export default function Home() {
 			{/* Section 5: Core Capabilities */}
 			<section className="pt-0 pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
 						Core Capabilities
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -691,13 +691,13 @@ export default function Home() {
 								thousand in seconds to meet any demand. You pay for the work
 								done, not for idle capacity.
 							</p>
-							<div className="h-56 rounded-lg overflow-hidden">
+							<div className="h-40 md:h-56 rounded-lg overflow-hidden relative">
 								<ElasticInfrastructureGraph />
 							</div>
 						</div>
 
 						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
-						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
+						<div className="hidden md:block md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
 								Seamless Integration
 							</h3>
@@ -737,7 +737,7 @@ export default function Home() {
 									alt="Collaborative Reasoning"
 									width={400}
 									height={300}
-									className="w-full h-auto max-w-full max-h-full object-contain mt-8 block dark:hidden"
+									className="w-2/3 md:w-full h-auto max-w-full max-h-full object-contain mt-8 block dark:hidden mx-auto"
 								/>
 								{/* Dark mode image */}
 								<Image
@@ -745,7 +745,7 @@ export default function Home() {
 									alt="Collaborative Reasoning"
 									width={400}
 									height={300}
-									className="w-full h-auto max-w-full max-h-full object-contain mt-8 hidden dark:block"
+									className="w-2/3 md:w-full h-auto max-w-full max-h-full object-contain mt-8 hidden dark:block mx-auto"
 								/>
 							</div>
 						</div>
@@ -760,7 +760,7 @@ export default function Home() {
 								explains it. Get clear, actionable insights and strategic
 								recommendations delivered automatically.
 							</p>
-							<div className=" rounded-lg h-20 flex items-center justify-center">
+							<div className="hidden md:flex rounded-lg h-20 items-center justify-center">
 								{/* Light mode image */}
 								<Image
 									src="/home/understand.svg"
@@ -781,7 +781,7 @@ export default function Home() {
 						</div>
 
 						{/* Feature Six - Outcome-Centric Reporting */}
-						<div className="bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[200px]">
+						<div className="hidden md:block bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
 								Outcome-Centric Reporting
 							</h3>
@@ -798,7 +798,7 @@ export default function Home() {
 			{/* Section 6: The New Equation of Value */}
 			<section className="py-16 sm:py-20 md:py-24 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
+					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
 						The New Equation of Value
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1022,12 +1022,12 @@ export default function Home() {
 				<div className="max-w-4xl mx-auto">
 					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 						<div className="inline-block mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+							<span className="bg-accent/10 text-foreground font-semibold px-2 sm:px-4 py-2 rounded-full text-xs sm:text-sm border border-accent/30 whitespace-nowrap">
 								Ready to Transform Your Operations?
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Buying Smarter Shovels.
 							<br />
 							<span className="text-accent">Start Delivering Outcomes.</span>

@@ -117,7 +117,7 @@ function MethodSection() {
 					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
 						Our Method
 					</span>
-					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
@@ -388,7 +388,7 @@ export default function LeadWorkforcePage() {
 			<Navigation />
 
 			{/* Theme Toggle */}
-			<div className="fixed top-4 right-4 z-50">
+			<div className="fixed top-4 right-4 z-50 hidden md:block">
 				<ThemeToggle />
 			</div>
 
@@ -412,7 +412,7 @@ export default function LeadWorkforcePage() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
 									Never Lose an Inbound Lead Again.
 								</h1>
 							</div>
@@ -779,7 +779,7 @@ export default function LeadWorkforcePage() {
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
 					<div className="text-center mb-16">
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The Four Systemic Failures of Your Inbound Funnel.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
@@ -1124,17 +1124,17 @@ export default function LeadWorkforcePage() {
 						<Image
 							src="/workforces/leads/before-after.svg"
 							alt="Before and After Comparison"
-							width={1200}
-							height={600}
-							className="w-full max-w-6xl h-auto dark:hidden"
+							width={1400}
+							height={700}
+							className="w-full max-w-7xl h-auto dark:hidden"
 						/>
 						{/* Dark mode image */}
 						<Image
 							src="/workforces/leads/before-after-dark.svg"
 							alt="Before and After Comparison"
-							width={1200}
-							height={600}
-							className="w-full max-w-6xl h-auto hidden dark:block"
+							width={1400}
+							height={700}
+							className="w-full max-w-7xl h-auto hidden dark:block"
 						/>
 					</div>
 				</div>
@@ -1150,7 +1150,7 @@ export default function LeadWorkforcePage() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Losing Leads.
 							<br />
 							<span className="text-accent">

@@ -3,14 +3,21 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export function Navigation() {
 	const pathname = usePathname()
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 	const [isMobileWorkforceOpen, setIsMobileWorkforceOpen] = useState(false)
+	const { theme, setTheme } = useTheme()
+	const [mounted, setMounted] = useState(false)
+
+	useEffect(() => {
+		setMounted(true)
+	}, [])
 
 	const isActive = (path: string) => pathname === path
 	const isWorkforceActive = () => pathname?.startsWith("/workforces")
@@ -104,25 +111,21 @@ export function Navigation() {
 								Mission
 							</Button>
 						</Link>
-						<a
-							href="https://cal.com/george-westbrook-novosapien/30min"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<Link href="/contact">
 							<Button
 								variant="ghost"
 								className={getButtonClassName("/contact")}
 							>
-								Speak to us
+								Contact
 							</Button>
-						</a>
+						</Link>
 					</div>
 				</div>
 
 				{/* Mobile Navigation */}
-				<div className="md:hidden">
+				<div className="md:hidden relative">
 					{/* Mobile Header Bar */}
-					<div className="flex items-center justify-between">
+					<div className="flex items-center justify-between backdrop-blur-sm rounded-lg p-3 border border-accent bg-background/80 dark:bg-accent/30">
 						<div className="flex items-center space-x-2">
 							<Image
 								src="/logo.svg"
@@ -138,25 +141,25 @@ export function Navigation() {
 						</div>
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-							className="p-2 rounded-md hover:bg-accent/20 transition-colors"
+							className="p-2 rounded-md hover:bg-accent/20 transition-colors text-foreground"
 							aria-label="Toggle menu"
 						>
 							{isMobileMenuOpen ? (
-								<X className="h-6 w-6" />
+								<X className="h-6 w-6 text-foreground" />
 							) : (
-								<Menu className="h-6 w-6" />
+								<Menu className="h-6 w-6 text-foreground" />
 							)}
 						</button>
 					</div>
 
-					{/* Mobile Menu Overlay */}
+					{/* Mobile Menu Dropdown */}
 					{isMobileMenuOpen && (
-						<div className="fixed inset-0 top-[60px] bg-background/95 backdrop-blur-sm z-50">
-							<div className="px-4 py-6 space-y-4">
+						<div className="absolute top-full left-0 right-0 mt-2 backdrop-blur-md rounded-lg border border-accent bg-background/95 dark:bg-background/75 z-50 shadow-lg max-h-[calc(100vh-100px)] overflow-y-auto">
+							<div className="p-3 space-y-1">
 								<Link
 									href="/"
 									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-4 py-3 rounded-md transition-colors ${
+									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
 										isActive("/")
 											? "bg-accent/20 text-foreground font-medium"
 											: "hover:bg-accent/10"
@@ -171,7 +174,7 @@ export function Navigation() {
 										onClick={() =>
 											setIsMobileWorkforceOpen(!isMobileWorkforceOpen)
 										}
-										className={`w-full flex items-center justify-between px-4 py-3 rounded-md transition-colors ${
+										className={`w-full flex items-center justify-between px-3 py-2 rounded-md transition-colors text-sm ${
 											isWorkforceActive()
 												? "bg-accent/20 text-foreground font-medium"
 												: "hover:bg-accent/10"
@@ -185,25 +188,25 @@ export function Navigation() {
 										/>
 									</button>
 									{isMobileWorkforceOpen && (
-										<div className="mt-2 ml-4 space-y-2">
+										<div className="mt-1 ml-4 space-y-1">
 											<Link
 												href="/workforces/lead"
 												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-4 py-2 rounded-md hover:bg-accent/10 transition-colors"
+												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 											>
 												Inbound Sales
 											</Link>
 											<Link
 												href="/workforces/content"
 												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-4 py-2 rounded-md hover:bg-accent/10 transition-colors"
+												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 											>
 												Content Creation
 											</Link>
 											<Link
 												href="/workforces/lab"
 												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-4 py-2 rounded-md hover:bg-accent/10 transition-colors"
+												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 											>
 												The Lab
 											</Link>
@@ -214,7 +217,7 @@ export function Navigation() {
 								<Link
 									href="/mission"
 									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-4 py-3 rounded-md transition-colors ${
+									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
 										isActive("/mission")
 											? "bg-accent/20 text-foreground font-medium"
 											: "hover:bg-accent/10"
@@ -223,15 +226,62 @@ export function Navigation() {
 									Mission
 								</Link>
 
-								<a
-									href="https://cal.com/george-westbrook-novosapien/30min"
-									target="_blank"
-									rel="noopener noreferrer"
+								{/* Blog */}
+								<Link
+									href="/blog"
 									onClick={() => setIsMobileMenuOpen(false)}
-									className="block px-4 py-3 rounded-md bg-accent text-white font-medium hover:bg-accent/90 transition-colors text-center"
+									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
+										isActive("/blog")
+											? "bg-accent/20 text-foreground font-medium"
+											: "hover:bg-accent/10"
+									}`}
 								>
-									Speak to us
-								</a>
+									Blog
+								</Link>
+
+								{/* Careers */}
+								<Link
+									href="/careers"
+									onClick={() => setIsMobileMenuOpen(false)}
+									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
+										isActive("/careers")
+											? "bg-accent/20 text-foreground font-medium"
+											: "hover:bg-accent/10"
+									}`}
+								>
+									Careers
+								</Link>
+
+								{/* Contact */}
+								<Link
+									href="/contact"
+									onClick={() => setIsMobileMenuOpen(false)}
+									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
+										isActive("/contact")
+											? "bg-accent/20 text-foreground font-medium"
+											: "hover:bg-accent/10"
+									}`}
+								>
+									Contact
+								</Link>
+
+								{/* Divider */}
+								<div className="h-px bg-border my-2"></div>
+
+								{/* Theme Toggle */}
+								{mounted && (
+									<button
+										onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+										className="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
+									>
+										<span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+										{theme === "dark" ? (
+											<Sun className="h-4 w-4" />
+										) : (
+											<Moon className="h-4 w-4" />
+										)}
+									</button>
+								)}
 							</div>
 						</div>
 					)}

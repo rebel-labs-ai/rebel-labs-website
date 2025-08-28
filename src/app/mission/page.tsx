@@ -195,7 +195,7 @@ export default function MissionPage() {
 								<div className="grid gap-8 lg:grid-cols-2">
 									{/* Content */}
 									<div>
-										<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+										<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
 											The Old World is Broken.
 										</h2>
 										<div className="space-y-4">
@@ -259,7 +259,7 @@ export default function MissionPage() {
 
 									{/* Content */}
 									<div className="order-1 lg:order-2">
-										<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+										<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
 											A New Coat of Paint on a Crumbling Foundation.
 										</h2>
 										<div className="space-y-4">
@@ -293,7 +293,7 @@ export default function MissionPage() {
 							<div>
 								<div className="grid gap-8 lg:grid-cols-[1fr_300px]">
 									<div>
-										<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+										<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
 											The Burden of the Blank Canvas.
 										</h2>
 										<div className="space-y-4">
@@ -476,7 +476,7 @@ export default function MissionPage() {
 								</span>
 							</div>
 
-							<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+							<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 								Stop Managing Tools.
 								<br />
 								<span className="text-accent">Start Commanding Outcomes.</span>
