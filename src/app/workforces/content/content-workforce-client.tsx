@@ -217,7 +217,11 @@ function CreationMockup() {
 					</div>
 				</div>
 				<div className="space-y-3">
-					<div className="text-sm text-muted-foreground mb-2">Draft</div>
+					<div className="text-sm text-muted-foreground mb-2">
+						Current<br className="sm:hidden" />
+						<span className="hidden sm:inline"> </span>
+						Draft
+					</div>
 					<div className="p-4 bg-muted rounded-lg h-full overflow-hidden">
 						<p className="text-xs text-foreground font-semibold mb-2">
 							The AI Revolution in Healthcare: Beyond the Hype
@@ -290,8 +294,18 @@ function AmplificationMockup() {
 								<p className="text-xs font-semibold text-foreground">
 									{item.platform}
 								</p>
+								{/* Mobile: Show dot only, Desktop: Show status text */}
+								<span className="sm:hidden">
+									<span
+										className={`inline-block w-2 h-2 rounded-full ${
+											item.status === "Ready"
+												? "bg-green-500"
+												: "bg-amber-500"
+										}`}
+									/>
+								</span>
 								<span
-									className={`text-xs px-1.5 py-0.5 rounded ${
+									className={`hidden sm:inline text-xs px-1.5 py-0.5 rounded ${
 										item.status === "Ready"
 											? "bg-emerald-100 dark:bg-green-500/20 text-emerald-700 dark:text-green-400"
 											: "bg-amber-100 dark:bg-yellow-500/20 text-amber-700 dark:text-yellow-400"
@@ -879,9 +893,9 @@ export function ContentWorkforceClient() {
 					<div className="relative">
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-24">
 							{/* Step 1 Module */}
-							<Card className="bg-card-background border-2 border-accent shadow-xl p-8">
+							<Card className="bg-card-background border-2 border-accent shadow-xl p-6 sm:p-8">
 								<div className="mb-6">
-									<div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+									<div className="hidden sm:flex w-12 h-12 bg-accent/20 rounded-lg items-center justify-center mb-4">
 										<FileText className="w-6 h-6 text-accent" />
 									</div>
 									<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -936,9 +950,9 @@ export function ContentWorkforceClient() {
 							</div>
 
 							{/* Step 2 Module */}
-							<Card className="bg-card-background border-2 border-accent shadow-xl p-8">
+							<Card className="bg-card-background border-2 border-accent shadow-xl p-6 sm:p-8">
 								<div className="mb-6">
-									<div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+									<div className="hidden sm:flex w-12 h-12 bg-accent/20 rounded-lg items-center justify-center mb-4">
 										<Users className="w-6 h-6 text-accent" />
 									</div>
 									<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
