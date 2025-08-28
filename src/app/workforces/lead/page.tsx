@@ -120,15 +120,53 @@ function MethodSection() {
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
-					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto px-4 sm:px-0">
+					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 						Your workforce follows a proven, four-step protocol to ensure every
 						lead is converted with maximum efficiency and intelligence, from
 						initial contact to the final handoff.
 					</p>
 				</div>
 
-				{/* Sticky Scroll Container */}
-				<div className="relative">
+				{/* Mobile Layout - Simple cards with images */}
+				<div className="block lg:hidden space-y-12">
+					{methodSteps.map((step, index) => (
+						<div key={step.id} className="space-y-4">
+							<div>
+								<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-xs border border-accent/30 inline-block mb-3">
+									{step.label}
+								</span>
+								<h3 className="text-xl font-bold mb-3 text-foreground">
+									{step.title}
+								</h3>
+								<p className="text-base leading-relaxed text-muted-foreground">
+									{step.description}
+								</p>
+							</div>
+							{/* Image for each step */}
+							<div className="rounded-lg overflow-hidden bg-accent/5 p-6">
+								{/* Light mode image */}
+								<Image
+									src={`/workforces/leads/step${index + 1}.svg`}
+									alt={`${step.title} Visualization`}
+									width={500}
+									height={400}
+									className="w-full h-auto max-h-[280px] object-contain dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<Image
+									src={`/workforces/leads/step${index + 1}-dark.svg`}
+									alt={`${step.title} Visualization`}
+									width={500}
+									height={400}
+									className="w-full h-auto max-h-[280px] object-contain hidden dark:block"
+								/>
+							</div>
+						</div>
+					))}
+				</div>
+
+				{/* Desktop Layout - Sticky Scroll (unchanged) */}
+				<div className="relative hidden lg:block">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 						{/* Left Column - Scrolling Text */}
 						<div>
@@ -166,7 +204,7 @@ function MethodSection() {
 						</div>
 
 						{/* Right Column - Sticky Visual */}
-						<div className="relative hidden lg:block mt-64">
+						<div className="relative mt-64">
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[500px] w-full flex items-center justify-center">
 									{/* Step Images */}
@@ -878,11 +916,11 @@ export default function LeadWorkforcePage() {
 
 						{/* Collaborative Work Section */}
 						<div className="mt-16">
-							<div className="text-center mb-8">
-								<h3 className="text-foreground text-2xl font-bold mb-4">
+							<div className="text-left sm:text-center mb-8">
+								<h3 className="text-foreground text-xl sm:text-2xl font-bold mb-4">
 									How They Work Together
 								</h3>
-								<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
+								<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto px-0 sm:px-0">
 									Your roster operates as a unified team, with each agent
 									playing a critical role in the lead conversion process. They
 									communicate in real-time, share insights, and coordinate
@@ -990,9 +1028,9 @@ export default function LeadWorkforcePage() {
 					{/* Funnel Diagram with Annotations */}
 					<div className="max-w-7xl mx-auto">
 						{/* Container with funnel in center and cards around it */}
-						<div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 items-center ">
+						<div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 items-center">
 							{/* Left Column - Two Cards */}
-							<div className="space-y-24">
+							<div className="space-y-6 lg:space-y-24">
 								{/* Top Left - Failure of Speed */}
 								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
@@ -1111,8 +1149,8 @@ export default function LeadWorkforcePage() {
 								</Card>
 							</div>
 
-							{/* Center Column - Funnel Image (Smaller) */}
-							<div className="flex justify-center px-4">
+							{/* Center Column - Funnel Image (Desktop only) */}
+							<div className="hidden lg:flex justify-center px-4">
 								<div className="relative max-w-xs w-full">
 									{/* Light mode funnel */}
 									<Image
@@ -1134,7 +1172,7 @@ export default function LeadWorkforcePage() {
 							</div>
 
 							{/* Right Column - Two Cards */}
-							<div className="space-y-24">
+							<div className="space-y-6 lg:space-y-24">
 								{/* Top Right - Failure of Persistence & Quality */}
 								<Card
 									className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
@@ -1258,12 +1296,12 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 4: The Method - 4-Step Protocol with Sticky Scroll */}
-			<div className="pt-32">
+			<div className="pt-16 sm:pt-32">
 				<MethodSection />
 			</div>
 
 			{/* Section 5: Results & ROI */}
-			<section className="px-4">
+			<section className="px-4 pt-16 sm:pt-0">
 				<div className="max-w-6xl mx-auto">
 					{/* Section Header - Proven Results First */}
 					<div className="text-left sm:text-center mb-12">
@@ -1276,38 +1314,38 @@ export default function LeadWorkforcePage() {
 					</div>
 
 					{/* Metrics Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-foreground mb-2">85%</div>
-							<p className="text-foreground text-sm">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16">
+						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
+							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">85%</div>
+							<p className="text-foreground text-xs sm:text-sm">
 								Faster Lead Response Time
 							</p>
 						</Card>
-						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-foreground mb-2">
+						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
+							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
 								3.5x
 							</div>
-							<p className="text-foreground text-sm">
+							<p className="text-foreground text-xs sm:text-sm">
 								Decrease in Human Wasted Time
 							</p>
 						</Card>
-						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-foreground mb-2">
+						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
+							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
 								99.9%
 							</div>
-							<p className="text-foreground text-sm">Leads Contacted</p>
+							<p className="text-foreground text-xs sm:text-sm">Leads Contacted</p>
 						</Card>
-						<Card className="bg-card-background border border-accent shadow-lg p-6 text-center">
-							<div className="text-4xl font-bold text-foreground mb-2">
+						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
+							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
 								24/7
 							</div>
-							<p className="text-foreground text-sm">Always-On Operations</p>
+							<p className="text-foreground text-xs sm:text-sm">Always-On Operations</p>
 						</Card>
 					</div>
 
 					{/* Subtitle */}
-					<div className="text-center mb-16">
-						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
+					<div className="text-left sm:text-center mb-16">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 							The old model measures your team on effort and activity. The new
 							model measures them on results. By systemically eliminating the
 							manual process, we transform your sales operation from a high-cost
@@ -1315,8 +1353,8 @@ export default function LeadWorkforcePage() {
 						</p>
 					</div>
 
-					{/* Before/After Comparison */}
-					<div className="flex justify-center">
+					{/* Before/After Comparison - Desktop Only */}
+					<div className="hidden sm:flex justify-center">
 						{/* Light mode image */}
 						<Image
 							src="/workforces/leads/before-after.svg"
@@ -1338,16 +1376,16 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 7: Final CTA */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+					<Card className="p-6 sm:p-12 text-left sm:text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-4 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
 								Ready to Transform Your Lead Process?
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							Stop Losing Leads.
 							<br />
 							<span className="text-accent">
@@ -1355,19 +1393,19 @@ export default function LeadWorkforcePage() {
 							</span>
 						</h2>
 
-						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl sm:mx-auto mb-6 sm:mb-8 leading-relaxed">
 							Join companies that are converting 3.5x more leads with an
 							autonomous Digital Workforce. See the impact in your pipeline
 							within days.
 						</p>
 
-						<div className="flex justify-center">
+						<div className="flex justify-start sm:justify-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 									Deploy This Workforce
 								</Button>
 							</a>
@@ -1389,62 +1427,62 @@ export default function LeadWorkforcePage() {
 					/>
 
 					{/* Modal Content */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 pointer-events-none">
 						<div
-							className="bg-card-background border border-accent shadow-2xl rounded-xl p-8 max-w-3xl w-full max-h-[85vh] overflow-y-auto pointer-events-auto animate-in zoom-in-95 fade-in duration-200"
+							className="bg-card-background border border-accent shadow-2xl rounded-xl p-4 sm:p-8 max-w-3xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto pointer-events-auto animate-in zoom-in-95 fade-in duration-200"
 							onClick={e => e.stopPropagation()}
 						>
 							{/* Modal Header */}
-							<div className="flex items-start justify-between mb-6">
-								<div className="flex items-start gap-4">
-									<div className="w-14 h-14 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start justify-between mb-4 sm:mb-6">
+								<div className="flex items-start gap-3 sm:gap-4 flex-1">
+									<div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 										{selectedAgent.icon}
 									</div>
-									<div>
-										<h2 className="text-foreground text-2xl font-bold">
+									<div className="flex-1 min-w-0">
+										<h2 className="text-foreground text-lg sm:text-2xl font-bold leading-tight">
 											{selectedAgent.name}
 										</h2>
-										<span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+										<span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 											{selectedAgent.role}
 										</span>
 									</div>
 								</div>
 								<button
 									onClick={() => setSelectedAgent(null)}
-									className="text-muted-foreground hover:text-foreground transition-colors"
+									className="text-muted-foreground hover:text-foreground transition-colors ml-2 p-1 -mr-1 -mt-1"
 								>
-									<X className="w-6 h-6" />
+									<X className="w-5 h-5 sm:w-6 sm:h-6" />
 								</button>
 							</div>
 
 							{/* Core Function */}
-							<div className="mb-6">
-								<p className="text-lg text-muted-foreground leading-relaxed">
+							<div className="mb-4 sm:mb-6">
+								<p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
 									{selectedAgent.coreFunction}
 								</p>
 							</div>
 
 							{/* Introduction Quote */}
-							<div className="bg-accent/10 border-l-4 border-accent p-4 mb-6 rounded-r-lg">
-								<p className="text-muted-foreground italic">
+							<div className="bg-accent/10 border-l-4 border-accent p-3 sm:p-4 mb-4 sm:mb-6 rounded-r-lg">
+								<p className="text-sm sm:text-base text-muted-foreground italic">
 									&ldquo;{selectedAgent.introduction}&rdquo;
 								</p>
 							</div>
 
 							{/* Details Grid */}
-							<div className="space-y-6">
+							<div className="space-y-4 sm:space-y-6">
 								{/* Responsibilities */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Responsibilities
 									</h3>
-									<ul className="space-y-2">
+									<ul className="space-y-1.5 sm:space-y-2">
 										{selectedAgent.responsibilities.map((resp, idx) => (
 											<li
 												key={idx}
-												className="text-muted-foreground flex items-start"
+												className="text-sm sm:text-base text-muted-foreground flex items-start"
 											>
-												<span className="text-accent mr-3 mt-1">•</span>
+												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">•</span>
 												<span>{resp}</span>
 											</li>
 										))}
@@ -1453,20 +1491,20 @@ export default function LeadWorkforcePage() {
 
 								{/* Strategic Importance */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Strategic Importance
 									</h3>
-									<p className="text-muted-foreground">
+									<p className="text-sm sm:text-base text-muted-foreground">
 										{selectedAgent.strategicImportance}
 									</p>
 								</div>
 
 								{/* Collaboration */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Collaboration
 									</h3>
-									<p className="text-muted-foreground">
+									<p className="text-sm sm:text-base text-muted-foreground">
 										{selectedAgent.collaboration}
 									</p>
 								</div>

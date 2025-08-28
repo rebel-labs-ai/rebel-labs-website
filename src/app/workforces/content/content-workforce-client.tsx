@@ -403,7 +403,7 @@ export function ContentWorkforceClient() {
 	const agents = {
 		intelligence: [
 			{
-				icon: <Search className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Search className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Research Agent",
 				role: "Scanning the Market",
 				coreFunction:
@@ -421,7 +421,7 @@ export function ContentWorkforceClient() {
 					"I provide a continuous stream of raw intelligence to the Idea Generation Agent, who synthesizes it into concrete content concepts.",
 			},
 			{
-				icon: <Brain className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Brain className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Idea Generation Agent",
 				role: "Architecting Content Concepts",
 				coreFunction:
@@ -439,7 +439,7 @@ export function ContentWorkforceClient() {
 					"I translate the intelligence from the Research Agent into actionable briefs for the Drafting and Media Generation Agents.",
 			},
 			{
-				icon: <Users className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Users className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Critic Agent",
 				role: "Ensuring Quality & Coherence",
 				coreFunction:
@@ -459,7 +459,7 @@ export function ContentWorkforceClient() {
 		],
 		creation: [
 			{
-				icon: <PenTool className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <PenTool className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Drafting Agent",
 				role: "Producing Written Content",
 				coreFunction:
@@ -477,7 +477,7 @@ export function ContentWorkforceClient() {
 					"I execute the brief from the Idea Generation Agent and work in a tight loop with the Critic and Iteration Agents to refine the final output.",
 			},
 			{
-				icon: <FileText className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <FileText className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Iteration Agent",
 				role: "Refining to Perfection",
 				coreFunction:
@@ -495,7 +495,7 @@ export function ContentWorkforceClient() {
 					"I work in a tight loop with the Drafting and Media Generation Agents, guided by feedback from the Critic Agent and your human team.",
 			},
 			{
-				icon: <Video className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Video className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Media Generation Agent",
 				role: "Creating Visual Assets",
 				coreFunction:
@@ -515,7 +515,7 @@ export function ContentWorkforceClient() {
 		],
 		amplification: [
 			{
-				icon: <Share2 className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Share2 className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Repurposing Agent",
 				role: "Maximizing Content Leverage",
 				coreFunction:
@@ -533,7 +533,7 @@ export function ContentWorkforceClient() {
 					"I take the final, approved pillar content and create the full suite of assets for the Hook Generation and Distribution Agents to finalize.",
 			},
 			{
-				icon: <MessageSquare className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <MessageSquare className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Hook Generation Agent",
 				role: "Crafting Compelling Hooks",
 				coreFunction:
@@ -551,7 +551,7 @@ export function ContentWorkforceClient() {
 					"I work directly on the outputs of the Repurposing Agent, providing the final layer of creative polish before the Distribution Agent takes over.",
 			},
 			{
-				icon: <Mail className="w-10 h-10 text-[#A1BCD1]" />,
+				icon: <Mail className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
 				name: "Distribution Agent",
 				role: "Engineering for Discovery & Distribution",
 				coreFunction:
@@ -619,48 +619,146 @@ export function ContentWorkforceClient() {
 			<ContentProductionProtocol />
 
 			{/* Section 3: The Interactive Roster (moved below Section 2) */}
-			<section className="py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
-				<div className="max-w-5xl mx-auto">
-					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-8">
-						<div className="text-center mb-12">
-							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+			<section className="py-32 px-2 sm:px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+				<div className="max-w-5xl mx-auto px-2 sm:px-4">
+					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-4 sm:p-8">
+						<div className="text-left sm:text-center mb-12">
+							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 								Meet Your Team
 							</span>
-							<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
+							<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mt-4">
 								Meet Your On-Demand Content Team.
 							</h2>
-							<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4">
+							<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto mt-4">
 								Your workforce is a coordinated team of specialized AI agents,
 								each a master of the content lifecycle, working in concert to
 								execute your strategy.
 							</p>
 						</div>
 
-						{/* Tab Navigation */}
-						<div className="flex justify-center mb-12">
-							<div className="inline-flex bg-background border border-accent/30 rounded-lg p-1">
-								{tabs.map(tab => (
-									<button
-										key={tab.id}
-										onClick={() =>
-											setActiveTab(
-												tab.id as "intelligence" | "creation" | "amplification"
-											)
-										}
-										className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-											activeTab === tab.id
-												? "bg-accent dark:bg-accent/60 text-white dark:text-white shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
-												: "text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20"
-										}`}
-									>
-										{tab.label}
-									</button>
-								))}
+						{/* Mobile Layout - All agents in vertical list */}
+						<div className="block sm:hidden space-y-6 -mx-2">
+							{/* Intelligence & Research Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Intelligence & Research</h3>
+								<div className="space-y-2 px-1">
+									{agents.intelligence.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-3">
+												{/* Icon on the left */}
+												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
+							</div>
+
+							{/* Creation & Refinement Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Creation & Refinement</h3>
+								<div className="space-y-2 px-1">
+									{agents.creation.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-3">
+												{/* Icon on the left */}
+												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
+							</div>
+
+							{/* Amplification & Distribution Section */}
+							<div>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Amplification & Distribution</h3>
+								<div className="space-y-2 px-1">
+									{agents.amplification.map((agent, index) => (
+										<Card
+											key={index}
+											onClick={() => setSelectedAgent(agent)}
+											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+										>
+											<div className="flex items-center gap-3">
+												{/* Icon on the left */}
+												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+													{agent.icon}
+												</div>
+												
+												{/* Text content */}
+												<div className="flex-1">
+													<h4 className="text-foreground font-semibold text-sm">
+														{agent.name}
+													</h4>
+												</div>
+												
+												{/* Arrow on the right */}
+												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+											</div>
+										</Card>
+									))}
+								</div>
 							</div>
 						</div>
 
-						{/* Agent Cards Grid */}
-						<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
+						{/* Desktop Layout - Tab Navigation and Grid (unchanged) */}
+						<div className="hidden sm:block">
+							{/* Tab Navigation */}
+							<div className="flex justify-center mb-12">
+								<div className="inline-flex bg-background border border-accent/30 rounded-lg p-1">
+									{tabs.map(tab => (
+										<button
+											key={tab.id}
+											onClick={() =>
+												setActiveTab(
+													tab.id as "intelligence" | "creation" | "amplification"
+												)
+											}
+											className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+												activeTab === tab.id
+													? "bg-accent dark:bg-accent/60 text-white dark:text-white shadow-md hover:shadow-lg hover:bg-accent/80 hover:dark:bg-accent/40"
+													: "text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20"
+											}`}
+										>
+											{tab.label}
+										</button>
+									))}
+								</div>
+							</div>
+
+							{/* Agent Cards Grid */}
+							<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
 							<div className="flex items-center justify-between">
 								{/* Left Arrow */}
 								<button
@@ -730,6 +828,7 @@ export function ContentWorkforceClient() {
 									<ChevronRight className="w-6 h-6" />
 								</button>
 							</div>
+						</div>
 						</div>
 					</Card>
 				</div>
@@ -1032,62 +1131,62 @@ export function ContentWorkforceClient() {
 					/>
 
 					{/* Modal Content */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 pointer-events-none">
 						<div
-							className="bg-card-background border border-accent shadow-2xl rounded-xl p-8 max-w-3xl w-full max-h-[85vh] overflow-y-auto pointer-events-auto animate-in zoom-in-95 fade-in duration-200"
+							className="bg-card-background border border-accent shadow-2xl rounded-xl p-4 sm:p-8 max-w-3xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-y-auto pointer-events-auto animate-in zoom-in-95 fade-in duration-200"
 							onClick={e => e.stopPropagation()}
 						>
 							{/* Modal Header */}
-							<div className="flex items-start justify-between mb-6">
-								<div className="flex items-start gap-4">
-									<div className="w-14 h-14 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start justify-between mb-4 sm:mb-6">
+								<div className="flex items-start gap-3 sm:gap-4 flex-1">
+									<div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 										{selectedAgent.icon}
 									</div>
-									<div>
-										<h2 className="text-foreground text-2xl font-bold">
+									<div className="flex-1 min-w-0">
+										<h2 className="text-foreground text-lg sm:text-2xl font-bold leading-tight">
 											{selectedAgent.name}
 										</h2>
-										<span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+										<span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 											{selectedAgent.role}
 										</span>
 									</div>
 								</div>
 								<button
 									onClick={() => setSelectedAgent(null)}
-									className="text-muted-foreground hover:text-foreground transition-colors"
+									className="text-muted-foreground hover:text-foreground transition-colors ml-2 p-1 -mr-1 -mt-1"
 								>
-									<X className="w-6 h-6" />
+									<X className="w-5 h-5 sm:w-6 sm:h-6" />
 								</button>
 							</div>
 
 							{/* Core Function */}
-							<div className="mb-6">
-								<p className="text-lg text-muted-foreground leading-relaxed">
+							<div className="mb-4 sm:mb-6">
+								<p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
 									{selectedAgent.coreFunction}
 								</p>
 							</div>
 
 							{/* Introduction Quote */}
-							<div className="bg-accent/10 border-l-4 border-accent p-4 mb-6 rounded-r-lg">
-								<p className="text-muted-foreground italic">
+							<div className="bg-accent/10 border-l-4 border-accent p-3 sm:p-4 mb-4 sm:mb-6 rounded-r-lg">
+								<p className="text-sm sm:text-base text-muted-foreground italic">
 									&ldquo;{selectedAgent.introduction}&rdquo;
 								</p>
 							</div>
 
 							{/* Details Grid */}
-							<div className="space-y-6">
+							<div className="space-y-4 sm:space-y-6">
 								{/* Responsibilities */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Responsibilities
 									</h3>
-									<ul className="space-y-2">
+									<ul className="space-y-1.5 sm:space-y-2">
 										{selectedAgent.responsibilities.map((resp, idx) => (
 											<li
 												key={idx}
-												className="text-muted-foreground flex items-start"
+												className="text-sm sm:text-base text-muted-foreground flex items-start"
 											>
-												<span className="text-accent mr-3 mt-1">•</span>
+												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">•</span>
 												<span>{resp}</span>
 											</li>
 										))}
@@ -1096,20 +1195,20 @@ export function ContentWorkforceClient() {
 
 								{/* Strategic Importance */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Strategic Importance
 									</h3>
-									<p className="text-muted-foreground">
+									<p className="text-sm sm:text-base text-muted-foreground">
 										{selectedAgent.strategicImportance}
 									</p>
 								</div>
 
 								{/* Collaboration */}
 								<div>
-									<h3 className="text-lg font-semibold text-foreground mb-3">
+									<h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3">
 										Collaboration
 									</h3>
-									<p className="text-muted-foreground">
+									<p className="text-sm sm:text-base text-muted-foreground">
 										{selectedAgent.collaboration}
 									</p>
 								</div>
