@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
-import { ChevronDown, Sparkles, Rocket } from "lucide-react"
+import { ChevronDown, Sparkles } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -86,7 +86,7 @@ function TwinklingStars() {
 }
 
 export default function MissionPage() {
-	const [activeSection, setActiveSection] = useState(0)
+	const [, setActiveSection] = useState(0)
 	const [showIntro, setShowIntro] = useState(false)
 	const [showSubtext, setShowSubtext] = useState(false)
 	const sectionsRef = useRef<(HTMLElement | null)[]>([])
