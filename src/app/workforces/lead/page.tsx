@@ -113,11 +113,11 @@ function MethodSection() {
 		<section className="px-4">
 			<div className="max-w-6xl mx-auto">
 				{/* Section Header */}
-				<div className="text-left sm:text-center mb-16">
-					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
+				<div className="text-left sm:text-center mb-8 sm:mb-16">
+					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-3">
 						Our Method
 					</span>
-					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
@@ -697,7 +697,7 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 3: The Interactive Roster (Your Digital Team) */}
-			<section className="py-32 px-2 sm:px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+			<section className="py-16 sm:py-32 px-2 sm:px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-5xl mx-auto px-2 sm:px-4">
 					<Card className="bg-card-background border border-accent shadow-lg rounded-xl p-4 sm:p-8">
 						<div className="text-left sm:text-center mb-12">
@@ -1010,7 +1010,7 @@ export default function LeadWorkforcePage() {
 			</section>
 
 			{/* Section 2: The Diagnosis - The Broken Funnel */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
 					<div className="text-left sm:text-center mb-16">
@@ -1304,17 +1304,17 @@ export default function LeadWorkforcePage() {
 			<section className="px-4 pt-16 sm:pt-0">
 				<div className="max-w-6xl mx-auto">
 					{/* Section Header - Proven Results First */}
-					<div className="text-left sm:text-center mb-12">
-						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+					<div className="text-left sm:text-center mb-8 sm:mb-12">
+						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-3">
 							Proven Results
 						</span>
-						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mt-4">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight">
 							Redefine Your Team&apos;s ROI
 						</h2>
 					</div>
 
 					{/* Metrics Grid */}
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
 						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
 							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">85%</div>
 							<p className="text-foreground text-xs sm:text-sm">
@@ -1378,7 +1378,7 @@ export default function LeadWorkforcePage() {
 			{/* Section 7: Final CTA */}
 			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-6 sm:p-12 text-left sm:text-center bg-card-background backdrop-blur-sm border-accent/20">
+					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 						<div className="inline-block mb-4 sm:mb-6">
 							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
 								Ready to Transform Your Lead Process?
@@ -1393,13 +1393,13 @@ export default function LeadWorkforcePage() {
 							</span>
 						</h2>
 
-						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl sm:mx-auto mb-6 sm:mb-8 leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
 							Join companies that are converting 3.5x more leads with an
 							autonomous Digital Workforce. See the impact in your pipeline
 							within days.
 						</p>
 
-						<div className="flex justify-start sm:justify-center">
+						<div className="flex justify-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"

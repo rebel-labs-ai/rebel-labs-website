@@ -69,7 +69,7 @@ export function ScrollAnimatedSteps() {
 	return (
 		<section ref={containerRef} className="relative">
 			<div className="max-w-6xl mx-auto px-4">
-				<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
+				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
 					How We Do It
 				</h2>
 
@@ -95,8 +95,8 @@ export function ScrollAnimatedSteps() {
 												: "opacity-100 scale-100 lg:opacity-30 lg:scale-95"
 										}`}
 									>
-										<div className="mb-6">
-											<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+										<div className="mb-3 sm:mb-6">
+											<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 												{index === 0
 													? "Step One"
 													: index === 1
@@ -104,10 +104,10 @@ export function ScrollAnimatedSteps() {
 														: "Step Three"}
 											</span>
 										</div>
-										<h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+										<h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-6">
 											{step.title}
 										</h3>
-										<p className="text-lg lg:text-xl leading-relaxed text-muted-foreground">
+										<p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
 										

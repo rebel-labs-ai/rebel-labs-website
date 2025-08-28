@@ -37,18 +37,18 @@ export default function Home() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Hero - The Declaration */}
-				<section className="pt-24 pb-16 md:pt-48 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
+				<section className="pt-20 sm:pt-24 md:pt-48 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
 					<div className="max-w-4xl mx-auto relative z-10 w-full md:mt-36">
-						<div className="text-center mb-8">
-							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+						<div className="text-center mb-6 sm:mb-8">
+							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 								Redefining the way your generate revenue
 							</span>
 						</div>
 						<div className="text-left">
-								<h1 className="text-foreground text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
 									Stop Managing Tools.
 								</h1>
-								<h1 className="text-foreground text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
 									Start <AnimatedText />
 								</h1>
 						</div>
@@ -56,7 +56,7 @@ export default function Home() {
 							We deploy digital workforces into your business so you can
 							generate revenue on autopilot.
 						</p>
-						<div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center">
+						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
@@ -89,12 +89,12 @@ export default function Home() {
 			</div>
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
-			<section className="mx-auto bg-accent/40 relative py-16 sm:py-20 md:py-24">
-				<div className="max-w-8xl mx-auto px-4 mt-32">
+			<section className="mx-auto bg-accent/40 relative py-16 sm:py-32">
+				<div className="max-w-8xl mx-auto px-4">
 					{/* Centered headline and subtext */}
-					<div className="text-center mb-12">
+					<div className="text-center mb-8 sm:mb-12">
 						<h2
-							className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6"
+							className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 sm:mb-6 px-2 sm:px-0"
 							style={{
 								textShadow:
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
@@ -102,7 +102,7 @@ export default function Home() {
 						>
 							We Automate the Full Stack of Revenue Operations
 						</h2>
-						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
+						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
 							A Novosapien Digital Workforce isn&apos;t a point solution that
 							automates a single task. It&apos;s a complete operational layer
 							designed to execute, learn, and scale, freeing your human team to
@@ -111,25 +111,25 @@ export default function Home() {
 					</div>
 
 					{/* Content Grid - Three columns layout */}
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
 						{/* Left side - The Operational Power */}
-						<div className="space-y-6">
-							<div className="mb-4 text-left md:text-right">
-								<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+						<div className="space-y-4 sm:space-y-6">
+							<div className="mb-3 sm:mb-4 text-left md:text-right">
+								<span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 									The Operational Power
 								</span>
 							</div>
 
 							{/* Element 1: 24/7 Operation */}
-							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -139,10 +139,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-left md:text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										24/7 Operation
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										Your workforce operates continuously without breaks,
 										holidays, or downtime.
 									</p>
@@ -150,15 +150,15 @@ export default function Home() {
 							</div>
 
 							{/* Element 2: Flawless Execution */}
-							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -168,10 +168,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-left md:text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										Flawless Execution
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										Eliminate human error. Your workforce runs critical
 										processes with perfect consistency and reliability.
 									</p>
@@ -179,15 +179,15 @@ export default function Home() {
 							</div>
 
 							{/* Element 3: Continuous Improvement */}
-							<div className="flex items-start gap-4 flex-row md:flex-row-reverse">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4 flex-row md:flex-row-reverse">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -197,10 +197,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div className="text-left md:text-right">
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										Continuous Improvement
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										Your workforce analyzes every action, learns what works, and
 										systematically improves its performance over time.
 									</p>
@@ -231,23 +231,23 @@ export default function Home() {
 						</div>
 
 						{/* Right side - The Strategic Impact */}
-						<div className="space-y-6">
-							<div className="mb-4">
-								<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+						<div className="space-y-4 sm:space-y-6">
+							<div className="mb-3 sm:mb-4">
+								<span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground">
 									The Strategic Impact
 								</span>
 							</div>
 
 							{/* Element 4: Free Your Talent */}
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -257,10 +257,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										Free Your Talent
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										Automate the high-volume, repetitive work that frees your
 										team for strategic priorities.
 									</p>
@@ -268,15 +268,15 @@ export default function Home() {
 							</div>
 
 							{/* Element 5: Unlock Autonomy */}
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -286,10 +286,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										Unlock Autonomy
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										A workforce that makes decisions, solves problems, and
 										optimizes its own performance to deliver the result.
 									</p>
@@ -297,15 +297,15 @@ export default function Home() {
 							</div>
 
 							{/* Element 6: Scale On Demand */}
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+							<div className="flex items-start gap-3 sm:gap-4">
+								<div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-6 h-6 text-[#A1BCD1]"
+										className="w-5 h-5 sm:w-6 sm:h-6 text-[#A1BCD1]"
 									>
 										<path
 											strokeLinecap="round"
@@ -315,10 +315,10 @@ export default function Home() {
 									</svg>
 								</div>
 								<div>
-									<h3 className="text-foreground text-lg font-semibold mb-2">
+									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
 										Scale On Demand
 									</h3>
-									<p className="text-muted-foreground text-sm">
+									<p className="text-muted-foreground text-xs sm:text-sm">
 										Instantly scale your operations to meet any demand, paying
 										only for productive output.
 									</p>
@@ -330,20 +330,20 @@ export default function Home() {
 			</section>
 
 			{/* Section 2: What is a Digital Workforce */}
-			<section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
-				<div className="max-w-7xl mx-auto px-4 py-16 rounded-xl relative z-10">
+			<section className="py-16 sm:py-32 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+				<div className="max-w-7xl mx-auto px-2 sm:px-4 rounded-xl relative z-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
 						{/* Left side - Content */}
 						<div>
-							<div className="mb-8">
-								<span className="bg-white dark:bg-transparent text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,205,255,0.4)]">
+							<div className="mb-6 sm:mb-8">
+								<span className="bg-white dark:bg-transparent text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] inline-flex items-center gap-2 shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
 										strokeWidth={1.5}
 										stroke="currentColor"
-										className="w-4 h-4"
+										className="w-3 h-3 sm:w-4 sm:h-4"
 									>
 										<path
 											strokeLinecap="round"
@@ -359,10 +359,10 @@ export default function Home() {
 									In a nutshell
 								</span>
 							</div>
-							<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6">
+							<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 sm:mb-6">
 								What is a Digital Workforce?
 							</h2>
-							<p className="text-muted-foreground text-lg leading-relaxed">
+							<p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
 								A Digital Workforce is a collection of autonomous AI agents that
 								work together to execute complete business processes from start
 								to finish. Unlike traditional automation tools that handle
@@ -397,28 +397,29 @@ export default function Home() {
 			</section>
 
 			{/* Section 3: The Solution */}
-			<section className="py-16 sm:py-20 md:py-24 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
+					<div className="text-center mb-8 sm:mb-12">
+						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							The Solution
 						</span>
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4">
-							We Don&apos;t Sell Tools. We Deliver Outcomes.
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-3 sm:mt-4">
+							<span className="block sm:inline">We Don&apos;t Sell Tools.</span>{' '}
+							<span className="block sm:inline">We Deliver Outcomes.</span>
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
+						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto mt-3 sm:mt-4 leading-relaxed px-2 sm:px-0">
 							A Digital Workforce is a collection of autonomous agents that
 							execute complete business processes, not individual tasks. They
 							operate 24/7, scale instantly, and deliver measurable results.
 						</p>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-6 sm:p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-xl font-bold mb-4 text-center md:text-left">
+								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center md:text-left">
 									Inbound Conversion Workforce
 								</h3>
-								<p className="text-muted-foreground mb-6 flex-1 text-center md:text-left">
+								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
 									Transforms website visitors into qualified sales meetings
 									through intelligent lead scoring, nurturing sequences, and
 									automated follow-up.
@@ -429,7 +430,7 @@ export default function Home() {
 									alt="Inbound Conversion Workflow"
 									width={400}
 									height={320}
-									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 block dark:hidden"
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
 								<Image
@@ -437,7 +438,7 @@ export default function Home() {
 									alt="Inbound Conversion Workflow"
 									width={400}
 									height={320}
-									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 hidden dark:block"
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
 									<a
@@ -450,12 +451,12 @@ export default function Home() {
 							</div>
 						</Card>
 
-						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-8">
+						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-6 sm:p-8">
 							<div className="flex flex-col h-full">
-								<h3 className="text-foreground text-xl font-bold mb-4 text-center md:text-left">
+								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center md:text-left">
 									Content Creation Workforce
 								</h3>
-								<p className="text-muted-foreground mb-6 flex-1 text-center md:text-left">
+								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
 									Produces consistent, high-quality content across all channels,
 									from blog posts to social media, aligned with your brand and
 									strategy.
@@ -466,7 +467,7 @@ export default function Home() {
 									alt="Content Creation Workflow"
 									width={400}
 									height={320}
-									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 block dark:hidden"
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
 								/>
 								{/* Dark mode image */}
 								<Image
@@ -474,7 +475,7 @@ export default function Home() {
 									alt="Content Creation Workflow"
 									width={400}
 									height={320}
-									className="w-full h-56 md:h-96 object-contain rounded-lg mb-6 hidden dark:block"
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
 									<a href="#" className="text-muted-foreground font-semibold">
@@ -669,12 +670,12 @@ export default function Home() {
 			</div>
 
 			{/* Section 5: Core Capabilities */}
-			<section className="pt-0 pb-24 px-4">
+			<section className="pt-0 pb-16 sm:pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-left sm:text-center mb-6 sm:mb-8">
 						Core Capabilities
 					</h2>
-					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
+					<p className="text-muted-foreground text-base sm:text-lg text-left sm:text-center max-w-3xl sm:mx-auto mb-8 sm:mb-16">
 						Your Digital Workforce is built on an architecture designed to
 						deliver outcomes, not just automate tasks. These are its core
 						capabilities.
@@ -796,9 +797,9 @@ export default function Home() {
 			</section>
 
 			{/* Section 6: The New Equation of Value */}
-			<section className="py-16 sm:py-20 md:py-24 px-4 bg-background">
+			<section className="py-16 sm:py-32 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-16">
 						The New Equation of Value
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1018,22 +1019,22 @@ export default function Home() {
 			</section>
 
 			{/* Section 7: Final CTA */}
-			<section className="py-16 sm:py-20 md:py-24 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-2 sm:px-4 py-2 rounded-full text-xs sm:text-sm border border-accent/30 whitespace-nowrap">
+					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-4 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30 whitespace-nowrap">
 								Ready to Transform Your Operations?
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							Stop Buying Smarter Shovels.
 							<br />
 							<span className="text-accent">Start Delivering Outcomes.</span>
 						</h2>
 
-						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed px-4 sm:px-0">
+						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
 							Join forward-thinking companies who are achieving measurable
 							results with Digital Workforces. Your transformation starts with a
 							single conversation.
