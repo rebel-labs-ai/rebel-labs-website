@@ -45,28 +45,29 @@ export default function Home() {
 							</span>
 						</div>
 						<div className="text-left">
-							<h1 className="text-foreground text-6xl md:text-7xl font-light tracking-tight font-geist-sans">
+							<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
 								Stop Managing Tools.
 							</h1>
-							<h1 className="text-foreground text-6xl md:text-7xl font-light tracking-tight mt-2 font-geist-sans">
+							<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mt-2 font-geist-sans">
 								Start <AnimatedText />
 							</h1>
 						</div>
-						<p className="text-muted-foreground text-xl mt-6 leading-relaxed text-left">
+						<p className="text-muted-foreground text-lg sm:text-xl mt-6 leading-relaxed text-left">
 							We deploy digital workforces into your business so you can
 							generate revenue on autopilot.
 						</p>
-						<div className="mt-8 text-center">
+						<div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/30min"
 								target="_blank"
 								rel="noopener noreferrer"
+								className="w-full sm:w-auto"
 							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 w-full sm:w-auto">
 									Speak to us
 								</Button>
 							</a>
-							<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 ml-4 hover:bg-accent/30 hover:dark:bg-accent/30">
+							<Button className="bg-white/70 dark:bg-transparent text-foreground dark:text-white border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/30 hover:dark:bg-accent/30 w-full sm:w-auto">
 								Try it now
 							</Button>
 						</div>
@@ -88,12 +89,12 @@ export default function Home() {
 			</div>
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
-			<section className="mx-auto bg-accent/40 relative py-24">
+			<section className="mx-auto bg-accent/40 relative py-16 sm:py-20 md:py-24">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-12">
 						<h2
-							className="text-foreground text-4xl font-bold tracking-tight mb-6"
+							className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6"
 							style={{
 								textShadow:
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
@@ -101,7 +102,7 @@ export default function Home() {
 						>
 							We Automate the Full Stack of Revenue Operations
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
 							A Novosapien Digital Workforce isn&apos;t a point solution that
 							automates a single task. It&apos;s a complete operational layer
 							designed to execute, learn, and scale, freeing your human team to
@@ -110,7 +111,7 @@ export default function Home() {
 					</div>
 
 					{/* Content Grid - Three columns layout */}
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start max-w-7xl mx-auto">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
 						{/* Left side - The Operational Power */}
 						<div className="space-y-6">
 							<div className="mb-4 text-right">
@@ -329,9 +330,9 @@ export default function Home() {
 			</section>
 
 			{/* Section 2: What is a Digital Workforce */}
-			<section className="py-24 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
+			<section className="py-16 sm:py-20 md:py-24 px-4 bg-gradient-to-b from-accent/40 via-accent/20 via-30% to-transparent">
 				<div className="max-w-7xl mx-auto px-4 py-16 rounded-xl relative z-10">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
 						{/* Left side - Content */}
 						<div>
 							<div className="mb-8">
@@ -358,7 +359,7 @@ export default function Home() {
 									In a nutshell
 								</span>
 							</div>
-							<h2 className="text-foreground text-4xl font-bold tracking-tight mb-6">
+							<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6">
 								What is a Digital Workforce?
 							</h2>
 							<p className="text-muted-foreground text-lg leading-relaxed">
@@ -396,13 +397,13 @@ export default function Home() {
 			</section>
 
 			{/* Section 3: The Solution */}
-			<section className="py-24 px-4">
+			<section className="py-16 sm:py-20 md:py-24 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 							The Solution
 						</span>
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mt-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4">
 							We Don&apos;t Sell Tools. We Deliver Outcomes.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
@@ -489,7 +490,7 @@ export default function Home() {
 			{/* Section 3.5: The Problem */}
 			{/* <section className="py-16 px-4 relative">
 				<div className="max-w-7xl mx-auto px-4 py-8 rounded-xl relative z-10">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
 						Your Revenue is Capped by a Broken Model
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -670,7 +671,7 @@ export default function Home() {
 			{/* Section 5: Core Capabilities */}
 			<section className="pt-0 pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-8">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8">
 						Core Capabilities
 					</h2>
 					<p className="text-muted-foreground text-lg text-center max-w-3xl mx-auto mb-16">
@@ -795,9 +796,9 @@ export default function Home() {
 			</section>
 
 			{/* Section 6: The New Equation of Value */}
-			<section className="py-24 px-4 bg-background">
+			<section className="py-16 sm:py-20 md:py-24 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
-					<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">
 						The New Equation of Value
 					</h2>
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1017,7 +1018,7 @@ export default function Home() {
 			</section>
 
 			{/* Section 7: Final CTA */}
-			<section className="py-24 px-4">
+			<section className="py-16 sm:py-20 md:py-24 px-4">
 				<div className="max-w-4xl mx-auto">
 					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 						<div className="inline-block mb-6">
@@ -1026,13 +1027,13 @@ export default function Home() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Buying Smarter Shovels.
 							<br />
 							<span className="text-accent">Start Delivering Outcomes.</span>
 						</h2>
 
-						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed px-4 sm:px-0">
 							Join forward-thinking companies who are achieving measurable
 							results with Digital Workforces. Your transformation starts with a
 							single conversation.

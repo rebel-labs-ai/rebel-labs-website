@@ -3,10 +3,10 @@ import Image from "next/image"
 export function Footer() {
 	return (
 		<footer className="bg-card/50 border-t border-accent/40">
-			<div className="max-w-6xl mx-auto px-6 py-16">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+			<div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 					{/* Company Info */}
-					<div className="md:col-span-1">
+					<div className="sm:col-span-2 md:col-span-1">
 						<div className="flex items-center space-x-2 mb-4">
 							<Image
 								src="/logo.svg"
@@ -107,11 +107,11 @@ export function Footer() {
 
 				{/* Bottom section */}
 				<div className="mt-12 pt-8 border-t border-border">
-					<div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-						<p className="text-sm text-muted-foreground">
+					<div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+						<p className="text-sm text-muted-foreground text-center sm:text-left">
 							© 2024 NovoSapien. All rights reserved.
 						</p>
-						<div className="flex space-x-6">
+						<div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
 							<a
 								href="/privacy"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"

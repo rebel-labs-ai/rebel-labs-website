@@ -22,7 +22,7 @@ export default function BlogPage() {
 			</div>
 
 			{/* Main Content */}
-			<main className="pt-32 pb-24 px-4">
+			<main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4">
 				<div className="max-w-7xl mx-auto">
 					<BlogContent />
 				</div>

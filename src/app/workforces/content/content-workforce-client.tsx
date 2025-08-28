@@ -68,7 +68,7 @@ function ContentProductionProtocol() {
 			<section className="py-16 px-4">
 				<div className="max-w-5xl mx-auto">
 					<div className="text-center">
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The Autonomous Content Lifecycle
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -95,7 +95,7 @@ function ContentProductionProtocol() {
 											Stage {stage.number}
 										</span>
 									</div>
-									<h3 className="text-3xl md:text-4xl font-bold text-foreground">
+									<h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
 										{stage.headline}
 									</h3>
 									<p className="text-lg text-muted-foreground leading-relaxed">
@@ -601,7 +601,7 @@ export function ContentWorkforceClient() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
 									From Blank Page to Published Campaign.
 								</h1>
 							</div>
@@ -684,7 +684,7 @@ export function ContentWorkforceClient() {
 
 								{/* Cards Grid */}
 								<div className="w-full px-12 py-8">
-									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center max-w-7xl mx-auto">
+									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 justify-items-center max-w-7xl mx-auto">
 										{agents[activeTab].map((agent, index) => (
 											<Card
 												key={index}
@@ -739,7 +739,7 @@ export function ContentWorkforceClient() {
 			<section className="py-32 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							We Build Your Custom Content Operating System.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -751,7 +751,7 @@ export function ContentWorkforceClient() {
 
 					{/* Two-Step Configuration Visual */}
 					<div className="relative">
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-24">
 							{/* Step 1 Module */}
 							<Card className="bg-card-background border-2 border-accent shadow-xl p-8">
 								<div className="mb-6">
@@ -867,7 +867,7 @@ export function ContentWorkforceClient() {
 			<section className="py-32 px-4">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The New Definition of Leverage.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -1002,7 +1002,7 @@ export function ContentWorkforceClient() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Feeding the Content Treadmill.
 						</h2>
 

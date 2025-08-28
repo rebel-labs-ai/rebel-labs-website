@@ -117,10 +117,10 @@ function MethodSection() {
 					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
 						Our Method
 					</span>
-					<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
-					<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
 						Your workforce follows a proven, four-step protocol to ensure every
 						lead is converted with maximum efficiency and intelligence, from
 						initial contact to the final handoff.
@@ -129,7 +129,7 @@ function MethodSection() {
 
 				{/* Sticky Scroll Container */}
 				<div className="relative">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 						{/* Left Column - Scrolling Text */}
 						<div>
 							{methodSteps.map((step, index) => (
@@ -154,10 +154,10 @@ function MethodSection() {
 												{step.label}
 											</span>
 										</div>
-										<h3 className="text-3xl font-bold mb-6 text-foreground">
+										<h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-foreground">
 											{step.title}
 										</h3>
-										<p className="text-xl leading-relaxed text-muted-foreground">
+										<p className="text-lg sm:text-xl leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
 									</div>
@@ -412,7 +412,7 @@ export default function LeadWorkforcePage() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
 									Never Lose an Inbound Lead Again.
 								</h1>
 							</div>
@@ -685,7 +685,7 @@ export default function LeadWorkforcePage() {
 								<h3 className="text-foreground text-2xl font-bold mb-4">
 									How They Work Together
 								</h3>
-								<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+								<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
 									Your roster operates as a unified team, with each agent
 									playing a critical role in the lead conversion process. They
 									communicate in real-time, share insights, and coordinate
@@ -779,7 +779,7 @@ export default function LeadWorkforcePage() {
 				<div className="max-w-7xl mx-auto">
 					{/* Section Header */}
 					<div className="text-center mb-16">
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							The Four Systemic Failures of Your Inbound Funnel.
 						</h2>
 						<p className="text-muted-foreground text-lg max-w-4xl mx-auto leading-relaxed">
@@ -1110,7 +1110,7 @@ export default function LeadWorkforcePage() {
 
 					{/* Subtitle */}
 					<div className="text-center mb-16">
-						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4 sm:px-0">
 							The old model measures your team on effort and activity. The new
 							model measures them on results. By systemically eliminating the
 							manual process, we transform your sales operation from a high-cost
@@ -1150,7 +1150,7 @@ export default function LeadWorkforcePage() {
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
 							Stop Losing Leads.
 							<br />
 							<span className="text-accent">

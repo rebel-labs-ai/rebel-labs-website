@@ -69,7 +69,7 @@ export function ScrollAnimatedSteps() {
 	return (
 		<section ref={containerRef} className="relative">
 			<div className="max-w-6xl mx-auto px-4">
-				<h2 className="text-foreground text-4xl font-bold tracking-tight text-center mb-16">
+				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
 					How We Do It
 				</h2>
 
@@ -104,7 +104,9 @@ export function ScrollAnimatedSteps() {
 														: "Step Three"}
 											</span>
 										</div>
-										<h3 className="text-3xl font-bold mb-6">{step.title}</h3>
+										<h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+											{step.title}
+										</h3>
 										<p className="text-xl leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
