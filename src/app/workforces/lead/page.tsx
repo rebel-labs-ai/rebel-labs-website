@@ -474,7 +474,7 @@ export default function LeadWorkforcePage() {
 								Deploy an autonomous workforce that converts your raw leads into
 								qualified, sales-ready meetings, 24/7.
 							</p>
-							<div className="mt-6 sm:mt-8 text-center">
+							<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
 								<a
 									href="https://demo.novosapien.ai"
 									target="_blank"
@@ -482,6 +482,15 @@ export default function LeadWorkforcePage() {
 								>
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
 										See It In Action
+									</Button>
+								</a>
+								<a
+									href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+										Talk to Us
 									</Button>
 								</a>
 							</div>
@@ -1433,7 +1442,7 @@ export default function LeadWorkforcePage() {
 							within days.
 						</p>
 
-						<div className="flex justify-center">
+						<div className="flex justify-center gap-3 sm:gap-4">
 							<a
 								href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
 								target="_blank"
@@ -1441,6 +1450,15 @@ export default function LeadWorkforcePage() {
 							>
 								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 									Deploy This Workforce
+								</Button>
+							</a>
+							<a
+								href="https://demo.novosapien.ai"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+									See It In Action
 								</Button>
 							</a>
 						</div>

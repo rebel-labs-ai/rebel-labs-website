@@ -3,7 +3,6 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ArrowRight, Bell, Sparkles, Calendar } from "lucide-react"
-import Link from "next/link"
 
 export const metadata: Metadata = {
 	title: "Blog - Coming Soon | NovoSapien",
@@ -37,9 +36,10 @@ export default function BlogComingSoonPage() {
 					<h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground mb-4">
 						Coming Soon
 					</h1>
-					
+
 					<p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-						We're crafting insightful content about AI workforces, automation strategies, and the future of digital transformation.
+						We&apos;re crafting insightful content about AI workforces,
+						automation strategies, and the future of digital transformation.
 					</p>
 
 					{/* Feature Preview */}
@@ -48,22 +48,26 @@ export default function BlogComingSoonPage() {
 							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
 								<Sparkles className="w-5 h-5 text-accent" />
 							</div>
-							<h3 className="font-medium text-foreground mb-2">Expert Insights</h3>
+							<h3 className="font-medium text-foreground mb-2">
+								Expert Insights
+							</h3>
 							<p className="text-sm text-muted-foreground">
 								Deep dives into AI technology and automation strategies
 							</p>
 						</div>
-						
+
 						<div className="p-6 bg-muted/30 rounded-lg border border-accent/20">
 							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
 								<Calendar className="w-5 h-5 text-accent" />
 							</div>
-							<h3 className="font-medium text-foreground mb-2">Weekly Updates</h3>
+							<h3 className="font-medium text-foreground mb-2">
+								Weekly Updates
+							</h3>
 							<p className="text-sm text-muted-foreground">
 								Fresh content on the latest in digital workforce innovation
 							</p>
 						</div>
-						
+
 						<div className="p-6 bg-muted/30 rounded-lg border border-accent/20">
 							<div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
 								<Bell className="w-5 h-5 text-accent" />
@@ -81,7 +85,8 @@ export default function BlogComingSoonPage() {
 							Be the First to Know
 						</h2>
 						<p className="text-muted-foreground mb-6">
-							Join our newsletter to get notified when we launch our blog and receive exclusive insights.
+							Join our newsletter to get notified when we launch our blog and
+							receive exclusive insights.
 						</p>
 						<form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
 							<input

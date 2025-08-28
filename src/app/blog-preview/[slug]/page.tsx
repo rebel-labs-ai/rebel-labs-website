@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react"
 import { notFound } from "next/navigation"
@@ -215,7 +214,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-	return Object.keys(blogPosts).map((slug) => ({
+	return Object.keys(blogPosts).map(slug => ({
 		slug,
 	}))
 }
@@ -270,9 +269,7 @@ export default async function BlogPost({ params }: Props) {
 							{post.title}
 						</h1>
 
-						<p className="text-xl text-muted-foreground mb-8">
-							{post.excerpt}
-						</p>
+						<p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>
 
 						<div className="flex items-center gap-3 pb-8 border-b border-border">
 							<div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -324,7 +321,7 @@ export default async function BlogPost({ params }: Props) {
 						<div className="mt-16">
 							<h2 className="text-2xl font-light mb-8">Related Articles</h2>
 							<div className="grid md:grid-cols-2 gap-6">
-								{post.relatedPosts.map((related) => (
+								{post.relatedPosts.map(related => (
 									<Link
 										key={related.slug}
 										href={`/blog/${related.slug}`}
@@ -348,8 +345,8 @@ export default async function BlogPost({ params }: Props) {
 							Ready to Scale Your Business with AI?
 						</h2>
 						<p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-							Join thousands of companies using NovoSapien's digital workforces
-							to transform their operations.
+							Join thousands of companies using NovoSapien&apos;s digital
+							workforces to transform their operations.
 						</p>
 						<Link
 							href="/workforces/lead"

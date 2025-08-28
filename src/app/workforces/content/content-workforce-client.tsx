@@ -639,7 +639,7 @@ export function ContentWorkforceClient() {
 								</h1>
 							</div>
 							<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto px-2 sm:px-0">
-									Deploy an autonomous content production team that transforms
+								Deploy an autonomous content production team that transforms
 								your strategic directives into high-quality, on-brand
 								assets—from drafting and research to multi-platform repurposing.
 							</p>

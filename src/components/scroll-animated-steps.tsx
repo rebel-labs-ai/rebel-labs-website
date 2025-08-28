@@ -73,7 +73,9 @@ export function ScrollAnimatedSteps() {
 					How We Do It
 				</h2>
 				<p className="text-muted-foreground text-base sm:text-lg text-center max-w-3xl mx-auto leading-relaxed mb-12">
-					From vision to reality in three strategic phases. Our proven methodology ensures your Digital Workforce delivers measurable results from day one.
+					From vision to reality in three strategic phases. Our proven
+					methodology ensures your Digital Workforce delivers measurable results
+					from day one.
 				</p>
 
 				{/* Main container */}

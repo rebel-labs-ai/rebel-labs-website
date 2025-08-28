@@ -88,7 +88,9 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 										</span>
 									</div>
 								</div>
-								<Link href={`/blog/${featuredPost.slug || 'rise-of-autonomous-digital-workforces'}`}>
+								<Link
+									href={`/blog/${featuredPost.slug || "rise-of-autonomous-digital-workforces"}`}
+								>
 									<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
 										Read More
 										<ArrowRight className="ml-2 w-4 h-4" />
@@ -105,67 +107,72 @@ export default function BlogPostsGrid({ posts }: BlogPostsGridProps) {
 				{filteredPosts
 					.filter(post => selectedCategory !== "All" || !post.featured)
 					.map(post => {
-						const postSlug = post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+						const postSlug =
+							post.slug ||
+							post.title
+								.toLowerCase()
+								.replace(/[^a-z0-9]+/g, "-")
+								.replace(/^-|-$/g, "")
 						return (
 							<Link key={post.id} href={`/blog/${postSlug}`}>
 								<Card className="bg-card-background border border-accent/20 shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group cursor-pointer h-full">
-							{/* Post Image */}
-							<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
-								<div className="absolute inset-0 flex items-center justify-center">
-									<span className="text-accent/30 text-3xl sm:text-4xl font-bold">
-										{post.id}
-									</span>
-								</div>
-								<div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-							</div>
-
-							{/* Post Content */}
-							<div className="p-6">
-								{/* Category */}
-								<div className="flex items-center gap-2 mb-3">
-									<span className="text-xs text-accent font-semibold">
-										{post.category}
-									</span>
-								</div>
-
-								{/* Title */}
-								<h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-									{post.title}
-								</h3>
-
-								{/* Excerpt */}
-								<p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-									{post.excerpt}
-								</p>
-
-								{/* Meta */}
-								<div className="flex items-center justify-between text-xs text-muted-foreground">
-									<div className="flex items-center gap-3">
-										<span className="flex items-center gap-1">
-											<User className="w-3 h-3" />
-											{post.author}
-										</span>
-										<span className="flex items-center gap-1">
-											<Clock className="w-3 h-3" />
-											{post.readTime}
-										</span>
+									{/* Post Image */}
+									<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
+										<div className="absolute inset-0 flex items-center justify-center">
+											<span className="text-accent/30 text-3xl sm:text-4xl font-bold">
+												{post.id}
+											</span>
+										</div>
+										<div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 									</div>
-									<span className="flex items-center gap-1">
-										<Calendar className="w-3 h-3" />
-										{post.date}
-									</span>
-								</div>
 
-									{/* Read More Link */}
-									<div className="mt-4 pt-4 border-t border-accent/10">
-										<span className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors flex items-center gap-1">
-											Read Article
-											<ArrowRight className="w-3 h-3" />
-										</span>
+									{/* Post Content */}
+									<div className="p-6">
+										{/* Category */}
+										<div className="flex items-center gap-2 mb-3">
+											<span className="text-xs text-accent font-semibold">
+												{post.category}
+											</span>
+										</div>
+
+										{/* Title */}
+										<h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+											{post.title}
+										</h3>
+
+										{/* Excerpt */}
+										<p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+											{post.excerpt}
+										</p>
+
+										{/* Meta */}
+										<div className="flex items-center justify-between text-xs text-muted-foreground">
+											<div className="flex items-center gap-3">
+												<span className="flex items-center gap-1">
+													<User className="w-3 h-3" />
+													{post.author}
+												</span>
+												<span className="flex items-center gap-1">
+													<Clock className="w-3 h-3" />
+													{post.readTime}
+												</span>
+											</div>
+											<span className="flex items-center gap-1">
+												<Calendar className="w-3 h-3" />
+												{post.date}
+											</span>
+										</div>
+
+										{/* Read More Link */}
+										<div className="mt-4 pt-4 border-t border-accent/10">
+											<span className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors flex items-center gap-1">
+												Read Article
+												<ArrowRight className="w-3 h-3" />
+											</span>
+										</div>
 									</div>
-								</div>
-							</Card>
-						</Link>
+								</Card>
+							</Link>
 						)
 					})}
 			</div>

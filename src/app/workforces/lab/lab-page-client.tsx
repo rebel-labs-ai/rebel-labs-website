@@ -111,9 +111,7 @@ function EngagementProtocol() {
 							</div>
 							{/* Mockup below text on mobile */}
 							<Card className="bg-card-background dark:border-0 border border-accent/30 shadow-xl overflow-hidden">
-								<div className="h-[300px] sm:h-[400px]">
-									{phase.mockup}
-								</div>
+								<div className="h-[300px] sm:h-[400px]">{phase.mockup}</div>
 							</Card>
 						</div>
 					))}
@@ -533,7 +531,9 @@ export function LabPageClient() {
 												className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]"
 											/>
 										</div>
-										<span className="text-2xl sm:text-4xl text-accent font-light">+</span>
+										<span className="text-2xl sm:text-4xl text-accent font-light">
+											+
+										</span>
 										<div className="relative">
 											<Image
 												src="/rebel-labs-logo.svg"
@@ -554,8 +554,8 @@ export function LabPageClient() {
 										</h4>
 										<p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
 											Novosapien provides the foundational architecture and the
-											productized, plug-and-play Digital Workforces that form the
-											backbone of modern revenue operations.
+											productized, plug-and-play Digital Workforces that form
+											the backbone of modern revenue operations.
 										</p>
 									</div>
 									<div className="space-y-3 sm:space-y-4">
@@ -787,7 +787,9 @@ export function LabPageClient() {
 
 						{/* Powered by */}
 						<div className="pt-6 sm:pt-8 border-t border-accent/10">
-							<p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Powered by</p>
+							<p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
+								Powered by
+							</p>
 							<p className="text-sm sm:text-base font-semibold text-foreground">
 								Novosapien × Rebel Labs
 							</p>

@@ -56,7 +56,9 @@ export function Navigation() {
 							/>
 							<span className="text-lg font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
-								<span className="text-[#09142f] dark:text-[#09142f]/80-">sapien</span>
+								<span className="text-[#09142f] dark:text-[#09142f]/80-">
+									sapien
+								</span>
 							</span>
 						</div>
 						<div className="w-px h-6 bg-border mx-2"></div>
