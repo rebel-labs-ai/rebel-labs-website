@@ -410,7 +410,7 @@ export function LabPageClient() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font">
 									Forge Your Unfair Advantage.
 								</h1>
 							</div>

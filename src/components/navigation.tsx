@@ -45,7 +45,7 @@ export function Navigation() {
 				{/* Desktop Navigation - Hidden on mobile */}
 				<div className="hidden md:flex items-center justify-center">
 					{/* Navigation Links with Logo */}
-					<div className="backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-accent bg-background/80 dark:bg-accent/30 items-center">
+					<div className="backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-accent bg-background/80 dark:bg-accent/35 items-center">
 						<div className="flex items-center space-x-2 px-3">
 							<Image
 								src="/logo.svg"
@@ -56,7 +56,7 @@ export function Navigation() {
 							/>
 							<span className="text-lg font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
-								<span className="text-foreground">sapien</span>
+								<span className="text-[#09142f] dark:text-[#09142f]/80-">sapien</span>
 							</span>
 						</div>
 						<div className="w-px h-6 bg-border mx-2"></div>

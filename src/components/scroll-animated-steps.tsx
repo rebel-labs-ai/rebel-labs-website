@@ -67,11 +67,14 @@ export function ScrollAnimatedSteps() {
 	}, [])
 
 	return (
-		<section ref={containerRef} className="relative">
+		<section ref={containerRef} className="relative py-12 sm:py-16 md:py-20">
 			<div className="max-w-6xl mx-auto px-4">
-				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 sm:mb-12 md:mb-16">
+				<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-4 sm:mb-6">
 					How We Do It
 				</h2>
+				<p className="text-muted-foreground text-base sm:text-lg text-center max-w-3xl mx-auto leading-relaxed mb-12">
+					From vision to reality in three strategic phases. Our proven methodology ensures your Digital Workforce delivers measurable results from day one.
+				</p>
 
 				{/* Main container */}
 				<div className="relative">
@@ -86,8 +89,8 @@ export function ScrollAnimatedSteps() {
 									}}
 									className={`${
 										index === 0
-											? "min-h-[50vh] lg:min-h-[50vh]"
-											: "min-h-0 lg:min-h-screen"
+											? "min-h-[50vh] lg:min-h-[80vh]"
+											: "min-h-0 lg:min-h-[80vh]"
 									} mb-32 lg:mb-0 lg:flex lg:items-center`}
 								>
 									<div
@@ -109,7 +112,7 @@ export function ScrollAnimatedSteps() {
 										<h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-6">
 											{step.title}
 										</h3>
-										<p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground">
+										<p className="text-base sm:text-lg lg:text-md leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
 
@@ -177,7 +180,7 @@ export function ScrollAnimatedSteps() {
 						</div>
 
 						{/* Right side - Sticky image container */}
-						<div className="relative hidden lg:block mt-64 mb-20">
+						<div className="relative hidden lg:block mt-96">
 							{/* Sticky container that stays centered */}
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[400px] w-full">

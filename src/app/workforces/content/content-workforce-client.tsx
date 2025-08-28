@@ -634,7 +634,7 @@ export function ContentWorkforceClient() {
 								</span>
 							</div>
 							<div className="text-center">
-								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-geist-sans">
+								<h1 className="text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font">
 									From Blank Page to Published Campaign.
 								</h1>
 							</div>

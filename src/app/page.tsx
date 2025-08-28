@@ -45,10 +45,10 @@ export default function Home() {
 							</span>
 						</div>
 						<div className="text-left">
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font">
 								Stop Managing Tools.
 							</h1>
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font">
 								Start <AnimatedText />
 							</h1>
 						</div>
@@ -665,7 +665,7 @@ export default function Home() {
 			</section> */}
 
 			{/* Section 4: How We Do It */}
-			<div className="pt-40">
+			<div>
 				<ScrollAnimatedSteps />
 			</div>
 
