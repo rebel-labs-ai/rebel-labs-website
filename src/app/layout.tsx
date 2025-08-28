@@ -191,6 +191,13 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable} ${redditSans.variable} ${satoshi.variable} antialiased`}
 			>
+				{/* Skip Navigation Link for Accessibility */}
+				<a 
+					href="#main-content" 
+					className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-md focus:shadow-lg"
+				>
+					Skip to main content
+				</a>
 				<ThemeProvider>{children}</ThemeProvider>
 
 				{/* Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID */}

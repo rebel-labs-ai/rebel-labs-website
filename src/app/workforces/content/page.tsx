@@ -160,8 +160,10 @@ export default function ContentWorkforcePage() {
 					]}
 				/>
 
-				{/* Hero Section - Server Component */}
-				<HeroSection />
+				{/* Main Content Start */}
+				<main id="main-content">
+					{/* Hero Section - Server Component */}
+					<HeroSection />
 
 				{/* Content Production Protocol - Server Component */}
 				<ContentProductionProtocol />
@@ -193,6 +195,7 @@ export default function ContentWorkforcePage() {
 
 				{/* Final CTA - Server Component */}
 				<FinalCTASection />
+				</main>
 
 				{/* Footer */}
 				<Footer />
