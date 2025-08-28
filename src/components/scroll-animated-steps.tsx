@@ -85,7 +85,9 @@ export function ScrollAnimatedSteps() {
 										stepRefs.current[index] = el
 									}}
 									className={`${
-										index === 0 ? "min-h-[50vh] lg:min-h-[50vh]" : "min-h-0 lg:min-h-screen"
+										index === 0
+											? "min-h-[50vh] lg:min-h-[50vh]"
+											: "min-h-0 lg:min-h-screen"
 									} mb-32 lg:mb-0 lg:flex lg:items-center`}
 								>
 									<div
@@ -110,7 +112,7 @@ export function ScrollAnimatedSteps() {
 										<p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground">
 											{step.description}
 										</p>
-										
+
 										{/* Mobile image - shown under text */}
 										<div className="mt-6 lg:hidden">
 											{/* Show the image for this specific step */}

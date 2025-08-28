@@ -270,7 +270,9 @@ export default function LeadWorkforcePage() {
 	const agents = {
 		research: [
 			{
-				icon: <Search className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Search className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Individual Profile Agent",
 				role: "Building Lead Blueprints",
 				coreFunction:
@@ -288,7 +290,9 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Company Profile Agent to create a holistic view of each lead, which the Strategy Agents then use to craft tailored approaches.",
 			},
 			{
-				icon: <Building className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Building className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Company Profile Agent",
 				role: "Mapping Business Landscapes",
 				coreFunction:
@@ -306,7 +310,9 @@ export default function LeadWorkforcePage() {
 					"I provide crucial business context that complements the Individual Profile Agent's data, helping create more targeted and effective engagement plans.",
 			},
 			{
-				icon: <Gift className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Gift className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Personalized Offering Agent",
 				role: "Crafting Tailored Solutions",
 				coreFunction:
@@ -326,7 +332,9 @@ export default function LeadWorkforcePage() {
 		],
 		strategy: [
 			{
-				icon: <Calendar className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Calendar className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Initial Strategy Agent",
 				role: "Crafting Engagement Blueprints",
 				coreFunction:
@@ -344,7 +352,9 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Research Agents to translate their insights into actionable strategies, which are then executed by the Outreach Agents.",
 			},
 			{
-				icon: <Settings className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Settings className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Strategy Optimization Agent",
 				role: "Refining Engagement Approaches",
 				coreFunction:
@@ -362,7 +372,9 @@ export default function LeadWorkforcePage() {
 					"I work hand-in-hand with the Interactions Analysis Agent, using their insights to make data-driven improvements to our strategies.",
 			},
 			{
-				icon: <LineChart className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<LineChart className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Interactions Analysis Agent",
 				role: "Decoding Engagement",
 				coreFunction:
@@ -382,7 +394,9 @@ export default function LeadWorkforcePage() {
 		],
 		outreach: [
 			{
-				icon: <Phone className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Phone className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Phone Call Agent",
 				role: "Orchestrating Targeted Conversations",
 				coreFunction:
@@ -400,7 +414,9 @@ export default function LeadWorkforcePage() {
 					"I work closely with the Email Agent to coordinate multi-channel outreach, and rely on the Strategy Agents for guidance on timing and content.",
 			},
 			{
-				icon: <Mail className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Mail className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Email Agent",
 				role: "Delivering Personalized Messaging",
 				coreFunction:
@@ -718,7 +734,9 @@ export default function LeadWorkforcePage() {
 						<div className="block sm:hidden space-y-6 -mx-2">
 							{/* Research & Planning Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Research & Planning</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Research & Planning
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.research.map((agent, index) => (
 										<Card
@@ -731,14 +749,14 @@ export default function LeadWorkforcePage() {
 												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -749,7 +767,9 @@ export default function LeadWorkforcePage() {
 
 							{/* Strategy & Analysis Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Strategy & Analysis</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Strategy & Analysis
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.strategy.map((agent, index) => (
 										<Card
@@ -762,14 +782,14 @@ export default function LeadWorkforcePage() {
 												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -780,7 +800,9 @@ export default function LeadWorkforcePage() {
 
 							{/* Outreach & Execution Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Outreach & Execution</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Outreach & Execution
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.outreach.map((agent, index) => (
 										<Card
@@ -793,14 +815,14 @@ export default function LeadWorkforcePage() {
 												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -847,7 +869,10 @@ export default function LeadWorkforcePage() {
 											const prevIndex =
 												currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
 											setActiveTab(
-												tabs[prevIndex].id as "research" | "strategy" | "outreach"
+												tabs[prevIndex].id as
+													| "research"
+													| "strategy"
+													| "outreach"
 											)
 										}}
 										className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
@@ -902,7 +927,10 @@ export default function LeadWorkforcePage() {
 											)
 											const nextIndex = (currentIndex + 1) % tabs.length
 											setActiveTab(
-												tabs[nextIndex].id as "research" | "strategy" | "outreach"
+												tabs[nextIndex].id as
+													| "research"
+													| "strategy"
+													| "outreach"
 											)
 										}}
 										className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
@@ -1316,7 +1344,9 @@ export default function LeadWorkforcePage() {
 					{/* Metrics Grid */}
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
 						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
-							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">85%</div>
+							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
+								85%
+							</div>
 							<p className="text-foreground text-xs sm:text-sm">
 								Faster Lead Response Time
 							</p>
@@ -1333,13 +1363,17 @@ export default function LeadWorkforcePage() {
 							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
 								99.9%
 							</div>
-							<p className="text-foreground text-xs sm:text-sm">Leads Contacted</p>
+							<p className="text-foreground text-xs sm:text-sm">
+								Leads Contacted
+							</p>
 						</Card>
 						<Card className="bg-card-background border border-accent shadow-lg p-4 sm:p-6 text-center">
 							<div className="text-2xl sm:text-4xl font-bold text-foreground mb-1 sm:mb-2">
 								24/7
 							</div>
-							<p className="text-foreground text-xs sm:text-sm">Always-On Operations</p>
+							<p className="text-foreground text-xs sm:text-sm">
+								Always-On Operations
+							</p>
 						</Card>
 					</div>
 
@@ -1482,7 +1516,9 @@ export default function LeadWorkforcePage() {
 												key={idx}
 												className="text-sm sm:text-base text-muted-foreground flex items-start"
 											>
-												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">•</span>
+												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">
+													•
+												</span>
 												<span>{resp}</span>
 											</li>
 										))}

@@ -23,11 +23,11 @@ export function ElasticInfrastructureGraph() {
 		const resizeCanvas = () => {
 			const rect = canvas.getBoundingClientRect()
 			const dpr = window.devicePixelRatio || 1
-			
+
 			// Set actual size in memory
 			canvas.width = rect.width * dpr
 			canvas.height = rect.height * dpr
-			
+
 			// Scale context to ensure correct drawing operations
 			ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 		}
@@ -203,10 +203,5 @@ export function ElasticInfrastructureGraph() {
 		}
 	}, [])
 
-	return (
-		<canvas
-			ref={canvasRef}
-			className="w-full h-full"
-		/>
-	)
+	return <canvas ref={canvasRef} className="w-full h-full" />
 }

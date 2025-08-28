@@ -65,13 +65,13 @@ function ContentProductionProtocol() {
 	return (
 		<div className="bg-accent/40">
 			{/* Title Section */}
-			<section className="py-16 px-4">
+			<section className="py-12 sm:py-16 px-4">
 				<div className="max-w-5xl mx-auto">
-					<div className="text-center">
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<div className="text-left sm:text-center">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							The Autonomous Content Lifecycle
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 							Your workforce operates in a continuous, four-stage loop,
 							transforming your strategic intent into a high-performance,
 							multi-platform content campaign.
@@ -82,23 +82,23 @@ function ContentProductionProtocol() {
 
 			{/* Stages */}
 			{protocolStages.map(stage => (
-				<section key={stage.id} className="py-24 px-6 lg:px-20">
+				<section key={stage.id} className="py-12 sm:py-24 px-4 sm:px-6 lg:px-20">
 					<div className="max-w-7xl mx-auto">
-						<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
 							{/* Text Content */}
 							<div
 								className={`${stage.textPosition === "right" ? "lg:order-2" : ""}`}
 							>
-								<div className="space-y-6">
+								<div className="space-y-3 sm:space-y-6">
 									<div className="inline-block">
-										<span className="text-sm text-muted-foreground uppercase tracking-wider">
+										<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-accent/30 inline-block">
 											Stage {stage.number}
 										</span>
 									</div>
-									<h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+									<h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
 										{stage.headline}
 									</h3>
-									<p className="text-lg text-muted-foreground leading-relaxed">
+									<p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 										{stage.description}
 									</p>
 								</div>
@@ -403,7 +403,9 @@ export function ContentWorkforceClient() {
 	const agents = {
 		intelligence: [
 			{
-				icon: <Search className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Search className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Research Agent",
 				role: "Scanning the Market",
 				coreFunction:
@@ -421,7 +423,9 @@ export function ContentWorkforceClient() {
 					"I provide a continuous stream of raw intelligence to the Idea Generation Agent, who synthesizes it into concrete content concepts.",
 			},
 			{
-				icon: <Brain className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Brain className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Idea Generation Agent",
 				role: "Architecting Content Concepts",
 				coreFunction:
@@ -439,7 +443,9 @@ export function ContentWorkforceClient() {
 					"I translate the intelligence from the Research Agent into actionable briefs for the Drafting and Media Generation Agents.",
 			},
 			{
-				icon: <Users className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Users className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Critic Agent",
 				role: "Ensuring Quality & Coherence",
 				coreFunction:
@@ -459,7 +465,9 @@ export function ContentWorkforceClient() {
 		],
 		creation: [
 			{
-				icon: <PenTool className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<PenTool className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Drafting Agent",
 				role: "Producing Written Content",
 				coreFunction:
@@ -477,7 +485,9 @@ export function ContentWorkforceClient() {
 					"I execute the brief from the Idea Generation Agent and work in a tight loop with the Critic and Iteration Agents to refine the final output.",
 			},
 			{
-				icon: <FileText className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<FileText className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Iteration Agent",
 				role: "Refining to Perfection",
 				coreFunction:
@@ -495,7 +505,9 @@ export function ContentWorkforceClient() {
 					"I work in a tight loop with the Drafting and Media Generation Agents, guided by feedback from the Critic Agent and your human team.",
 			},
 			{
-				icon: <Video className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Video className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Media Generation Agent",
 				role: "Creating Visual Assets",
 				coreFunction:
@@ -515,7 +527,9 @@ export function ContentWorkforceClient() {
 		],
 		amplification: [
 			{
-				icon: <Share2 className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Share2 className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Repurposing Agent",
 				role: "Maximizing Content Leverage",
 				coreFunction:
@@ -533,7 +547,9 @@ export function ContentWorkforceClient() {
 					"I take the final, approved pillar content and create the full suite of assets for the Hook Generation and Distribution Agents to finalize.",
 			},
 			{
-				icon: <MessageSquare className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<MessageSquare className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Hook Generation Agent",
 				role: "Crafting Compelling Hooks",
 				coreFunction:
@@ -551,7 +567,9 @@ export function ContentWorkforceClient() {
 					"I work directly on the outputs of the Repurposing Agent, providing the final layer of creative polish before the Distribution Agent takes over.",
 			},
 			{
-				icon: <Mail className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />,
+				icon: (
+					<Mail className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+				),
 				name: "Distribution Agent",
 				role: "Engineering for Discovery & Distribution",
 				coreFunction:
@@ -592,7 +610,7 @@ export function ContentWorkforceClient() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Hero Content */}
-				<section className="pt-32 pb-24 px-4 relative">
+				<section className="pt-8 sm:pt-32 pb-24 px-4 relative">
 					<div className="max-w-5xl mx-auto relative z-10 mt-36">
 						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-12">
 							<div className="text-center mb-8">
@@ -640,27 +658,29 @@ export function ContentWorkforceClient() {
 						<div className="block sm:hidden space-y-6 -mx-2">
 							{/* Intelligence & Research Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Intelligence & Research</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Intelligence & Research
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.intelligence.map((agent, index) => (
 										<Card
 											key={index}
 											onClick={() => setSelectedAgent(agent)}
-											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
 										>
-											<div className="flex items-center gap-3">
+											<div className="flex items-center gap-2">
 												{/* Icon on the left */}
-												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -671,27 +691,29 @@ export function ContentWorkforceClient() {
 
 							{/* Creation & Refinement Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Creation & Refinement</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Creation & Refinement
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.creation.map((agent, index) => (
 										<Card
 											key={index}
 											onClick={() => setSelectedAgent(agent)}
-											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
 										>
-											<div className="flex items-center gap-3">
+											<div className="flex items-center gap-2">
 												{/* Icon on the left */}
-												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -702,27 +724,29 @@ export function ContentWorkforceClient() {
 
 							{/* Amplification & Distribution Section */}
 							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">Amplification & Distribution</h3>
+								<h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-3">
+									Amplification & Distribution
+								</h3>
 								<div className="space-y-2 px-1">
 									{agents.amplification.map((agent, index) => (
 										<Card
 											key={index}
 											onClick={() => setSelectedAgent(agent)}
-											className="bg-card-background border border-accent/20 px-3 py-3 cursor-pointer hover:border-accent transition-all rounded-md"
+											className="bg-card-background border border-accent/20 px-2 py-2.5 cursor-pointer hover:border-accent transition-all rounded-md"
 										>
-											<div className="flex items-center gap-3">
+											<div className="flex items-center gap-2">
 												{/* Icon on the left */}
-												<div className="w-10 h-10 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+												<div className="w-9 h-9 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0">
 													{agent.icon}
 												</div>
-												
+
 												{/* Text content */}
 												<div className="flex-1">
 													<h4 className="text-foreground font-semibold text-sm">
 														{agent.name}
 													</h4>
 												</div>
-												
+
 												{/* Arrow on the right */}
 												<ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
 											</div>
@@ -742,7 +766,10 @@ export function ContentWorkforceClient() {
 											key={tab.id}
 											onClick={() =>
 												setActiveTab(
-													tab.id as "intelligence" | "creation" | "amplification"
+													tab.id as
+														| "intelligence"
+														| "creation"
+														| "amplification"
 												)
 											}
 											className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
@@ -759,89 +786,89 @@ export function ContentWorkforceClient() {
 
 							{/* Agent Cards Grid */}
 							<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
-							<div className="flex items-center justify-between">
-								{/* Left Arrow */}
-								<button
-									onClick={() => {
-										const currentIndex = tabs.findIndex(
-											tab => tab.id === activeTab
-										)
-										const prevIndex =
-											currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
-										setActiveTab(
-											tabs[prevIndex].id as
-												| "intelligence"
-												| "creation"
-												| "amplification"
-										)
-									}}
-									className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
-								>
-									<ChevronLeft className="w-6 h-6" />
-								</button>
+								<div className="flex items-center justify-between">
+									{/* Left Arrow */}
+									<button
+										onClick={() => {
+											const currentIndex = tabs.findIndex(
+												tab => tab.id === activeTab
+											)
+											const prevIndex =
+												currentIndex === 0 ? tabs.length - 1 : currentIndex - 1
+											setActiveTab(
+												tabs[prevIndex].id as
+													| "intelligence"
+													| "creation"
+													| "amplification"
+											)
+										}}
+										className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+									>
+										<ChevronLeft className="w-6 h-6" />
+									</button>
 
-								{/* Cards Grid */}
-								<div className="w-full px-12 py-8">
-									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 justify-items-center max-w-7xl mx-auto">
-										{agents[activeTab].map((agent, index) => (
-											<Card
-												key={index}
-												onClick={() => setSelectedAgent(agent)}
-												className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-6 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[400px] w-[280px]"
-											>
-												<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
-													{agent.name}
-												</h3>
-												<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
-													{agent.role}
-												</span>
-												<div className="w-20 h-20 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
-													{agent.icon}
-												</div>
-												<p className="text-muted-foreground text-sm mb-2 flex-1">
-													{agent.coreFunction}
-												</p>
-												<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
-													Learn More →
-												</button>
-											</Card>
-										))}
+									{/* Cards Grid */}
+									<div className="w-full px-12 py-8">
+										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 justify-items-center max-w-7xl mx-auto">
+											{agents[activeTab].map((agent, index) => (
+												<Card
+													key={index}
+													onClick={() => setSelectedAgent(agent)}
+													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-6 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[400px] w-[280px]"
+												>
+													<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
+														{agent.name}
+													</h3>
+													<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
+														{agent.role}
+													</span>
+													<div className="w-20 h-20 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
+														{agent.icon}
+													</div>
+													<p className="text-muted-foreground text-sm mb-2 flex-1">
+														{agent.coreFunction}
+													</p>
+													<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
+														Learn More →
+													</button>
+												</Card>
+											))}
+										</div>
 									</div>
-								</div>
 
-								{/* Right Arrow */}
-								<button
-									onClick={() => {
-										const currentIndex = tabs.findIndex(
-											tab => tab.id === activeTab
-										)
-										const nextIndex = (currentIndex + 1) % tabs.length
-										setActiveTab(
-											tabs[nextIndex].id as
-												| "intelligence"
-												| "creation"
-												| "amplification"
-										)
-									}}
-									className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
-								>
-									<ChevronRight className="w-6 h-6" />
-								</button>
+									{/* Right Arrow */}
+									<button
+										onClick={() => {
+											const currentIndex = tabs.findIndex(
+												tab => tab.id === activeTab
+											)
+											const nextIndex = (currentIndex + 1) % tabs.length
+											setActiveTab(
+												tabs[nextIndex].id as
+													| "intelligence"
+													| "creation"
+													| "amplification"
+											)
+										}}
+										className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+									>
+										<ChevronRight className="w-6 h-6" />
+									</button>
+								</div>
 							</div>
-						</div>
 						</div>
 					</Card>
 				</div>
 			</section>
 
 			{/* Section 4: The Method (Your Custom Content OS) */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<div className="text-left sm:text-center mb-8 sm:mb-12">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							We Build Your Custom Content Operating System.
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 							This is not a one-size-fits-all tool. We work with you to
 							architect a workforce that acts as a true extension of your team,
 							aligned to your unique brand, experts, and strategic goals.
@@ -857,7 +884,7 @@ export function ContentWorkforceClient() {
 									<div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
 										<FileText className="w-6 h-6 text-accent" />
 									</div>
-									<h3 className="text-2xl font-bold text-foreground mb-4">
+									<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
 										1. We Codify Your Brand DNA
 									</h3>
 								</div>
@@ -914,7 +941,7 @@ export function ContentWorkforceClient() {
 									<div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
 										<Users className="w-6 h-6 text-accent" />
 									</div>
-									<h3 className="text-2xl font-bold text-foreground mb-4">
+									<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
 										2. We Clone Your Expert Voices
 									</h3>
 								</div>
@@ -963,13 +990,13 @@ export function ContentWorkforceClient() {
 			</section>
 
 			{/* Section 5: The Choice - The Impact Amplifier */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<div className="text-left sm:text-center mb-8 sm:mb-12">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							The New Definition of Leverage.
 						</h2>
-						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 							The old model gives you a 1:1 return on strategic effort. Our
 							model is an amplifier, systematically transforming one unit of
 							your team&apos;s strategic input into an overwhelming
@@ -978,8 +1005,99 @@ export function ContentWorkforceClient() {
 					</div>
 
 					{/* Impact Amplifier Diagram */}
-					<Card className="bg-card-background border border-accent/30 shadow-lg p-12">
-						<div className="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-7xl mx-auto">
+					<Card className="bg-card-background border border-accent/30 shadow-lg p-6 sm:p-12">
+						{/* Mobile Layout - Vertical Stack */}
+						<div className="flex flex-col items-center gap-8 lg:hidden">
+							{/* Input */}
+							<div className="text-center">
+								<div className="inline-flex flex-col items-center">
+									<div className="w-16 h-16 bg-background border-2 border-accent/30 rounded-lg flex items-center justify-center mb-3">
+										<FileText className="w-8 h-8 text-muted-foreground" />
+									</div>
+									<p className="text-xs font-semibold text-muted-foreground">
+										1 Strategic Brief
+									</p>
+								</div>
+							</div>
+
+							{/* Arrow Down */}
+							<ChevronRight className="w-6 h-6 text-accent rotate-90" />
+
+							{/* Processor */}
+							<div className="text-center">
+								<div className="inline-flex flex-col items-center">
+									<div className="relative mb-3">
+										{/* Light mode image */}
+										<Image
+											src="/content/circle.svg"
+											alt="Content Workforce"
+											width={180}
+											height={180}
+											className="dark:hidden"
+										/>
+										{/* Dark mode image */}
+										<Image
+											src="/content/circle-dark.svg"
+											alt="Content Workforce"
+											width={180}
+											height={180}
+											className="hidden dark:block"
+										/>
+									</div>
+									<p className="text-sm font-bold text-foreground">
+										Content Workforce
+									</p>
+								</div>
+							</div>
+
+							{/* Arrow Down */}
+							<ChevronRight className="w-6 h-6 text-accent rotate-90" />
+
+							{/* Output */}
+							<div className="w-full max-w-sm">
+								<div className="grid grid-cols-2 gap-2">
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<FileText className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											Pillar Article
+										</p>
+									</div>
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<MessageSquare className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											LinkedIn Posts
+										</p>
+									</div>
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<Share2 className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											Tweet Thread
+										</p>
+									</div>
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<Video className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											Video Script
+										</p>
+									</div>
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<Mail className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											Newsletter
+										</p>
+									</div>
+									<div className="bg-background border border-green-500/30 rounded-lg p-2">
+										<Layers className="w-5 h-5 text-green-500 mx-auto mb-1" />
+										<p className="text-xs font-medium text-foreground text-center">
+											Social Media
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Desktop Layout - Horizontal Flow */}
+						<div className="hidden lg:flex items-center justify-between gap-12 max-w-7xl mx-auto">
 							{/* Input (Left) */}
 							<div className="text-center flex-shrink-0">
 								<div className="inline-flex flex-col items-center">
@@ -1092,26 +1210,26 @@ export function ContentWorkforceClient() {
 			</section>
 
 			{/* Section 6: Final CTA */}
-			<section className="py-32 px-4">
+			<section className="py-16 sm:py-32 px-4">
 				<div className="max-w-4xl mx-auto">
-					<Card className="p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-4 py-2 rounded-full text-sm border border-accent/30">
+					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-4 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
 								Ready to Transform Your Content Process?
 							</span>
 						</div>
 
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 							Stop Feeding the Content Treadmill.
 						</h2>
 
-						<p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
 							Deploy an on-demand content workforce that scales your
 							brand&apos;s voice, not your headcount. Your first strategic
 							session is the starting point.
 						</p>
 
-						<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+						<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 							Book a Strategic Session
 						</Button>
 					</Card>
@@ -1186,7 +1304,9 @@ export function ContentWorkforceClient() {
 												key={idx}
 												className="text-sm sm:text-base text-muted-foreground flex items-start"
 											>
-												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">•</span>
+												<span className="text-accent mr-2 sm:mr-3 mt-0.5 sm:mt-1">
+													•
+												</span>
 												<span>{resp}</span>
 											</li>
 										))}

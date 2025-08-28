@@ -27,7 +27,7 @@ export default function Home() {
 			</div>
 
 			{/* Hero Section with Animated Dots Background */}
-				<div className="relative min-h-[85vh] md:min-h-screen md:mb-0">
+			<div className="relative min-h-[85vh] md:min-h-screen md:mb-0">
 				{/* Animated Dot Pattern Background for entire hero area */}
 				<div className="absolute inset-0 top-0 left-0 right-0 bottom-0 w-full h-full">
 					<AnimatedDots />
@@ -37,7 +37,7 @@ export default function Home() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Hero - The Declaration */}
-				<section className="pt-20 sm:pt-24 md:pt-48 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
+				<section className="pt-48 sm:pt-24 md:pt-48 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
 					<div className="max-w-4xl mx-auto relative z-10 w-full md:mt-36">
 						<div className="text-center mb-6 sm:mb-8">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
@@ -45,12 +45,12 @@ export default function Home() {
 							</span>
 						</div>
 						<div className="text-left">
-								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
-									Stop Managing Tools.
-								</h1>
-								<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight font-geist-sans">
-									Start <AnimatedText />
-								</h1>
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+								Stop Managing Tools.
+							</h1>
+							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+								Start <AnimatedText />
+							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-left">
 							We deploy digital workforces into your business so you can
@@ -89,7 +89,7 @@ export default function Home() {
 			</div>
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
-			<section className="mx-auto bg-accent/40 relative py-16 sm:py-32">
+			<section className="mx-auto bg-accent/40 relative py-32 sm:py-32">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-8 sm:mb-12">
@@ -404,7 +404,7 @@ export default function Home() {
 							The Solution
 						</span>
 						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-3 sm:mt-4">
-							<span className="block sm:inline">We Don&apos;t Sell Tools.</span>{' '}
+							<span className="block sm:inline">We Don&apos;t Sell Tools.</span>{" "}
 							<span className="block sm:inline">We Deliver Outcomes.</span>
 						</h2>
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto mt-3 sm:mt-4 leading-relaxed px-2 sm:px-0">

@@ -271,7 +271,9 @@ export function Navigation() {
 								{/* Theme Toggle */}
 								{mounted && (
 									<button
-										onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+										onClick={() =>
+											setTheme(theme === "dark" ? "light" : "dark")
+										}
 										className="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 									>
 										<span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
