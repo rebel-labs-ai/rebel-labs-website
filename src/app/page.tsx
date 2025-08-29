@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -553,13 +554,13 @@ export default function Home() {
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
-									<a
+									<Link
 										href="/workforces/inbound-sales"
 										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
 										aria-label="Learn more about the Inbound Conversion Workforce for lead generation"
 									>
 										Explore Inbound Sales →
-									</a>
+									</Link>
 								</div>
 							</div>
 						</Card>
@@ -591,13 +592,13 @@ export default function Home() {
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
 								/>
 								<div className="text-right">
-									<a
+									<Link
 										href="/workforces/content-creation"
 										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
 										aria-label="Learn more about the Content Creation Workforce for automated content generation"
 									>
 										Explore Content Workforce →
-									</a>
+									</Link>
 								</div>
 							</div>
 						</Card>
