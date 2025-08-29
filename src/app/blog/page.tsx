@@ -75,13 +75,13 @@ export const revalidate = 60;
 export default async function BlogPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
 
-  // Schema markup for WebPage
+  // Enhanced Schema markup for Blog
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${baseUrl}/blog#webpage`,
+    "@type": "Blog",
+    "@id": `${baseUrl}/blog#blog`,
     url: `${baseUrl}/blog`,
-    name: "Blog",
+    name: "NovoSapien Blog",
     description:
       "Insights on AI workforces, automation strategies, and digital transformation.",
     dateModified: new Date().toISOString(),
@@ -89,6 +89,45 @@ export default async function BlogPage() {
       "@type": "Organization",
       name: "NovoSapien",
       url: baseUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/logo.png`,
+        width: 600,
+        height: 60,
+      },
+      sameAs: [
+        "https://twitter.com/novosapien",
+        "https://linkedin.com/company/novosapien",
+      ],
+    },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: `${baseUrl}/blog/${post.slug.current}`,
+      datePublished: post.publishedAt,
+      author: {
+        "@type": "Person",
+        name: post.author,
+      },
+      description: post.excerpt,
+      articleSection: post.category,
+    })),
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: baseUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${baseUrl}/blog`,
+        },
+      ],
     },
   };
 
@@ -108,13 +147,15 @@ export default async function BlogPage() {
         <ThemeToggle />
       </div>
 
-      {/* SEO: Breadcrumbs (visually hidden) */}
-      <div className="sr-only">
-        <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
+      {/* SEO: Breadcrumbs */}
+      <div className="pt-24 sm:pt-32 px-4">
+        <div className="max-w-6xl mx-auto mb-8">
+          <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
+        </div>
       </div>
 
       {/* Main Content */}
-      <main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4">
+      <main className="pb-16 sm:pb-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-4">Blog</h1>

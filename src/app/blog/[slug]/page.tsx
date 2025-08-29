@@ -1,5 +1,6 @@
 import { PortableText, type SanityDocument } from "next-sanity";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { client, urlFor } from "@/sanity/client";
 import type { Metadata } from "next";
@@ -111,18 +112,34 @@ export default async function PostPage({
     ? urlFor(post.image).width(1200).height(630).url()
     : null;
 
-  // Schema markup for Article
+  // Calculate reading time (rough estimate: 200 words per minute)
+  const wordCount = post.body ? post.body.reduce((count: number, block: any) => {
+    if (block._type === 'block' && block.children) {
+      return count + block.children.reduce((sum: number, child: any) => {
+        return sum + (child.text ? child.text.split(' ').length : 0);
+      }, 0);
+    }
+    return count;
+  }, 0) : 0;
+  const readingTime = Math.ceil(wordCount / 200);
+
+  // Enhanced Schema markup for BlogPosting
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": `${baseUrl}/blog/${slug}#article`,
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post._updatedAt || post.publishedAt,
+    wordCount: wordCount,
+    timeRequired: `PT${readingTime}M`,
+    articleSection: post.category,
+    keywords: post.category,
     author: {
       "@type": "Person",
       name: post.author,
+      url: `${baseUrl}/about#team`,
     },
     publisher: {
       "@type": "Organization",
@@ -131,12 +148,47 @@ export default async function PostPage({
       logo: {
         "@type": "ImageObject",
         url: `${baseUrl}/logo.png`,
+        width: 600,
+        height: 60,
       },
+      sameAs: [
+        "https://twitter.com/novosapien",
+        "https://linkedin.com/company/novosapien",
+      ],
     },
-    image: postImageUrl || `${baseUrl}/og-blog-post.jpg`,
+    image: postImageUrl ? {
+      "@type": "ImageObject",
+      url: postImageUrl,
+      width: 1200,
+      height: 630,
+      caption: post.image?.alt || post.title,
+    } : `${baseUrl}/og-blog-post.jpg`,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${baseUrl}/blog/${slug}`,
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: baseUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${baseUrl}/blog`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: `${baseUrl}/blog/${slug}`,
+        },
+      ],
     },
   };
 
@@ -156,18 +208,20 @@ export default async function PostPage({
         <ThemeToggle />
       </div>
 
-      {/* SEO: Breadcrumbs (visually hidden) */}
-      <div className="sr-only">
-        <Breadcrumbs 
-          items={[
-            { name: "Home", href: "/" }, 
-            { name: "Blog", href: "/blog" },
-            { name: post.title }
-          ]} 
-        />
+      {/* SEO: Breadcrumbs */}
+      <div className="pt-24 sm:pt-32 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Breadcrumbs 
+            items={[
+              { name: "Home", href: "/" }, 
+              { name: "Blog", href: "/blog" },
+              { name: post.title }
+            ]} 
+          />
+        </div>
       </div>
 
-      <main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4">
+      <main className="pt-8 pb-16 sm:pb-24 px-4">
         <div className="max-w-4xl mx-auto">
           <Link 
             href="/blog" 
@@ -187,16 +241,29 @@ export default async function PostPage({
               <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400">
                 <span>{post.author}</span>
                 <span>•</span>
-                <time>{new Date(post.publishedAt).toLocaleDateString()}</time>
+                <time dateTime={post.publishedAt}>
+                  {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                <span>•</span>
+                <span>{readingTime} min read</span>
               </div>
             </header>
 
             {postImageUrl && (
-              <img
-                src={postImageUrl}
-                alt={post.image.alt || post.title}
-                className="w-full aspect-video object-cover rounded-xl mb-8"
-              />
+              <div className="relative w-full aspect-video mb-8">
+                <Image
+                  src={postImageUrl}
+                  alt={post.image?.alt || post.title}
+                  fill
+                  className="object-cover rounded-xl"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                />
+              </div>
             )}
 
             <div className="prose prose-lg dark:prose-invert max-w-none">
