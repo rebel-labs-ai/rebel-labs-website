@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://novosapien.com",
+		url: "https://novosapien.ai",
 		siteName: "Novosapien",
 		title: "Digital Workforces for Revenue Generation",
 		description:
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 		images: ["/og-image.jpg"],
 	},
 	alternates: {
-		canonical: "https://novosapien.com",
+		canonical: "https://novosapien.ai",
 	},
 	robots: {
 		index: true,
@@ -62,10 +62,10 @@ export default function Home() {
 	const organizationSchema = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		"@id": "https://novosapien.com/#organization",
+		"@id": "https://novosapien.ai/#organization",
 		name: "Novosapien",
-		url: "https://novosapien.com",
-		logo: "https://novosapien.com/logo.svg",
+		url: "https://novosapien.ai",
+		logo: "https://novosapien.ai/logo.svg",
 		description:
 			"Digital workforce platform for revenue generation and business automation",
 		sameAs: [
@@ -75,21 +75,21 @@ export default function Home() {
 		contactPoint: {
 			"@type": "ContactPoint",
 			contactType: "sales",
-			url: "https://novosapien.com/contact",
+			url: "https://novosapien.ai/contact",
 		},
 	}
 
 	const webPageSchema = {
 		"@context": "https://schema.org",
 		"@type": "WebPage",
-		"@id": "https://novosapien.com/#webpage",
-		url: "https://novosapien.com",
+		"@id": "https://novosapien.ai/#webpage",
+		url: "https://novosapien.ai",
 		name: "Digital Workforces for Revenue Generation | Novosapien",
 		description:
 			"Transform your business with AI-powered digital workforces. Automate revenue operations, lead generation & content creation.",
 		dateModified: new Date().toISOString(),
 		publisher: {
-			"@id": "https://novosapien.com/#organization",
+			"@id": "https://novosapien.ai/#organization",
 		},
 		breadcrumb: {
 			"@type": "BreadcrumbList",
@@ -120,7 +120,7 @@ export default function Home() {
 			"Revenue Operations Optimization",
 			"Multi-Channel Integration",
 		],
-		screenshot: "https://novosapien.com/home/workforce-stack.png",
+		screenshot: "https://novosapien.ai/home/workforce-stack.png",
 	}
 
 	const combinedSchema = {

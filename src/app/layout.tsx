@@ -70,7 +70,7 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
 	metadataBase: new URL(
-		process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+		process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 	),
 	title: {
 		template: "%s | Novosapien",
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com",
+		url: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai",
 		siteName: "Novosapien",
 		title: "Novosapien - Digital Workforces for Revenue Generation",
 		description:
@@ -164,7 +164,7 @@ export const metadata: Metadata = {
 	},
 	manifest: "/favicons/site.webmanifest",
 	alternates: {
-		canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com",
+		canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai",
 	},
 	category: "technology",
 }

@@ -89,7 +89,7 @@ const blogPosts = [
 	},
 ]
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
 	title: "AI Insights & Automation Blog | NovoSapien",

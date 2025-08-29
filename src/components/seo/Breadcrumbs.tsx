@@ -15,7 +15,7 @@ export default function Breadcrumbs({
 	items,
 	className = "",
 }: BreadcrumbsProps) {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 	// Generate schema.org structured data for breadcrumbs
 	const breadcrumbSchema = {

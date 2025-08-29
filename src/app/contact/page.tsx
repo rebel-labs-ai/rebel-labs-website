@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://novosapien.com/contact",
+		url: "https://novosapien.ai/contact",
 		siteName: "Novosapien",
 		title: "Contact Novosapien - Schedule Your AI Consultation",
 		description:

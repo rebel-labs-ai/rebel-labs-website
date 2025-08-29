@@ -7,7 +7,7 @@ import { ArrowLeft, Calendar, Clock, User } from "lucide-react"
 import { notFound } from "next/navigation"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 // Blog posts data - in production this would come from a CMS or database
 const blogPosts = {

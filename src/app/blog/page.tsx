@@ -5,7 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { ArrowRight, Bell, Sparkles, Calendar } from "lucide-react"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
 	title: "Blog - Coming Soon | NovoSapien",

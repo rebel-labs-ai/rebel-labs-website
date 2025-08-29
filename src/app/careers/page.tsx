@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://novosapien.com/careers",
+		url: "https://novosapien.ai/careers",
 		siteName: "Novosapien",
 		title: "Careers at Novosapien - Build the Future of Work",
 		description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 		images: ["/og-careers.jpg"],
 	},
 	alternates: {
-		canonical: "https://novosapien.com/careers",
+		canonical: "https://novosapien.ai/careers",
 	},
 	robots: {
 		index: true,
@@ -79,9 +79,9 @@ export default function CareersPage() {
 	const organizationSchema = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		"@id": "https://novosapien.com/#organization",
+		"@id": "https://novosapien.ai/#organization",
 		name: "Novosapien",
-		url: "https://novosapien.com",
+		url: "https://novosapien.ai",
 		description:
 			"Building autonomous AI workforces that transform how businesses operate",
 		sameAs: [
