@@ -17,12 +17,9 @@ import {
 	Phone,
 	Mail,
 	Database,
-	Brain,
 	Zap,
-	FileText,
 	Globe,
 	ArrowRight,
-	Users,
 	Megaphone,
 } from "lucide-react"
 import { AgentRosterClient, FailureCardsClient } from "./lead-page-client"
@@ -1081,11 +1078,12 @@ export default function LeadWorkforcePage() {
 							<div className="px-6 pb-6 pt-2">
 								<p className="text-muted-foreground leading-relaxed">
 									The workforce executes 8-12 touchpoints on average, matching
-									what's required for 80% of successful sales. Unlike human
-									teams where 44% give up after one "no," the AI workforce
-									persistently nurtures leads with personalized, timely
-									follow-ups across email and phone channels until they're
-									either qualified for a meeting or definitively not a fit.
+									what&apos;s required for 80% of successful sales. Unlike human
+									teams where 44% give up after one &quot;no,&quot; the AI
+									workforce persistently nurtures leads with personalized,
+									timely follow-ups across email and phone channels until
+									they&apos;re either qualified for a meeting or definitively
+									not a fit.
 								</p>
 							</div>
 						</details>
@@ -1116,7 +1114,7 @@ export default function LeadWorkforcePage() {
 									including professional history, behavioral patterns, company
 									structure, pain points, and decision-making styles. This deep
 									intelligence enables hyper-personalized outreach that
-									resonates with each prospect's specific situation,
+									resonates with each prospect&apos;s specific situation,
 									dramatically increasing engagement and conversion rates.
 								</p>
 							</div>
@@ -1145,11 +1143,12 @@ export default function LeadWorkforcePage() {
 							<div className="px-6 pb-6 pt-2">
 								<p className="text-muted-foreground leading-relaxed">
 									Once a lead is qualified, the workforce automatically books a
-									meeting in your team's calendar and delivers a complete
-									executive brief. This includes the lead's background, pain
-									points, engagement history, and recommended talking points.
-									Your sales team walks into every meeting fully prepared, with
-									all the context needed for a productive conversation.
+									meeting in your team&apos;s calendar and delivers a complete
+									executive brief. This includes the lead&apos;s background,
+									pain points, engagement history, and recommended talking
+									points. Your sales team walks into every meeting fully
+									prepared, with all the context needed for a productive
+									conversation.
 								</p>
 							</div>
 						</details>

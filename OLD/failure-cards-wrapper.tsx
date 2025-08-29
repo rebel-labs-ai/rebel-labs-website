@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { FailureCardsClient } from "./lead-page-client"
+import { FailureCardsClient } from "./src/app/workforces/inbound-sales/lead-page-client"
 
 export function FailureCardsSection() {
 	return (

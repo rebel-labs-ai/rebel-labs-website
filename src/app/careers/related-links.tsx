@@ -46,7 +46,6 @@ export function RelatedLinks() {
 						Explore lab <ArrowRight className="ml-1 w-4 h-4" />
 					</span>
 				</Link>
-				
 
 				<Link
 					href="/blog"

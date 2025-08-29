@@ -181,11 +181,11 @@ export default function CookiesPage() {
 									Introduction
 								</h2>
 								<p className="text-muted-foreground">
-									This Cookie Policy explains how Novosapien (&quot;we&quot;, &quot;us&quot;, or
-									&quot;our&quot;) uses cookies and similar tracking technologies when you
-									visit our website and use our AI workforce platform. By using
-									our services, you consent to the use of cookies as described
-									in this policy.
+									This Cookie Policy explains how Novosapien (&quot;we&quot;,
+									&quot;us&quot;, or &quot;our&quot;) uses cookies and similar
+									tracking technologies when you visit our website and use our
+									AI workforce platform. By using our services, you consent to
+									the use of cookies as described in this policy.
 								</p>
 							</section>
 

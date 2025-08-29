@@ -1,4 +1,4 @@
-import { Metadata } from "next"
+// Types for SEO and structured data
 
 export interface BreadcrumbItem {
 	name: string
@@ -16,7 +16,15 @@ export interface PageSEO {
 export interface SchemaData {
 	"@context": "https://schema.org"
 	"@type": string
-	[key: string]: any
+	[key: string]:
+		| string
+		| string[]
+		| number
+		| boolean
+		| SchemaData
+		| SchemaData[]
+		| Record<string, unknown>
+		| undefined
 }
 
 export type SchemaType =

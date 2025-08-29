@@ -3,14 +3,6 @@
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import {
-	Search,
-	Building,
-	Gift,
-	Calendar,
-	Settings,
-	LineChart,
-	Phone,
-	Mail,
 	X,
 	ChevronLeft,
 	ChevronRight,

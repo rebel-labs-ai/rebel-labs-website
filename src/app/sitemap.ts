@@ -23,7 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	let blogPosts: MetadataRoute.Sitemap = []
 	try {
 		const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY)
-		blogPosts = posts.map((post) => ({
+		blogPosts = posts.map(post => ({
 			url: `${baseUrl}/blog/${post.slug}`,
 			lastModified: new Date(post._updatedAt || post.publishedAt),
 			changeFrequency: "weekly" as const,

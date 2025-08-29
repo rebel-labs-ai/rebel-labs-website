@@ -187,10 +187,10 @@ export default function TermsPage() {
 									1. Agreement to Terms
 								</h2>
 								<p className="text-muted-foreground">
-									By accessing or using Novosapien&apos;s AI workforce platform and
-									services (&quot;Services&quot;), you agree to be bound by these Terms of
-									Service (&quot;Terms&quot;). If you disagree with any part of these
-									terms, you may not access our Services.
+									By accessing or using Novosapien&apos;s AI workforce platform
+									and services (&quot;Services&quot;), you agree to be bound by
+									these Terms of Service (&quot;Terms&quot;). If you disagree
+									with any part of these terms, you may not access our Services.
 								</p>
 							</section>
 
@@ -200,8 +200,8 @@ export default function TermsPage() {
 									2. Description of Services
 								</h2>
 								<p className="text-muted-foreground mb-3">
-									Novosapien provides AI-powered digital workforce solutions that
-									include:
+									Novosapien provides AI-powered digital workforce solutions
+									that include:
 								</p>
 								<ul className="list-disc pl-6 space-y-1 text-muted-foreground">
 									<li>
@@ -223,13 +223,20 @@ export default function TermsPage() {
 									3. Account Registration
 								</h2>
 								<p className="text-muted-foreground">
-									To use our Services, you must create an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate. You are responsible for safeguarding your account credentials and for all activities that occur under your account.
+									To use our Services, you must create an account. You agree to
+									provide accurate, current, and complete information during
+									registration and to update such information to keep it
+									accurate. You are responsible for safeguarding your account
+									credentials and for all activities that occur under your
+									account.
 								</p>
 							</section>
 
 							{/* Acceptable Use */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">4. Acceptable Use Policy</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									4. Acceptable Use Policy
+								</h2>
 								<p className="text-muted-foreground mb-3">
 									You agree not to use our Services to:
 								</p>
@@ -239,24 +246,38 @@ export default function TermsPage() {
 									<li>Generate harmful, offensive, or misleading content</li>
 									<li>Attempt to gain unauthorized access to our systems</li>
 									<li>Interfere with or disrupt the Services</li>
-									<li>Use the Services for any illegal or unauthorized purpose</li>
+									<li>
+										Use the Services for any illegal or unauthorized purpose
+									</li>
 								</ul>
 							</section>
 
 							{/* Intellectual Property */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">5. Intellectual Property Rights</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									5. Intellectual Property Rights
+								</h2>
 								<div className="space-y-3">
 									<div>
-										<h3 className="text-xl font-medium text-foreground mb-2">Our Property</h3>
+										<h3 className="text-xl font-medium text-foreground mb-2">
+											Our Property
+										</h3>
 										<p className="text-muted-foreground">
-											The Services, including all software, technology, designs, and content provided by Novosapien, are owned by us and protected by intellectual property laws. You may not copy, modify, or reverse engineer any part of our Services.
+											The Services, including all software, technology, designs,
+											and content provided by Novosapien, are owned by us and
+											protected by intellectual property laws. You may not copy,
+											modify, or reverse engineer any part of our Services.
 										</p>
 									</div>
 									<div>
-										<h3 className="text-xl font-medium text-foreground mb-2">Your Content</h3>
+										<h3 className="text-xl font-medium text-foreground mb-2">
+											Your Content
+										</h3>
 										<p className="text-muted-foreground">
-											You retain ownership of all content you provide to the Services and all output generated for you. You grant us a limited license to use your content solely to provide the Services to you.
+											You retain ownership of all content you provide to the
+											Services and all output generated for you. You grant us a
+											limited license to use your content solely to provide the
+											Services to you.
 										</p>
 									</div>
 								</div>
@@ -264,57 +285,94 @@ export default function TermsPage() {
 
 							{/* Payment Terms */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">6. Payment and Billing</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									6. Payment and Billing
+								</h2>
 								<p className="text-muted-foreground">
-									Paid Services are billed in advance on a subscription basis. You agree to pay all fees according to your selected plan. Fees are non-refundable except as required by law or as explicitly stated in these Terms. We reserve the right to modify pricing with 30 days' notice.
+									Paid Services are billed in advance on a subscription basis.
+									You agree to pay all fees according to your selected plan.
+									Fees are non-refundable except as required by law or as
+									explicitly stated in these Terms. We reserve the right to
+									modify pricing with 30 days&apos; notice.
 								</p>
 							</section>
 
 							{/* Termination */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">7. Termination</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									7. Termination
+								</h2>
 								<p className="text-muted-foreground">
-									Either party may terminate these Terms at any time. You may cancel your account through your account settings or by contacting support. We may suspend or terminate your access for violations of these Terms. Upon termination, your right to use the Services ceases immediately.
+									Either party may terminate these Terms at any time. You may
+									cancel your account through your account settings or by
+									contacting support. We may suspend or terminate your access
+									for violations of these Terms. Upon termination, your right to
+									use the Services ceases immediately.
 								</p>
 							</section>
 
 							{/* Disclaimers */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">8. Disclaimers and Limitations</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									8. Disclaimers and Limitations
+								</h2>
 								<p className="text-muted-foreground">
-									The Services are provided "as is" without warranties of any kind. We do not guarantee that the Services will be uninterrupted or error-free. Our total liability shall not exceed the amount you paid us in the twelve months preceding the claim. We are not liable for indirect, incidental, or consequential damages.
+									The Services are provided &quot;as is&quot; without warranties
+									of any kind. We do not guarantee that the Services will be
+									uninterrupted or error-free. Our total liability shall not
+									exceed the amount you paid us in the twelve months preceding
+									the claim. We are not liable for indirect, incidental, or
+									consequential damages.
 								</p>
 							</section>
 
 							{/* Indemnification */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">9. Indemnification</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									9. Indemnification
+								</h2>
 								<p className="text-muted-foreground">
-									You agree to indemnify and hold harmless Novosapien and its affiliates from any claims, damages, losses, and expenses arising from your use of the Services, violation of these Terms, or infringement of any third-party rights.
+									You agree to indemnify and hold harmless Novosapien and its
+									affiliates from any claims, damages, losses, and expenses
+									arising from your use of the Services, violation of these
+									Terms, or infringement of any third-party rights.
 								</p>
 							</section>
 
 							{/* Governing Law */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">10. Governing Law</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									10. Governing Law
+								</h2>
 								<p className="text-muted-foreground">
-									These Terms are governed by the laws of the United States and the State of Delaware, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Delaware.
+									These Terms are governed by the laws of the United States and
+									the State of Delaware, without regard to conflict of law
+									principles. Any disputes shall be resolved in the courts of
+									Delaware.
 								</p>
 							</section>
 
 							{/* Changes to Terms */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">11. Changes to Terms</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									11. Changes to Terms
+								</h2>
 								<p className="text-muted-foreground">
-									We reserve the right to modify these Terms at any time. We will notify you of material changes via email or through the Services. Your continued use of the Services after changes constitutes acceptance of the modified Terms.
+									We reserve the right to modify these Terms at any time. We
+									will notify you of material changes via email or through the
+									Services. Your continued use of the Services after changes
+									constitutes acceptance of the modified Terms.
 								</p>
 							</section>
 
 							{/* Contact Information */}
 							<section>
-								<h2 className="text-2xl font-semibold text-foreground mb-4">12. Contact Information</h2>
+								<h2 className="text-2xl font-semibold text-foreground mb-4">
+									12. Contact Information
+								</h2>
 								<p className="text-muted-foreground">
-									If you have questions about these Terms of Service, please contact us at:
+									If you have questions about these Terms of Service, please
+									contact us at:
 								</p>
 								<div className="mt-3 space-y-1 text-muted-foreground">
 									<p>Email: legal@novosapien.ai</p>
@@ -375,7 +433,8 @@ export default function TermsPage() {
 										Privacy Policy
 									</h3>
 									<p className="text-muted-foreground">
-										Understand how we collect, use, and protect your personal information.
+										Understand how we collect, use, and protect your personal
+										information.
 									</p>
 									<span className="text-primary-blue mt-2 inline-block font-medium">
 										Read Privacy Policy →
