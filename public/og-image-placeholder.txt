@@ -1,0 +1,33 @@
+IMPORTANT: OG Image Required
+============================
+
+You need to create an Open Graph image for optimal social media sharing.
+
+Requirements:
+- Filename: og-image.jpg
+- Dimensions: 1200x630 pixels
+- Format: JPEG (for better compression)
+- Location: /public/og-image.jpg
+
+Content suggestions:
+- Include your Novosapien logo
+- Add your tagline: "Digital Workforces for Revenue Generation"
+- Use your brand colors (primary-blue: #A1BCD1, accent colors)
+- Keep text large and readable (minimum 24px when scaled)
+- High contrast between text and background
+
+Tools to create OG image:
+- Canva (has OG image templates)
+- Figma
+- Adobe Creative Suite
+- Online generators like og-image.vercel.app
+
+Once created, place the file at: /public/og-image.jpg
+
+This image will be displayed when your site is shared on:
+- Facebook
+- Twitter/X
+- LinkedIn
+- Slack
+- WhatsApp
+- And other social platforms

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -62,10 +63,12 @@ export function MissionContent() {
 											</p>
 											<div className="space-y-4">
 												<div className="flex items-start space-x-4">
-													<img
+													<Image
 														src="/images/logos/roblox.svg"
 														alt="Roblox"
-														className="mt-1 h-6 w-6"
+														width={24}
+														height={24}
+														className="mt-1"
 													/>
 													<div>
 														<h4 className="font-semibold">Roblox</h4>
@@ -77,10 +80,12 @@ export function MissionContent() {
 													</div>
 												</div>
 												<div className="flex items-start space-x-4">
-													<img
+													<Image
 														src="/images/logos/pinterest.svg"
 														alt="Pinterest"
-														className="mt-1 h-6 w-6"
+														width={24}
+														height={24}
+														className="mt-1"
 													/>
 													<div>
 														<h4 className="font-semibold">Pinterest</h4>
@@ -96,10 +101,12 @@ export function MissionContent() {
 										<div>
 											<div className="space-y-4">
 												<div className="flex items-start space-x-4">
-													<img
+													<Image
 														src="/images/logos/openai.svg"
 														alt="OpenAI"
-														className="mt-1 h-6 w-6"
+														width={24}
+														height={24}
+														className="mt-1"
 													/>
 													<div>
 														<h4 className="font-semibold">OpenAI</h4>
@@ -111,10 +118,12 @@ export function MissionContent() {
 													</div>
 												</div>
 												<div className="flex items-start space-x-4">
-													<img
+													<Image
 														src="/images/logos/anthropic.svg"
 														alt="Anthropic"
-														className="mt-1 h-6 w-6"
+														width={24}
+														height={24}
+														className="mt-1"
 													/>
 													<div>
 														<h4 className="font-semibold">Anthropic</h4>
@@ -170,10 +179,11 @@ export function MissionContent() {
 										<div className="grid gap-6 md:grid-cols-2">
 											<div className="rounded-lg bg-background/50 p-6">
 												<div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
-													<img
+													<Image
 														src="/images/icons/brain.svg"
 														alt="Intelligence"
-														className="h-6 w-6"
+														width={24}
+														height={24}
 													/>
 												</div>
 												<h4 className="mb-2 font-semibold">
@@ -187,10 +197,11 @@ export function MissionContent() {
 											</div>
 											<div className="rounded-lg bg-background/50 p-6">
 												<div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
-													<img
+													<Image
 														src="/images/icons/growth.svg"
 														alt="Growth"
-														className="h-6 w-6"
+														width={24}
+														height={24}
 													/>
 												</div>
 												<h4 className="mb-2 font-semibold">
@@ -237,7 +248,7 @@ export function MissionContent() {
 											</div>
 											<div className="mt-8">
 												<Link
-													href="/workforces/lead"
+													href="/workforces/inbound-sales"
 													className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50"
 												>
 													Explore Our Workforces
@@ -440,7 +451,7 @@ export function MissionContent() {
 											Schedule a Demo
 										</a>
 										<Link
-											href="/workforces/lead"
+											href="/workforces/inbound-sales"
 											className="inline-flex items-center justify-center rounded-md border border-primary bg-background px-8 py-3 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50"
 										>
 											Explore Workforces

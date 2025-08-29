@@ -46,7 +46,10 @@ export function Navigation() {
 				<div className="hidden md:flex items-center justify-center">
 					{/* Navigation Links with Logo */}
 					<div className="backdrop-blur-sm rounded-lg p-1 flex space-x-1 border border-accent bg-background/80 dark:bg-accent/35 items-center">
-						<div className="flex items-center space-x-2 px-3">
+						<Link
+							href="/"
+							className="flex items-center space-x-2 px-3 hover:opacity-80 transition-opacity"
+						>
 							<Image
 								src="/logo.svg"
 								alt="Novosapien Logo"
@@ -54,13 +57,13 @@ export function Navigation() {
 								height={24}
 								className="w-6 h-6"
 							/>
-							<span className="text-lg font-reddit-sans lowercase font-medium">
+							<span className="text-xl font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
 								<span className="text-[#09142f] dark:text-[#09142f]/80-">
 									sapien
 								</span>
 							</span>
-						</div>
+						</Link>
 						<div className="w-px h-6 bg-border mx-2"></div>
 						<Link href="/">
 							<Button
@@ -85,13 +88,13 @@ export function Navigation() {
 							<div className="absolute top-full left-0 mt-1 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100">
 								<div className="bg-background/95 backdrop-blur-sm border border-accent rounded-md shadow-lg overflow-hidden">
 									<Link
-										href="/workforces/lead"
+										href="/workforces/inbound-sales"
 										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
 									>
 										Inbound Sales
 									</Link>
 									<Link
-										href="/workforces/content"
+										href="/workforces/content-creation"
 										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
 									>
 										Content Creation
@@ -128,7 +131,11 @@ export function Navigation() {
 				<div className="md:hidden relative">
 					{/* Mobile Header Bar */}
 					<div className="flex items-center justify-between backdrop-blur-sm rounded-lg p-3 border border-accent bg-background/80 dark:bg-accent/30">
-						<div className="flex items-center space-x-2">
+						<Link
+							href="/"
+							className="flex items-center space-x-2"
+							onClick={() => setIsMobileMenuOpen(false)}
+						>
 							<Image
 								src="/logo.svg"
 								alt="Novosapien Logo"
@@ -136,11 +143,13 @@ export function Navigation() {
 								height={24}
 								className="w-6 h-6"
 							/>
-							<span className="text-lg font-reddit-sans lowercase font-medium">
+							<span className="text-xl font-reddit-sans lowercase font-medium">
 								<span className="text-accent">novo</span>
-								<span className="text-foreground">sapien</span>
+								<span className="text-[#09142f] dark:text-[#09142f]/80">
+									sapien
+								</span>
 							</span>
-						</div>
+						</Link>
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							className="p-2 rounded-md hover:bg-accent/20 transition-colors text-foreground"
@@ -192,14 +201,14 @@ export function Navigation() {
 									{isMobileWorkforceOpen && (
 										<div className="mt-1 ml-4 space-y-1">
 											<Link
-												href="/workforces/lead"
+												href="/workforces/inbound-sales"
 												onClick={() => setIsMobileMenuOpen(false)}
 												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 											>
 												Inbound Sales
 											</Link>
 											<Link
-												href="/workforces/content"
+												href="/workforces/content-creation"
 												onClick={() => setIsMobileMenuOpen(false)}
 												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
 											>

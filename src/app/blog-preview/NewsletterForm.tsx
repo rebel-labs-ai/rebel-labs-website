@@ -14,16 +14,30 @@ export default function NewsletterForm() {
 					Get the latest insights on AI workforces and automation delivered to
 					your inbox.
 				</p>
-				<div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+				<form
+					className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+					aria-label="Newsletter subscription"
+				>
+					<label htmlFor="newsletter-email" className="sr-only">
+						Email address
+					</label>
 					<input
+						id="newsletter-email"
 						type="email"
 						placeholder="Enter your email"
-						className="flex-1 px-4 py-2 bg-background border border-accent/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-foreground placeholder-muted-foreground"
+						className="flex-1 min-h-[48px] px-4 py-3 bg-background border border-accent/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-foreground placeholder-muted-foreground"
+						required
+						aria-required="true"
+						aria-label="Enter your email address for newsletter"
 					/>
-					<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
+					<Button
+						type="submit"
+						className="min-h-[48px] px-6 py-3 bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30"
+						aria-label="Subscribe to newsletter"
+					>
 						Subscribe
 					</Button>
-				</div>
+				</form>
 			</div>
 		</Card>
 	)
