@@ -98,7 +98,7 @@ export default function Home() {
 					"@type": "ListItem",
 					position: 1,
 					name: "Home",
-					item: "https://novosapien.com",
+					item: "https://novosapien.ai",
 				},
 			],
 		},
@@ -167,7 +167,8 @@ export default function Home() {
 								Redefining the way your generate revenue
 							</span>
 						</div>
-						<div className="sm:text-left ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+						{/* ml-0 sm:ml-8 md:ml-16 lg:ml-24 */}
+						<div className="sm:text-left ">
 							{/* AGENT COMMENT: SEO Optimization - Heading Hierarchy Fix
 							    Original: Two <h1> tags
 							    Changed to: Single <h1> with <span> for second line
@@ -180,7 +181,7 @@ export default function Home() {
 								<span className="block text-center sm:mb-3">
 									Stop Managing Tools.
 								</span>
-								<span className="block ml-5 min-[409px]:ml-8 sm:ml-20 text-left text-foreground text-[28px] min-[360px]:text-[26px] min-[390px]:text-[29px] min-[430px]:text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+								<span className="block ml-5 min-[409px]:ml-8 sm:ml-36 text-left text-foreground text-[28px] min-[360px]:text-[26px] min-[390px]:text-[29px] min-[430px]:text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
 									Start <AnimatedText />
 								</span>
 							</h1>
@@ -317,7 +318,7 @@ export default function Home() {
 
 						{/* Middle - Workforce Stack Image */}
 						<div className="flex justify-center items-center">
-							<div className="max-w-xs w-full">
+							<div className="max-w-[260px] sm:max-w-[280px] md:max-w-xs w-full">
 								{/* Light mode image */}
 								<Image
 									src="/home/workforce-stack.svg"

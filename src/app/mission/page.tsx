@@ -11,7 +11,7 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs"
 import { TwinklingStars, AnimatedHeroContent } from "./client-components"
 import { HubSpokeGraphic, RelatedSolutionsSection } from "./mission-sections"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
 	title: "Our Mission - Building the Future of Autonomous Work | Novosapien",

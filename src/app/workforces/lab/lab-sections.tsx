@@ -37,6 +37,17 @@ export function HeroSection() {
 						workforces cannot solve, we forge your proprietary workflow into a
 						fully autonomous operational asset.
 					</p>
+					<div className="flex justify-center mt-8">
+						<a
+							href="https://cal.com/george-westbrook-novosapien/custom-workforce"
+							className="inline-block"
+							aria-label="Schedule a consultation for custom workforce development"
+						>
+							<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base min-h-[48px] min-w-[48px] px-6 py-3 ">
+								Book a Lab Scoping Session
+							</Button>
+						</a>
+					</div>
 				</Card>
 			</div>
 		</section>

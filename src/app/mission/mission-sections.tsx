@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 
 // Hub & Spoke Graphic Component - Server rendered with no interactivity
 export function HubSpokeGraphic() {

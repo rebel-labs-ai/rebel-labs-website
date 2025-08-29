@@ -23,7 +23,7 @@ export function ThemeToggle() {
 					variant="ghost"
 					size="sm"
 					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-					className="rounded-md p-2 h-8 w-10 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 group relative"
+					className="rounded-md p-2 h-8 w-10 text-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-200 group relative flex items-center justify-center"
 					aria-label="Toggle theme"
 				>
 					{theme === "dark" ? (
@@ -50,7 +50,7 @@ export function ThemeToggle() {
 								viewBox="0 0 24 24"
 								strokeWidth={1.5}
 								stroke="currentColor"
-								className="w-4 h-4 absolute inset-2 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+								className="w-4 h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
 							>
 								<circle cx="12" cy="12" r="4" />
 								<path d="M12 2v2" />
@@ -91,7 +91,7 @@ export function ThemeToggle() {
 								viewBox="0 0 24 24"
 								strokeWidth={1.5}
 								stroke="currentColor"
-								className="w-4 h-4 absolute inset-2 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+								className="w-4 h-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-200 opacity-0 group-hover:opacity-100"
 							>
 								<path
 									strokeLinecap="round"

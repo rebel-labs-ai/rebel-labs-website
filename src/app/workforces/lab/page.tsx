@@ -33,7 +33,7 @@ const EngagementProtocol = dynamic(
 	}
 )
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.com"
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
 	title: "Custom AI Workforce Lab | Build Bespoke Digital Workforces",
@@ -99,7 +99,7 @@ export default function LabPage() {
 			{
 				"@type": "Organization",
 				name: "Rebel Labs",
-				url: "https://rebel-labs.com",
+				url: "https://rebel-labs.co",
 			},
 		],
 		serviceType: "Custom AI Workforce Development",

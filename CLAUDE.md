@@ -57,12 +57,11 @@ This is a Next.js 15 application using the App Router with a complete design sys
 - `/` - Homepage
 - `/workforces/content` - Content workforce page with contact modal
 - `/workforces/lead` - Lead workforce page with agent roster and method sections
-- `/workforces/custom` - Custom workforce solutions
 - `/workforces/lab` - Lab/experimental features
 - `/blog` - Blog with category filters, posts grid, and newsletter form
 - `/careers` - Careers page with application form
 - `/mission` - Mission page with animated hero and scroll effects
-- `/about`, `/contact`, `/privacy`, `/terms`, `/cookies` - Standard pages
+- `/contact`, `/privacy`, `/terms`, `/cookies` - Standard pages
 
 ### Component Development Guidelines
 
