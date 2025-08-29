@@ -160,14 +160,14 @@ export default function Home() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Hero - The Declaration */}
-				<section className="pt-48 sm:pt-24 md:pt-48 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
-					<div className="max-w-4xl mx-auto relative z-10 w-full md:mt-36">
+				<section className="pt-48 sm:pt-24 md:pt-44 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
+					<div className="max-w-5xl mx-auto relative z-10 w-full md:mt-36">
 						<div className="hidden sm:block text-center mb-6 sm:mb-6">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 								Redefining the way your generate revenue
 							</span>
 						</div>
-						<div className="text-left ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+						<div className="sm:text-left ml-0 sm:ml-8 md:ml-16 lg:ml-24">
 							{/* AGENT COMMENT: SEO Optimization - Heading Hierarchy Fix
 							    Original: Two <h1> tags
 							    Changed to: Single <h1> with <span> for second line
@@ -176,15 +176,20 @@ export default function Home() {
 							    Date: 2025-08-28
 							    Agent: Claude
 							*/}
-							<h1 className="text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
-								Stop Managing Tools.
-								<span className="block text-foreground text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+							<h1 className="text-foreground text-[28px] min-[360px]:text-[26px] min-[390px]:text-[29px] min-[430px]:text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
+								<span className="block text-center sm:mb-3">
+									Stop Managing Tools.
+								</span>
+								<span className="block ml-5 min-[409px]:ml-8 sm:ml-20 text-left text-foreground text-[28px] min-[360px]:text-[26px] min-[390px]:text-[29px] min-[430px]:text-[31px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium sm:font-light tracking-tight font-geist-sans">
 									Start <AnimatedText />
 								</span>
 							</h1>
 						</div>
-						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center">
+						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-1 sm:mt-6 leading-relaxed text-center">
 							We deploy digital workforces into your business so you can
+							<span className="hidden sm:inline">
+								<br />
+							</span>
 							generate revenue on autopilot.
 						</p>
 						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
@@ -200,24 +205,11 @@ export default function Home() {
 							</a>
 						</div>
 					</div>
-					{/* Hero Image - Above dots */}
-					{/* Light mode image */}
-					{/* <img
-						src="/home/image.png"
-						alt="Hero Image"
-						className="w-full max-w-[85%] mx-auto relative z-20 block dark:hidden mt-8"
-					 /> */}
-					{/* Dark mode image */}
-					{/* <img
-						src="/home/image-dark.png"
-						alt="Hero Image"
-						className="w-full max-w-[85%] mx-auto relative z-20 hidden dark:block mt-8"
-					/>  */}
 				</section>
 			</div>
 
 			{/* Section 1.5: We Automate the Full Stack of Revenue Operations */}
-			<section className="mx-auto bg-accent/40 relative py-32 sm:py-32">
+			<section className="mx-auto bg-accent/40 relative py-36 sm:py-32">
 				<div className="max-w-8xl mx-auto px-4">
 					{/* Centered headline and subtext */}
 					<div className="text-center mb-8 sm:mb-12">
