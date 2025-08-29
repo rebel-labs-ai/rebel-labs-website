@@ -3,36 +3,42 @@
 ## ✅ Safe Schema Types to Use
 
 ### Organization Schema
+
 - **Safe to use**: Company information, logo, contact details
 - **Requirements**: Must be accurate company information
+
 ```json
 {
-  "@type": "Organization",
-  "name": "Novosapien",
-  "url": "https://novosapien.com",
-  "logo": "https://novosapien.com/logo.svg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales"
-  }
+	"@type": "Organization",
+	"name": "Novosapien",
+	"url": "https://novosapien.com",
+	"logo": "https://novosapien.com/logo.svg",
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"contactType": "sales"
+	}
 }
 ```
 
 ### Service Schema
+
 - **Safe to use**: Describing actual services you offer
 - **Requirements**: Services must actually be available
+
 ```json
 {
-  "@type": "Service",
-  "name": "AI Content Creation Workforce",
-  "description": "Automated content creation service",
-  "provider": {"@type": "Organization", "name": "Novosapien"}
+	"@type": "Service",
+	"name": "AI Content Creation Workforce",
+	"description": "Automated content creation service",
+	"provider": { "@type": "Organization", "name": "Novosapien" }
 }
 ```
 
 ### WebPage/WebSite Schema
+
 - **Safe to use**: Page structure and navigation
 - **Requirements**: Accurate page information
+
 ```json
 {
   "@type": "WebPage",
@@ -43,73 +49,82 @@
 ```
 
 ### BreadcrumbList Schema
+
 - **Safe to use**: Navigation hierarchy
 - **Requirements**: Must match actual site structure
+
 ```json
 {
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}
-  ]
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{ "@type": "ListItem", "position": 1, "name": "Home", "item": "/" }
+	]
 }
 ```
 
 ### SoftwareApplication Schema
+
 - **Safe to use**: Describing your platform
 - **Requirements**: Accurate feature descriptions
+
 ```json
 {
-  "@type": "SoftwareApplication",
-  "name": "Novosapien Platform",
-  "applicationCategory": "BusinessApplication",
-  "featureList": ["Feature 1", "Feature 2"]
+	"@type": "SoftwareApplication",
+	"name": "Novosapien Platform",
+	"applicationCategory": "BusinessApplication",
+	"featureList": ["Feature 1", "Feature 2"]
 }
 ```
 
 ### BlogPosting/Article Schema
+
 - **Safe to use**: For actual blog posts
 - **Requirements**: Real authors, real publish dates
+
 ```json
 {
-  "@type": "BlogPosting",
-  "headline": "Article Title",
-  "author": {"@type": "Person", "name": "Real Author Name"},
-  "datePublished": "2024-01-01"
+	"@type": "BlogPosting",
+	"headline": "Article Title",
+	"author": { "@type": "Person", "name": "Real Author Name" },
+	"datePublished": "2024-01-01"
 }
 ```
 
 ### FAQPage Schema
+
 - **Safe to use**: Frequently asked questions
 - **Requirements**: Real questions and accurate answers
+
 ```json
 {
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Real question?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Real answer"}
-    }
-  ]
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "Real question?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Real answer" }
+		}
+	]
 }
 ```
 
 ### HowTo Schema
+
 - **Safe to use**: Step-by-step guides
 - **Requirements**: Actual instructions that work
+
 ```json
 {
-  "@type": "HowTo",
-  "name": "How to use Novosapien",
-  "step": [
-    {"@type": "HowToStep", "text": "Step 1: Sign up"}
-  ]
+	"@type": "HowTo",
+	"name": "How to use Novosapien",
+	"step": [{ "@type": "HowToStep", "text": "Step 1: Sign up" }]
 }
 ```
 
 ## 🚫 Schema Types to AVOID Without Real Data
 
 ### AggregateRating
+
 - **DO NOT USE** unless you have:
   - Real customer reviews
   - Verifiable rating system
@@ -117,6 +132,7 @@
 - **Penalty**: Manual action, rich snippets removal
 
 ### Review/ReviewRating
+
 - **DO NOT USE** unless:
   - Reviews are from real customers
   - Reviews are displayed on page
@@ -124,6 +140,7 @@
 - **Penalty**: Severe ranking penalties
 
 ### Offer with Price
+
 - **BE CAREFUL** with:
   - Price must be accurate
   - Availability must be real
@@ -131,26 +148,31 @@
 - **Better alternative**: Use Service schema without pricing
 
 ### Person (as Author)
+
 - **DO NOT USE** fake authors
 - **Only use** for real team members
 - **Include** real job titles and roles
 
 ### Event
+
 - **DO NOT USE** for fake events
 - **Only use** for actual scheduled events
 - **Must have** real dates, locations, organizers
 
 ### JobPosting
+
 - **DO NOT USE** for non-existent positions
 - **Only use** for actual open positions
 - **Must be** actively recruiting
 
 ### Product
+
 - **BE CAREFUL** - only for physical/digital products
 - **Not for** services (use Service schema instead)
 - **Requires** actual product details
 
 ### LocalBusiness
+
 - **Only if** you have physical locations
 - **Requires** real address, hours, contact info
 
@@ -192,6 +214,7 @@ Before implementing any schema:
 ## 🔄 Implementation Status
 
 ### Currently Implemented (Safe):
+
 - ✅ Organization schema (all pages via layout)
 - ✅ WebPage schema (homepage, service pages)
 - ✅ Service schema (workforce pages)
@@ -200,11 +223,13 @@ Before implementing any schema:
 - ✅ BlogPosting (blog preview pages - verify authors are real)
 
 ### Removed (Unsafe):
+
 - ❌ AggregateRating (all pages - no real reviews)
 - ❌ Offer with "$0" price (misleading)
 - ⚠️ Converted Offer to Service in catalogs
 
 ### Future Opportunities (When Ready):
+
 - 📅 FAQPage schema (create real FAQ section)
 - 📅 HowTo schema (create guides)
 - 📅 VideoObject (when you have videos)
@@ -214,6 +239,7 @@ Before implementing any schema:
 ## 🚨 Emergency Response
 
 If you receive a manual action:
+
 1. Remove problematic schema immediately
 2. Fix the underlying issue
 3. Request reconsideration in Search Console

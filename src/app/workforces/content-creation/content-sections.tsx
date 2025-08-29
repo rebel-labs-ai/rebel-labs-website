@@ -52,6 +52,19 @@ export function HeroSection() {
 							strategic directives into high-quality, on-brand assets—from
 							drafting and research to multi-platform repurposing.
 						</p>
+						<Button className=" mt-4 sm:mt-8 mx-auto block bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
+							Talk to Us
+							{/* Added link to book a strategic session */}
+							<a
+								href="https://cal.com/george-westbrook-novosapien/content-creation-workforce"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block w-full h-full"
+								tabIndex={-1}
+								aria-label="Book a Strategic Session for Content Creation Workforce"
+								style={{ position: "absolute", inset: 0, zIndex: 10 }}
+							></a>
+						</Button>
 					</Card>
 				</div>
 			</section>

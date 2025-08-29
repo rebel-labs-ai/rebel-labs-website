@@ -414,7 +414,7 @@ export function ContentWorkforceClient() {
 		intelligence: [
 			{
 				icon: (
-					<Search className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Search className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Research Agent",
 				role: "Scanning the Market",
@@ -434,7 +434,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<Brain className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Brain className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Idea Generation Agent",
 				role: "Architecting Content Concepts",
@@ -454,7 +454,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<Users className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Users className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Critic Agent",
 				role: "Ensuring Quality & Coherence",
@@ -476,7 +476,7 @@ export function ContentWorkforceClient() {
 		creation: [
 			{
 				icon: (
-					<PenTool className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<PenTool className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Drafting Agent",
 				role: "Producing Written Content",
@@ -496,7 +496,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<FileText className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<FileText className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Iteration Agent",
 				role: "Refining to Perfection",
@@ -516,7 +516,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<Video className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Video className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Media Generation Agent",
 				role: "Creating Visual Assets",
@@ -538,7 +538,7 @@ export function ContentWorkforceClient() {
 		amplification: [
 			{
 				icon: (
-					<Share2 className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Share2 className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Repurposing Agent",
 				role: "Maximizing Content Leverage",
@@ -558,7 +558,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<MessageSquare className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<MessageSquare className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Hook Generation Agent",
 				role: "Crafting Compelling Hooks",
@@ -578,7 +578,7 @@ export function ContentWorkforceClient() {
 			},
 			{
 				icon: (
-					<Mail className="w-5 h-5 sm:w-10 sm:h-10 text-[#A1BCD1] stroke-[1.5]" />
+					<Mail className="w-5 h-5 sm:w-8 sm:h-8 text-[#A1BCD1] stroke-[1.5]" />
 				),
 				name: "Distribution Agent",
 				role: "Engineering for Discovery & Distribution",
@@ -794,7 +794,7 @@ export function ContentWorkforceClient() {
 								</div>
 							</div>
 
-							{/* Agent Cards Grid */}
+							{/* Agent Cards Grid - Fenced Section with Arrows */}
 							<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
 								<div className="flex items-center justify-between">
 									{/* Left Arrow */}
@@ -813,34 +813,44 @@ export function ContentWorkforceClient() {
 											)
 										}}
 										className="absolute left-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+										aria-label="Previous tab"
 									>
 										<ChevronLeft className="w-6 h-6" />
 									</button>
 
-									{/* Cards Grid */}
+									{/* Cards Grid with padding to account for arrows */}
 									<div className="w-full px-12 py-8">
-										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 justify-items-center max-w-7xl mx-auto">
+										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center max-w-7xl mx-auto">
 											{agents[activeTab].map((agent, index) => (
 												<Card
 													key={index}
 													onClick={() => setSelectedAgent(agent)}
-													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-6 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[400px] w-[280px]"
+													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-5 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[360px] w-[260px]"
 												>
+													{/* Title */}
 													<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
 														{agent.name}
 													</h3>
+
+													{/* Subtitle */}
 													<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
 														{agent.role}
 													</span>
-													<div className="w-20 h-20 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
-														{agent.icon}
+
+													{/* Centered Icon */}
+													<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
+														<div className="scale-100">{agent.icon}</div>
 													</div>
+
+													{/* Description */}
 													<p className="text-muted-foreground text-sm mb-2 flex-1">
 														{agent.coreFunction}
 													</p>
-													<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
+
+													{/* Learn More Button - No background, just text */}
+													<span className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
 														Learn More →
-													</button>
+													</span>
 												</Card>
 											))}
 										</div>
@@ -861,6 +871,7 @@ export function ContentWorkforceClient() {
 											)
 										}}
 										className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-background border border-accent/30 text-muted-foreground hover:text-foreground hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+										aria-label="Next tab"
 									>
 										<ChevronRight className="w-6 h-6" />
 									</button>

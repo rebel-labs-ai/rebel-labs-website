@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://novosapien.ai/workforces/lead",
+		url: "https://novosapien.ai/workforces/inbound-sales",
 		siteName: "NovoSapien",
 		title: "Inbound Sales Workforce - Never Lose a Lead Again",
 		description:
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 		images: ["/og-inbound-sales.jpg"],
 	},
 	alternates: {
-		canonical: "https://novosapien.ai/workforces/lead",
+		canonical: "https://novosapien.ai/workforces/inbound-sales",
 	},
 	robots: {
 		index: true,
@@ -277,8 +277,7 @@ export default function LeadWorkforcePage() {
 				{
 					"@type": "Service",
 					name: "24/7 Lead Response",
-					description:
-						"Instant response to all inbound leads within 5 minutes",
+					description: "Instant response to all inbound leads within 5 minutes",
 				},
 				{
 					"@type": "Service",
@@ -315,7 +314,7 @@ export default function LeadWorkforcePage() {
 				"@type": "ListItem",
 				position: 3,
 				name: "Inbound Sales",
-				item: "https://novosapien.ai/workforces/lead",
+				item: "https://novosapien.ai/workforces/inbound-sales",
 			},
 		],
 	}
@@ -812,35 +811,42 @@ export default function LeadWorkforcePage() {
 
 					{/* Funnel Diagram with Annotations */}
 					<div className="max-w-7xl mx-auto">
-						{/* Container with funnel in center and cards around it */}
-						<div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 items-center">
-							{/* Left Column - Two Cards */}
-							<div className="space-y-6 lg:space-y-24">
-								{/* Client Component for Interactive Failure Cards */}
-								<FailureCardsClient />
-							</div>
+						{/* The component now handles both mobile and desktop layouts */}
+						<div className="relative">
+							<FailureCardsClient />
 
-							{/* Center Column - Funnel Image (Desktop only) */}
-							<div className="hidden lg:flex justify-center px-4">
-								<div className="relative max-w-xs w-full">
-									{/* Light mode funnel */}
-									<Image
-										src="/workforces/leads/funnel.svg"
-										alt="Inbound sales funnel diagram showing lead flow from top to qualified meetings"
-										width={300}
-										height={400}
-										className="w-full h-auto dark:hidden"
-										priority
-									/>
-									{/* Dark mode funnel */}
-									<Image
-										src="/workforces/leads/funnel-dark.svg"
-										alt="Inbound sales funnel diagram showing lead flow from top to qualified meetings"
-										width={300}
-										height={400}
-										className="w-full h-auto hidden dark:block"
-										priority
-									/>
+							{/* Funnel Image - Desktop only, positioned absolutely over the center column */}
+							<div className="hidden lg:block absolute inset-0 pointer-events-none">
+								<div className="grid grid-cols-3 gap-6 h-full">
+									{/* Empty left column */}
+									<div></div>
+
+									{/* Center column with funnel */}
+									<div className="flex justify-center items-center">
+										<div className="relative max-w-xs w-full">
+											{/* Light mode funnel */}
+											<Image
+												src="/workforces/leads/funnel.svg"
+												alt="Inbound sales funnel diagram showing lead flow from top to qualified meetings"
+												width={300}
+												height={400}
+												className="w-full h-auto dark:hidden"
+												priority
+											/>
+											{/* Dark mode funnel */}
+											<Image
+												src="/workforces/leads/funnel-dark.svg"
+												alt="Inbound sales funnel diagram showing lead flow from top to qualified meetings"
+												width={300}
+												height={400}
+												className="w-full h-auto hidden dark:block"
+												priority
+											/>
+										</div>
+									</div>
+
+									{/* Empty right column */}
+									<div></div>
 								</div>
 							</div>
 						</div>
@@ -947,7 +953,7 @@ export default function LeadWorkforcePage() {
 						</p>
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-						<Link href="/workforces/content" className="block group">
+						<Link href="/workforces/content-creation" className="block group">
 							<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 								<h3 className="text-xl font-semibold mb-2 text-foreground">
 									Content Workforce

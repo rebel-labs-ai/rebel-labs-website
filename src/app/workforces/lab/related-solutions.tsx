@@ -16,7 +16,7 @@ export function RelatedSolutionsSection() {
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
 					{/* Content Workforce Card - Matching lead page exactly */}
-					<Link href="/workforces/content" className="block group">
+					<Link href="/workforces/content-creation" className="block group">
 						<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 							<h3 className="text-xl font-semibold mb-2 text-foreground">
 								Content Workforce
@@ -31,7 +31,7 @@ export function RelatedSolutionsSection() {
 						</Card>
 					</Link>
 					{/* Inbound Sales Card - Matching content page exactly */}
-					<Link href="/workforces/lead" className="block group">
+					<Link href="/workforces/inbound-sales" className="block group">
 						<Card className="p-6 border border-accent/30 hover:border-accent hover:shadow-lg transition-all group-hover:scale-[1.02] h-full">
 							<h3 className="text-xl font-semibold mb-2 text-foreground">
 								Inbound Sales Workforce

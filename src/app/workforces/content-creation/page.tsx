@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: `${baseUrl}/workforces/content`,
+		url: `${baseUrl}/workforces/content-creation`,
 		siteName: "Novosapien",
 		title: "AI Content Creation Workforce - Scale Your Content Strategy",
 		description:
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 		images: ["/og-content-workforce.jpg"],
 	},
 	alternates: {
-		canonical: `${baseUrl}/workforces/content`,
+		canonical: `${baseUrl}/workforces/content-creation`,
 	},
 	robots: {
 		index: true,
@@ -84,7 +84,7 @@ export default function ContentWorkforcePage() {
 	const schemaData = {
 		"@context": "https://schema.org",
 		"@type": "Service",
-		"@id": `${baseUrl}/workforces/content#service`,
+		"@id": `${baseUrl}/workforces/content-creation#service`,
 		name: "AI Content Creation Workforce",
 		description:
 			"Automated content creation and distribution service powered by AI agents",
@@ -152,36 +152,36 @@ export default function ContentWorkforcePage() {
 					{/* Hero Section - Server Component */}
 					<HeroSection />
 
-				{/* Content Production Protocol - Server Component */}
-				<ContentProductionProtocol />
+					{/* Content Production Protocol - Server Component */}
+					<ContentProductionProtocol />
 
-				{/* Agent Roster - Client Component for interactivity */}
-				<Suspense
-					fallback={
-						<div className="py-32 px-4">
-							<div className="max-w-5xl mx-auto">
-								<div className="h-96 bg-accent/10 rounded-xl animate-pulse" />
+					{/* Agent Roster - Client Component for interactivity */}
+					<Suspense
+						fallback={
+							<div className="py-32 px-4">
+								<div className="max-w-5xl mx-auto">
+									<div className="h-96 bg-accent/10 rounded-xl animate-pulse" />
+								</div>
 							</div>
-						</div>
-					}
-				>
-					<AgentRoster />
-				</Suspense>
+						}
+					>
+						<AgentRoster />
+					</Suspense>
 
-				{/* Method Section - Server Component */}
-				<MethodSection />
+					{/* Method Section - Server Component */}
+					<MethodSection />
 
-				{/* Impact Amplifier - Server Component */}
-				<ImpactAmplifierSection />
+					{/* Impact Amplifier - Server Component */}
+					<ImpactAmplifierSection />
 
-				{/* Related Solutions - Server Component */}
-				<RelatedSolutionsSection />
+					{/* Related Solutions - Server Component */}
+					<RelatedSolutionsSection />
 
-				{/* FAQ Section - Server Component */}
-				<FAQSection />
+					{/* FAQ Section - Server Component */}
+					<FAQSection />
 
-				{/* Final CTA - Server Component */}
-				<FinalCTASection />
+					{/* Final CTA - Server Component */}
+					<FinalCTASection />
 				</main>
 
 				{/* Footer */}

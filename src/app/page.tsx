@@ -561,11 +561,11 @@ export default function Home() {
 								/>
 								<div className="text-right">
 									<a
-										href="/workforces/lead"
+										href="/workforces/inbound-sales"
 										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
 										aria-label="Learn more about the Inbound Conversion Workforce for lead generation"
 									>
-										Explore Lead Workforce →
+										Explore Inbound Sales →
 									</a>
 								</div>
 							</div>
@@ -599,7 +599,7 @@ export default function Home() {
 								/>
 								<div className="text-right">
 									<a
-										href="/workforces/content"
+										href="/workforces/content-creation"
 										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
 										aria-label="Learn more about the Content Creation Workforce for automated content generation"
 									>

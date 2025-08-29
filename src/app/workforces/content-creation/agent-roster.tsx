@@ -384,7 +384,7 @@ export function AgentRoster() {
 								</div>
 							</div>
 
-							{/* Agent Cards Grid */}
+							{/* Agent Cards Grid - Fenced Section with Arrows */}
 							<div className="border border-accent/30 rounded-xl p-8 bg-accent/10 dark:bg-background/50 relative">
 								<div className="flex items-center justify-between">
 									{/* Left Arrow */}
@@ -408,30 +408,39 @@ export function AgentRoster() {
 										<ChevronLeft className="w-6 h-6" />
 									</button>
 
-									{/* Cards Grid */}
+									{/* Cards Grid with padding to account for arrows */}
 									<div className="w-full px-12 py-8">
-										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 justify-items-center max-w-7xl mx-auto">
+										<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center max-w-7xl mx-auto">
 											{agents[activeTab].map((agent, index) => (
 												<Card
 													key={index}
 													onClick={() => setSelectedAgent(agent)}
-													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-6 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[400px] w-[280px]"
+													className="bg-card-background border border-[#A1BCD1] shadow-md transition-all hover:border-accent hover:shadow-lg p-5 group cursor-pointer hover:scale-[1.02] flex flex-col items-center justify-between text-center min-h-[360px] w-[260px]"
 												>
+													{/* Title */}
 													<h3 className="text-foreground text-lg font-bold leading-tight mb-2">
 														{agent.name}
 													</h3>
+
+													{/* Subtitle */}
 													<span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8">
 														{agent.role}
 													</span>
-													<div className="w-20 h-20 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
-														{agent.icon}
+
+													{/* Centered Icon */}
+													<div className="w-16 h-16 bg-[#A1BCD1]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-8">
+														<div className="scale-100">{agent.icon}</div>
 													</div>
+
+													{/* Description */}
 													<p className="text-muted-foreground text-sm mb-2 flex-1">
 														{agent.coreFunction}
 													</p>
-													<button className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
+
+													{/* Learn More Button - No background, just text */}
+													<span className="text-accent font-semibold text-sm hover:text-accent/80 transition-colors">
 														Learn More →
-													</button>
+													</span>
 												</Card>
 											))}
 										</div>

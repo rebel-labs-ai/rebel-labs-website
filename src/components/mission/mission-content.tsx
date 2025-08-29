@@ -237,7 +237,7 @@ export function MissionContent() {
 											</div>
 											<div className="mt-8">
 												<Link
-													href="/workforces/lead"
+													href="/workforces/inbound-sales"
 													className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50"
 												>
 													Explore Our Workforces
@@ -440,7 +440,7 @@ export function MissionContent() {
 											Schedule a Demo
 										</a>
 										<Link
-											href="/workforces/lead"
+											href="/workforces/inbound-sales"
 											className="inline-flex items-center justify-center rounded-md border border-primary bg-background px-8 py-3 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50"
 										>
 											Explore Workforces

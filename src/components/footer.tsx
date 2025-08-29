@@ -52,18 +52,18 @@ export function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="/workforces/lead"
+									href="/workforces/inbound-sales"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Lead Workforce
+									Inbound Sales
 								</a>
 							</li>
 							<li>
 								<a
-									href="/workforces/content"
+									href="/workforces/content-creation"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Content Workforce
+									Content Creation
 								</a>
 							</li>
 							<li>

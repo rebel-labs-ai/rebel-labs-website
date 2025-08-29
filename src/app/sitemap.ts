@@ -46,13 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.7,
 		},
 		{
-			url: `${baseUrl}/workforces/content`,
+			url: `${baseUrl}/workforces/content-creation`,
 			lastModified: currentDate,
 			changeFrequency: "monthly",
 			priority: 0.8,
 		},
 		{
-			url: `${baseUrl}/workforces/lead`,
+			url: `${baseUrl}/workforces/inbound-sales`,
 			lastModified: currentDate,
 			changeFrequency: "monthly",
 			priority: 0.8,

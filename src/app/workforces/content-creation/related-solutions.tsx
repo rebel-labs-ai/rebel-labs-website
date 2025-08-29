@@ -4,7 +4,7 @@ import { TrendingUp, Zap } from "lucide-react"
 
 const relatedSolutions = [
 	{
-		href: "/workforces/lead",
+		href: "/workforces/inbound-sales",
 		icon: <TrendingUp className="w-6 h-6 text-accent" />,
 		title: "Inbound Sales Workforce",
 		description:

@@ -120,8 +120,7 @@ export default function LabPage() {
 				{
 					"@type": "Service",
 					name: "Pipeline Intelligence System",
-					description:
-						"AI-powered pipeline monitoring and intervention system",
+					description: "AI-powered pipeline monitoring and intervention system",
 				},
 				{
 					"@type": "Service",

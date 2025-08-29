@@ -83,22 +83,60 @@ export function MethodSection() {
 		<section className="px-4">
 			<div className="max-w-6xl mx-auto">
 				{/* Section Header */}
-				<div className="text-center mb-16">
-					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-4">
+				<div className="text-center mb-8 sm:mb-16">
+					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-3 sm:mb-4">
 						Our Method
 					</span>
-					<h2 className="text-foreground text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
-					<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
 						Your workforce follows a proven, four-step protocol to ensure every
 						lead is converted with maximum efficiency and intelligence, from
 						initial contact to the final handoff.
 					</p>
 				</div>
 
-				{/* Sticky Scroll Container */}
-				<div className="relative">
+				{/* Mobile Layout - Cards with Images */}
+				<div className="block lg:hidden">
+					{methodSteps.map((step, index) => (
+						<div key={step.id} className="mb-12">
+							<div className="mb-3">
+								<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-xs border border-accent/30 inline-block">
+									{step.label}
+								</span>
+							</div>
+							<h3 className="text-xl sm:text-2xl font-bold mb-3 text-foreground">
+								{step.title}
+							</h3>
+							<p className="text-base leading-relaxed text-muted-foreground mb-6">
+								{step.description}
+							</p>
+							{/* Mobile Image - No background card, larger size */}
+							<div className="flex justify-center">
+								{/* Light mode image */}
+								<Image
+									src={`/workforces/leads/step${index + 1}.svg`}
+									alt={`${step.title} Visualization`}
+									width={500}
+									height={400}
+									className="w-full h-auto max-h-[300px] object-contain dark:hidden"
+								/>
+								{/* Dark mode image */}
+								<Image
+									src={`/workforces/leads/step${index + 1}-dark.svg`}
+									alt={`${step.title} Visualization`}
+									width={500}
+									height={400}
+									className="w-full h-auto max-h-[300px] object-contain hidden dark:block"
+								/>
+							</div>
+						</div>
+					))}
+				</div>
+
+				{/* Desktop Sticky Scroll Container */}
+				<div className="relative hidden lg:block">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 						{/* Left Column - Scrolling Text */}
 						<div>
@@ -136,7 +174,7 @@ export function MethodSection() {
 						</div>
 
 						{/* Right Column - Sticky Visual */}
-						<div className="relative hidden lg:block mt-64">
+						<div className="relative hidden lg:block mt-80 mb-32">
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[500px] w-full flex items-center justify-center">
 									{/* Step Images */}

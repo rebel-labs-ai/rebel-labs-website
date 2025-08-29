@@ -435,7 +435,7 @@ export default async function BlogPost({ params }: Props) {
 							workforces to transform their operations.
 						</p>
 						<Link
-							href="/workforces/lead"
+							href="/workforces/inbound-sales"
 							className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
 						>
 							Explore Our Solutions

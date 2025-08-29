@@ -369,120 +369,211 @@ export function AgentRosterClient({ agents }: LeadPageClientProps) {
 	)
 }
 
-// Failure Cards Interactive Section
+// Failure Cards Interactive Section - Now returns individual cards
 export function FailureCardsClient() {
 	const [expandedFailure, setExpandedFailure] = useState<number | null>(null)
 
-	const failures = [
-		{
-			id: 1,
-			icon: <Clock className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
-			title: "The Failure of Speed",
-			summary:
-				"Slow follow-up costs you the deal before the conversation even begins.",
-			details:
-				"Industry data is unequivocal: the first responder wins the deal. Every hour of delay systematically degrades the value of your marketing investment.",
-			points: [
-				"78% of customers buy from the company that responds first.",
-				"A lead is 10x less likely to convert after the first hour.",
-				"Your competitors are already engaged while you're still assigning the lead.",
-			],
-		},
-		{
-			id: 2,
-			icon: <AlertCircle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
-			title: "The Failure of Persistence & Quality",
-			summary:
-				"Inconsistent nurturing and dropped follow-ups allow the majority of your pipeline to go cold.",
-			details:
-				"The average sale requires 8-12 touchpoints, yet the average salesperson gives up after 2. This gap is where the majority of your future revenue is lost.",
-			points: [
-				"80% of sales require five or more follow-ups to close.",
-				'44% of salespeople give up after one "no."',
-				"Inconsistent messaging and context erodes brand trust with every touchpoint.",
-			],
-		},
-		{
-			id: 3,
-			icon: <Users className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
-			title: "The Failure of Scale",
-			summary:
-				"Your growth is trapped in a linear, expensive cycle of hiring more headcount to handle more leads.",
-			details:
-				"Scaling with headcount is the most expensive and least efficient way to grow. It is a model of diminishing returns due to the high costs of hiring, training, and churn.",
-			points: [
-				"The average SDR costs $75k-$90k per year, before they book a single meeting.",
-				"It takes 3-6 months for a new hire to become fully productive.",
-				"Annual SDR churn rates often exceed 30%, creating constant instability.",
-			],
-		},
-		{
-			id: 4,
-			icon: (
-				<TrendingDown className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
-			),
-			title: "The Failure of Intelligence",
-			summary:
-				"Without systemic learning, your team is forced to rely on guesswork, repeating the same mistakes.",
-			details:
-				"Without a systemic way to learn from every interaction, your team is forced to rely on gut feel and anecdotal evidence, repeating the same mistakes indefinitely.",
-			points: [
-				"Your best and worst performers are using different playbooks, with no way to codify what works.",
-				"Sales and Marketing are misaligned due to a lack of objective data on lead quality.",
-				"High-stakes strategic decisions are being made on the basis of an unreliable pipeline.",
-			],
-		},
-	]
+	const renderCard = (failure: {
+		id: number
+		title: string
+		icon: React.ReactNode
+		summary: string
+		details: string
+		points: string[]
+	}) => (
+		<Card
+			key={failure.id}
+			className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
+			onClick={() =>
+				setExpandedFailure(expandedFailure === failure.id ? null : failure.id)
+			}
+			role="button"
+			aria-expanded={expandedFailure === failure.id}
+			aria-label={`${expandedFailure === failure.id ? "Collapse" : "Expand"} details about ${failure.title}`}
+		>
+			<div className="flex items-start gap-3">
+				{failure.icon}
+				<div className="flex-1">
+					<div className="flex items-center justify-between">
+						<h3 className="text-foreground font-bold mb-2">
+							{failure.id}. {failure.title}
+						</h3>
+						<span className="text-muted-foreground text-xl" aria-hidden="true">
+							{expandedFailure === failure.id ? "−" : "+"}
+						</span>
+					</div>
+					<p className="text-muted-foreground text-sm">{failure.summary}</p>
+					{expandedFailure === failure.id && (
+						<div className="mt-4 pt-4 border-t border-red-500/20">
+							<p className="text-muted-foreground text-sm mb-3">
+								{failure.details}
+							</p>
+							<ul className="space-y-2 text-sm text-muted-foreground">
+								{failure.points.map((point, idx) => (
+									<li key={idx} className="flex items-start">
+										<span className="text-muted-foreground mr-2">•</span>
+										{point}
+									</li>
+								))}
+							</ul>
+						</div>
+					)}
+				</div>
+			</div>
+		</Card>
+	)
+
+	// For mobile, return all cards in a single column
+	const mobileView = (
+		<div className="block lg:hidden space-y-6">
+			{renderCard({
+				id: 1,
+				title: "The Failure of Speed",
+				icon: <Clock className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+				summary:
+					"Slow follow-up costs you the deal before the conversation even begins.",
+				details:
+					"Industry data is unequivocal: the first responder wins the deal. Every hour of delay systematically degrades the value of your marketing investment.",
+				points: [
+					"78% of customers buy from the company that responds first.",
+					"A lead is 10x less likely to convert after the first hour.",
+					"Your competitors are already engaged while you're still assigning the lead.",
+				],
+			})}
+			{renderCard({
+				id: 2,
+				title: "The Failure of Persistence & Quality",
+				icon: (
+					<AlertCircle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+				),
+				summary:
+					"Inconsistent nurturing and dropped follow-ups allow the majority of your pipeline to go cold.",
+				details:
+					"The average sale requires 8-12 touchpoints, yet the average salesperson gives up after 2. This gap is where the majority of your future revenue is lost.",
+				points: [
+					"80% of sales require five or more follow-ups to close.",
+					'44% of salespeople give up after one "no."',
+					"Inconsistent messaging and context erodes brand trust with every touchpoint.",
+				],
+			})}
+			{renderCard({
+				id: 3,
+				title: "The Failure of Scale",
+				icon: <Users className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+				summary:
+					"Your growth is trapped in a linear, expensive cycle of hiring more headcount to handle more leads.",
+				details:
+					"Scaling with headcount is the most expensive and least efficient way to grow. It is a model of diminishing returns due to the high costs of hiring, training, and churn.",
+				points: [
+					"The average SDR costs $75k-$90k per year, before they book a single meeting.",
+					"It takes 3-6 months for a new hire to become fully productive.",
+					"Annual SDR churn rates often exceed 30%, creating constant instability.",
+				],
+			})}
+			{renderCard({
+				id: 4,
+				title: "The Failure of Intelligence",
+				icon: (
+					<TrendingDown className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+				),
+				summary:
+					"Without systemic learning, your team is forced to rely on guesswork, repeating the same mistakes.",
+				details:
+					"Without a systemic way to learn from every interaction, your team is forced to rely on gut feel and anecdotal evidence, repeating the same mistakes indefinitely.",
+				points: [
+					"Your best and worst performers are using different playbooks, with no way to codify what works.",
+					"Sales and Marketing are misaligned due to a lack of objective data on lead quality.",
+					"High-stakes strategic decisions are being made on the basis of an unreliable pipeline.",
+				],
+			})}
+		</div>
+	)
+
+	// Desktop cards data
+	const card1 = {
+		id: 1,
+		title: "The Failure of Speed",
+		icon: <Clock className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+		summary:
+			"Slow follow-up costs you the deal before the conversation even begins.",
+		details:
+			"Industry data is unequivocal: the first responder wins the deal. Every hour of delay systematically degrades the value of your marketing investment.",
+		points: [
+			"78% of customers buy from the company that responds first.",
+			"A lead is 10x less likely to convert after the first hour.",
+			"Your competitors are already engaged while you're still assigning the lead.",
+		],
+	}
+
+	const card2 = {
+		id: 2,
+		title: "The Failure of Persistence & Quality",
+		icon: <AlertCircle className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+		summary:
+			"Inconsistent nurturing and dropped follow-ups allow the majority of your pipeline to go cold.",
+		details:
+			"The average sale requires 8-12 touchpoints, yet the average salesperson gives up after 2. This gap is where the majority of your future revenue is lost.",
+		points: [
+			"80% of sales require five or more follow-ups to close.",
+			'44% of salespeople give up after one "no."',
+			"Inconsistent messaging and context erodes brand trust with every touchpoint.",
+		],
+	}
+
+	const card3 = {
+		id: 3,
+		title: "The Failure of Scale",
+		icon: <Users className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+		summary:
+			"Your growth is trapped in a linear, expensive cycle of hiring more headcount to handle more leads.",
+		details:
+			"Scaling with headcount is the most expensive and least efficient way to grow. It is a model of diminishing returns due to the high costs of hiring, training, and churn.",
+		points: [
+			"The average SDR costs $75k-$90k per year, before they book a single meeting.",
+			"It takes 3-6 months for a new hire to become fully productive.",
+			"Annual SDR churn rates often exceed 30%, creating constant instability.",
+		],
+	}
+
+	const card4 = {
+		id: 4,
+		title: "The Failure of Intelligence",
+		icon: <TrendingDown className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />,
+		summary:
+			"Without systemic learning, your team is forced to rely on guesswork, repeating the same mistakes.",
+		details:
+			"Without a systemic way to learn from every interaction, your team is forced to rely on gut feel and anecdotal evidence, repeating the same mistakes indefinitely.",
+		points: [
+			"Your best and worst performers are using different playbooks, with no way to codify what works.",
+			"Sales and Marketing are misaligned due to a lack of objective data on lead quality.",
+			"High-stakes strategic decisions are being made on the basis of an unreliable pipeline.",
+		],
+	}
+
+	// Desktop layout - return the proper 3-column structure with left and right cards
+	const desktopView = (
+		<div className="hidden lg:grid lg:grid-cols-3 gap-6 items-center relative">
+			{/* Left Column - Cards 1 and 3 */}
+			<div className="space-y-24">
+				{renderCard(card1)}
+				{renderCard(card3)}
+			</div>
+
+			{/* Center Column - Empty space for funnel (will be added by parent) */}
+			<div></div>
+
+			{/* Right Column - Cards 2 and 4 */}
+			<div className="space-y-24">
+				{renderCard(card2)}
+				{renderCard(card4)}
+			</div>
+		</div>
+	)
 
 	return (
-		<div className="space-y-6">
-			{failures.map(failure => (
-				<Card
-					key={failure.id}
-					className="bg-card-background border-2 border-red-500/30 p-4 shadow-lg cursor-pointer transition-all hover:shadow-xl"
-					onClick={() =>
-						setExpandedFailure(
-							expandedFailure === failure.id ? null : failure.id
-						)
-					}
-					role="button"
-					aria-expanded={expandedFailure === failure.id}
-					aria-label={`${expandedFailure === failure.id ? "Collapse" : "Expand"} details about ${failure.title}`}
-				>
-					<div className="flex items-start gap-3">
-						{failure.icon}
-						<div className="flex-1">
-							<div className="flex items-center justify-between">
-								<h3 className="text-foreground font-bold mb-2">
-									{failure.id}. {failure.title}
-								</h3>
-								<span
-									className="text-muted-foreground text-xl"
-									aria-hidden="true"
-								>
-									{expandedFailure === failure.id ? "−" : "+"}
-								</span>
-							</div>
-							<p className="text-muted-foreground text-sm">{failure.summary}</p>
-							{expandedFailure === failure.id && (
-								<div className="mt-4 pt-4 border-t border-red-500/20">
-									<p className="text-muted-foreground text-sm mb-3">
-										{failure.details}
-									</p>
-									<ul className="space-y-2 text-sm text-muted-foreground">
-										{failure.points.map((point, idx) => (
-											<li key={idx} className="flex items-start">
-												<span className="text-muted-foreground mr-2">•</span>
-												{point}
-											</li>
-										))}
-									</ul>
-								</div>
-							)}
-						</div>
-					</div>
-				</Card>
-			))}
-		</div>
+		<>
+			{mobileView}
+			{desktopView}
+		</>
 	)
 }

@@ -115,14 +115,15 @@ export function RelatedSolutionsSection() {
 				</h2>
 				<div className="grid gap-6 md:grid-cols-3">
 					<Link
-						href="/workforces/content"
+						href="/workforces/content-creation"
 						className="block rounded-xl border border-accent/30 bg-card/90 p-6 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:border-accent"
 					>
 						<h3 className="text-xl font-semibold mb-2 text-foreground">
 							Content Workforce
 						</h3>
 						<p className="text-muted-foreground mb-4">
-							Generate high-quality blog posts, social media content, and marketing copy at scale with AI-powered content creation.
+							Generate high-quality blog posts, social media content, and
+							marketing copy at scale with AI-powered content creation.
 						</p>
 						<span className="text-accent font-medium inline-flex items-center">
 							Learn more →
@@ -130,14 +131,16 @@ export function RelatedSolutionsSection() {
 					</Link>
 
 					<Link
-						href="/workforces/lead"
+						href="/workforces/inbound-sales"
 						className="block rounded-xl border border-accent/30 bg-card/90 p-6 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all hover:border-accent"
 					>
 						<h3 className="text-xl font-semibold mb-2 text-foreground">
 							Inbound Sales Workforce
 						</h3>
 						<p className="text-muted-foreground mb-4">
-							Never lose an inbound lead again. Deploy an autonomous workforce that converts your raw leads into qualified, sales-ready meetings, 24/7.
+							Never lose an inbound lead again. Deploy an autonomous workforce
+							that converts your raw leads into qualified, sales-ready meetings,
+							24/7.
 						</p>
 						<span className="text-accent font-medium inline-flex items-center">
 							Learn more →
@@ -152,7 +155,8 @@ export function RelatedSolutionsSection() {
 							Workforce Lab
 						</h3>
 						<p className="text-muted-foreground mb-4">
-							Experiment with cutting-edge AI capabilities and preview upcoming workforce features in our innovation lab.
+							Experiment with cutting-edge AI capabilities and preview upcoming
+							workforce features in our innovation lab.
 						</p>
 						<span className="text-accent font-medium inline-flex items-center">
 							Explore lab →
