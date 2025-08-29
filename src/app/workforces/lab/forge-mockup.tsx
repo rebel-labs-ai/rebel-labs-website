@@ -27,7 +27,7 @@ export function ForgeMockup() {
 							<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-75" />
 							<div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse delay-150" />
 						</div>
-						<h3 className="text-xl font-bold text-foreground">The Forge</h3>
+						<span className="text-xl font-bold text-foreground">The Forge</span>
 					</div>
 					<span className="text-xs text-muted-foreground">Sprint 4 of 5</span>
 				</div>

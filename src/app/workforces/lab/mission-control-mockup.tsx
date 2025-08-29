@@ -23,9 +23,9 @@ export function MissionControlMockup() {
 				<div className="flex items-center justify-between mb-6">
 					<div className="flex items-center gap-3">
 						<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-						<h3 className="text-xl font-bold text-foreground">
+						<span className="text-xl font-bold text-foreground">
 							Mission Control
-						</h3>
+						</span>
 					</div>
 					<span className="px-2 py-1 bg-green-500/20 text-green-500 text-xs rounded-full font-bold">
 						LIVE

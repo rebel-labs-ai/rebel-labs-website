@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function Footer() {
 	return (
@@ -51,28 +52,28 @@ export function Footer() {
 						<h3 className="font-semibold text-foreground mb-4">Solutions</h3>
 						<ul className="space-y-2">
 							<li>
-								<a
-									href="/workforces/lead"
+								<Link
+									href="/workforces/inbound-sales"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Lead Workforce
-								</a>
+									Inbound Sales
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/workforces/content"
+								<Link
+									href="/workforces/content-creation"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
-									Content Workforce
-								</a>
+									Content Creation
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									href="/workforces/lab"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									The Lab
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -82,20 +83,20 @@ export function Footer() {
 						<h3 className="font-semibold text-foreground mb-4">Company</h3>
 						<ul className="space-y-2">
 							<li>
-								<a
+								<Link
 									href="/mission"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Mission
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
+								<Link
 									href="/careers"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Careers
-								</a>
+								</Link>
 							</li>
 							<li>
 								<a
@@ -115,12 +116,12 @@ export function Footer() {
 						<h3 className="font-semibold text-foreground mb-4">Resources</h3>
 						<ul className="space-y-2">
 							<li>
-								<a
+								<Link
 									href="/blog"
 									className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 								>
 									Blog
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -133,24 +134,24 @@ export function Footer() {
 							© 2024 NovoSapien. All rights reserved.
 						</p>
 						<div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
-							<a
+							<Link
 								href="/privacy"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Privacy Policy
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/terms"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Terms of Service
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/cookies"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Cookie Policy
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

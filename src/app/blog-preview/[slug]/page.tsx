@@ -5,6 +5,9 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react"
 import { notFound } from "next/navigation"
+import Breadcrumbs from "@/components/seo/Breadcrumbs"
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 // Blog posts data - in production this would come from a CMS or database
 const blogPosts = {
@@ -200,15 +203,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	}
 
 	return {
-		title: `${post.title} - NovoSapien Blog`,
+		title: `${post.title} | NovoSapien Blog`,
 		description: post.excerpt,
 		authors: [{ name: post.author }],
+		keywords: `${post.category}, AI workforces, automation, digital transformation`,
 		openGraph: {
+			type: "article",
+			locale: "en_US",
+			url: `${baseUrl}/blog-preview/${slug}`,
+			siteName: "NovoSapien",
 			title: post.title,
 			description: post.excerpt,
-			type: "article",
 			publishedTime: post.date,
 			authors: [post.author],
+			images: [
+				{
+					url: post.image || "/og-blog-post.jpg",
+					width: 1200,
+					height: 630,
+					alt: post.title,
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			site: "@novosapien",
+			creator: "@novosapien",
+			title: post.title,
+			description: post.excerpt,
+			images: [post.image || "/og-blog-post.jpg"],
+		},
+		alternates: {
+			canonical: `${baseUrl}/blog-preview/${slug}`,
+		},
+		robots: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
 		},
 	}
 }
@@ -227,8 +259,50 @@ export default async function BlogPost({ params }: Props) {
 		notFound()
 	}
 
+	// Schema markup for Article
+	const articleSchema = {
+		"@context": "https://schema.org",
+		"@type": "Article",
+		"@id": `${baseUrl}/blog-preview/${slug}#article`,
+		headline: post.title,
+		description: post.excerpt,
+		image: post.image
+			? `${baseUrl}${post.image}`
+			: `${baseUrl}/og-blog-post.jpg`,
+		datePublished: post.date,
+		dateModified: post.date,
+		author: {
+			"@type": "Person",
+			name: post.author,
+			jobTitle: post.authorRole,
+		},
+		publisher: {
+			"@type": "Organization",
+			name: "NovoSapien",
+			url: baseUrl,
+			logo: {
+				"@type": "ImageObject",
+				url: `${baseUrl}/logo.png`,
+			},
+		},
+		articleSection: post.category,
+		keywords: `${post.category}, AI workforces, automation, digital transformation`,
+		wordCount: post.content.split(" ").length,
+		url: `${baseUrl}/blog-preview/${slug}`,
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": `${baseUrl}/blog-preview/${slug}`,
+		},
+	}
+
 	return (
 		<div className="min-h-screen bg-background">
+			{/* SEO: Schema Markup */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+			/>
+
 			{/* Navigation */}
 			<Navigation />
 
@@ -237,13 +311,25 @@ export default async function BlogPost({ params }: Props) {
 				<ThemeToggle />
 			</div>
 
+			{/* SEO: Breadcrumbs (visually hidden) */}
+			<div className="sr-only">
+				<Breadcrumbs
+					items={[
+						{ name: "Home", href: "/" },
+						{ name: "Blog", href: "/blog-preview" },
+						{ name: post.title },
+					]}
+				/>
+			</div>
+
 			{/* Main Content */}
 			<article className="pt-24 sm:pt-32 pb-16 sm:pb-24">
 				<div className="max-w-4xl mx-auto px-4">
 					{/* Back Link */}
 					<Link
-						href="/blog"
-						className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-8"
+						href="/blog-preview"
+						className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-8 min-h-[48px] py-3 px-2 -ml-2"
+						aria-label="Navigate back to blog listing"
 					>
 						<ArrowLeft className="w-4 h-4 mr-2" />
 						Back to Blog
@@ -324,8 +410,8 @@ export default async function BlogPost({ params }: Props) {
 								{post.relatedPosts.map(related => (
 									<Link
 										key={related.slug}
-										href={`/blog/${related.slug}`}
-										className="group block p-6 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
+										href={`/blog-preview/${related.slug}`}
+										className="group block p-6 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors min-h-[48px]"
 									>
 										<span className="text-sm text-primary font-medium">
 											{related.category}
@@ -349,7 +435,7 @@ export default async function BlogPost({ params }: Props) {
 							workforces to transform their operations.
 						</p>
 						<Link
-							href="/workforces/lead"
+							href="/workforces/inbound-sales"
 							className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
 						>
 							Explore Our Solutions

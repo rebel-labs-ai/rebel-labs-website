@@ -307,3 +307,140 @@ h6 {
 .animate-draw-line {
 	animation: draw-line 2s ease-out forwards;
 }
+
+/* SEO and Accessibility Utilities */
+@layer utilities {
+	/* Touch target optimization for mobile (WCAG 2.5.5) */
+	.touch-target {
+		min-height: 48px;
+		min-width: 48px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Screen reader only content - visually hidden but accessible */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
+	/* Focus visible for keyboard navigation */
+	*:focus-visible {
+		outline: 2px solid hsl(var(--accent-teal));
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
+
+	/* Skip to main content link (accessibility) */
+	.skip-link {
+		position: absolute;
+		top: -40px;
+		left: 0;
+		background: hsl(var(--background));
+		color: hsl(var(--foreground));
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		z-index: 100;
+		border-radius: var(--radius);
+		font-weight: 500;
+	}
+
+	.skip-link:focus {
+		top: 0.5rem;
+		left: 0.5rem;
+	}
+
+	/* Ensure interactive elements meet minimum size (iOS/Android recommendation) */
+	button,
+	a,
+	input[type="submit"],
+	input[type="button"],
+	select,
+	textarea {
+		min-height: 44px; /* iOS minimum recommendation */
+	}
+
+	/* Preserve heading styles when tags change for SEO */
+	.preserve-h1 {
+		font-size: 3rem;
+		font-weight: 900;
+		line-height: 1;
+		letter-spacing: -0.02em;
+	}
+
+	.preserve-h2 {
+		font-size: 2.25rem;
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+	}
+
+	.preserve-h3 {
+		font-size: 1.875rem;
+		font-weight: 700;
+		line-height: 1.25;
+	}
+
+	.preserve-h4 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 1.333;
+	}
+
+	.preserve-h5 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		line-height: 1.4;
+	}
+
+	.preserve-h6 {
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	/* Print styles for better SEO and UX */
+	@media print {
+		.no-print {
+			display: none !important;
+		}
+
+		/* Ensure links are visible in print */
+		a[href]::after {
+			content: " (" attr(href) ")";
+		}
+
+		/* Page break utilities */
+		.page-break-before {
+			page-break-before: always;
+		}
+
+		.page-break-after {
+			page-break-after: always;
+		}
+
+		.avoid-page-break {
+			page-break-inside: avoid;
+		}
+	}
+
+	/* Reduced motion for accessibility */
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
