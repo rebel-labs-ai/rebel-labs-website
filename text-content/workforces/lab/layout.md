@@ -141,18 +141,21 @@ The Lab page follows a vertical flow design emphasizing custom workforce develop
 ## Visual Design Elements
 
 ### Color Usage:
+
 - **Primary Accent**: Used for badges, borders, and emphasis
 - **Card Backgrounds**: Semi-transparent with backdrop blur
 - **Hover States**: Increased border opacity and shadow depth
 - **Text Hierarchy**: Foreground for headlines, muted for descriptions
 
 ### Typography:
+
 - **Headlines**: text-2xl to text-4xl (responsive scaling)
 - **Body Text**: text-base to text-lg
 - **Badges**: text-xs to text-sm with uppercase styling
 - **Emphasis**: Bold text within descriptions for key points
 
 ### Spacing:
+
 - **Section Padding**: py-16 to py-32 (responsive)
 - **Card Padding**: p-6 to p-12 (responsive)
 - **Content Max Width**: max-w-6xl for most sections

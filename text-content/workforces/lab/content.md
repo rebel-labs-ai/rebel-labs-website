@@ -50,55 +50,69 @@ schema:
 ## Hero Section
 
 ### Badge
+
 "The Workforce Lab"
 
 ### Main Headline
+
 "Forge Your Unfair Advantage."
 
 ### Description
+
 "For the complex sales and marketing challenges that our standard workforces cannot solve, we forge your proprietary workflow into a fully autonomous operational asset."
 
 ### CTA Button
+
 "Book a Lab Scoping Session"
 
 ## Division of Labor Section
 
 ### Section Headline
+
 "The New Division of Labor."
 
 ### Section Description
+
 "The Workforce Lab is exclusively focused on solving the most complex challenges in revenue operations. Our approach is built on a simple but powerful principle: your best people direct the strategy; the workforce delivers the outcome."
 
 ### Partnership Block
 
 #### Novosapien - The Architects of the System
+
 "Novosapien provides the foundational architecture and the productized, plug-and-play Digital Workforces that form the backbone of modern revenue operations."
 
 #### Rebel Labs - The Elite Forging & Deployment Partner
+
 "Rebel Labs provides the specialized agentic engineering to both seamlessly deploy our productized solutions and to forge bespoke workforces for unique, mission-critical challenges."
 
 ### Human-AI Collaboration Section
 
 #### Philosophy Headline
+
 "Your Strategy, Autonomously Executed."
 
 #### Philosophy Description
+
 "This model is designed to liberate your most valuable asset—your human team. By providing them with a dedicated, autonomous execution layer, we free them from the operational 'how' so they can focus exclusively on the strategic 'what' and 'why'."
 
 ### Two-Column Cards
 
 #### Your Team: The Strategists
+
 "Freed from the burden of repetitive execution, your human experts are elevated to their highest purpose. They provide the strategic judgment, creative insights, and mission command that guide the entire operation."
 
 **Key Responsibilities:**
+
 - Define strategic objectives
 - Provide creative solutions
 - Make critical decisions
 
 #### The Workforce: The Operators
+
 "Your bespoke Digital Workforce operates as a tireless, autonomous execution layer. It runs the complex, high-volume workflows with perfect consistency, learning and optimizing its performance 24/7 to achieve the mission you have set."
 
 **Key Capabilities:**
+
 - Execute workflows 24/7
 - Maintain perfect consistency
 - Learn and optimize continuously
@@ -106,78 +120,99 @@ schema:
 ## Engagement Protocol Section
 
 ### Section Headline
+
 "The Engagement Protocol"
 
 ### Process Overview
+
 Three-phase protocol over 8-12 weeks
 
 ### Process Steps
 
 #### Phase One: Strategic Intent to Architectural Blueprint
+
 "We begin with an intensive discovery sprint. Our senior architects and your subject matter experts co-author the definitive architectural blueprint, defining the mission, mapping your unique workflows, and specifying the precise business outcomes."
 
 #### Phase Two: Blueprint to Functional Asset
+
 "This is the core build-out. Operating in a series of two-week engineering sprints, we forge the components of your workforce. Each sprint concludes with a joint review to demonstrate tangible progress and gather feedback, ensuring a transparent and collaborative process."
 
 #### Phase Three: Functional Asset to Full Autonomy
+
 "The final phase focuses on seamless integration and activation. We deploy the forged workforce into your live environment, handle all technical setup, and conclude with the final handover where the workforce is switched to full autonomy, ready to execute its mission."
 
 ## Art of the Possible Section
 
 ### Section Headline
+
 "The Art of the Possible."
 
 ### Section Introduction
+
 "The Lab exists to answer a simple question:"
 
 ### Key Question
+
 "What if you could..."
 
 ### Possibility Cards
 
 #### Sales Intelligence
+
 "...create a workforce that **analyzes every sales call** and customer interaction to identify patterns, predict churn, and deliver real-time coaching insights?"
 
 #### Pipeline Health
+
 "...forge a workforce that **monitors your entire sales pipeline**, identifies at-risk deals based on behavioral data, and autonomously launches intervention campaigns to save them?"
 
 #### Ideal Customer Discovery
+
 "...create an ideal customer profile discovery engine that **analyzes your best customers** and then builds a complete, autonomous outbound prospecting campaign to find more of them?"
 
 #### Marketing Optimization
+
 "...deploy a closed-loop marketing workforce that **analyzes ad spend, content performance, and lead quality** to autonomously reallocate your budget in real-time to the highest-ROI activities?"
 
 ## Final CTA Section
 
 ### Badge
+
 "Ready to Forge Your Workforce?"
 
 ### Headline
+
 "Commission Your Workforce."
 
 ### Description
+
 "The journey begins with a direct conversation. A confidential, strategic session with the leadership to determine if your challenge and our capabilities are a perfect match."
 
 ### CTA Button
+
 "Book a Lab Scoping Session"
 
 ### Powered By
+
 "Novosapien × Rebel Labs"
 
 ## Related Solutions Section
 
 ### Section Headline
+
 "Explore Our Other AI Workforces"
 
 ### Section Description
+
 "Discover how our suite of specialized AI workforces can transform every aspect of your business operations."
 
 ### Related Workforce Cards
 
 #### Content Workforce
+
 "Generate high-quality blog posts, social media content, and marketing copy at scale with AI-powered content creation."
 
 #### Inbound Sales Workforce
+
 "Never lose an inbound lead again. Deploy an autonomous AI workforce that converts raw leads into qualified meetings 24/7."
 
 ## FAQ Section
@@ -217,6 +252,7 @@ A: The Lab is ideal if you have a complex, high-value workflow that's currently 
 ## Schema Data (for SEO)
 
 The page includes structured data for:
+
 - Service schema for custom AI workforce development
 - Organization schema for Novosapien and Rebel Labs partnership
 - FAQ schema for all questions and answers

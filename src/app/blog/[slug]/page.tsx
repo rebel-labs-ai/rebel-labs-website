@@ -48,30 +48,6 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   }
 }`
 
-// Fallback post for preview
-const fallbackPost = {
-	_id: "1",
-	title: "The Rise of Autonomous Digital Workforces",
-	slug: { current: "rise-of-autonomous-digital-workforces" },
-	excerpt:
-		"Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
-	body: [
-		{
-			_type: "block",
-			children: [
-				{
-					text: "This is a preview post. Connect your Sanity CMS to display real content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-				},
-			],
-		},
-	],
-	author: "Sarah Chen",
-	category: "AI & Automation",
-	publishedAt: "2024-12-15",
-	estimatedReadTime: 5,
-	relatedPosts: [],
-}
-
 // Generate metadata for SEO
 export async function generateMetadata({
 	params,
@@ -79,17 +55,12 @@ export async function generateMetadata({
 	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
 	const { slug } = await params
-	
+
 	let post: SanityDocument | null = null
 	try {
 		post = await client.fetch<SanityDocument>(POST_QUERY, { slug })
 	} catch (error) {
 		console.error("Error fetching post for metadata:", error)
-	}
-
-	// Use fallback if no post found
-	if (!post && slug === "rise-of-autonomous-digital-workforces") {
-		post = fallbackPost
 	}
 
 	if (!post) return { title: "Post Not Found" }
@@ -143,11 +114,11 @@ export async function generateStaticParams() {
 		const posts = await client.fetch<SanityDocument[]>(
 			`*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`
 		)
-		
+
 		// Include fallback post slug
 		return [
 			...posts.map(post => ({ slug: post.slug })),
-			{ slug: "rise-of-autonomous-digital-workforces" }
+			{ slug: "rise-of-autonomous-digital-workforces" },
 		]
 	} catch (error) {
 		console.error("Error generating static params:", error)
@@ -164,27 +135,20 @@ export default async function PostPage({
 	params: Promise<{ slug: string }>
 }) {
 	const { slug } = await params
-	
+
 	let post: SanityDocument | null = null
-	let useFallback = false
-	
+
 	try {
 		post = await client.fetch<SanityDocument>(POST_QUERY, { slug })
 	} catch (error) {
 		console.error("Error fetching post:", error)
 	}
 
-	// Use fallback for demo
-	if (!post && slug === "rise-of-autonomous-digital-workforces") {
-		post = fallbackPost
-		useFallback = true
-	}
-
 	if (!post) {
 		notFound()
 	}
 
-	const postImageUrl = post.image && !useFallback
+	const postImageUrl = post.image
 		? urlFor(post.image).width(1200).height(630).url()
 		: null
 
@@ -258,14 +222,6 @@ export default async function PostPage({
 						Back to Blog
 					</Link>
 
-					{useFallback && (
-						<div className="mb-6 p-4 bg-accent/10 border border-accent/30 rounded-lg">
-							<p className="text-sm text-muted-foreground">
-								Preview mode: This is a sample post. Connect your Sanity CMS to display real content.
-							</p>
-						</div>
-					)}
-
 					<article>
 						{/* Article Header */}
 						<header className="mb-12">
@@ -328,8 +284,8 @@ export default async function PostPage({
 						{/* Article Body */}
 						<div className="prose prose-lg dark:prose-invert max-w-none mb-12">
 							{Array.isArray(post.body) && (
-								<PortableText 
-									value={post.body} 
+								<PortableText
+									value={post.body}
 									components={portableTextComponents}
 								/>
 							)}
@@ -338,7 +294,9 @@ export default async function PostPage({
 						{/* Related Posts */}
 						{post.relatedPosts && post.relatedPosts.length > 0 && (
 							<section className="mt-16 pt-12 border-t border-accent/20">
-								<h2 className="text-3xl font-bold text-foreground mb-8">Related Articles</h2>
+								<h2 className="text-3xl font-bold text-foreground mb-8">
+									Related Articles
+								</h2>
 								<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 									{post.relatedPosts.map(
 										(relatedPost: {
@@ -347,7 +305,7 @@ export default async function PostPage({
 											category: string
 											title: string
 											excerpt: string
-											image: any
+											image?: { alt?: string; [key: string]: unknown }
 											author: string
 											publishedAt: string
 											estimatedReadTime: number
@@ -360,7 +318,14 @@ export default async function PostPage({
 													{/* Post Image */}
 													<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
 														<Image
-															src={relatedPost.image ? urlFor(relatedPost.image).width(400).height(300).url() : "/og-blog-post.jpg"}
+															src={
+																relatedPost.image
+																	? urlFor(relatedPost.image)
+																			.width(400)
+																			.height(300)
+																			.url()
+																	: "/og-blog-post.jpg"
+															}
 															alt={relatedPost.title}
 															fill
 															className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -401,7 +366,9 @@ export default async function PostPage({
 
 					{/* CTA Section */}
 					<div className="mt-16 p-8 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl border border-accent/20">
-						<h3 className="text-2xl font-bold mb-4">Explore Our AI Workforces</h3>
+						<h3 className="text-2xl font-bold mb-4">
+							Explore Our AI Workforces
+						</h3>
 						<p className="text-muted-foreground mb-6">
 							Ready to transform your business with autonomous digital workers?
 						</p>
@@ -413,9 +380,7 @@ export default async function PostPage({
 								</Button>
 							</Link>
 							<Link href="/contact">
-								<Button variant="outline">
-									Get in Touch
-								</Button>
+								<Button variant="outline">Get in Touch</Button>
 							</Link>
 						</div>
 					</div>

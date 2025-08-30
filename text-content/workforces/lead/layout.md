@@ -111,17 +111,20 @@
 ### Text Element Categories:
 
 #### Short Text Elements (1-10 words)
+
 - Navigation items: 8 items
 - Button labels: 6 buttons
 - Section badges: 5 badges
 - Metric values: 4 metrics
 
 #### Medium Text Elements (10-50 words)
+
 - Hero headline and description: ~35 words
 - Section headers: ~15-25 words each
 - Agent card summaries: ~20-30 words each
 
 #### Long Text Elements (50+ words)
+
 - Section descriptions: 60-100 words each
 - Agent detail modals: 150-200 words each
 - Failure explanations: 80-120 words each

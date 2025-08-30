@@ -1,7 +1,7 @@
 ---
 title: "Stop Managing Tools, Start Scaling Revenue | Novosapien"
 description: "Deploy digital workforces into your business to generate revenue on autopilot. Transform your operations with AI automation that delivers measurable outcomes 24/7."
-keywords: 
+keywords:
   - "digital workforce"
   - "AI automation"
   - "revenue operations"

@@ -83,6 +83,7 @@
 ### Text Element Categories:
 
 #### Main Headlines (6 sections)
+
 - Hero headline: 7 words
 - Protocol section title: 5 words
 - Team section title: 6 words
@@ -91,6 +92,7 @@
 - Final CTA title: 5 words
 
 #### Major Text Blocks
+
 - Hero description: 21 words
 - Protocol intro: 30 words
 - Team intro: 29 words
@@ -99,12 +101,14 @@
 - Final CTA description: 24 words
 
 #### Protocol Stage Descriptions
+
 - Stage 1: 43 words
 - Stage 2: 44 words
 - Stage 3: 43 words
 - Stage 4: 45 words
 
 #### Agent Information (per agent average)
+
 - Core function: 20-30 words
 - Introduction quote: 20-35 words
 - Responsibilities: 3 bullet points (10-15 words each)

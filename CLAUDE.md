@@ -30,6 +30,7 @@ This is a Next.js 15 application using the App Router with a complete design sys
 ### Environment Configuration
 
 Create a `.env.local` file with:
+
 ```
 NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id_here  # Defaults to "3nnkhkhz" if not set
 NEXT_PUBLIC_SANITY_DATASET=production
@@ -115,12 +116,14 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ### Sanity CMS Integration
 
 **Content Management**:
+
 - Blog posts are managed through Sanity CMS
 - Client configured in `src/sanity/client.ts` with image URL builder
 - Portable Text components in `src/components/portable-text-components.tsx` handle rich content rendering
 - Blog pages fetch content dynamically with Next.js caching (CDN disabled for fresh content)
 
 **Image Handling**:
+
 - Sanity images use the `urlFor()` helper for optimization
 - External image domains configured in `next.config.ts`: `cdn.sanity.io`, `novosapien.ai`
 

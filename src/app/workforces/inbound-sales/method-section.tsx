@@ -84,7 +84,6 @@ export function MethodSection() {
 			<div className="max-w-6xl mx-auto">
 				{/* Section Header */}
 				<div className="text-left sm:text-center mb-8 sm:mb-16">
-
 					<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>

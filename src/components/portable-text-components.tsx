@@ -7,8 +7,9 @@ export const portableTextComponents: PortableTextComponents = {
 	types: {
 		image: ({ value }) => {
 			// Check for different possible image data structures
-			const hasAsset = value?.asset?._ref || value?.asset?._id || value?.asset?.url
-			
+			const hasAsset =
+				value?.asset?._ref || value?.asset?._id || value?.asset?.url
+
 			if (!hasAsset && !value?._type) {
 				return null
 			}
@@ -28,7 +29,7 @@ export const portableTextComponents: PortableTextComponents = {
 						.auto("format")
 						.url()
 				}
-			} catch (error) {
+			} catch {
 				return null
 			}
 
@@ -43,7 +44,7 @@ export const portableTextComponents: PortableTextComponents = {
 							className="w-full h-auto object-cover"
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
 							loading="lazy"
-							unoptimized={imageUrl.includes('cdn.sanity.io')}
+							unoptimized={imageUrl.includes("cdn.sanity.io")}
 						/>
 					</div>
 					{value.caption && (
@@ -57,9 +58,11 @@ export const portableTextComponents: PortableTextComponents = {
 	},
 	marks: {
 		link: ({ children, value }) => {
-			const rel = !value.href?.startsWith("/") ? "noreferrer noopener" : undefined
+			const rel = !value.href?.startsWith("/")
+				? "noreferrer noopener"
+				: undefined
 			const target = !value.href?.startsWith("/") ? "_blank" : undefined
-			
+
 			return (
 				<Link
 					href={value.href}
@@ -74,9 +77,7 @@ export const portableTextComponents: PortableTextComponents = {
 		strong: ({ children }) => (
 			<strong className="font-semibold text-foreground">{children}</strong>
 		),
-		em: ({ children }) => (
-			<em className="italic">{children}</em>
-		),
+		em: ({ children }) => <em className="italic">{children}</em>,
 		code: ({ children }) => (
 			<code className="px-1.5 py-0.5 rounded-md bg-muted text-sm font-mono">
 				{children}
@@ -85,22 +86,34 @@ export const portableTextComponents: PortableTextComponents = {
 	},
 	block: {
 		h1: ({ children }) => (
-			<h1 className="text-4xl font-bold mt-12 mb-6 text-foreground">{children}</h1>
+			<h1 className="text-4xl font-bold mt-12 mb-6 text-foreground">
+				{children}
+			</h1>
 		),
 		h2: ({ children }) => (
-			<h2 className="text-3xl font-bold mt-10 mb-5 text-foreground">{children}</h2>
+			<h2 className="text-3xl font-bold mt-10 mb-5 text-foreground">
+				{children}
+			</h2>
 		),
 		h3: ({ children }) => (
-			<h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">{children}</h3>
+			<h3 className="text-2xl font-semibold mt-8 mb-4 text-foreground">
+				{children}
+			</h3>
 		),
 		h4: ({ children }) => (
-			<h4 className="text-xl font-semibold mt-6 mb-3 text-foreground">{children}</h4>
+			<h4 className="text-xl font-semibold mt-6 mb-3 text-foreground">
+				{children}
+			</h4>
 		),
 		h5: ({ children }) => (
-			<h5 className="text-lg font-semibold mt-5 mb-2 text-foreground">{children}</h5>
+			<h5 className="text-lg font-semibold mt-5 mb-2 text-foreground">
+				{children}
+			</h5>
 		),
 		h6: ({ children }) => (
-			<h6 className="text-base font-semibold mt-4 mb-2 text-foreground">{children}</h6>
+			<h6 className="text-base font-semibold mt-4 mb-2 text-foreground">
+				{children}
+			</h6>
 		),
 		normal: ({ children }) => (
 			<p className="mb-6 leading-relaxed text-foreground/90">{children}</p>

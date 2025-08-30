@@ -88,60 +88,13 @@ const POSTS_QUERY = `*[
 // Revalidate every 60 seconds
 export const revalidate = 60
 
-// Fallback posts for preview when no Sanity posts exist
-const fallbackPosts = [
-	{
-		_id: "1",
-		title: "The Rise of Autonomous Digital Workforces",
-		slug: { current: "rise-of-autonomous-digital-workforces" },
-		excerpt:
-			"Explore how AI-powered workforces are transforming the way businesses operate, from lead generation to customer service.",
-		author: "Sarah Chen",
-		publishedAt: "2024-12-15",
-		estimatedReadTime: 5,
-		category: "AI & Automation",
-		featured: true,
-	},
-	{
-		_id: "2",
-		title: "Building Scalable Sales Teams with AI Agents",
-		slug: { current: "building-scalable-sales-teams" },
-		excerpt:
-			"Learn how companies are achieving 3.5x conversion rates by deploying intelligent sales automation systems.",
-		author: "Michael Rodriguez",
-		publishedAt: "2024-12-12",
-		estimatedReadTime: 8,
-		category: "Sales",
-		featured: false,
-	},
-	{
-		_id: "3",
-		title: "The Future of Content Creation: AI Workforces",
-		slug: { current: "future-content-creation-ai-workforces" },
-		excerpt:
-			"Discover how AI content workforces are revolutionizing marketing departments and creative agencies worldwide.",
-		author: "Emily Watson",
-		publishedAt: "2024-12-10",
-		estimatedReadTime: 6,
-		category: "Content",
-		featured: false,
-	},
-]
-
 export default async function BlogPage() {
 	let posts: SanityDocument[] = []
-	let useFallback = false
 
 	try {
 		posts = await client.fetch<SanityDocument[]>(POSTS_QUERY)
-		if (posts.length === 0) {
-			posts = fallbackPosts
-			useFallback = true
-		}
 	} catch (error) {
 		console.error("Error fetching posts:", error)
-		posts = fallbackPosts
-		useFallback = true
 	}
 
 	const featuredPost = posts.find(post => post.featured)
@@ -211,15 +164,9 @@ export default async function BlogPage() {
 							AI Insights & Innovation
 						</h1>
 						<p className="text-xl text-muted-foreground max-w-3xl">
-							Explore the latest trends in AI workforces, automation strategies, and digital transformation
+							Explore the latest trends in AI workforces, automation strategies,
+							and digital transformation
 						</p>
-						{useFallback && (
-							<div className="mt-4 p-4 bg-accent/10 border border-accent/30 rounded-lg">
-								<p className="text-sm text-muted-foreground">
-									Preview mode: Showing sample posts. Connect your Sanity CMS to display real content.
-								</p>
-							</div>
-						)}
 					</div>
 
 					{/* Featured Post */}
@@ -230,7 +177,14 @@ export default async function BlogPage() {
 									{/* Featured Image */}
 									<div className="relative h-64 lg:h-full bg-gradient-to-br from-accent/20 to-accent/10">
 										<Image
-											src={featuredPost.image ? urlFor(featuredPost.image).width(800).height(600).url() : "/og-blog.jpg"}
+											src={
+												featuredPost.image
+													? urlFor(featuredPost.image)
+															.width(800)
+															.height(600)
+															.url()
+													: "/og-blog.jpg"
+											}
 											alt={featuredPost.title}
 											fill
 											className="object-cover"
@@ -261,10 +215,12 @@ export default async function BlogPage() {
 												</span>
 												<span className="flex items-center gap-1">
 													<Calendar className="w-4 h-4" />
-													{new Date(featuredPost.publishedAt).toLocaleDateString("en-US", {
+													{new Date(
+														featuredPost.publishedAt
+													).toLocaleDateString("en-US", {
 														month: "long",
 														day: "numeric",
-														year: "numeric"
+														year: "numeric",
 													})}
 												</span>
 												{featuredPost.estimatedReadTime && (
@@ -295,7 +251,11 @@ export default async function BlogPage() {
 									{/* Post Image */}
 									<div className="relative h-48 bg-gradient-to-br from-accent/20 to-accent/10 overflow-hidden">
 										<Image
-											src={post.image ? urlFor(post.image).width(400).height(300).url() : "/og-blog.jpg"}
+											src={
+												post.image
+													? urlFor(post.image).width(400).height(300).url()
+													: "/og-blog.jpg"
+											}
 											alt={post.title}
 											fill
 											className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -338,10 +298,13 @@ export default async function BlogPage() {
 											</div>
 											<span className="flex items-center gap-1">
 												<Calendar className="w-3 h-3" />
-												{new Date(post.publishedAt).toLocaleDateString("en-US", {
-													month: "short",
-													day: "numeric"
-												})}
+												{new Date(post.publishedAt).toLocaleDateString(
+													"en-US",
+													{
+														month: "short",
+														day: "numeric",
+													}
+												)}
 											</span>
 										</div>
 
@@ -359,17 +322,16 @@ export default async function BlogPage() {
 					</div>
 
 					{/* Empty State */}
-					{posts.length === 0 && !useFallback && (
+					{posts.length === 0 && (
 						<div className="text-center py-16">
 							<div className="max-w-md mx-auto">
 								<h3 className="text-2xl font-bold mb-4">No posts yet</h3>
 								<p className="text-muted-foreground mb-8">
-									Check back soon for insights on AI workforces and automation strategies.
+									Check back soon for insights on AI workforces and automation
+									strategies.
 								</p>
 								<Link href="/">
-									<Button variant="outline">
-										Return Home
-									</Button>
+									<Button variant="outline">Return Home</Button>
 								</Link>
 							</div>
 						</div>
