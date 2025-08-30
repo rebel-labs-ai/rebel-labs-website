@@ -72,7 +72,8 @@ const HOME_POSTS_QUERY = `*[
   excerpt,
   author-> {
     name,
-    slug
+    slug,
+    image
   },
   category,
   publishedAt,

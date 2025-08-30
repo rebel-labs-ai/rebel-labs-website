@@ -50,11 +50,10 @@ export function SimpleBlogSection({ posts }: SimpleBlogSectionProps) {
 						Latest Insights
 					</span>
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
-						Learn from the AI Revolution
+						Learn More About Digital Workforces
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
-						Explore insights on AI workforces, automation strategies, and
-						digital transformation from industry experts
+						Explore insights on digital workforces, how they work, and how they can transform your business
 					</p>
 				</div>
 
@@ -103,32 +102,45 @@ export function SimpleBlogSection({ posts }: SimpleBlogSectionProps) {
 									</p>
 
 									{/* Meta */}
-									<div className="flex items-center justify-between text-xs text-muted-foreground">
-										<div className="flex items-center gap-3">
-											{post.author && (
-												<span className="flex items-center gap-1">
-													<User className="w-3 h-3" />
-													{post.author.slug ? (
-														<Link
-															href={`/author/${post.author.slug.current}`}
-															className="hover:text-accent transition-colors"
-														>
-															{post.author.name}
-														</Link>
-													) : (
-														post.author.name
-													)}
-												</span>
-											)}
-											{post.estimatedReadTime && (
-												<span className="flex items-center gap-1">
-													<Clock className="w-3 h-3" />
-													{post.estimatedReadTime} min
-												</span>
-											)}
-										</div>
-										<span className="flex items-center gap-1">
-											<Calendar className="w-3 h-3" />
+									<div className="flex items-center gap-2.5 text-xs text-muted-foreground">
+										{post.author && (
+											<>
+												{post.author.image ? (
+													<div className="relative w-5 h-5 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
+														<Image
+															src={urlFor(post.author.image).width(40).height(40).url()}
+															alt={post.author.name}
+															fill
+															className="object-cover"
+														/>
+													</div>
+												) : (
+													<div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+														<User className="w-3 h-3" />
+													</div>
+												)}
+												{post.author.slug ? (
+													<Link
+														href={`/author/${post.author.slug.current}`}
+														className="hover:text-accent transition-colors"
+													>
+														{post.author.name}
+													</Link>
+												) : (
+													<span>{post.author.name}</span>
+												)}
+											</>
+										)}
+										{post.author && post.estimatedReadTime && (
+											<span className="text-muted-foreground/50">•</span>
+										)}
+										{post.estimatedReadTime && (
+											<span>{post.estimatedReadTime} min</span>
+										)}
+										{(post.author || post.estimatedReadTime) && (
+											<span className="text-muted-foreground/50">•</span>
+										)}
+										<span>
 											{new Date(post.publishedAt).toLocaleDateString("en-US", {
 												month: "short",
 												day: "numeric",

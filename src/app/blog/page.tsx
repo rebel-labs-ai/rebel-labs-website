@@ -15,9 +15,9 @@ import { Metadata } from "next"
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
-	title: "AI Insights & Automation Blog | NovoSapien",
+	title: "NovoSapien Blog | AI Workforces & AI Employees for Sales and Marketing",
 	description:
-		"Stay updated with the latest insights on AI workforces, automation strategies, and digital transformation. Learn how to scale your business with intelligent automation.",
+		"Explore the latest trends in AI workforces and AI employees for sales and marketing. Learn how to scale your business with intelligent automation.",
 	keywords: [
 		"AI workforces",
 		"automation",
@@ -96,7 +96,8 @@ const POSTS_QUERY = `*[
   excerpt,
   author-> {
     name,
-    slug
+    slug,
+    image
   },
   category,
   publishedAt,
@@ -224,7 +225,7 @@ export default async function BlogPage({
 					{/* Page Header - Centered */}
 					<div className="mb-12 text-center">
 						<h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-							NovoSapien Blog
+							Novosapien Blog
 						</h1>
 						<p className="text-xl text-muted-foreground max-w-3xl mx-auto">
 							Explore the latest trends in AI workforces and AI employees for sales and marketing
@@ -277,40 +278,51 @@ export default async function BlogPage({
 										<p className="text-muted-foreground text-lg mb-6">
 											{featuredPost.excerpt}
 										</p>
-										<div className="flex items-center justify-between mb-6">
-											<div className="flex items-center gap-4 text-sm text-muted-foreground">
-												{featuredPost.author && (
-													<span className="flex items-center gap-1">
-														<User className="w-4 h-4" />
-														{featuredPost.author.slug ? (
-															<Link
-																href={`/author/${featuredPost.author.slug.current}`}
-																className="hover:text-accent transition-colors"
-															>
-																{featuredPost.author.name}
-															</Link>
-														) : (
-															featuredPost.author.name
-														)}
-													</span>
-												)}
-												<span className="flex items-center gap-1">
-													<Calendar className="w-4 h-4" />
-													{new Date(
-														featuredPost.publishedAt
-													).toLocaleDateString("en-US", {
-														month: "long",
-														day: "numeric",
-														year: "numeric",
-													})}
-												</span>
-												{featuredPost.estimatedReadTime && (
-													<span className="flex items-center gap-1">
-														<Clock className="w-4 h-4" />
-														{featuredPost.estimatedReadTime} min read
-													</span>
-												)}
-											</div>
+										<div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
+											{featuredPost.author && (
+												<>
+													{featuredPost.author.image ? (
+														<div className="relative w-6 h-6 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
+															<Image
+																src={urlFor(featuredPost.author.image).width(48).height(48).url()}
+																alt={featuredPost.author.name}
+																fill
+																className="object-cover"
+															/>
+														</div>
+													) : (
+														<div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+															<User className="w-4 h-4" />
+														</div>
+													)}
+													{featuredPost.author.slug ? (
+														<Link
+															href={`/author/${featuredPost.author.slug.current}`}
+															className="hover:text-accent transition-colors"
+														>
+															{featuredPost.author.name}
+														</Link>
+													) : (
+														<span>{featuredPost.author.name}</span>
+													)}
+												</>
+											)}
+											{featuredPost.author && featuredPost.estimatedReadTime && (
+												<span className="text-muted-foreground/50">•</span>
+											)}
+											{featuredPost.estimatedReadTime && (
+												<span>{featuredPost.estimatedReadTime} min read</span>
+											)}
+											{(featuredPost.author || featuredPost.estimatedReadTime) && (
+												<span className="text-muted-foreground/50">•</span>
+											)}
+											<span>
+												{new Date(featuredPost.publishedAt).toLocaleDateString("en-US", {
+													month: "long",
+													day: "numeric",
+													year: "numeric",
+												})}
+											</span>
 										</div>
 										<Link href={`/blog/${featuredPost.slug.current}`}>
 											<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30">
@@ -368,32 +380,45 @@ export default async function BlogPage({
 											</p>
 
 											{/* Meta */}
-											<div className="flex items-center justify-between text-xs text-muted-foreground">
-												<div className="flex items-center gap-3">
-													{post.author && (
-														<span className="flex items-center gap-1">
-															<User className="w-3 h-3" />
-															{post.author.slug ? (
-																<Link
-																	href={`/author/${post.author.slug.current}`}
-																	className="hover:text-accent transition-colors"
-																>
-																	{post.author.name}
-																</Link>
-															) : (
-																post.author.name
-															)}
-														</span>
-													)}
-													{post.estimatedReadTime && (
-														<span className="flex items-center gap-1">
-															<Clock className="w-3 h-3" />
-															{post.estimatedReadTime} min
-														</span>
-													)}
-												</div>
-												<span className="flex items-center gap-1">
-													<Calendar className="w-3 h-3" />
+											<div className="flex items-center gap-2.5  max-w-full text-xs text-muted-foreground">
+												{post.author && (
+													<>
+														{post.author.image ? (
+															<div className="relative w-5 h-5 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
+																<Image
+																	src={urlFor(post.author.image).width(40).height(40).url()}
+																	alt={post.author.name}
+																	fill
+																	className="object-cover"
+																/>
+															</div>
+														) : (
+															<div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+																<User className="w-3 h-3" />
+															</div>
+														)}
+														{post.author.slug ? (
+															<Link
+																href={`/author/${post.author.slug.current}`}
+																className="hover:text-accent transition-colors"
+															>
+																{post.author.name}
+															</Link>
+														) : (
+															<span>{post.author.name}</span>
+														)}
+													</>
+												)}
+												{post.author && post.estimatedReadTime && (
+													<span className="text-muted-foreground/50">•</span>
+												)}
+												{post.estimatedReadTime && (
+													<span>{post.estimatedReadTime} min</span>
+												)}
+												{(post.author || post.estimatedReadTime) && (
+													<span className="text-muted-foreground/50">•</span>
+												)}
+												<span>
 													{new Date(post.publishedAt).toLocaleDateString(
 														"en-US",
 														{

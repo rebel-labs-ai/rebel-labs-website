@@ -15,6 +15,22 @@ import { portableTextComponents } from "@/components/portable-text-components"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
+// Helper function to get human-readable category label
+function getCategoryLabel(category: string): string {
+	const categoryMap: Record<string, string> = {
+		product: "Product Updates",
+		"case-studies": "Case Studies",
+		"sales-marketing": "Sales & Marketing",
+		"content-ai-creation": "Content & AI Creation",
+		"ai-automation": "AI & Automation",
+		"future-of-work": "Future of Work",
+		"guides-tutorials": "Guides & Tutorials",
+		"news-updates": "News & Updates",
+		"research-data": "Research & Data",
+	}
+	return categoryMap[category] || category
+}
+
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   _id,
   title,
@@ -256,7 +272,7 @@ export default async function PostPage({
 							{/* Category Badge */}
 							<div className="mb-4">
 								<span className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold border border-accent/30">
-									{post.category}
+									{getCategoryLabel(post.category)}
 								</span>
 							</div>
 
@@ -273,11 +289,30 @@ export default async function PostPage({
 							)}
 
 							{/* Meta Information */}
-							<div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground pb-8 border-b border-accent/20">
-								<span className="flex items-center gap-2">
-									<User className="w-4 h-4" />
-									{post.author?.name}
-								</span>
+							<div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pb-8 border-b border-accent/20">
+								{post.author && (
+									<Link 
+										href={`/author/${post.author.slug?.current || ''}`}
+										className="flex items-center gap-2 hover:text-accent transition-colors"
+									>
+										{post.author.image ? (
+											<div className="relative w-8 h-8 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
+												<Image
+													src={urlFor(post.author.image).width(64).height(64).url()}
+													alt={post.author.name}
+													fill
+													className="object-cover"
+												/>
+											</div>
+										) : (
+											<div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+												<User className="w-4 h-4" />
+											</div>
+										)}
+										<span>{post.author.name}</span>
+									</Link>
+								)}
+								<span className="text-muted-foreground/50">•</span>
 								<span className="flex items-center gap-2">
 									<Calendar className="w-4 h-4" />
 									{new Date(post.publishedAt).toLocaleDateString("en-US", {
@@ -287,10 +322,13 @@ export default async function PostPage({
 									})}
 								</span>
 								{post.estimatedReadTime && (
-									<span className="flex items-center gap-2">
-										<Clock className="w-4 h-4" />
-										{post.estimatedReadTime} min read
-									</span>
+									<>
+										<span className="text-muted-foreground/50">•</span>
+										<span className="flex items-center gap-2">
+											<Clock className="w-4 h-4" />
+											{post.estimatedReadTime} min read
+										</span>
+									</>
 								)}
 							</div>
 						</header>
@@ -386,7 +424,7 @@ export default async function PostPage({
 													<div className="p-5">
 														<div className="flex items-center gap-2 mb-2">
 															<span className="text-xs text-accent font-semibold">
-																{relatedPost.category}
+																{getCategoryLabel(relatedPost.category)}
 															</span>
 														</div>
 														<h3 className="font-bold text-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
