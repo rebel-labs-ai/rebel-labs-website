@@ -26,7 +26,7 @@ export function HeroSection() {
 			<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 			{/* Hero Content */}
-			<section className="pt-24 sm:pt-32 pb-24 px-4 relative">
+			<section className="pt-20 sm:pt-32 pb-24 px-4 relative">
 				<div className="max-w-5xl mx-auto relative z-10 mt-36">
 					<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-12">
 						<div className="text-center mb-4 sm:mb-8">

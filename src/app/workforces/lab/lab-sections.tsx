@@ -13,7 +13,7 @@ import {
 // Hero Section - Server Component for SEO
 export function HeroSection() {
 	return (
-		<section className="pt-48 sm:pt-32 pb-24 px-4 relative">
+		<section className="pt-40 sm:pt-32 pb-24 px-4 relative">
 			<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
 				<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
 					<div className="text-center mb-8">

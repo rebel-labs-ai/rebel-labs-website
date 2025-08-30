@@ -383,7 +383,7 @@ export default function LeadWorkforcePage() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40 via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Part 1.A - The Promise (Hero) */}
-				<section className="pt-48 sm:pt-32 pb-24 px-4 relative">
+				<section className="pt-40 sm:pt-32 pb-24 px-4 relative">
 					<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
 						<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
 							<div className="text-center mb-6 sm:mb-8">
