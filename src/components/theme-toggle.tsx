@@ -17,7 +17,7 @@ export function ThemeToggle() {
 	}
 
 	return (
-		<div className="fixed top-4 right-4 z-50">
+		<div className="fixed top-4 right-4 z-50 hidden sm:block">
 			<div className="backdrop-blur-sm rounded-lg p-0.5 border border-accent bg-background/80 dark:bg-card/80">
 				<Button
 					variant="ghost"

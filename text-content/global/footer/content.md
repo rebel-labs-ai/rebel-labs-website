@@ -1,3 +1,22 @@
+---
+title: "Footer Content"
+description: "Global footer content for Novosapien website"
+component: "Footer"
+type: "global"
+keywords:
+  - "footer"
+  - "site links"
+  - "company information"
+  - "legal links"
+schema:
+  type: "WPFooter"
+  name: "Site Footer"
+  copyrightYear: 2024
+  copyrightHolder:
+    type: "Organization"
+    name: "Novosapien"
+---
+
 # Footer Component Text Content
 
 ## Company Information Section

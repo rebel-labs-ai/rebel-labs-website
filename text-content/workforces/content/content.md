@@ -1,3 +1,45 @@
+---
+title: "Content Creation Workforce | AI Content Generation at Scale | Novosapien"
+description: "Deploy an autonomous content workforce that produces high-quality content across all channels 24/7. Scale your content marketing 10x with AI-powered creation and optimization."
+keywords:
+  - "AI content creation"
+  - "content automation"
+  - "content workforce"
+  - "automated content generation"
+  - "AI content marketing"
+  - "content production at scale"
+  - "blog automation"
+  - "social media automation"
+  - "content optimization AI"
+  - "autonomous content team"
+openGraph:
+  title: "Content Creation Workforce - Scale Your Content 10x"
+  description: "Deploy an autonomous workforce that produces consistent, high-quality content across all channels. Transform your content marketing with AI."
+  type: "website"
+  image: "/og-content-workforce.jpg"
+  url: "https://novosapien.ai/workforces/content-creation"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "AI Content Creation Workforce"
+  description: "Produce high-quality content at scale. Deploy an autonomous workforce that creates, optimizes, and distributes content 24/7."
+  image: "/og-content-workforce.jpg"
+canonical: "https://novosapien.ai/workforces/content-creation"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "Service"
+  name: "Content Creation Workforce"
+  description: "Autonomous AI workforce for content generation and distribution"
+  provider:
+    type: "Organization"
+    name: "Novosapien"
+  serviceType: "Content Marketing Automation"
+---
+
 # Content Creation Workforce Page - All Text Content
 
 ## Page Metadata

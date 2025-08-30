@@ -151,10 +151,39 @@ MissionPage
 - **Entrance Animations**: Staggered opacity and transform animations
 - **Scroll Interactions**: Section-based scroll tracking and smooth navigation
 
-## Content Organization Principles
+## Text Content Metrics
 
-1. **Problem-Solution Narrative**: Structured storytelling from problem identification to solution presentation
-2. **Visual Hierarchy**: Clear heading sizes (text-5xl to text-2xl) with consistent spacing
-3. **Progressive Disclosure**: Information complexity increases through sections
-4. **Call-to-Action Progression**: Multiple touchpoints leading to final CTA section
-5. **Theme Consistency**: Consistent use of accent colors, card styles, and typography throughout
+### Word Count by Section:
+
+1. **Hero Section**: 29 words
+2. **Section 1 (Old World)**: 98 words
+3. **Section 2 (New Paint)**: 81 words
+4. **Section 3 (Blank Canvas)**: 128 words
+5. **Section 4 (Outcomes)**: 109 words
+6. **Section 5 (Elastic Operations)**: 233 words
+7. **CTA Section**: 38 words
+
+**Total Mission Page Content**: ~716 words (excluding navigation and footer)
+
+## Interactive Elements
+
+1. **Twinkling Stars Animation**: 200 animated star particles
+2. **Smooth Scrolling**: Navigation between sections with smooth transitions
+3. **Theme Toggle**: Light/dark mode switching affecting all graphics
+4. **Hover Effects**: Cards and buttons with state changes
+5. **Scroll Tracking**: Active section highlighting during scroll
+6. **Hub-Spoke Diagram**: Interactive 6-spoke visualization system
+
+## Responsive Behavior
+
+- **Desktop**: Multi-column layouts with asymmetric grids
+- **Tablet**: Adapted 2-column layouts with maintained hierarchy
+- **Mobile**: Single column stacking with responsive text scaling
+
+## Content Guidelines
+
+- **Problem-Solution Narrative**: Structured storytelling from problem identification to solution presentation
+- **Visual Hierarchy**: Clear heading sizes (text-5xl to text-2xl) with consistent spacing
+- **Progressive Disclosure**: Information complexity increases through sections
+- **Call-to-Action Progression**: Multiple touchpoints leading to final CTA section
+- **Theme Consistency**: Consistent use of accent colors, card styles, and typography throughout

@@ -55,6 +55,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			priority: 0.9,
 		},
 		{
+			url: `${baseUrl}/blog/rss.xml`,
+			lastModified: currentDate,
+			changeFrequency: "hourly", // RSS feeds update frequently
+			priority: 0.8,
+		},
+		{
 			url: `${baseUrl}/careers`,
 			lastModified: currentDate,
 			changeFrequency: "weekly",

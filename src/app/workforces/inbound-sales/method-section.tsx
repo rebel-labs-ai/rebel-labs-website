@@ -83,14 +83,11 @@ export function MethodSection() {
 		<section className="px-4">
 			<div className="max-w-6xl mx-auto">
 				{/* Section Header */}
-				<div className="text-center mb-8 sm:mb-16">
-					<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block mb-3 sm:mb-4">
-						Our Method
-					</span>
+				<div className="text-left sm:text-center mb-8 sm:mb-16">
 					<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
 						A Disciplined Protocol for Delivering Results
 					</h2>
-					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto">
+					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 						Your workforce follows a proven, four-step protocol to ensure every
 						lead is converted with maximum efficiency and intelligence, from
 						initial contact to the final handoff.
@@ -102,7 +99,7 @@ export function MethodSection() {
 					{methodSteps.map((step, index) => (
 						<div key={step.id} className="mb-12">
 							<div className="mb-3">
-								<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-xs border border-accent/30 inline-block">
+								<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 									{step.label}
 								</span>
 							</div>
@@ -158,7 +155,7 @@ export function MethodSection() {
 										}`}
 									>
 										<div className="mb-6">
-											<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-sm border border-accent/30 inline-block">
+											<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 												{step.label}
 											</span>
 										</div>

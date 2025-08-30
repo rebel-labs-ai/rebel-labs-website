@@ -13,10 +13,10 @@ import {
 // Hero Section - Server Component for SEO
 export function HeroSection() {
 	return (
-		<section className="pt-48 sm:pt-32 pb-24 px-4 relative">
+		<section className="pt-40 sm:pt-32 pb-24 px-4 relative">
 			<div className="max-w-5xl mx-auto relative z-10 mt-12 sm:mt-36">
 				<Card className="bg-card-background/80 backdrop-blur-sm border border-accent/20 shadow-xl p-6 sm:p-8 md:p-12">
-					<div className="text-center mb-8">
+					<div className="text-center mb-6 sm:mb-8">
 						<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm tracking-wider border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
 							The Workforce Lab
 						</span>
@@ -32,12 +32,12 @@ export function HeroSection() {
 							Forge Your Unfair Advantage.
 						</h1>
 					</div>
-					<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-6 leading-relaxed text-center max-w-3xl mx-auto">
+					<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto">
 						For the complex sales and marketing challenges that our standard
 						workforces cannot solve, we forge your proprietary workflow into a
 						fully autonomous operational asset.
 					</p>
-					<div className="flex justify-center mt-8">
+					<div className="flex justify-center mt-6 sm:mt-8">
 						<a
 							href="https://cal.com/george-westbrook-novosapien/custom-workforce"
 							className="inline-block"

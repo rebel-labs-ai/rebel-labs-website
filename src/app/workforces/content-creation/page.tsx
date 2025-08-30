@@ -174,14 +174,14 @@ export default function ContentWorkforcePage() {
 					{/* Impact Amplifier - Server Component */}
 					<ImpactAmplifierSection />
 
+					{/* Final CTA - Server Component */}
+					<FinalCTASection />
+
 					{/* Related Solutions - Server Component */}
 					<RelatedSolutionsSection />
 
 					{/* FAQ Section - Server Component */}
 					<FAQSection />
-
-					{/* Final CTA - Server Component */}
-					<FinalCTASection />
 				</main>
 
 				{/* Footer */}

@@ -141,16 +141,38 @@ BlogPage
 - **Load More**: Only shows if more than 6 posts exist
 - **Responsive Elements**: Different layouts based on screen size
 
-## Content Management
+## Text Content Metrics
 
-### Blog Post Data Structure
+### Word Count by Section:
 
-- Each post contains: id, title, excerpt, author, date, readTime, category, image, featured flag
-- **Sample Data**: 6 posts across different categories
-- **Content Length**: Excerpts are 15-25 words, titles 4-8 words
+1. **Header Section**: 28 words (title + subtitle)
+2. **Category Filters**: 14 words (7 filter options)
+3. **Featured Post**: 32 words (title + excerpt + metadata)
+4. **Blog Posts Grid**: ~150 words (6 posts with titles, excerpts, metadata)
+5. **Newsletter Signup**: 17 words
+6. **Interactive Elements**: ~25 words (buttons, labels)
 
-### Category System
+**Total Blog Page Content**: ~266 words (excluding navigation and footer)
 
-- **Categories**: 7 predefined categories including "All"
-- **Filtering**: Dynamic filtering based on selected category
-- **Display**: Category tags shown on each post card
+## Interactive Elements
+
+1. **Category Filtering**: Client-side filtering with 7 categories
+2. **Featured Post Display**: Conditional rendering based on "All" filter
+3. **Load More Functionality**: Pagination for additional posts
+4. **Newsletter Signup**: Email input with subscribe button
+5. **Post Card Interactions**: Hover effects and navigation
+6. **Theme Toggle**: Dark/light mode switching
+
+## Responsive Behavior
+
+- **Desktop**: 3-column blog post grid, 2-column featured post layout
+- **Tablet**: 2-column blog post grid, maintained featured layout
+- **Mobile**: Single column layout for all content sections
+
+## Content Guidelines
+
+- **Post Titles**: 4-8 words for optimal readability
+- **Excerpts**: 15-25 words to provide clear post preview
+- **Category Labels**: Concise 1-3 word descriptors
+- **Metadata**: Consistent author, date, and read time formatting
+- **Call-to-Actions**: Clear, action-oriented button text

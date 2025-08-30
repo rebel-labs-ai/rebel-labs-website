@@ -189,14 +189,14 @@ export default function LabPage() {
 				{/* Art of the Possible - Server Component */}
 				<ArtOfPossibleSection />
 
+				{/* Final CTA - Server Component */}
+				<FinalCTASection />
+
 				{/* Related Solutions - Server Component */}
 				<RelatedSolutionsSection />
 
 				{/* FAQ Section - Server Component */}
 				<FAQSection />
-
-				{/* Final CTA - Server Component */}
-				<FinalCTASection />
 
 				{/* Footer */}
 				<Footer />

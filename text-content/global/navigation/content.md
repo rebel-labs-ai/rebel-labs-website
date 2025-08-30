@@ -1,3 +1,17 @@
+---
+title: "Navigation Content"
+description: "Global navigation content for Novosapien website"
+component: "Navigation"
+type: "global"
+keywords:
+  - "navigation"
+  - "menu"
+  - "site structure"
+schema:
+  type: "SiteNavigationElement"
+  name: "Main Navigation"
+---
+
 # Navigation Content Documentation
 
 ## Brand Identity

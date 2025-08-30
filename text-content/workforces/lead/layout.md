@@ -94,7 +94,21 @@
 - **Mobile**: Single-column stacking with reduced spacing
 - **Breakpoints**: Standard Tailwind breakpoints (md, lg)
 
-### Text Element Lengths (Word Counts)
+## Text Content Metrics
+
+### Word Count by Section:
+
+1. **Hero Section**: 35 words
+2. **Explanation Section**: 80 words
+3. **Agent Details**: ~2,000 words (complete team descriptions)
+4. **Problem Section**: ~400 words (4 failure explanations)
+5. **Method Section**: ~150 words (4-step protocol)
+6. **Results Section**: 60 words
+7. **Final CTA Section**: 50 words
+
+**Total Lead Workforce Page Content**: ~2,775 words (excluding navigation and footer)
+
+### Text Element Categories:
 
 #### Short Text Elements (1-10 words)
 
@@ -107,7 +121,7 @@
 
 - Hero headline and description: ~35 words
 - Section headers: ~15-25 words each
-- Agent card descriptions: ~20-30 words each
+- Agent card summaries: ~20-30 words each
 
 #### Long Text Elements (50+ words)
 
@@ -136,3 +150,26 @@
 - **Image Optimization**: Next.js Image component for all graphics
 - **Lazy Loading**: Scroll-based activation for method section
 - **Theme Support**: Dual light/dark mode graphics and styling
+
+## Interactive Elements
+
+1. **Agent Roster System**: Tabbed interface with 9 detailed agent modals
+2. **Problem Diagnosis**: Expandable failure cards with detailed explanations
+3. **Method Section**: Sticky scroll implementation with step animations
+4. **External Booking**: 3 Cal.com integration points
+5. **Theme Toggle**: Complete light/dark mode switching
+6. **Modal System**: Agent detail overlays with backdrop blur
+
+## Responsive Behavior
+
+- **Desktop**: Multi-column layouts with sticky scroll elements
+- **Tablet**: Adapted 2-column grids with maintained functionality
+- **Mobile**: Single-column stacking with touch-optimized interactions
+
+## Content Guidelines
+
+- **Agent Descriptions**: Detailed 150-200 word profiles for credibility
+- **Problem Explanations**: Data-driven failure analysis with statistics
+- **Method Steps**: Clear, actionable 30-50 word descriptions
+- **Technical Terminology**: Balanced with accessible explanations
+- **Call-to-Actions**: Direct, results-focused language

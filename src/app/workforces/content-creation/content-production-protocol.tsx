@@ -329,11 +329,8 @@ export function ContentProductionProtocol() {
 
 			{/* Stages */}
 			{protocolStages.map(stage => (
-				<section
-					key={stage.id}
-					className="py-12 sm:py-24 px-4 sm:px-6 lg:px-20"
-				>
-					<div className="max-w-7xl mx-auto">
+				<section key={stage.id} className=" sm:py-24 px-4 sm:px-6 lg:px-20">
+					<div className="py-6 max-w-7xl mx-auto">
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
 							{/* Text Content */}
 							<div
@@ -341,7 +338,7 @@ export function ContentProductionProtocol() {
 							>
 								<div className="space-y-3 sm:space-y-6">
 									<div className="inline-block">
-										<span className="bg-accent/10 text-foreground font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-accent/30 inline-block">
+										<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)] inline-block">
 											Stage {stage.number}
 										</span>
 									</div>

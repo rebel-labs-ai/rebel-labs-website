@@ -1,3 +1,44 @@
+---
+title: "Careers | Join the Digital Workforce Revolution | Novosapien"
+description: "Join Novosapien and help build the future of autonomous work. We're looking for talented individuals to revolutionize how businesses operate with AI workforces."
+keywords:
+  - "novosapien careers"
+  - "AI jobs"
+  - "digital workforce careers"
+  - "AI automation jobs"
+  - "tech careers"
+  - "AI engineering jobs"
+  - "startup careers"
+  - "future of work jobs"
+  - "autonomous systems careers"
+  - "remote AI jobs"
+openGraph:
+  title: "Careers at Novosapien - Build the Future of Work"
+  description: "Join our team building autonomous digital workforces that transform businesses. Explore opportunities in AI, engineering, and operations."
+  type: "website"
+  image: "/og-careers.jpg"
+  url: "https://novosapien.ai/careers"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "Join Novosapien - Build the Future of Work"
+  description: "We're hiring talented individuals to revolutionize business operations with autonomous AI workforces."
+  image: "/og-careers.jpg"
+canonical: "https://novosapien.ai/careers"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "JobPosting"
+  hiringOrganization:
+    type: "Organization"
+    name: "Novosapien"
+    url: "https://novosapien.ai"
+  description: "Join our team building digital workforces"
+---
+
 # Careers Page - Content Extraction
 
 ## Page Metadata

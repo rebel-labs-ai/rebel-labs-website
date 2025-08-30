@@ -1,3 +1,42 @@
+---
+title: "Our Mission | Building the Future of Autonomous Work | Novosapien"
+description: "Learn about Novosapien's mission to transform businesses through autonomous digital workforces that deliver outcomes, not just tools. The future is here."
+keywords:
+  - "novosapien mission"
+  - "future of work"
+  - "autonomous workforce"
+  - "AI transformation"
+  - "digital transformation"
+  - "business automation"
+  - "productive work"
+  - "AI workforces"
+  - "operational autonomy"
+  - "revenue automation"
+openGraph:
+  title: "Our Mission - The Future of Productive Work"
+  description: "Discover how Novosapien is building autonomous workforces that transform businesses and deliver measurable outcomes, not just better tools."
+  type: "website"
+  image: "/og-mission.jpg"
+  url: "https://novosapien.ai/mission"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "The Future of Work is Autonomous"
+  description: "Learn how Novosapien is transforming businesses with digital workforces that deliver outcomes, not just assist with tasks."
+  image: "/og-mission.jpg"
+canonical: "https://novosapien.ai/mission"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "AboutPage"
+  name: "Novosapien Mission"
+  description: "Our mission to deploy digital workforces that transform businesses"
+  url: "https://novosapien.ai/mission"
+---
+
 # Mission Page Text Content
 
 ## Page Metadata
