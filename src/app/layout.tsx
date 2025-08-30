@@ -4,6 +4,7 @@ import localFont from "next/font/local"
 import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -199,6 +200,7 @@ export default function RootLayout({
 					Skip to main content
 				</a>
 				<ThemeProvider>{children}</ThemeProvider>
+				<Analytics />
 
 				{/* Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID */}
 				{process.env.NEXT_PUBLIC_GA_ID && (
