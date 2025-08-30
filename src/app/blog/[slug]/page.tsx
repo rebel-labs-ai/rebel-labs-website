@@ -372,7 +372,7 @@ export default async function PostPage({
 						</div>
 
 						{/* Tags Section */}
-						{post.tags && post.tags.length > 0 && (
+						{/* {post.tags && post.tags.length > 0 && (
 							<div className="mt-8 mb-12">
 								<div className="flex items-center gap-2 mb-3">
 									<Tag className="w-4 h-4 text-muted-foreground" />
@@ -392,7 +392,7 @@ export default async function PostPage({
 									))}
 								</div>
 							</div>
-						)}
+						)} */}
 
 						{/* Related Posts */}
 						{post.relatedPosts && post.relatedPosts.length > 0 && (
