@@ -100,8 +100,13 @@ export async function generateMetadata({
 	if (!post) return { title: "Post Not Found" }
 
 	return {
-		title: post.seoTitle ? `${post.seoTitle} | NovoSapien Blog` : `${post.title} | NovoSapien Blog`,
-		description: post.metaDescription || post.excerpt || `Read ${post.title} on the NovoSapien blog`,
+		title: post.seoTitle
+			? `${post.seoTitle} | NovoSapien Blog`
+			: `${post.title} | NovoSapien Blog`,
+		description:
+			post.metaDescription ||
+			post.excerpt ||
+			`Read ${post.title} on the NovoSapien blog`,
 		openGraph: {
 			type: "article",
 			locale: "en_US",
@@ -199,15 +204,21 @@ export default async function PostPage({
 		datePublished: post.publishedAt,
 		dateModified: post._updatedAt || post.publishedAt,
 		articleSection: post.category,
-		keywords: [post.focusKeyword, post.category, ...(post.tags || [])].filter(Boolean).join(', '),
+		keywords: [post.focusKeyword, post.category, ...(post.tags || [])]
+			.filter(Boolean)
+			.join(", "),
 		author: {
 			"@type": "Person",
 			name: post.author?.name,
 			jobTitle: post.author?.role,
 			description: post.author?.bio,
-			image: post.author?.image ? urlFor(post.author.image).width(200).height(200).url() : undefined,
+			image: post.author?.image
+				? urlFor(post.author.image).width(200).height(200).url()
+				: undefined,
 			sameAs: [
-				post.author?.twitter ? `https://twitter.com/${post.author.twitter}` : undefined,
+				post.author?.twitter
+					? `https://twitter.com/${post.author.twitter}`
+					: undefined,
 				post.author?.linkedin,
 			].filter(Boolean),
 			url: `${baseUrl}/author/${post.author?.slug?.current}`,
@@ -291,14 +302,17 @@ export default async function PostPage({
 							{/* Meta Information */}
 							<div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground pb-8 border-b border-accent/20">
 								{post.author && (
-									<Link 
-										href={`/author/${post.author.slug?.current || ''}`}
+									<Link
+										href={`/author/${post.author.slug?.current || ""}`}
 										className="flex items-center gap-2 hover:text-accent transition-colors"
 									>
 										{post.author.image ? (
 											<div className="relative w-8 h-8 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
 												<Image
-													src={urlFor(post.author.image).width(64).height(64).url()}
+													src={urlFor(post.author.image)
+														.width(64)
+														.height(64)
+														.url()}
 													alt={post.author.name}
 													fill
 													className="object-cover"
@@ -362,7 +376,9 @@ export default async function PostPage({
 							<div className="mt-8 mb-12">
 								<div className="flex items-center gap-2 mb-3">
 									<Tag className="w-4 h-4 text-muted-foreground" />
-									<span className="text-sm font-semibold text-muted-foreground">Related Topics</span>
+									<span className="text-sm font-semibold text-muted-foreground">
+										Related Topics
+									</span>
 								</div>
 								<div className="flex flex-wrap gap-2">
 									{post.tags.map((tag: string) => (

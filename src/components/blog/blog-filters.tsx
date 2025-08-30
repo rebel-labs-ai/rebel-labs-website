@@ -18,14 +18,18 @@ interface BlogFiltersProps {
 	totalPosts: number
 }
 
-export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFiltersProps) {
+export function BlogFilters({
+	categories,
+	categoryCounts,
+	totalPosts,
+}: BlogFiltersProps) {
 	const router = useRouter()
 	const searchParams = useSearchParams()
 	const [isPending, startTransition] = useTransition()
-	
-	const currentCategory = searchParams.get("category") || "all"
-	const currentSearch = searchParams.get("search") || ""
-	
+
+	const currentCategory = searchParams?.get("category") || "all"
+	const currentSearch = searchParams?.get("search") || ""
+
 	const [searchQuery, setSearchQuery] = useState(currentSearch)
 
 	// Get the label for current category
@@ -38,7 +42,7 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 	// Handle category change
 	const handleCategoryChange = (category: string) => {
 		startTransition(() => {
-			const params = new URLSearchParams(searchParams.toString())
+			const params = new URLSearchParams(searchParams?.toString() || "")
 			if (category === "all") {
 				params.delete("category")
 			} else {
@@ -53,7 +57,7 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 		const timer = setTimeout(() => {
 			if (searchQuery !== currentSearch) {
 				startTransition(() => {
-					const params = new URLSearchParams(searchParams.toString())
+					const params = new URLSearchParams(searchParams?.toString() || "")
 					if (searchQuery) {
 						params.set("search", searchQuery)
 					} else {
@@ -70,7 +74,7 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 	const handleClearSearch = () => {
 		setSearchQuery("")
 		startTransition(() => {
-			const params = new URLSearchParams(searchParams.toString())
+			const params = new URLSearchParams(searchParams?.toString() || "")
 			params.delete("search")
 			router.push(`/blog?${params.toString()}`)
 		})
@@ -84,7 +88,7 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 				<Input
 					type="text"
 					value={searchQuery}
-					onChange={(e) => setSearchQuery(e.target.value)}
+					onChange={e => setSearchQuery(e.target.value)}
 					placeholder="Search articles..."
 					className="pl-10 pr-10 bg-card-background border-accent/20 focus:border-accent"
 					aria-label="Search blog posts"
@@ -106,8 +110,8 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 			{/* Category Dropdown */}
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
-					<Button 
-						variant="outline" 
+					<Button
+						variant="outline"
 						className="bg-card-background border-accent/20 hover:border-accent min-w-[200px] justify-between"
 						disabled={isPending}
 					>
@@ -126,20 +130,24 @@ export function BlogFilters({ categories, categoryCounts, totalPosts }: BlogFilt
 					<DropdownMenuItem onClick={() => handleCategoryChange("all")}>
 						<span className="flex items-center justify-between w-full">
 							<span>All Articles</span>
-							<span className="text-xs text-muted-foreground">{totalPosts}</span>
+							<span className="text-xs text-muted-foreground">
+								{totalPosts}
+							</span>
 						</span>
 					</DropdownMenuItem>
-					{categories.map((category) => {
+					{categories.map(category => {
 						const count = categoryCounts[category.value] || 0
 						return (
-							<DropdownMenuItem 
+							<DropdownMenuItem
 								key={category.value}
 								onClick={() => handleCategoryChange(category.value)}
 							>
 								<span className="flex items-center justify-between w-full">
 									<span>{category.label}</span>
 									{count > 0 && (
-										<span className="text-xs text-muted-foreground">{count}</span>
+										<span className="text-xs text-muted-foreground">
+											{count}
+										</span>
 									)}
 								</span>
 							</DropdownMenuItem>

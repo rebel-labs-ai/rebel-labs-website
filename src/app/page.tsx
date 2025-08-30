@@ -16,6 +16,22 @@ import { type SanityDocument } from "next-sanity"
 
 import { Metadata } from "next"
 
+// Type definition for blog posts
+interface BlogPost extends SanityDocument {
+	title: string
+	slug: { current: string }
+	excerpt: string
+	category: string
+	publishedAt: string
+	author?: {
+		name: string
+		slug?: { current: string }
+		image?: SanityDocument
+	}
+	image?: SanityDocument
+	estimatedReadTime?: number
+}
+
 export const metadata: Metadata = {
 	title: "Digital Workforces for Revenue Generation | Novosapien",
 	description:
@@ -83,9 +99,9 @@ const HOME_POSTS_QUERY = `*[
 
 export default async function Home() {
 	// Fetch recent blog posts
-	let posts: SanityDocument[] = []
+	let posts: BlogPost[] = []
 	try {
-		posts = await client.fetch<SanityDocument[]>(HOME_POSTS_QUERY)
+		posts = await client.fetch<BlogPost[]>(HOME_POSTS_QUERY)
 	} catch (error) {
 		console.error("Error fetching posts for home page:", error)
 	}

@@ -49,7 +49,7 @@ export function BlogSearch({
 				<Input
 					type="text"
 					value={searchQuery}
-					onChange={(e) => setSearchQuery(e.target.value)}
+					onChange={e => setSearchQuery(e.target.value)}
 					placeholder={placeholder}
 					className="pl-10 pr-10 bg-card-background border-accent/20 focus:border-accent"
 					aria-label="Search blog posts"

@@ -3,6 +3,17 @@ import { type SanityDocument } from "next-sanity"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
+// Type definitions for Portable Text
+interface PortableTextChild {
+	_type: string
+	text?: string
+}
+
+interface PortableTextBlock {
+	_type: string
+	children?: PortableTextChild[]
+}
+
 // Query to get recent blog posts for RSS
 const RSS_POSTS_QUERY = `*[
   _type == "post" 
@@ -37,16 +48,16 @@ function escapeXml(unsafe: string): string {
 		.replace(/'/g, "&apos;")
 }
 
-function extractTextFromPortableText(body: any[]): string {
+function extractTextFromPortableText(body: PortableTextBlock[]): string {
 	if (!Array.isArray(body)) return ""
-	
+
 	return body
 		.filter(block => block._type === "block")
 		.map(block => {
 			if (!block.children) return ""
 			return block.children
-				.filter((child: any) => child.text)
-				.map((child: any) => child.text)
+				.filter((child: PortableTextChild) => child.text)
+				.map((child: PortableTextChild) => child.text)
 				.join("")
 		})
 		.join("\n\n")
@@ -57,7 +68,7 @@ export async function GET() {
 	try {
 		// Fetch posts from Sanity
 		const posts = await client.fetch<SanityDocument[]>(RSS_POSTS_QUERY)
-		
+
 		// Generate RSS XML
 		const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" 
@@ -86,12 +97,13 @@ export async function GET() {
     ${posts
 			.map(post => {
 				const postUrl = `${baseUrl}/blog/${post.slug.current}`
-				const description = post.excerpt || extractTextFromPortableText(post.body)
+				const description =
+					post.excerpt || extractTextFromPortableText(post.body)
 				const pubDate = new Date(post.publishedAt).toUTCString()
-				const lastModified = post._updatedAt 
-					? new Date(post._updatedAt).toUTCString() 
+				const lastModified = post._updatedAt
+					? new Date(post._updatedAt).toUTCString()
 					: pubDate
-				
+
 				return `
     <item>
       <title>${escapeXml(post.title)}</title>
@@ -114,13 +126,14 @@ export async function GET() {
 		return new Response(rssXml, {
 			headers: {
 				"Content-Type": "application/rss+xml; charset=utf-8",
-				"Cache-Control": "public, max-age=3600, s-maxage=7200, stale-while-revalidate=86400",
+				"Cache-Control":
+					"public, max-age=3600, s-maxage=7200, stale-while-revalidate=86400",
 				"X-Content-Type-Options": "nosniff",
 			},
 		})
 	} catch (error) {
 		console.error("Error generating RSS feed:", error)
-		
+
 		// Return a minimal valid RSS feed on error
 		const errorRss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -131,7 +144,7 @@ export async function GET() {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
   </channel>
 </rss>`
-		
+
 		return new Response(errorRss, {
 			headers: {
 				"Content-Type": "application/rss+xml; charset=utf-8",

@@ -13,7 +13,6 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs"
 import {
 	Calendar,
 	Clock,
-	Tag,
 	Linkedin,
 	Award,
 	BookOpen,
@@ -22,6 +21,18 @@ import {
 } from "lucide-react"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+
+// Type definitions
+interface BlogPost {
+	_id: string
+	title: string
+	slug: { current: string }
+	excerpt: string
+	publishedAt: string
+	image?: SanityDocument
+	category?: string
+	estimatedReadTime?: number
+}
 
 // Query to fetch author data with all their posts
 const AUTHOR_QUERY = `*[_type == "author" && slug.current == $slug][0] {
@@ -50,10 +61,11 @@ const AUTHOR_QUERY = `*[_type == "author" && slug.current == $slug][0] {
 export async function generateMetadata({
 	params,
 }: {
-	params: { slug: string }
+	params: Promise<{ slug: string }>
 }): Promise<Metadata> {
+	const { slug } = await params
 	const author = await client.fetch<SanityDocument>(AUTHOR_QUERY, {
-		slug: params.slug,
+		slug,
 	})
 
 	if (!author) {
@@ -65,7 +77,8 @@ export async function generateMetadata({
 
 	const title = `${author.name} - ${author.role} | NovoSapien`
 	const description =
-		author.bio || `Read articles and insights from ${author.name}, ${author.role} at NovoSapien.`
+		author.bio ||
+		`Read articles and insights from ${author.name}, ${author.role} at NovoSapien.`
 
 	return {
 		title,
@@ -84,7 +97,7 @@ export async function generateMetadata({
 							height: 630,
 							alt: author.name,
 						},
-				  ]
+					]
 				: undefined,
 		},
 		twitter: {
@@ -108,7 +121,7 @@ export async function generateStaticParams() {
 	const authors = await client.fetch<SanityDocument[]>(
 		`*[_type == "author" && defined(slug.current)]{slug}`
 	)
-	return authors.map((author) => ({
+	return authors.map(author => ({
 		slug: author.slug.current,
 	}))
 }
@@ -116,10 +129,11 @@ export async function generateStaticParams() {
 export default async function AuthorPage({
 	params,
 }: {
-	params: { slug: string }
+	params: Promise<{ slug: string }>
 }) {
+	const { slug } = await params
 	const author = await client.fetch<SanityDocument>(AUTHOR_QUERY, {
-		slug: params.slug,
+		slug,
 	})
 
 	if (!author) {
@@ -165,7 +179,7 @@ export default async function AuthorPage({
 		author: {
 			"@id": `${baseUrl}/author/${author.slug.current}#person`,
 		},
-		hasPart: author.posts?.map((post: any) => ({
+		hasPart: author.posts?.map((post: BlogPost) => ({
 			"@type": "BlogPosting",
 			headline: post.title,
 			description: post.excerpt,
@@ -183,7 +197,8 @@ export default async function AuthorPage({
 	}
 
 	// Helper function to get category label
-	const getCategoryLabel = (category: string): string => {
+	const getCategoryLabel = (category: string | undefined): string => {
+		if (!category) return "General"
 		const categoryMap: Record<string, string> = {
 			product: "Product Updates",
 			"case-studies": "Case Studies",
@@ -283,14 +298,16 @@ export default async function AuthorPage({
 													</span>
 												</div>
 												<div className="flex flex-wrap gap-2">
-													{author.expertise.map((area: string, index: number) => (
-														<span
-															key={index}
-															className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium border border-accent/30"
-														>
-															{area}
-														</span>
-													))}
+													{author.expertise.map(
+														(area: string, index: number) => (
+															<span
+																key={index}
+																className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium border border-accent/30"
+															>
+																{area}
+															</span>
+														)
+													)}
 												</div>
 											</div>
 										)}
@@ -350,7 +367,7 @@ export default async function AuthorPage({
 
 						{author.posts && author.posts.length > 0 ? (
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-								{author.posts.map((post: any) => (
+								{author.posts.map((post: BlogPost) => (
 									<Link key={post._id} href={`/blog/${post.slug.current}`}>
 										<Card className="bg-card-background border border-accent/20 shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group cursor-pointer h-full">
 											{/* Post Image */}
@@ -378,7 +395,7 @@ export default async function AuthorPage({
 												{/* Category */}
 												<div className="flex items-center gap-2 mb-3">
 													<span className="text-xs text-accent font-semibold">
-														{getCategoryLabel(post.category)}
+														{post.category && getCategoryLabel(post.category)}
 													</span>
 												</div>
 

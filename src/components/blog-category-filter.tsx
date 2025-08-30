@@ -34,7 +34,7 @@ export function BlogCategoryFilter({
 }: BlogCategoryFilterProps) {
 	return (
 		<div className={cn("flex flex-wrap gap-2", className)}>
-			{BLOG_CATEGORIES.map((category) => {
+			{BLOG_CATEGORIES.map(category => {
 				const isActive = selectedCategory === category.value
 				const count = categoryCounts[category.value] || 0
 
