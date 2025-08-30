@@ -102,45 +102,42 @@ export function SimpleBlogSection({ posts }: SimpleBlogSectionProps) {
 									</p>
 
 									{/* Meta */}
-									<div className="flex items-center gap-2.5 text-xs text-muted-foreground">
-										{post.author && (
-											<>
-												{post.author.image ? (
-													<div className="relative w-5 h-5 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
-														<Image
-															src={urlFor(post.author.image).width(40).height(40).url()}
-															alt={post.author.name}
-															fill
-															className="object-cover"
-														/>
-													</div>
-												) : (
-													<div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-														<User className="w-3 h-3" />
-													</div>
-												)}
-												{post.author.slug ? (
-													<Link
-														href={`/author/${post.author.slug.current}`}
-														className="hover:text-accent transition-colors"
-													>
-														{post.author.name}
-													</Link>
-												) : (
-													<span>{post.author.name}</span>
-												)}
-											</>
+									<div className="flex items-center justify-center gap-2 text-xs text-muted-foreground leading-5">
+										{post.author && post.author.image && (
+											<div className="relative w-5 h-5 rounded-full overflow-hidden bg-accent/10 flex-shrink-0">
+												<Image
+													src={urlFor(post.author.image).width(40).height(40).url()}
+													alt={post.author.name}
+													fill
+													className="object-cover"
+												/>
+											</div>
+										)}
+										{post.author && !post.author.image && (
+											<div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+												<User className="w-3 h-3" />
+											</div>
+										)}
+										{post.author && post.author.slug ? (
+											<Link
+												href={`/author/${post.author.slug.current}`}
+												className="hover:text-accent transition-colors leading-5 inline-flex items-center h-5"
+											>
+												{post.author.name}
+											</Link>
+										) : (
+											post.author && <span className="leading-5 inline-flex items-center h-5">{post.author.name}</span>
 										)}
 										{post.author && post.estimatedReadTime && (
-											<span className="text-muted-foreground/50">•</span>
+											<span className="text-muted-foreground/50 leading-5">•</span>
 										)}
 										{post.estimatedReadTime && (
-											<span>{post.estimatedReadTime} min</span>
+											<span className="leading-5">{post.estimatedReadTime} min</span>
 										)}
 										{(post.author || post.estimatedReadTime) && (
-											<span className="text-muted-foreground/50">•</span>
+											<span className="text-muted-foreground/50 leading-5">•</span>
 										)}
-										<span>
+										<span className="leading-5">
 											{new Date(post.publishedAt).toLocaleDateString("en-US", {
 												month: "short",
 												day: "numeric",

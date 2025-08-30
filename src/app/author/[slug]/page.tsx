@@ -229,14 +229,13 @@ export default async function AuthorPage({
 					</div>
 
 					{/* Back to Blog Button */}
-					<div className="mb-8">
-						<Link href="/blog">
-							<Button variant="outline" size="sm" className="gap-2">
-								<ArrowLeft className="w-4 h-4" />
-								Back to Blog
-							</Button>
-						</Link>
-					</div>
+					<Link
+						href="/blog"
+						className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-8"
+					>
+						<ArrowLeft className="w-4 h-4" />
+						Back to Blog
+					</Link>
 
 					{/* Author Profile Section */}
 					<div className="mb-16">
