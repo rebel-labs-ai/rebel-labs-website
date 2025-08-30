@@ -160,7 +160,7 @@ export function EngagementProtocol() {
 						</div>
 
 						{/* Right side - Sticky mockup container */}
-						<div className="relative hidden lg:block mt-96 mb-12">
+						<div className="relative hidden lg:block mt-64">
 							{/* Sticky container that stays centered */}
 							<div className="sticky top-1/2 -translate-y-1/2">
 								<div className="relative h-[500px] w-full">
