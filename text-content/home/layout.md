@@ -122,14 +122,14 @@ The homepage follows a vertical flow design with the following major sections:
 
 1. **Hero Section**: ~30 words (excluding animated phrases)
 2. **Revenue Operations**: ~150 words
-3. **Digital Workforce**: ~50 words
-4. **Solution Overview**: ~80 words
-5. **How We Do It**: ~180 words
-6. **Core Capabilities**: ~200 words
-7. **Value Proposition**: ~120 words
-8. **Final CTA**: ~40 words
+3. **Digital Workforce**: ~49 words
+4. **Solution Overview**: ~92 words
+5. **How We Do It**: ~175 words
+6. **Core Capabilities**: ~190 words
+7. **Value Proposition**: ~108 words
+8. **Final CTA**: ~33 words
 
-**Total Homepage Content**: ~850 words (excluding navigation and footer)
+**Total Homepage Content**: ~827 words (excluding navigation and footer)
 
 ## Interactive Elements
 

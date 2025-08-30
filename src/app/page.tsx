@@ -189,6 +189,7 @@ export default function Home() {
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-1 sm:mt-6 leading-relaxed text-center">
 							We deploy digital workforces into your business so you can
+							<span className="inline sm:hidden">&nbsp;</span>
 							<span className="hidden sm:inline">
 								<br />
 							</span>
@@ -1136,6 +1137,44 @@ export default function Home() {
 				</div>
 			</section>
 
+			{/* Section 7: Final CTA */}
+			<section className="py-16 sm:py-32 px-4">
+				<div className="max-w-4xl mx-auto">
+					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-4 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30 whitespace-nowrap">
+								Ready to Transform Your Operations?
+							</span>
+						</div>
+
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
+							Stop Buying Smarter Shovels.
+							<br />
+							<span className="text-accent">Start Delivering Outcomes.</span>
+						</h2>
+
+						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
+							Join forward-thinking companies who are achieving measurable
+							results with Digital Workforces. Your transformation starts with a
+							single conversation.
+						</p>
+
+						<div className="flex justify-center">
+							<a
+								href="https://cal.com/george-westbrook-novosapien/30min"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Book a demo to see how digital workforces can transform your revenue operations"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 px-6 py-3 min-h-[48px] min-w-[48px]">
+									Book a Demo
+								</Button>
+							</a>
+						</div>
+					</Card>
+				</div>
+			</section>
+
 			{/* FAQ Section for SEO */}
 			<section className="py-16 sm:py-24 px-4 bg-background">
 				<div className="max-w-4xl mx-auto">
@@ -1353,44 +1392,6 @@ export default function Home() {
 						}),
 					}}
 				/>
-			</section>
-
-			{/* Section 7: Final CTA */}
-			<section className="py-16 sm:py-32 px-4">
-				<div className="max-w-4xl mx-auto">
-					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-4 sm:mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30 whitespace-nowrap">
-								Ready to Transform Your Operations?
-							</span>
-						</div>
-
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-							Stop Buying Smarter Shovels.
-							<br />
-							<span className="text-accent">Start Delivering Outcomes.</span>
-						</h2>
-
-						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
-							Join forward-thinking companies who are achieving measurable
-							results with Digital Workforces. Your transformation starts with a
-							single conversation.
-						</p>
-
-						<div className="flex justify-center">
-							<a
-								href="https://cal.com/george-westbrook-novosapien/30min"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label="Book a demo to see how digital workforces can transform your revenue operations"
-							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 px-6 py-3 min-h-[48px] min-w-[48px]">
-									Book a Demo
-								</Button>
-							</a>
-						</div>
-					</Card>
-				</div>
 			</section>
 
 			{/* Footer */}

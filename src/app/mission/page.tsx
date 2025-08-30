@@ -153,11 +153,11 @@ export default function MissionPage() {
 						</div>
 					</div>
 
-					{/* Related Solutions Section - Server component with internal links */}
-					<RelatedSolutionsSection />
-
 					{/* CTA Section */}
 					<CTASection />
+
+					{/* Related Solutions Section - Server component with internal links */}
+					<RelatedSolutionsSection />
 
 					<Footer />
 				</div>
@@ -189,7 +189,7 @@ function MissionHeroSection() {
 								Date: 2025-08-28
 								Agent: Claude
 							*/}
-							<h1 className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight transition-all duration-1000 data-[show-intro=true]:translate-y-0 data-[show-intro=true]:opacity-100 data-[show-intro=false]:translate-y-4 data-[show-intro=false]:opacity-0">
+							<h1 className="text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl sm:font-light tracking-tight font font-medium transition-all duration-1000 data-[show-intro=true]:translate-y-0 data-[show-intro=true]:opacity-100 data-[show-intro=false]:translate-y-4 data-[show-intro=false]:opacity-0">
 								The Future of Productive Work is Not Another, Better Tool.
 							</h1>
 							<p className="text-muted-foreground text-xl mt-8 leading-relaxed transition-all duration-1000 delay-300 data-[show-subtext=true]:translate-y-0 data-[show-subtext=true]:opacity-100 data-[show-subtext=false]:translate-y-4 data-[show-subtext=false]:opacity-0">
@@ -212,7 +212,7 @@ function OldWorldSection() {
 				<div className="grid gap-8 lg:grid-cols-2">
 					{/* Content */}
 					<div>
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-6">
 							The Old World is Broken.
 						</h2>
 						<div className="space-y-4">
@@ -294,7 +294,7 @@ function NewCoatSection() {
 
 					{/* Content */}
 					<div className="order-1 lg:order-2">
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-6">
 							A New Coat of Paint on a Crumbling Foundation.
 						</h2>
 						<div className="space-y-4">
@@ -327,7 +327,7 @@ function BlankCanvasSection() {
 			<div>
 				<div className="grid gap-8 lg:grid-cols-[1fr_300px]">
 					<div>
-						<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-light tracking-tight mb-6">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-6">
 							The Burden of the Blank Canvas.
 						</h2>
 						<div className="space-y-4">
@@ -391,7 +391,7 @@ function PrincipleSection() {
 				<div className="space-y-24">
 					{/* Main Content */}
 					<div className="text-center">
-						<h2 className="text-foreground text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-6">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-6">
 							We Don&apos;t Sell Tools. We Deliver Outcomes.
 						</h2>
 						<p className="text-xl text-muted-foreground">
@@ -466,7 +466,7 @@ function PromisedLandSection() {
 					<div className="absolute -bottom-32 -right-32 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 
 					<div className="relative z-10">
-						<h2 className="text-foreground text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-8">
+						<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-8">
 							The Promised Land: Elastic Operations.
 						</h2>
 
@@ -515,7 +515,7 @@ function CTASection() {
 						</span>
 					</div>
 
-					<h2 className="text-foreground text-3xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4">
+					<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-4">
 						Stop Managing Tools.
 						<br />
 						<span className="text-accent">Start Commanding Outcomes.</span>

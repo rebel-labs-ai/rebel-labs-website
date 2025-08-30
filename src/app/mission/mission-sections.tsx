@@ -55,7 +55,31 @@ export function HubSpokeGraphic() {
 
 	return (
 		<div className="flex items-center justify-center py-8">
-			<div className="relative h-[700px] w-full max-w-7xl px-4">
+			{/* Mobile Layout - Just the Hub */}
+			<div className="block lg:hidden w-full">
+				{/* Central Hub SVG for Mobile */}
+				<div className="flex justify-center">
+					<Image
+						src="/mission/hub.svg"
+						alt="Novosapien central hub representing elastic operations"
+						width={160}
+						height={160}
+						className="w-40 h-40 dark:hidden"
+						priority
+					/>
+					<Image
+						src="/mission/hub-dark.svg"
+						alt="Novosapien central hub representing elastic operations"
+						width={160}
+						height={160}
+						className="w-40 h-40 hidden dark:block"
+						priority
+					/>
+				</div>
+			</div>
+
+			{/* Desktop Layout - Elliptical */}
+			<div className="hidden lg:block relative h-[700px] w-full max-w-7xl px-4">
 				{/* Central Hub SVG */}
 				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
 					<Image
@@ -89,7 +113,7 @@ export function HubSpokeGraphic() {
 						>
 							{/* Text Box - Wider and shorter */}
 							<div className="w-80 rounded-xl border border-accent/30 bg-card/90 p-4 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow">
-								<h4 className="mb-2 text-lg font-bold text-accent">
+								<h4 className="mb-2 text-lg font-semibold text-accent">
 									{spoke.title}
 								</h4>
 								<p className="text-sm leading-relaxed text-muted-foreground">

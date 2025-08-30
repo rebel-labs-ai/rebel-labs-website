@@ -72,8 +72,8 @@ The careers page is a single-page application with a clean, form-focused design 
 
 ### Total Estimated Content
 
-- **Total word count**: ~65-70 words
-- **Total character count**: ~400-450 characters
+- **Total word count**: ~80 words
+- **Total character count**: ~500 characters
 
 ## Graphics and Visual Elements
 
@@ -155,10 +155,37 @@ The careers page is a single-page application with a clean, form-focused design 
 - Keyboard navigation support
 - Focus management for form fields
 
-## Technical Architecture
+## Text Content Metrics
 
-- Client-side component ("use client")
-- React hooks for state management
-- TypeScript for type safety
-- Tailwind CSS for styling
-- Component composition with UI library components
+### Word Count by Section:
+
+1. **Header Section**: 18 words (title + subtitle)
+2. **Form Labels**: 22 words (9 field labels)
+3. **Placeholder Text**: 28 words (8 placeholders)
+4. **Help Text**: 10 words (instructions and validation)
+5. **Button Text**: 2 words
+
+**Total Careers Page Content**: ~80 words (excluding navigation and footer)
+
+## Interactive Elements
+
+1. **Form Validation**: Required field indicators and validation
+2. **File Upload**: Drag-and-drop with file type restrictions
+3. **Input Focus States**: Ring styling and transitions
+4. **Button Hover Effects**: Shadow and color transitions
+5. **Form Submission**: State management for form data
+6. **Theme Support**: Full light/dark mode compatibility
+
+## Responsive Behavior
+
+- **Desktop**: Centered form with max-width constraints
+- **Tablet**: Maintained single-column form layout
+- **Mobile**: Optimized spacing and touch-friendly inputs
+
+## Content Guidelines
+
+- **Form Labels**: Clear, descriptive field identifiers
+- **Placeholder Text**: Helpful examples and formatting guides
+- **Help Text**: Concise instructions for user guidance
+- **Error Messages**: Clear validation feedback
+- **Professional Tone**: Welcoming yet professional language throughout

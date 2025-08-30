@@ -1,3 +1,45 @@
+---
+title: "Inbound Sales Workforce | AI Lead Generation & Conversion | Novosapien"
+description: "Deploy an autonomous inbound sales workforce that converts leads into qualified meetings 24/7. Never lose another lead with AI-powered qualification and nurturing."
+keywords:
+  - "inbound sales automation"
+  - "AI lead generation"
+  - "lead qualification automation"
+  - "sales workforce"
+  - "lead nurturing AI"
+  - "automated sales pipeline"
+  - "lead conversion"
+  - "sales automation platform"
+  - "AI SDR"
+  - "autonomous sales team"
+openGraph:
+  title: "Inbound Sales Workforce - Never Lose a Lead Again"
+  description: "Deploy an autonomous workforce that converts your raw leads into qualified, sales-ready meetings, 24/7. Transform your sales operations."
+  type: "website"
+  image: "/og-lead-workforce.jpg"
+  url: "https://novosapien.ai/workforces/inbound-sales"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "AI Inbound Sales Workforce"
+  description: "Convert every lead into opportunity. Deploy an autonomous sales workforce that qualifies, nurtures, and books meetings 24/7."
+  image: "/og-lead-workforce.jpg"
+canonical: "https://novosapien.ai/workforces/inbound-sales"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "Service"
+  name: "Inbound Sales Workforce"
+  description: "Autonomous AI workforce for lead generation and conversion"
+  provider:
+    type: "Organization"
+    name: "Novosapien"
+  serviceType: "Sales Automation"
+---
+
 # Workforces Lead Page - Complete Text Content
 
 ## Page Metadata

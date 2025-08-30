@@ -1,3 +1,43 @@
+---
+title: "Stop Managing Tools, Start Scaling Revenue | Novosapien"
+description: "Deploy digital workforces into your business to generate revenue on autopilot. Transform your operations with AI automation that delivers measurable outcomes 24/7."
+keywords: 
+  - "digital workforce"
+  - "AI automation"
+  - "revenue operations"
+  - "sales automation"
+  - "autonomous AI agents"
+  - "business process automation"
+  - "revenue scaling"
+  - "AI workforce"
+  - "operational automation"
+  - "novosapien"
+openGraph:
+  title: "Stop Managing Tools, Start Scaling Revenue"
+  description: "We deploy digital workforces into your business so you can generate revenue on autopilot. Discover how AI automation can transform your operations."
+  type: "website"
+  image: "/og-home.jpg"
+  url: "https://novosapien.ai"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "Stop Managing Tools, Start Scaling Revenue"
+  description: "Deploy digital workforces that deliver outcomes, not just automate tasks. Transform your revenue operations with Novosapien."
+  image: "/og-home.jpg"
+canonical: "https://novosapien.ai"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "Organization"
+  name: "Novosapien"
+  description: "Building digital workforces to power the future of work"
+  url: "https://novosapien.ai"
+  logo: "/logo.svg"
+---
+
 # Homepage Content Text
 
 ## Page Metadata

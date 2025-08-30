@@ -937,6 +937,54 @@ export default function LeadWorkforcePage() {
 				</div>
 			</section>
 
+			{/* Section 7: Final CTA */}
+			<section className="py-16 sm:py-32 px-4">
+				<div className="max-w-4xl mx-auto">
+					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
+						<div className="inline-block mb-4 sm:mb-6">
+							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
+								Ready to Transform Your Lead Process?
+							</span>
+						</div>
+
+						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
+							Stop Losing Leads.
+							<br />
+							<span className="text-accent">
+								Start Converting Automatically.
+							</span>
+						</h2>
+
+						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+							Join companies that are converting 3.5x more leads with an
+							autonomous Digital Workforce. See the impact in your pipeline
+							within days.
+						</p>
+
+						<div className="flex justify-center gap-3 sm:gap-4">
+							<a
+								href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
+									Deploy This Workforce
+								</Button>
+							</a>
+							<a
+								href="https://demo.novosapien.ai"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+									See It In Action
+								</Button>
+							</a>
+						</div>
+					</Card>
+				</div>
+			</section>
+
 			{/* Related Solutions Section - Internal Linking */}
 			<section className="py-16 sm:py-24 px-4">
 				<div className="max-w-6xl mx-auto">
@@ -1247,54 +1295,6 @@ export default function LeadWorkforcePage() {
 						}),
 					}}
 				/>
-			</section>
-
-			{/* Section 7: Final CTA */}
-			<section className="py-16 sm:py-32 px-4">
-				<div className="max-w-4xl mx-auto">
-					<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
-						<div className="inline-block mb-4 sm:mb-6">
-							<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
-								Ready to Transform Your Lead Process?
-							</span>
-						</div>
-
-						<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-							Stop Losing Leads.
-							<br />
-							<span className="text-accent">
-								Start Converting Automatically.
-							</span>
-						</h2>
-
-						<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-							Join companies that are converting 3.5x more leads with an
-							autonomous Digital Workforce. See the impact in your pipeline
-							within days.
-						</p>
-
-						<div className="flex justify-center gap-3 sm:gap-4">
-							<a
-								href="https://cal.com/george-westbrook-novosapien/inbound-sales-workforce"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
-									Deploy This Workforce
-								</Button>
-							</a>
-							<a
-								href="https://demo.novosapien.ai"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
-									See It In Action
-								</Button>
-							</a>
-						</div>
-					</Card>
-				</div>
 			</section>
 
 			{/* Footer */}

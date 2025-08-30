@@ -1,3 +1,46 @@
+---
+title: "Blog | AI Workforce Insights & Automation Strategies | Novosapien"
+description: "Explore insights on digital workforces, AI automation, and revenue operations. Learn how to transform your business with autonomous systems that deliver outcomes."
+keywords:
+  - "AI automation blog"
+  - "digital workforce insights"
+  - "revenue operations strategies"
+  - "business automation guides"
+  - "AI workforce best practices"
+  - "autonomous systems"
+  - "sales automation tips"
+  - "content automation"
+  - "novosapien blog"
+  - "AI transformation"
+openGraph:
+  title: "Novosapien Blog - Digital Workforce Insights"
+  description: "Latest insights and strategies for deploying AI workforces that transform revenue operations and deliver measurable business outcomes."
+  type: "website"
+  image: "/og-blog.jpg"
+  url: "https://novosapien.ai/blog"
+  siteName: "Novosapien"
+twitter:
+  card: "summary_large_image"
+  site: "@novosapien"
+  creator: "@novosapien"
+  title: "AI Workforce Insights & Strategies"
+  description: "Explore how digital workforces are transforming businesses. Latest insights on AI automation and revenue operations."
+  image: "/og-blog.jpg"
+canonical: "https://novosapien.ai/blog"
+robots:
+  index: true
+  follow: true
+schema:
+  type: "Blog"
+  name: "Novosapien Blog"
+  description: "Insights on digital workforces and AI automation"
+  url: "https://novosapien.ai/blog"
+  publisher:
+    type: "Organization"
+    name: "Novosapien"
+    logo: "/logo.svg"
+---
+
 # Blog Page Content Documentation
 
 ## Page Metadata
