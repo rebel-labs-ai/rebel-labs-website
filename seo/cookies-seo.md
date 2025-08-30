@@ -213,8 +213,9 @@ None identified
 ### Critical SEO Score: 97/100
 
 **Breakdown:**
+
 - Metadata: 20/20 ✅
-- Technical SEO: 19/20 ✅ 
+- Technical SEO: 19/20 ✅
 - Content Structure: 19/20 ✅
 - User Experience: 19/20 ✅
 - Performance: 20/20 ✅
@@ -222,6 +223,7 @@ None identified
 ### Issues Found
 
 **Minor Issues (3 points deducted):**
+
 1. Skip navigation link missing (-2 points)
 2. Cookie management table could be more detailed (-1 point)
 

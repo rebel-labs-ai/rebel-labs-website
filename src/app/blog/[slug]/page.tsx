@@ -10,7 +10,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
-import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag } from "lucide-react"
+import { Calendar, Clock, User, ArrowLeft, ArrowRight } from "lucide-react"
 import { portableTextComponents } from "@/components/portable-text-components"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
