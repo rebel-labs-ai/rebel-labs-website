@@ -9,7 +9,10 @@ import { AnimatedText } from "@/components/animated-text"
 import { ScrollAnimatedSteps } from "@/components/scroll-animated-steps"
 import { ElasticInfrastructureGraph } from "@/components/elastic-infrastructure-graph"
 import { Footer } from "@/components/footer"
+import { SimpleBlogSection } from "@/components/home/simple-blog-section"
 import { TrendingUp } from "lucide-react"
+import { client } from "@/sanity/client"
+import { type SanityDocument } from "next-sanity"
 
 import { Metadata } from "next"
 
@@ -58,7 +61,33 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function Home() {
+// Query to fetch recent blog posts for home page - just 3 most recent
+const HOME_POSTS_QUERY = `*[
+  _type == "post"
+  && defined(slug.current)
+]|order(publishedAt desc)[0...3]{
+  _id, 
+  title, 
+  slug, 
+  excerpt,
+  author-> {
+    name,
+    slug
+  },
+  category,
+  publishedAt,
+  image,
+  "estimatedReadTime": round(length(pt::text(body)) / 5 / 200)
+}`
+
+export default async function Home() {
+	// Fetch recent blog posts
+	let posts: SanityDocument[] = []
+	try {
+		posts = await client.fetch<SanityDocument[]>(HOME_POSTS_QUERY)
+	} catch (error) {
+		console.error("Error fetching posts for home page:", error)
+	}
 	// Schema.org structured data for SEO
 	const organizationSchema = {
 		"@context": "https://schema.org",
@@ -1174,6 +1203,9 @@ export default function Home() {
 					</Card>
 				</div>
 			</section>
+
+			{/* Blog Section */}
+			{posts && posts.length > 0 && <SimpleBlogSection posts={posts} />}
 
 			{/* FAQ Section for SEO */}
 			<section className="py-16 sm:py-24 px-4 bg-background">

@@ -116,6 +116,14 @@ export function Navigation() {
 								Mission
 							</Button>
 						</Link>
+						<Link href="/blog">
+							<Button
+								variant={getButtonVariant("/blog")}
+								className={getButtonClassName("/blog")}
+							>
+								Blog
+							</Button>
+						</Link>
 						<Link href="/contact">
 							<Button
 								variant="ghost"

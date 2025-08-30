@@ -10,7 +10,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
-import { Calendar, Clock, User, ArrowLeft, ArrowRight } from "lucide-react"
+import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag } from "lucide-react"
 import { portableTextComponents } from "@/components/portable-text-components"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
@@ -22,6 +22,8 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   excerpt,
   seoTitle,
   metaDescription,
+  focusKeyword,
+  tags,
   body[]{
     ...,
     _type == "image" => {
@@ -32,7 +34,16 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
       }
     }
   },
-  author,
+  author-> {
+    name,
+    slug,
+    role,
+    bio,
+    image,
+    twitter,
+    linkedin,
+    expertise
+  },
   category,
   publishedAt,
   image,
@@ -43,7 +54,12 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
     slug,
     excerpt,
     category,
-    author,
+    author-> {
+      name,
+      slug,
+      role,
+      image
+    },
     publishedAt,
     image,
     "estimatedReadTime": round(length(pt::text(body)) / 5 / 200)
@@ -95,7 +111,7 @@ export async function generateMetadata({
 						},
 					],
 			publishedTime: post.publishedAt,
-			authors: [post.author],
+			authors: [post.author?.name],
 		},
 		twitter: {
 			card: "summary_large_image",
@@ -167,11 +183,18 @@ export default async function PostPage({
 		datePublished: post.publishedAt,
 		dateModified: post._updatedAt || post.publishedAt,
 		articleSection: post.category,
-		keywords: post.category,
+		keywords: [post.focusKeyword, post.category, ...(post.tags || [])].filter(Boolean).join(', '),
 		author: {
 			"@type": "Person",
-			name: post.author,
-			url: `${baseUrl}/about#team`,
+			name: post.author?.name,
+			jobTitle: post.author?.role,
+			description: post.author?.bio,
+			image: post.author?.image ? urlFor(post.author.image).width(200).height(200).url() : undefined,
+			sameAs: [
+				post.author?.twitter ? `https://twitter.com/${post.author.twitter}` : undefined,
+				post.author?.linkedin,
+			].filter(Boolean),
+			url: `${baseUrl}/author/${post.author?.slug?.current}`,
 		},
 		publisher: {
 			"@type": "Organization",
@@ -253,7 +276,7 @@ export default async function PostPage({
 							<div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground pb-8 border-b border-accent/20">
 								<span className="flex items-center gap-2">
 									<User className="w-4 h-4" />
-									{post.author}
+									{post.author?.name}
 								</span>
 								<span className="flex items-center gap-2">
 									<Calendar className="w-4 h-4" />
@@ -296,6 +319,27 @@ export default async function PostPage({
 							)}
 						</div>
 
+						{/* Tags Section */}
+						{post.tags && post.tags.length > 0 && (
+							<div className="mt-8 mb-12">
+								<div className="flex items-center gap-2 mb-3">
+									<Tag className="w-4 h-4 text-muted-foreground" />
+									<span className="text-sm font-semibold text-muted-foreground">Related Topics</span>
+								</div>
+								<div className="flex flex-wrap gap-2">
+									{post.tags.map((tag: string) => (
+										<Link
+											key={tag}
+											href={`/blog?tag=${tag}`}
+											className="inline-block bg-background hover:bg-accent/10 text-foreground px-3 py-1 rounded-full text-sm border border-accent/20 hover:border-accent/40 transition-colors"
+										>
+											{tag}
+										</Link>
+									))}
+								</div>
+							</div>
+						)}
+
 						{/* Related Posts */}
 						{post.relatedPosts && post.relatedPosts.length > 0 && (
 							<section className="mt-16 pt-12 border-t border-accent/20">
@@ -311,7 +355,7 @@ export default async function PostPage({
 											title: string
 											excerpt: string
 											image?: { alt?: string; [key: string]: unknown }
-											author: string
+											author: { name: string }
 											publishedAt: string
 											estimatedReadTime: number
 										}) => (
@@ -354,7 +398,7 @@ export default async function PostPage({
 															</p>
 														)}
 														<div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-accent/10">
-															<span>{relatedPost.author}</span>
+															<span>{relatedPost.author?.name}</span>
 															{relatedPost.estimatedReadTime && (
 																<span>{relatedPost.estimatedReadTime} min</span>
 															)}
