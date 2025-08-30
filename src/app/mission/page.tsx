@@ -169,9 +169,9 @@ export default function MissionPage() {
 // Hero Section Component
 function MissionHeroSection() {
 	return (
-		<section className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-18">
+		<section className="relative flex min-h-screen flex-col items-center justify-center px-4  sm:pt-18">
 			<div className="mx-auto max-w-5xl">
-				<div className="relative overflow-hidden rounded-3xl border border-accent/50 bg-card/80 p-12 backdrop-blur-lg shadow-[0_0_50px_rgba(var(--accent),0.1)]">
+				<div className="relative overflow-hidden rounded-3xl border border-accent/50 bg-card/80 p-10 backdrop-blur-lg shadow-[0_0_50px_rgba(var(--accent),0.1)]">
 					{/* Animated gradient border effect */}
 					<div className="absolute inset-0 -z-10">
 						<div className="absolute inset-[-2px] rounded-3xl bg-gradient-to-r from-accent via-accent-teal to-accent bg-[length:200%_100%] animate-[gradient_3s_linear_infinite]" />
