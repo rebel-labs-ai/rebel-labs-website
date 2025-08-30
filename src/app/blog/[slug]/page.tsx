@@ -20,6 +20,8 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   title,
   slug,
   excerpt,
+  seoTitle,
+  metaDescription,
   body[]{
     ...,
     _type == "image" => {
@@ -66,8 +68,8 @@ export async function generateMetadata({
 	if (!post) return { title: "Post Not Found" }
 
 	return {
-		title: `${post.title} | NovoSapien Blog`,
-		description: post.excerpt || `Read ${post.title} on the NovoSapien blog`,
+		title: post.seoTitle ? `${post.seoTitle} | NovoSapien Blog` : `${post.title} | NovoSapien Blog`,
+		description: post.metaDescription || post.excerpt || `Read ${post.title} on the NovoSapien blog`,
 		openGraph: {
 			type: "article",
 			locale: "en_US",
@@ -104,6 +106,9 @@ export async function generateMetadata({
 		},
 		alternates: {
 			canonical: `${baseUrl}/blog/${slug}`,
+			types: {
+				"application/rss+xml": `${baseUrl}/blog/rss.xml`,
+			},
 		},
 	}
 }
