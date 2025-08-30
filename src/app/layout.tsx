@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Nunito_Sans, Reddit_Sans } from "next/font/google"
 import localFont from "next/font/local"
-import Script from "next/script"
 import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleAnalytics } from "@/components/google-tag-manager"
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -204,22 +204,9 @@ export default function RootLayout({
 				<Analytics />
 				<SpeedInsights />
 
-				{/* Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID */}
+				{/* Google Analytics */}
 				{process.env.NEXT_PUBLIC_GA_ID && (
-					<>
-						<Script
-							src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-							strategy="afterInteractive"
-						/>
-						<Script id="google-analytics" strategy="afterInteractive">
-							{`
-								window.dataLayer = window.dataLayer || [];
-								function gtag(){dataLayer.push(arguments);}
-								gtag('js', new Date());
-								gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-							`}
-						</Script>
-					</>
+					<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
 				)}
 			</body>
 		</html>
