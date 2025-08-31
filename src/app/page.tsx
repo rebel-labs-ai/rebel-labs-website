@@ -207,7 +207,7 @@ export default async function Home() {
 				<div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-accent/40  via-accent/30 via-30% to-transparent pointer-events-none"></div>
 
 				{/* Section 1: Hero - The Declaration */}
-				<section className="pt-48 sm:pt-24 md:pt-44 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
+				<section className="pt-48 sm:pt-24 md:pt-40 pb-16 md:pb-24 px-4 relative min-h-[75vh] flex items-center md:block md:min-h-0">
 					<div className="max-w-5xl mx-auto relative z-10 w-full md:mt-36">
 						<div className="hidden sm:block text-center mb-6 sm:mb-6">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
@@ -904,24 +904,24 @@ export default async function Home() {
 						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
 						<div className="hidden md:block md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Works with your existing stack
+							Complete processes end-to-end without supervision
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Your workforce connects natively to your core systems—CRM,
-								marketing automation, and calendars—acting as a seamless
-								extension of your existing tech stack.
+								
+								Your workforce manages complex, multi-step processes from end to
+								end, executing its mission without the need for your constant
+								intervention or management.
 							</p>
 						</div>
 
 						{/* Feature Three - Autonomous Execution */}
 						<div className="bg-card-background border border-accent/30 shadow-lg rounded-xl p-6 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Complete processes end-to-end without supervision
+								 Works with your existing stack
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								Your workforce manages complex, multi-step processes from end to
-								end, executing its mission without the need for your constant
-								intervention or management.
+							Your workforce connects natively to your core systems, acting as a seamless
+							extension of your existing tech stack.
 							</p>
 						</div>
 
