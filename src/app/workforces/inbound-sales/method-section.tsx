@@ -23,7 +23,7 @@ export function MethodSection() {
 			label: "Step Two",
 			title: "Blueprint & Strategize",
 			description:
-				"For every lead, the workforce builds a deep intelligence blueprint. A strategy agent then analyzes this blueprint to map the prospect's pains to your value, architecting the optimal outreach plan.",
+				"For every lead, the workforce builds a deep intelligence blueprint. They then analyze this blueprint to map the prospect's pains to your value, architecting the optimal strategy to maximize conversions.",
 			icon: <Brain className="w-12 h-12 text-accent" />,
 			visual: "Lead Blueprint",
 		},
@@ -85,7 +85,7 @@ export function MethodSection() {
 				{/* Section Header */}
 				<div className="text-left sm:text-center mb-8 sm:mb-16">
 					<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-						A Disciplined Protocol for Delivering Results
+						A Battle-Tested System That Actually Delivers
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 						Your workforce follows a proven, four-step protocol to ensure every
@@ -143,9 +143,13 @@ export function MethodSection() {
 									ref={el => {
 										stepRefs.current[index] = el
 									}}
-									className={`${
-										index === 0 ? "min-h-[50vh]" : "min-h-screen"
-									} flex items-center`}
+									className={`flex items-center ${
+										index === 0
+											? "min-h-[80vh] pt-20"
+											: index === methodSteps.length - 1
+												? "min-h-[80vh] pb-20"
+												: "min-h-[80vh]"
+									}`}
 								>
 									<div
 										className={`transition-all duration-500 ${
@@ -171,8 +175,8 @@ export function MethodSection() {
 						</div>
 
 						{/* Right Column - Sticky Visual */}
-						<div className="relative hidden lg:block mt-80 mb-32">
-							<div className="sticky top-1/2 -translate-y-1/2">
+						<div className="relative hidden lg:block mt-80 ">
+							<div className="sticky top-1/2 -translate-y-1/3">
 								<div className="relative h-[500px] w-full flex items-center justify-center">
 									{/* Step Images */}
 									{methodSteps.map((step, index) => (

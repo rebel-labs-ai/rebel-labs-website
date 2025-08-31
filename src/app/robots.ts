@@ -8,7 +8,14 @@ export default function robots(): MetadataRoute.Robots {
 			{
 				userAgent: "*",
 				allow: "/",
-				disallow: ["/api/", "/admin/", "/*.json$", "/_next/", "/static/"],
+				disallow: [
+					"/api/",
+					"/admin/",
+					"/*.json$",
+					"/_next/",
+					"/static/",
+					"/lp/", // Block all landing pages from being crawled
+				],
 			},
 			// Specific rules for major search engine bots
 			{

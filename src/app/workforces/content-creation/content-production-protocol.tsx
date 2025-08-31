@@ -4,32 +4,32 @@ const protocolStages = [
 	{
 		id: "brief",
 		number: "1",
-		headline: "From Strategic Intent to Actionable Brief",
-		description: `The process begins with your strategic command. Your team provides a simple, high-level brief—the core idea, the target audience, the desired outcome. The workforce's research agents then enrich this brief, adding market data and competitive intelligence to create a comprehensive, data-backed mission plan.`,
+		headline: "Brief to Blueprint",
+		description: `You give us strategic direction. The workforce transforms it into a complete campaign blueprint enriched with competitor intelligence, untapped opportunities, and platform-specific execution strategies. Your team shapes the final direction. The workforce delivers at scale.`,
 		textPosition: "left",
 		mockupAlt: "Mission Planner UI showing brief enrichment process",
 	},
 	{
 		id: "creation",
 		number: "2",
-		headline: "From First Draft to Perfected Asset",
-		description: `A coordinated team of AI agents—a planner, writer, and critic—collaborates to produce the core asset. Your human strategists then act as creative directors, providing simple feedback. The workforce's iteration agents make precise revisions at machine speed, learning your preferences with every cycle.`,
+		headline: "Creation Through Collaboration",
+		description: `The workforce orchestrates specialized agents. Drafters create. Critics refine. Perfectors polish. When you provide feedback, the system implements instantly and learns your preferences. What used to take 5 revision cycles now takes 1. Time-to-market drops by 10x.`,
 		textPosition: "right",
 		mockupAlt: "Iteration Studio UI showing draft refinement and feedback",
 	},
 	{
 		id: "amplification",
 		number: "3",
-		headline: "From Single Asset to Multi-Platform Campaign",
-		description: `This is where we create true leverage. A dedicated repurposing agent systematically "atomizes" the perfected core asset into a complete arsenal of derivative content, with specific tones and formats for each channel, turning one idea into a complete campaign.`,
+		headline: "One Piece Becomes Everywhere",
+		description: `One pillar article transforms into 20+ coordinated assets. Each optimized for its platform-specific psychology. LinkedIn's professional tone. Twitter's punchy threads. Instagram's visual hooks. The workforce knows what works where and executes accordingly.`,
 		textPosition: "left",
 		mockupAlt: "Amplification Dashboard showing content derivatives",
 	},
 	{
 		id: "analysis",
 		number: "4",
-		headline: "From Performance Data to Smarter Strategy",
-		description: `This is a closed-loop system. The workforce monitors engagement across all platforms to understand what resonates. This performance data is then used as fuel to make all future content ideas and strategic recommendations even more effective, creating a compounding advantage.`,
+		headline: "Performance Becomes Predictive Intelligence",
+		description: `The workforce monitors cross-platform performance continuously. Identifies patterns humans miss. Self-adjusts future strategies—topics, timing, formats. Every campaign makes the next one stronger. Compound intelligence that grows without limits.`,
 		textPosition: "right",
 		mockupAlt:
 			"Performance Insights dashboard with analytics and recommendations",
@@ -319,9 +319,10 @@ export function ContentProductionProtocol() {
 							The Autonomous Content Lifecycle
 						</h2>
 						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-							Your workforce operates in a continuous, four-stage loop,
-							transforming your strategic intent into a high-performance,
-							multi-platform content campaign.
+							Your workforce operates through four self-managing stages. You
+							provide the mission. The workforce delivers the outcome. No
+							hand-holding between stages. No project management. Just
+							relentless execution.
 						</p>
 					</div>
 				</div>

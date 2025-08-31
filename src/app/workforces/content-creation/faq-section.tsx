@@ -2,45 +2,39 @@
 
 const faqs = [
 	{
-		question:
-			"How quickly can the AI Content Workforce start producing content?",
-		answer:
-			"After the initial onboarding and configuration process (typically 3-5 days), your content workforce can begin producing content immediately. The system learns and improves with each iteration, becoming more aligned with your brand voice over time.",
-	},
-	{
 		question: "Will the content sound generic or AI-generated?",
 		answer:
-			"No. We configure the workforce with your brand DNA and expert voice profiles. The AI analyzes your existing content to capture your unique style, tone, and perspective. The result is authentic content that sounds like it came from your team, not a machine.",
+			"Your workforce learns from your best content. We analyze 50+ linguistic markers. Sentence cadence. Vocabulary. Storytelling patterns. All encoded into each agent. Research captures your insights. Writer maintains voice. Critic ensures authenticity. Result: Content indistinguishable from your best human writers.",
 	},
 	{
-		question: "Can I review and edit content before it's published?",
+		question: "Can I maintain control over what gets published?",
 		answer:
-			"Absolutely. While the workforce can automate the entire process, we recommend human oversight for strategic content. Your team acts as creative directors, providing feedback that the AI uses to refine content instantly. You maintain full control over what gets published.",
+			"You set boundaries. Workforce executes within them. Auto-publish social. Review blogs. Approve case studies. Your team directs strategy, not tasks. You're commanding an autonomous operation, not managing writers.",
 	},
 	{
 		question: "What types of content can the workforce create?",
 		answer:
-			"The workforce handles the full content spectrum: long-form blog posts, social media content (LinkedIn, Twitter/X, Instagram), email newsletters, video scripts, case studies, whitepapers, and more. Each piece is optimized for its specific platform and audience.",
+			"2,500-word SEO articles. LinkedIn thought leadership. Case studies from raw data. Each agent specializes. The workforce coordinates. Message consistency across channels.",
 	},
 	{
 		question: "How does the content repurposing work?",
 		answer:
-			"The Repurposing Agent takes a single pillar piece (like a blog post) and automatically creates derivative content for all your channels. One 2,000-word article becomes 4 LinkedIn posts, a 10-tweet thread, an email newsletter, Instagram captions, and more—each formatted perfectly for its platform.",
+			"One piece becomes a campaign. Your 2,000-word blog autonomously becomes: 5 LinkedIn posts, 12-part Twitter thread, 3 segmented newsletters, 15 social clips, 2 sales one-pagers, FAQ docs. Each optimized for platform algorithms and audience behavior. Zero additional effort. 10x reach.",
 	},
 	{
-		question: "Can the AI workforce integrate with our existing tools?",
+		question: "Won't I lose the human creativity and strategic thinking?",
 		answer:
-			"Yes. The workforce integrates with popular CMS platforms, social media schedulers, email marketing tools, and analytics platforms. We can work with your existing tech stack or recommend optimizations based on your needs.",
+			'Workforce amplifies creativity, doesn\'t replace it. Your team provides strategy, concepts, insights. Workforce handles execution at scale. Film director vs production crew. One CMO: "My team finally works at the level they were hired for."',
 	},
 	{
 		question: "How do you ensure content quality at scale?",
 		answer:
-			"The Critic Agent acts as a built-in quality control system, reviewing every piece of content for accuracy, coherence, and brand alignment. Combined with your team's strategic oversight, this ensures consistently high-quality output regardless of volume.",
+			"Three-layer architecture. Critic Agent reviews before you see anything. Performance data feeds continuous improvement. Your feedback trains in real-time. Quality improves with volume, not degrades.",
 	},
 	{
 		question: "What makes this different from ChatGPT or other AI tools?",
 		answer:
-			"This isn't a generic AI tool—it's a complete content operating system custom-built for your business. Unlike ChatGPT, which requires constant prompting and produces inconsistent results, your workforce operates autonomously, maintains perfect brand consistency, and improves continuously based on performance data.",
+			"ChatGPT is a tool. You work. This is a workforce. It works. No prompting. No copy-paste. No inconsistency. Your Content Workforce operates 24/7. Perfect brand consistency across 1 or 1,000 pieces. Improves automatically from performance data. Swiss Army knife vs production studio.",
 	},
 ]
 

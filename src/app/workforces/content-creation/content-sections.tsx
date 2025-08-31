@@ -48,9 +48,9 @@ export function HeroSection() {
 							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto px-2 sm:px-0">
-							Deploy an autonomous content production team that transforms your
-							strategic directives into high-quality, on-brand assets—from
-							drafting and research to multi-platform repurposing.
+							Turn one strategic brief into 50+ pieces of content across every
+							channel. Your self-managing workforce operates 24/7 at machine
+							scale.
 						</p>
 						<Button className=" mt-4 sm:mt-8 mx-auto block bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 							Talk to Us
@@ -86,12 +86,13 @@ export function MethodSection() {
 					    Agent: Assistant
 					*/}
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-						We Build Your Custom Content Operating System.
+						Your Content Operating System
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-						This is not a one-size-fits-all tool. We work with you to architect
-						a workforce that acts as a true extension of your team, aligned to
-						your unique brand, experts, and strategic goals.
+						This is not a one-size-fits-all tool. Deploy a self-directing
+						workforce that learns your business, masters your voice, and scales
+						your best thinking. Each agent specializes. Together they deliver
+						the results.
 					</p>
 				</div>
 
@@ -105,7 +106,7 @@ export function MethodSection() {
 									<FileText className="w-6 h-6 text-accent" />
 								</div>
 								<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
-									1. We Codify Your Brand DNA
+									1. Your Workforce Learns the Business
 								</h3>
 							</div>
 							<div className="space-y-4">
@@ -113,11 +114,11 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Brand Voice & Tone:
+											Absorbs Your Strategic Foundation:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											We analyze your existing content to define its unique
-											personality.
+											Studies positioning and go-to-market priorities. 48 hours
+											to fluency.
 										</span>
 									</div>
 								</div>
@@ -125,10 +126,10 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Strategic Pillars:
+											Masters Your Brand Standards:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											We codify your core messaging and non-negotiable themes.
+											Voice, messaging, quality—encoded and consistent at scale.
 										</span>
 									</div>
 								</div>
@@ -136,11 +137,10 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Platform Requirements:
+											Maps Your Content Ecosystem:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											We configure the specific formats and styles for all your
-											target channels.
+											Every piece aligned to buyer journey and revenue goals.
 										</span>
 									</div>
 								</div>
@@ -162,7 +162,7 @@ export function MethodSection() {
 									<Users className="w-6 h-6 text-accent" />
 								</div>
 								<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4">
-									2. We Clone Your Expert Voices
+									2. Your Workforce Replicates Your Best Minds
 								</h3>
 							</div>
 							<div className="space-y-4">
@@ -170,11 +170,11 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Analyze Past Content:
+											Studies Your Subject Matter Experts:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											The workforce ingests your experts&apos; existing articles
-											and posts.
+											Analyzes how your top people think and write. Scales their
+											perspectives.
 										</span>
 									</div>
 								</div>
@@ -182,11 +182,11 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Create Voice Profiles:
+											Develops Specialized Capabilities:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											It creates unique models that capture their individual
-											style and perspective.
+											Each agent masters distinct competencies. Available on
+											demand.
 										</span>
 									</div>
 								</div>
@@ -194,11 +194,10 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Generate Authentic Content:
+											Scales Expert-Level Thinking:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											The system can now generate new, original content that
-											sounds authentically like them.
+											Sophistication of your best people. At machine velocity.
 										</span>
 									</div>
 								</div>
@@ -225,11 +224,11 @@ export function ImpactAmplifierSection() {
 					    Agent: Assistant
 					*/}
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-						The New Definition of Leverage.
+						The New Definition of Leverage
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-						The old model gives you a 1:1 return on strategic effort. Our model
-						is an amplifier, systematically transforming one unit of your
+						Your old model gives you a 1:1 return on strategic effort. Your new
+						model is an amplifier, systematically transforming one unit of your
 						team&apos;s strategic input into an overwhelming multi-platform
 						market presence.
 					</p>
@@ -453,7 +452,7 @@ export function FinalCTASection() {
 				<Card className="p-6 sm:p-12 text-center bg-card-background backdrop-blur-sm border-accent/20">
 					<div className="inline-block mb-4 sm:mb-6">
 						<span className="bg-accent/10 text-foreground font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm border border-accent/30">
-							Ready to Transform Your Content Process?
+							30 Minutes to Your Content Breakthrough
 						</span>
 					</div>
 
@@ -470,9 +469,10 @@ export function FinalCTASection() {
 					</h2>
 
 					<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-						Deploy an on-demand content workforce that scales your brand&apos;s
-						voice, not your headcount. Your first strategic session is the
-						starting point.
+						Your competitors hire their 5th content manager. You deploy a
+						workforce producing 10x output at 30% cost. Every week you wait: 50+
+						pieces you&apos;re not publishing. 50+ opportunities your
+						competition claims.
 					</p>
 
 					<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">

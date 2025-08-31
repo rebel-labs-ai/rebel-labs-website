@@ -211,7 +211,7 @@ export default async function Home() {
 					<div className="max-w-5xl mx-auto relative z-10 w-full md:mt-36">
 						<div className="hidden sm:block text-center mb-6 sm:mb-6">
 							<span className="bg-[#A8CDFF]/10 text-foreground dark:text-white font-semibold px-3 py-1 rounded-full text-xs sm:text-sm border border-[#A8CDFF] shadow-[0_0_15px_rgba(168,205,255,0.4)]">
-								Redefining the way your generate revenue
+								Revenue teams that scale without hiring
 							</span>
 						</div>
 						{/* ml-0 sm:ml-8 md:ml-16 lg:ml-24 */}
@@ -234,12 +234,8 @@ export default async function Home() {
 							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-1 sm:mt-6 leading-relaxed text-center">
-							We deploy digital workforces into your business so you can
-							<span className="inline sm:hidden">&nbsp;</span>
-							<span className="hidden sm:inline">
-								<br />
-							</span>
-							generate revenue on autopilot.
+							We deploy digital workforces that execute your entire revenue
+							operation 24/7, at scale, without adding headcount.
 						</p>
 						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
 							<a
@@ -269,13 +265,14 @@ export default async function Home() {
 									"0 0 20px rgba(168, 205, 255, 0.4), 0 0 40px rgba(168, 205, 255, 0.3)",
 							}}
 						>
-							We Automate the Full Stack of Revenue Operations
+							The Only Revenue Operations System That Actually Runs Itself
 						</h2>
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-							A Novosapien Digital Workforce isn&apos;t a point solution that
-							automates a single task. It&apos;s a complete operational layer
-							designed to execute, learn, and scale, freeing your human team to
-							focus on what matters most: growth.
+							Stop buying tools that still need humans to operate them.
+							Novosapien deploys complete digital workforces that execute
+							revenue operations end-to-end, from first touch to booked
+							appointment to content at scale, while your team focuses on
+							strategy and growth.
 						</p>
 					</div>
 
@@ -309,11 +306,11 @@ export default async function Home() {
 								</div>
 								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
-										24/7 Operation
+										Always On, Always Working
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Your workforce operates continuously without breaks,
-										holidays, or downtime.
+										Works every lead, every hour, every day. No meetings, no
+										lunch breaks, no timezone limitations.
 									</p>
 								</div>
 							</div>
@@ -341,8 +338,8 @@ export default async function Home() {
 										Flawless Execution
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Eliminate human error. Your workforce runs critical
-										processes with perfect consistency and reliability.
+										No cherry-picking accounts, no forgotten follow-ups, no data
+										entry errors. Perfect consistency across every interaction.
 									</p>
 								</div>
 							</div>
@@ -354,11 +351,11 @@ export default async function Home() {
 								</div>
 								<div className="text-left md:text-right">
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
-										Continuous Improvement
+										Self-Optimizing Performance
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Your workforce analyzes every action, learns what works, and
-										systematically improves its performance over time.
+										Tracks what converts, tests what doesn&apos;t, improves
+										automatically. Your conversion rates go up while you sleep.
 									</p>
 								</div>
 							</div>
@@ -416,11 +413,11 @@ export default async function Home() {
 								</div>
 								<div>
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
-										Free Your Talent
+										Redeploy Your A-Players
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Automate the high-volume, repetitive work that frees your
-										team for strategic priorities.
+										Move your best people from data entry to deal strategy. From
+										list building to relationship building.
 									</p>
 								</div>
 							</div>
@@ -445,11 +442,12 @@ export default async function Home() {
 								</div>
 								<div>
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
-										Unlock Autonomy
+										Scale Without Limits
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										A workforce that makes decisions, solves problems, and
-										optimizes its own performance to deliver the result.
+										Process unlimited leads, create endless content, and book
+										meetings 24/7. Handle 10x the volume without hiring a single
+										person.
 									</p>
 								</div>
 							</div>
@@ -474,11 +472,12 @@ export default async function Home() {
 								</div>
 								<div>
 									<h3 className="text-foreground text-base sm:text-lg font-semibold mb-1 sm:mb-2">
-										Scale On Demand
+										True Revenue Acceleration
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Instantly scale your operations to meet any demand, paying
-										only for productive output.
+										Deploy AI workforces across your entire revenue function.
+										From content that drives traffic to lead nurturing that
+										books meetings.
 									</p>
 								</div>
 							</div>
@@ -521,11 +520,11 @@ export default async function Home() {
 								What is a Digital Workforce?
 							</h2>
 							<p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-								A Digital Workforce is a collection of autonomous AI agents that
-								work together to execute complete business processes from start
-								to finish. Unlike traditional automation tools that handle
-								single tasks, our digital workers manage entire workflows, make
-								decisions, and deliver results 24/7.
+								It&apos;s an AI team that runs your revenue operations 24/7. No
+								training, no management, no downtime. While ChatGPT answers
+								questions, a Digital Workforce completes entire jobs: qualifying
+								leads, booking meetings, creating content. You get measurable
+								outcomes, not just outputs.
 							</p>
 						</div>
 
@@ -568,21 +567,23 @@ export default async function Home() {
 							<span className="block sm:inline">We Deliver Outcomes.</span>
 						</h2>
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto mt-3 sm:mt-4 leading-relaxed px-2 sm:px-0">
-							A Digital Workforce is a collection of autonomous agents that
-							execute complete business processes, not individual tasks. They
-							operate 24/7, scale instantly, and deliver measurable results.
+							Your competitors juggle 42 different tools and burn cash on
+							headcount, you&apos;ll run a single unified workforce that
+							converts visitors, creates content, and captures revenue 24/7. No
+							integration headaches. No management overhead. Just results.
 						</p>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-6 sm:p-8">
 							<div className="flex flex-col h-full">
 								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center md:text-left">
 									Inbound Conversion Workforce
 								</h3>
 								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
-									Transforms website visitors into qualified sales meetings
-									through intelligent lead scoring, nurturing sequences, and
-									automated follow-up.
+									Convert more leads into booked appointments. Qualify prospects
+									from any source in real-time, trigger multi-channel sequences
+									within 5 minutes, and never lose another opportunity to slow
+									follow-up.
 								</p>
 								{/* Light mode image */}
 								<Image
@@ -618,9 +619,9 @@ export default async function Home() {
 									Content Creation Workforce
 								</h3>
 								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
-									Produces consistent, high-quality content across all channels,
-									from blog posts to social media, aligned with your brand and
-									strategy.
+									Ship 10x more content without hiring a single writer. Generate
+									SEO-optimized articles, social campaigns, and sales collateral
+									that actually sounds like your brand.
 								</p>
 								{/* Light mode image */}
 								<Image
@@ -645,6 +646,44 @@ export default async function Home() {
 										aria-label="Learn more about the Content Creation Workforce for automated content generation"
 									>
 										Explore Content Workforce →
+									</Link>
+								</div>
+							</div>
+						</Card>
+
+						<Card className="bg-card-background border border-[#A1BCD1] shadow-lg transition-all hover:border-accent hover:shadow-xl p-6 sm:p-8">
+							<div className="flex flex-col h-full">
+								<h3 className="text-foreground text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center md:text-left">
+									Workforce Lab
+								</h3>
+								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
+									Access cutting-edge experimental workforces before they hit
+									the market. Test new capabilities, shape product development,
+									and get first-mover advantage on emerging use cases.
+								</p>
+
+								<Image
+									src="/home/lab-workforce.svg"
+									alt="Experimental AI workforce testing environment showing cutting-edge capabilities and development preview features"
+									width={400}
+									height={320}
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
+								/>
+
+								<Image
+									src="/home/lab-workforce-dark.svg"
+									alt="Experimental AI workforce testing environment showing cutting-edge capabilities and development preview features"
+									width={400}
+									height={320}
+									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 hidden dark:block"
+								/>
+								<div className="text-right">
+									<Link
+										href="/workforces/lab"
+										className="text-muted-foreground font-semibold hover:text-accent transition-colors inline-block py-2 px-1"
+										aria-label="Learn more about the Workforce Lab for experimental AI capabilities"
+									>
+										Explore Lab →
 									</Link>
 								</div>
 							</div>
@@ -838,7 +877,7 @@ export default async function Home() {
 			<section className="pt-0 pb-16 sm:pb-24 px-4">
 				<div className="max-w-6xl mx-auto">
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-left sm:text-center mb-6 sm:mb-8">
-						Core Capabilities
+						Built Different From Day One
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg text-left sm:text-center max-w-3xl sm:mx-auto mb-8 sm:mb-16">
 						Your Digital Workforce is built on an architecture designed to
@@ -850,7 +889,7 @@ export default async function Home() {
 						{/* Feature One - Elastic Infrastructure (Primary - Large Card) */}
 						<div className="md:col-span-2 md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-8 min-h-[350px]">
 							<h3 className="text-foreground text-xl font-semibold mb-4">
-								Elastic Infrastructure
+								Scale from 1 to 1,000 agents in seconds
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-6">
 								Your workforce dynamically scales from a single agent to a
@@ -865,7 +904,7 @@ export default async function Home() {
 						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
 						<div className="hidden md:block md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Seamless Integration
+								Works with your existing stack
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
 								Your workforce connects natively to your core systems—CRM,
@@ -877,7 +916,7 @@ export default async function Home() {
 						{/* Feature Three - Autonomous Execution */}
 						<div className="bg-card-background border border-accent/30 shadow-lg rounded-xl p-6 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Autonomous Execution
+								Complete processes end-to-end without supervision
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
 								Your workforce manages complex, multi-step processes from end to
@@ -889,7 +928,7 @@ export default async function Home() {
 						{/* Feature Four - Collaborative Reasoning (moved from Feature Two) */}
 						<div className="md:row-span-2 bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[370px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Collaborative Reasoning
+								AI agents that debate to find the best solution
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
 								Inside your workforce, specialized agents—like Researchers and
@@ -919,7 +958,7 @@ export default async function Home() {
 						{/* Feature Five - Real-Time Optimization (moved from Feature Four) */}
 						<div className="md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Understand the Why, Not Just the What
+								Understand the why, not just the what
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed mb-4">
 								Your workforce doesn&apos;t just report on performance—it
@@ -949,7 +988,7 @@ export default async function Home() {
 						{/* Feature Six - Outcome-Centric Reporting */}
 						<div className="hidden md:block bg-card-background border border-accent shadow-lg rounded-xl p-6 min-h-[200px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								Outcome-Centric Reporting
+								Transparent ROI, not vanity metrics
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
 								Get transparent reporting focused on the business outcomes your
@@ -996,7 +1035,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Locked into fixed costs for headcount and software.
+											Fixed headcount burns $30K-50K monthly whether pipeline is
+											full or empty.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1010,7 +1050,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Growth is capped by the linear speed of your team.
+											Pipeline velocity capped at 8 hours/day, 5 days/week of
+											human bandwidth.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1024,7 +1065,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Scaling requires slow, expensive hiring projects.
+											Scaling means 3-6 month hiring cycles that miss quarterly
+											targets.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1038,8 +1080,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Execution quality is subject to human error and
-											inconsistency.
+											20-30% of leads leak through process gaps and handoff
+											errors.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1053,8 +1095,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Pivoting strategy is slow, costly, and risks market
-											momentum.
+											Testing new plays requires retraining teams and risking
+											current performance.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1068,7 +1110,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Budget is spent on tasks, not the final result.
+											Paying for activity metrics while conversion rates stay
+											flat.
 										</span>
 									</li>
 								</ul>
@@ -1101,7 +1144,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Pay for productive output, not for idle time.
+											Pay for work performed: content published, leads
+											contacted, conversations held.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1115,7 +1159,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Growth is driven by 24/7 autonomous operations.
+											Content creation runs parallel to lead outreach while you
+											focus on strategy.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1129,7 +1174,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Scale capacity instantly, on demand, without projects.
+											Scale from 10 to 1,000 agents instantly when opportunity
+											strikes.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1143,7 +1189,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Achieve inhuman consistency and precision in every action.
+											Maintain consistent brand voice across 10,000 pieces of
+											content or conversations.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1157,8 +1204,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Adapt to market changes instantly with a fluid operational
-											model.
+											Test campaign variations simultaneously without risking
+											core operations.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1172,8 +1219,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Budget is spent directly on the revenue-generating
-											outcome.
+											Every dollar translates to measurable execution, not
+											monthly salaries.
 										</span>
 									</li>
 								</ul>
@@ -1200,9 +1247,10 @@ export default async function Home() {
 						</h2>
 
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
-							Join forward-thinking companies who are achieving measurable
-							results with Digital Workforces. Your transformation starts with a
-							single conversation.
+							See exactly how digital workforces are generating 3x more
+							qualified pipeline for companies like yours. In 30 minutes,
+							we&apos;ll show you real workflows, actual results, and ROI
+							calculations based on your current metrics.
 						</p>
 
 						<div className="flex justify-center">
@@ -1213,7 +1261,7 @@ export default async function Home() {
 								aria-label="Book a demo to see how digital workforces can transform your revenue operations"
 							>
 								<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 px-6 py-3 min-h-[48px] min-w-[48px]">
-									Book a Demo
+									Speak to us
 								</Button>
 							</a>
 						</div>
@@ -1253,12 +1301,10 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									A Digital Workforce is a collection of autonomous AI agents
-									that work together to execute complete business processes
-									24/7. Unlike traditional automation tools that handle single
-									tasks, our digital workers manage entire workflows, make
-									decisions, and continuously improve their performance without
-									human intervention.
+									AI agents that run complete revenue operations from lead
+									capture to booked appointment or from idea to published
+									campaign. Not a chatbot. Not basic automation. Full execution
+									of your playbooks, 24/7, at 10x the speed of human teams.
 								</p>
 							</div>
 						</details>
@@ -1267,7 +1313,7 @@ export default async function Home() {
 						<details className="group bg-card-background border border-accent/20 rounded-lg">
 							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
 								<h3 className="text-foreground text-lg font-semibold pr-4">
-									How quickly can I deploy a Digital Workforce?
+									What happens to my existing team?
 								</h3>
 								<svg
 									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
@@ -1285,11 +1331,11 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Most Digital Workforces can be deployed within 2-4 weeks. We
-									start with a discovery call to understand your specific needs,
-									then configure and train the workforce for your unique
-									business processes. The workforce begins delivering value
-									immediately upon deployment and improves over time.
+									Your team gets elevated, not replaced. Instead of data entry
+									and follow-ups, they focus on strategy, relationships, and
+									high-value deals. Digital workforces handle the repetitive
+									work so your people can do what humans do best: create,
+									strategize, and build relationships.
 								</p>
 							</div>
 						</details>
@@ -1316,11 +1362,9 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									We offer outcome-based pricing where you pay for productive
-									output, not idle time. Our elastic infrastructure means you
-									only pay for the work actually performed. This eliminates
-									fixed costs and scales automatically with your business needs.
-									Book a demo to discuss pricing for your specific use case.
+									Pay-per-execution model, for every lead that they speak to or
+									piece of content they create. Scale up during busy periods,
+									scale down when needed.
 								</p>
 							</div>
 						</details>
@@ -1347,11 +1391,11 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Digital Workforces integrate seamlessly with all major
-									business systems including CRMs (Salesforce, HubSpot),
-									marketing automation platforms, communication tools (Slack,
-									Teams), calendars, and custom APIs. We handle all integration
-									setup as part of the deployment process.
+									We can integrate with almost anything that has an API.
+									Salesforce, HubSpot, Marketo, and 50+ other platforms. We
+									handle all the setup and configuration for you - no IT
+									involvement needed. Your workforce becomes a seamless
+									extension of your existing tech stack.
 								</p>
 							</div>
 						</details>
@@ -1378,11 +1422,40 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									No technical expertise is required. Digital Workforces are
-									designed to be autonomous and self-managing. You interact with
-									them through simple dashboards and receive clear reports on
-									outcomes delivered. Our team handles all technical aspects and
-									provides ongoing support.
+									Zero. You see a dashboard showing meetings booked, leads
+									qualified, content created. Weekly performance reports in
+									plain English. It&apos;s like having a revenue team, not
+									managing software.
+								</p>
+							</div>
+						</details>
+
+						{/* FAQ Item 6 */}
+						<details className="group bg-card-background border border-accent/20 rounded-lg">
+							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
+								<h3 className="text-foreground text-lg font-semibold pr-4">
+									How is this different from ChatGPT or other AI tools?
+								</h3>
+								<svg
+									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div className="px-6 pb-6">
+								<p className="text-muted-foreground">
+									ChatGPT helps you write. We execute. Our workforce makes 50+
+									touches per lead, remembers every interaction, books
+									appointments directly into calendars, and improves conversion
+									rates weekly based on what&apos;s working.
 								</p>
 							</div>
 						</details>
@@ -1402,15 +1475,15 @@ export default async function Home() {
 									name: "What is a Digital Workforce?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "A Digital Workforce is a collection of autonomous AI agents that work together to execute complete business processes 24/7. Unlike traditional automation tools that handle single tasks, our digital workers manage entire workflows, make decisions, and continuously improve their performance without human intervention.",
+										text: "AI agents that run complete revenue operations from lead capture to booked appointment or from idea to published campaign. Not a chatbot. Not basic automation. Full execution of your playbooks, 24/7, at 10x the speed of human teams.",
 									},
 								},
 								{
 									"@type": "Question",
-									name: "How quickly can I deploy a Digital Workforce?",
+									name: "What happens to my existing team?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Most Digital Workforces can be deployed within 2-4 weeks. We start with a discovery call to understand your specific needs, then configure and train the workforce for your unique business processes. The workforce begins delivering value immediately upon deployment and improves over time.",
+										text: "Your team gets elevated, not replaced. Instead of data entry and follow-ups, they focus on strategy, relationships, and high-value deals. Digital workforces handle the repetitive work so your people can do what humans do best: create, strategize, and build relationships.",
 									},
 								},
 								{
@@ -1418,7 +1491,7 @@ export default async function Home() {
 									name: "How does pricing work?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "We offer outcome-based pricing where you pay for productive output, not idle time. Our elastic infrastructure means you only pay for the work actually performed. This eliminates fixed costs and scales automatically with your business needs. Book a demo to discuss pricing for your specific use case.",
+										text: "Pay-per-execution model: You pay for every piece of content created, every lead spoken to, every appointment booked. No fixed costs, no idle time. Scale up during busy periods, scale down when needed. Most clients see 70% cost reduction versus human teams with 3x the output.",
 									},
 								},
 								{
@@ -1426,7 +1499,7 @@ export default async function Home() {
 									name: "What systems does a Digital Workforce integrate with?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Digital Workforces integrate seamlessly with all major business systems including CRMs (Salesforce, HubSpot), marketing automation platforms, communication tools (Slack, Teams), calendars, and custom APIs. We handle all integration setup as part of the deployment process.",
+										text: "We can integrate with almost anything that has an API. Salesforce, HubSpot, Marketo, and 50+ other platforms. We handle all the setup and configuration for you - no IT involvement needed. Your workforce becomes a seamless extension of your existing tech stack.",
 									},
 								},
 								{
@@ -1434,7 +1507,15 @@ export default async function Home() {
 									name: "Do I need technical expertise to manage a Digital Workforce?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "No technical expertise is required. Digital Workforces are designed to be autonomous and self-managing. You interact with them through simple dashboards and receive clear reports on outcomes delivered. Our team handles all technical aspects and provides ongoing support.",
+										text: "Zero. You see a dashboard showing meetings booked, leads qualified, content created. Weekly performance reports in plain English. It's like having a revenue team, not managing software.",
+									},
+								},
+								{
+									"@type": "Question",
+									name: "How is this different from ChatGPT or other AI tools?",
+									acceptedAnswer: {
+										"@type": "Answer",
+										text: "ChatGPT helps you write. We execute. Our workforce makes 50+ touches per lead, remembers every interaction, books appointments directly into calendars, and improves conversion rates weekly based on what's working.",
 									},
 								},
 							],

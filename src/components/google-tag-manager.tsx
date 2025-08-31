@@ -1,12 +1,40 @@
 "use client"
 
 import Script from "next/script"
+import { useEffect } from "react"
+import { getCookie } from "cookies-next"
 
 interface GoogleTagManagerProps {
 	gtmId: string
 }
 
+declare global {
+	interface Window {
+		dataLayer?: Array<Record<string, unknown>>
+	}
+}
+
 export function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
+	useEffect(() => {
+		// Initialize dataLayer
+		window.dataLayer = window.dataLayer || []
+
+		// Push initial consent state
+		const consentState = getCookie("cookie-consent-state")
+		if (consentState) {
+			try {
+				const parsed = JSON.parse(consentState as string)
+				window.dataLayer.push({
+					event: "consent_update",
+					analytics_consent: parsed.analytics ? "granted" : "denied",
+					marketing_consent: parsed.marketing ? "granted" : "denied",
+				})
+			} catch (e) {
+				console.error("Failed to parse consent state", e)
+			}
+		}
+	}, [])
+
 	return (
 		<>
 			<Script

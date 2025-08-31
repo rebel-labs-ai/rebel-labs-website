@@ -5,8 +5,9 @@ import { useEffect, useState } from "react"
 const phrases = [
 	"Delivering Outcomes",
 	"Booking Meetings",
+	"Creating Content",
 	"Generating Pipeline",
-	"Increasing Revenue",
+	"Driving Conversions",
 ]
 
 export function AnimatedText() {
