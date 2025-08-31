@@ -3,13 +3,15 @@
 ## Component Structure
 
 ### Navigation & Global Elements
+
 - Navigation Component (imported)
 - Theme Toggle: Fixed position top-right (hidden on mobile)
 - Breadcrumbs: SEO breadcrumb navigation (hidden but present)
 - Schema markup: JSON-LD for Service type
 
 ### Hero Section
-- Background: Full-screen AnimatedDots with gradient overlay  
+
+- Background: Full-screen AnimatedDots with gradient overlay
 - Container: Card with backdrop blur (bg-card-background/80)
 - Badge: "Content Creation Workforce" (~3 words)
 - Main Heading (h1): "From Blank Page to Published Campaign." (~7 words)
@@ -18,29 +20,31 @@
 - Responsive typography: text-2xl to text-7xl scaling
 
 ### Content Production Protocol Section
+
 - Background: bg-accent/40 with full-width coverage
 - Section Title (h2): "The Autonomous Content Lifecycle" (~4 words)
 - Description: ~24 words about four-stage loop
 - Four Protocol Stages (each):
-  - Stage badge: "Stage 1/2/3/4" 
+  - Stage badge: "Stage 1/2/3/4"
   - Headline (h3): ~7-9 words each
   - Description: ~43-45 words each
   - UI Mockup: Card component with aspect-ratio 4/3
 - Layout: Alternating text left/right positioning
 - Mockup Components:
   - BriefMockup: Mission Planner interface
-  - CreationMockup: Iteration Studio interface  
+  - CreationMockup: Iteration Studio interface
   - AmplificationMockup: Dashboard with content grid
   - AnalysisMockup: Performance insights charts
 
 ### Method Section
+
 - Section Title (h2): "Your Content Operating System" (~4 words)
 - Description: ~34 words about custom workforce architecture
 - Two-Step Process Cards:
   - Step 1 Card: "We Codify Your Brand DNA" (~6 words)
     - Icon: FileText in accent background
     - 3 bullet points: ~15-20 words each
-  - Step 2 Card: "We Clone Your Expert Voices" (~6 words)  
+  - Step 2 Card: "We Clone Your Expert Voices" (~6 words)
     - Icon: Users in accent background
     - 3 bullet points: ~15-20 words each
   - Connecting Arrow: ChevronRight between cards (desktop only)
@@ -48,6 +52,7 @@
 - Container: max-width 6xl
 
 ### Agent Roster Section (Dynamic Component)
+
 - Background: Gradient from accent/40 to transparent
 - Container: Card with accent border and shadow
 - Badge: "Meet Your Team" (~3 words)
@@ -67,7 +72,8 @@
   - Modal: max-width 3xl, scrollable content
   - Agent details: Icon, name, role, description sections
 
-### Impact Amplifier Section  
+### Impact Amplifier Section
+
 - Section Title (h2): "The New Definition of Leverage." (~6 words)
 - Description: ~40 words about ROI amplification
 - Amplifier Diagram Card:
@@ -81,6 +87,7 @@
 - Images: /content/circle.svg and /content/circle-dark.svg
 
 ### Final CTA Section
+
 - Container: Card with backdrop blur
 - Badge: "Ready to Transform Your Content Process?" (~6 words)
 - Title (h2): "Stop Feeding the Content Treadmill." (~5 words)
@@ -89,6 +96,7 @@
 - Layout: Centered content, max-width 4xl
 
 ### Related Solutions Section
+
 - Section Title (h2): "Explore Our Other AI Workforces" (~6 words)
 - Description: ~20 words about business operations
 - Solution Cards: 2-card grid (md:grid-cols-2)
@@ -96,6 +104,7 @@
 - Container: max-width 6xl, max-width 3xl for grid
 
 ### FAQ Section
+
 - Section Title (h2): "Frequently Asked Questions" (~3 words)
 - FAQ Items: 8 questions using details/summary elements
 - Each FAQ: Question title, collapsible answer
@@ -103,6 +112,7 @@
 - Schema: FAQ schema markup for SEO
 
 ### Footer
+
 - Footer Component (imported)
 
 ## Responsive Behavior
@@ -114,7 +124,7 @@
 ## Key Components Used
 
 - Card (from @/components/ui/card)
-- Button (from @/components/ui/button)  
+- Button (from @/components/ui/button)
 - AnimatedDots (from @/components/animated-dots)
 - Navigation (from @/components/navigation)
 - Footer (from @/components/footer)
@@ -126,7 +136,7 @@
 ## Content Guidelines
 
 - Hero section: Impactful, conversion-focused messaging
-- Agent descriptions: Detailed, persona-driven voice 
+- Agent descriptions: Detailed, persona-driven voice
 - Process explanations: Clear, step-by-step flow
 - CTAs: Action-oriented with strategic session focus
 - Technical features: Balanced accessibility with depth

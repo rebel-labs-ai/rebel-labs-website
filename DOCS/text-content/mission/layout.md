@@ -1,6 +1,7 @@
 # Page Layout: Mission
 
 ## Component Structure
+
 - Navigation
 - ThemeToggle
 - Breadcrumbs
@@ -25,11 +26,13 @@
 - Footer
 
 ## Responsive Behavior
+
 - Desktop: Multi-column layouts with full hub-spoke diagram
 - Tablet: Adapted grids maintaining visual hierarchy
 - Mobile: Single column, hub-only display for complex diagrams
 
 ## Key Components Used
+
 - Button (from @/components/ui/button)
 - Card (from @/components/ui/card)
 - Navigation (from @/components/navigation)
@@ -43,6 +46,7 @@
 - Image (Next.js optimized images with light/dark variants)
 
 ## Content Guidelines
+
 - Hero section: Dramatic, transformation-focused messaging
 - Problem sections: Progressive narrative building from SaaS to AI tools
 - Solution sections: Outcome-focused, specific deliverables
@@ -55,23 +59,27 @@
 ## Layout Structure Details
 
 ### Hero Section Layout
+
 - Container: max-w-5xl, centered
 - Card: rounded-3xl with animated gradient border
 - Content: centered text with icon
 - Background: Full-screen twinkling stars canvas
 
-### Content Sections Layout  
+### Content Sections Layout
+
 - Container: max-w-7xl with space-y-32 between sections
 - Grid patterns: 2-column, reversed 2-column, asymmetric [1fr_300px]
 - Cards: rounded-xl with backdrop-blur and accent borders
 - Images: Next.js optimized with theme-aware variants
 
 ### Special Components
+
 - **HubSpokeGraphic**: Elliptical positioning with 6 spoke cards around central hub
 - **ComparisonCards**: 3-column grid with strikethrough/accent text styling
 - **RelatedSolutions**: 3-column workforce link cards
 
 ### Animation Architecture
+
 - **TwinklingStars**: Client-side canvas with 200 particle animation
 - **AnimatedHeroContent**: Staggered entrance animations with data attributes
 - **Gradient Border**: CSS animation on hero card border

@@ -1,6 +1,7 @@
 # Page Layout: Privacy Policy
 
 ## Component Structure
+
 - Navigation (fixed header)
   - Logo: "novosapien" brand
   - Home link
@@ -50,15 +51,17 @@
   - Copyright notice: ~6 words
 
 ## Responsive Behavior
+
 - Desktop: Full layout with large typography (7xl heading)
 - Tablet: Maintained structure with adjusted spacing
-- Mobile: 
+- Mobile:
   - Reduced heading size (6xl)
   - Single column layout for related policies
   - Collapsed navigation menu
   - Theme toggle visible on all screen sizes
 
 ## Key Components Used
+
 - Navigation (from @/components/navigation)
 - Footer (from @/components/footer)
 - ThemeToggle (from @/components/theme-toggle)
@@ -67,6 +70,7 @@
 - Native HTML details/summary elements for FAQ accordion
 
 ## Content Guidelines
+
 - Page title: Premium typography treatment with Geist Sans font
 - Content sections: Prose styling with consistent spacing
 - FAQ section: Interactive accordion interface for user engagement
@@ -75,6 +79,7 @@
 - Schema markup: Structured data for SEO optimization
 
 ## SEO and Technical Features
+
 - Comprehensive metadata with OpenGraph and Twitter cards
 - JSON-LD schema markup for WebPage and FAQPage
 - Hidden breadcrumbs for search engine navigation
@@ -83,12 +88,14 @@
 - Dynamic date generation for freshness indicators
 
 ## Interactive Elements
+
 - FAQ accordion: Expandable details with animated chevron icons
 - Related policy cards: Hover effects with shadow and border changes
 - Theme toggle: Smooth transitions between light/dark modes
 - Navigation links: Hover states and dropdown functionality
 
 ## Layout Specifications
+
 - Max content width: 4xl container (896px)
 - Top padding: 32 units (128px) to clear fixed navigation
 - Bottom padding: 24 units (96px)

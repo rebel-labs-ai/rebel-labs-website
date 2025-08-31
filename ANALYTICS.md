@@ -54,8 +54,9 @@ NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=false
 ## What Each Tool Does
 
 ### Google Analytics (GA4)
+
 - **Purpose**: Quantitative analytics - the "what" of user behavior
-- **Tracks**: 
+- **Tracks**:
   - Page views and user sessions
   - Traffic sources (where users come from)
   - User demographics and interests
@@ -64,6 +65,7 @@ NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=false
 - **Best For**: Understanding traffic patterns and conversion metrics
 
 ### Google Tag Manager (GTM)
+
 - **Purpose**: Tag management container - controls when and how tracking fires
 - **Features**:
   - Manage all tracking codes in one place
@@ -74,6 +76,7 @@ NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=false
 - **Best For**: Marketing teams to manage tracking independently
 
 ### Microsoft Clarity
+
 - **Purpose**: Qualitative analytics - the "how" of user behavior
 - **Features**:
   - Session recordings (watch actual user sessions)
@@ -91,6 +94,7 @@ NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=false
 Landing pages are accessible at: `/lp/[campaign-name]`
 
 Example URLs:
+
 - `https://yoursite.com/lp/test-campaign`
 - `https://yoursite.com/lp/summer-2025`
 - `https://yoursite.com/lp/black-friday?variant=B`
@@ -104,6 +108,7 @@ https://yoursite.com/lp/summer-2025?utm_source=linkedin&utm_medium=social&utm_ca
 ```
 
 Supported parameters:
+
 - `utm_source` - Where the traffic comes from (e.g., google, linkedin, newsletter)
 - `utm_medium` - Marketing medium (e.g., cpc, social, email)
 - `utm_campaign` - Campaign name
@@ -137,6 +142,7 @@ Both Clarity and GA will track the variant for analysis.
 ### Consent States
 
 The system respects these consent states:
+
 - **No Consent**: No tracking scripts load
 - **Analytics Only**: GA and Clarity load
 - **Marketing Only**: GTM loads
@@ -150,26 +156,23 @@ Edit `/src/app/lp/[campaign]/page.tsx`:
 
 ```typescript
 const campaigns: Record<string, CampaignConfig> = {
-  // ... existing campaigns
-  "your-new-campaign": {
-    id: "your-new-campaign",
-    title: "Your Campaign Title - Novosapien",
-    description: "Campaign description for SEO",
-    heroTitle: "Main Headline",
-    heroSubtitle: "Supporting text",
-    ctaText: "Call to Action",
-    ctaLink: "/contact",
-    variant: "A",
-    features: [
-      "Feature 1",
-      "Feature 2",
-    ],
-    testimonial: {
-      quote: "Customer testimonial",
-      author: "Customer Name",
-      role: "Customer Title",
-    },
-  },
+	// ... existing campaigns
+	"your-new-campaign": {
+		id: "your-new-campaign",
+		title: "Your Campaign Title - Novosapien",
+		description: "Campaign description for SEO",
+		heroTitle: "Main Headline",
+		heroSubtitle: "Supporting text",
+		ctaText: "Call to Action",
+		ctaLink: "/contact",
+		variant: "A",
+		features: ["Feature 1", "Feature 2"],
+		testimonial: {
+			quote: "Customer testimonial",
+			author: "Customer Name",
+			role: "Customer Title",
+		},
+	},
 }
 ```
 
@@ -189,8 +192,8 @@ import { trackEvent } from "@/lib/analytics/tracking"
 
 // Track a button click
 trackEvent("button_click", {
-  button_name: "hero_cta",
-  page: "homepage",
+	button_name: "hero_cta",
+	page: "homepage",
 })
 ```
 
@@ -201,8 +204,8 @@ import { trackFormSubmission } from "@/lib/analytics/tracking"
 
 // Track form submission
 trackFormSubmission("contact_form", {
-  form_location: "header",
-  campaign: "summer-2025",
+	form_location: "header",
+	campaign: "summer-2025",
 })
 ```
 
@@ -222,10 +225,10 @@ import { trackCampaignLanding } from "@/lib/analytics/tracking"
 
 // Automatically tracked on landing pages
 trackCampaignLanding({
-  campaignName: "summer-2025",
-  variant: "B",
-  source: "linkedin",
-  medium: "social",
+	campaignName: "summer-2025",
+	variant: "B",
+	source: "linkedin",
+	medium: "social",
 })
 ```
 
@@ -243,24 +246,29 @@ trackCampaignLanding({
 ### Common Issues
 
 **Issue: No tracking after accepting cookies**
+
 - Solution: Refresh the page after accepting cookies
 - Check: Console for error messages
 
 **Issue: Clarity not recording sessions**
+
 - Solution: Ensure you have the correct Project ID
 - Check: Clarity dashboard for the project status
 
 **Issue: GTM not firing tags**
+
 - Solution: Use GTM Preview mode to debug
 - Check: GTM container is published
 
 **Issue: Analytics working in dev but not production**
+
 - Solution: Ensure environment variables are set in production
 - Check: Vercel/hosting platform environment settings
 
 ## Privacy & Compliance
 
 ### GDPR Compliance
+
 - ✅ No tracking before consent
 - ✅ Granular consent options
 - ✅ Clear privacy policy link
@@ -268,12 +276,15 @@ trackCampaignLanding({
 - ✅ 365-day consent expiration
 
 ### Data Retention
+
 - **GA**: Default 14 months (configurable)
 - **GTM**: No data storage (just manages tags)
 - **Clarity**: 30 days of recordings
 
 ### User Rights
+
 Users can:
+
 - Refuse all tracking
 - Choose specific tracking categories
 - Change preferences anytime
@@ -282,18 +293,21 @@ Users can:
 ## Performance Considerations
 
 ### Load Order
+
 1. Essential scripts first
 2. Cookie consent check
 3. Analytics scripts (if consented)
 4. All scripts load asynchronously
 
 ### Impact on Core Web Vitals
+
 - Scripts load with `async` or `defer`
 - No render blocking
 - Minimal impact on LCP
 - No layout shift from consent banner
 
 ### Best Practices
+
 - ✅ Only load in production by default
 - ✅ Lazy load analytics after consent
 - ✅ Use performance monitoring
@@ -310,6 +324,7 @@ Users can:
 ## Support
 
 For issues or questions:
+
 - **Clarity**: [clarity.microsoft.com/docs](https://clarity.microsoft.com/docs)
 - **Google Analytics**: [analytics.google.com/analytics/academy](https://analytics.google.com/analytics/academy)
 - **GTM**: [tagmanager.google.com/help](https://tagmanager.google.com/help)

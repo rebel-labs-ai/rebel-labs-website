@@ -106,12 +106,15 @@ Yes, we use essential cookies for functionality, analytics cookies to improve ou
 ## Related Policies
 
 ### Terms of Service
+
 Read our terms and conditions for using Novosapien's AI workforce platform.
 
 ### Cookie Policy
+
 Learn how we use cookies to enhance your experience on our platform.
 
 ### Dynamic Content
+
 - Last updated date is dynamically generated based on current date
 - FAQ schema and page schema are generated for SEO optimization
 - Breadcrumbs are generated automatically from current route

@@ -144,11 +144,11 @@ export function MethodSection() {
 										stepRefs.current[index] = el
 									}}
 									className={`flex items-center ${
-										index === 0 
-											? "min-h-[80vh] pt-20" 
-											: index === methodSteps.length - 1 
-											? "min-h-[80vh] pb-20"
-											: "min-h-[80vh]"
+										index === 0
+											? "min-h-[80vh] pt-20"
+											: index === methodSteps.length - 1
+												? "min-h-[80vh] pb-20"
+												: "min-h-[80vh]"
 									}`}
 								>
 									<div

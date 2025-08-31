@@ -319,7 +319,10 @@ export function ContentProductionProtocol() {
 							The Autonomous Content Lifecycle
 						</h2>
 						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-							Your workforce operates through four self-managing stages. You provide the mission. The workforce delivers the outcome. No hand-holding between stages. No project management. Just relentless execution.
+							Your workforce operates through four self-managing stages. You
+							provide the mission. The workforce delivers the outcome. No
+							hand-holding between stages. No project management. Just
+							relentless execution.
 						</p>
 					</div>
 				</div>

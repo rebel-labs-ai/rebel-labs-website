@@ -17,7 +17,7 @@
   - Centered card with backdrop blur
   - Badge: "Inbound Sales Workforce"
   - Main H1 heading: ~8-10 words
-  - Subheading: ~20-25 words  
+  - Subheading: ~20-25 words
   - Two CTA buttons: "See It In Action", "Talk to Us"
 
 - **Process Overview Section**
@@ -31,7 +31,7 @@
   - Central workforce: 3 categories (Research, Strategy, Outreach)
   - Output: Qualified Meeting label
 
-- **Agent Roster Section**  
+- **Agent Roster Section**
   - Background: Gradient overlay with card container
   - Section badge and heading: ~15-20 words
   - Description: ~40-50 words
@@ -101,7 +101,7 @@
 ## Responsive Behavior
 
 - **Desktop (lg+)**: Full multi-column layouts with sticky elements, side-by-side content
-- **Tablet (md-lg)**: 2-column grids, maintained functionality, adapted spacing  
+- **Tablet (md-lg)**: 2-column grids, maintained functionality, adapted spacing
 - **Mobile (sm and below)**: Single column stacking, vertical layouts, touch-optimized
 
 ## Key Components Used
@@ -116,6 +116,7 @@
 ## Content Guidelines
 
 ### Text Length Expectations:
+
 - **Hero section**: Impactful, conversion-focused (~35 words total)
 - **Agent descriptions**: Detailed 150-200 word profiles for credibility
 - **Problem explanations**: Data-driven failure analysis with statistics (~100 words each)
@@ -124,13 +125,15 @@
 - **CTAs**: Action-oriented, clear value proposition (~5-10 words)
 
 ### Interactive Elements:
+
 - **Agent Roster**: Tabbed interface with modal details system
-- **Problem Cards**: Expandable accordion-style cards  
+- **Problem Cards**: Expandable accordion-style cards
 - **Method Section**: Sticky scroll with step activation
 - **External Links**: 3 Cal.com booking integrations
 - **Theme System**: Complete light/dark mode with dual graphics
 
 ### Performance Features:
+
 - **Image Optimization**: Next.js Image component for all graphics
 - **Lazy Loading**: Scroll-based activation for method section
 - **Theme Support**: Dual light/dark mode graphics and styling
@@ -138,6 +141,7 @@
 - **Responsive Images**: Breakpoint-specific sizing and positioning
 
 ### Visual Design:
+
 - **Color System**: Consistent accent color theming throughout
 - **Typography**: Proper heading hierarchy (H1 → H2 → H3)
 - **Spacing**: Responsive padding and margins

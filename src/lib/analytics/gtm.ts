@@ -5,7 +5,7 @@
 
 declare global {
 	interface Window {
-		dataLayer: any[]
+		dataLayer?: Array<Record<string, unknown>>
 	}
 }
 
@@ -14,7 +14,10 @@ declare global {
  * @param eventName - The name of the event
  * @param eventData - Additional data to send with the event
  */
-export const sendGTMEvent = (eventName: string, eventData?: Record<string, any>) => {
+export const sendGTMEvent = (
+	eventName: string,
+	eventData?: Record<string, unknown>
+) => {
 	if (typeof window !== "undefined" && window.dataLayer) {
 		window.dataLayer.push({
 			event: eventName,
@@ -65,7 +68,7 @@ export const trackGTMClick = (
 export const trackGTMFormSubmit = (
 	formId: string,
 	formName: string,
-	formData?: Record<string, any>
+	formData?: Record<string, unknown>
 ) => {
 	sendGTMEvent("form_submit", {
 		form_id: formId,
@@ -102,7 +105,10 @@ export const trackGTMEngagementTime = (seconds: number) => {
  * @param action - The e-commerce action (view_item, add_to_cart, purchase, etc.)
  * @param data - E-commerce data
  */
-export const trackGTMEcommerce = (action: string, data: Record<string, any>) => {
+export const trackGTMEcommerce = (
+	action: string,
+	data: Record<string, unknown>
+) => {
 	sendGTMEvent(`ecommerce_${action}`, {
 		ecommerce: data,
 	})
@@ -117,7 +123,7 @@ export const trackGTMEcommerce = (action: string, data: Record<string, any>) => 
 export const trackGTMConversion = (
 	conversionName: string,
 	conversionValue?: number,
-	conversionData?: Record<string, any>
+	conversionData?: Record<string, unknown>
 ) => {
 	sendGTMEvent("conversion", {
 		conversion_name: conversionName,
@@ -149,7 +155,9 @@ export const trackGTMVideo = (
  * Track user properties (be careful with PII!)
  * @param userProperties - User properties to track
  */
-export const setGTMUserProperties = (userProperties: Record<string, any>) => {
+export const setGTMUserProperties = (
+	userProperties: Record<string, unknown>
+) => {
 	sendGTMEvent("user_properties", {
 		user_properties: userProperties,
 	})

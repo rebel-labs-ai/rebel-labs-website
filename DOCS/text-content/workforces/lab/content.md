@@ -124,6 +124,7 @@ Custom workforces are built to be modular and adaptable. New agents can be added
 The Lab is ideal if you have a complex, high-value workflow that's currently bottlenecking growth, requires significant manual effort from expensive resources, or represents a unique competitive advantage. If you're thinking 'we need to build something custom because nothing exists for this,' that's exactly what the Lab is for.
 
 ### Dynamic Content
+
 - Interactive scrollytelling mockups for engagement protocol phases
 - Service schema markup for SEO
 - FAQ schema markup for search optimization

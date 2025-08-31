@@ -12,15 +12,20 @@ export const analyticsConfig = {
 		enabled: !!process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID,
 	},
 	general: {
-		requireCookieConsent: process.env.NEXT_PUBLIC_REQUIRE_COOKIE_CONSENT === "true",
-		enableInDevelopment: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV === "true",
+		requireCookieConsent:
+			process.env.NEXT_PUBLIC_REQUIRE_COOKIE_CONSENT === "true",
+		enableInDevelopment:
+			process.env.NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV === "true",
 		enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS !== "false",
 	},
 }
 
 export const isAnalyticsEnabled = () => {
 	if (!analyticsConfig.general.enableAnalytics) return false
-	if (process.env.NODE_ENV === "development" && !analyticsConfig.general.enableInDevelopment) {
+	if (
+		process.env.NODE_ENV === "development" &&
+		!analyticsConfig.general.enableInDevelopment
+	) {
 		return false
 	}
 	return true
@@ -31,7 +36,13 @@ export const campaignConfig = {
 		site: "novosapien",
 		version: "v2",
 	},
-	utmParams: ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"],
+	utmParams: [
+		"utm_source",
+		"utm_medium",
+		"utm_campaign",
+		"utm_term",
+		"utm_content",
+	],
 	customParams: ["campaign", "source", "variant", "test_id"],
 }
 

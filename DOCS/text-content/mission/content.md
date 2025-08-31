@@ -97,6 +97,7 @@ Join the revolution of elastic operations. Experience how digital workforces tra
 **Workforce Lab**: Experiment with cutting-edge AI capabilities and preview upcoming workforce features in our innovation lab.
 
 ### Dynamic Content
+
 - Hub-spoke diagram with interactive positioning (from HubSpokeGraphic component)
 - Twinkling stars background animation with 200+ animated particles
 - Theme-aware images (light/dark variants for all illustrations)

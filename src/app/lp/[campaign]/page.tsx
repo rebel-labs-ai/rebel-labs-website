@@ -48,7 +48,8 @@ const campaigns: Record<string, CampaignConfig> = {
 		title: "Summer 2025 Special - AI Workforces",
 		description: "Limited time offer on our AI workforce solutions",
 		heroTitle: "Summer Special: 30% Off AI Workforces",
-		heroSubtitle: "Transform your business this summer with intelligent automation",
+		heroSubtitle:
+			"Transform your business this summer with intelligent automation",
 		ctaText: "Claim Your Discount",
 		ctaLink: "/contact?offer=summer2025",
 		variant: "A",
@@ -64,9 +65,10 @@ const campaigns: Record<string, CampaignConfig> = {
 export async function generateMetadata({
 	params,
 }: {
-	params: { campaign: string }
+	params: Promise<{ campaign: string }>
 }): Promise<Metadata> {
-	const campaign = campaigns[params.campaign]
+	const { campaign: campaignId } = await params
+	const campaign = campaigns[campaignId]
 
 	if (!campaign) {
 		return {
@@ -105,25 +107,31 @@ export async function generateMetadata({
 	}
 }
 
-export default function CampaignLandingPage({
+export default async function CampaignLandingPage({
 	params,
 	searchParams,
 }: {
-	params: { campaign: string }
-	searchParams: { [key: string]: string | string[] | undefined }
+	params: Promise<{ campaign: string }>
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-	const campaign = campaigns[params.campaign]
+	const { campaign: campaignId } = await params
+	const resolvedSearchParams = await searchParams
+	const campaign = campaigns[campaignId]
 
 	if (!campaign) {
 		notFound()
 	}
 
-	const variant = (searchParams.variant as string) || campaign.variant || "A"
+	const variant =
+		(resolvedSearchParams.variant as string) || campaign.variant || "A"
 
 	return (
 		<>
-			<CampaignTracker campaign={campaign} searchParams={searchParams} />
-			
+			<CampaignTracker
+				campaign={campaign}
+				searchParams={resolvedSearchParams}
+			/>
+
 			<main className="min-h-screen bg-gradient-to-b from-background to-section-background">
 				<section className="relative py-24 px-4 sm:px-6 lg:px-8">
 					<div className="max-w-7xl mx-auto">
@@ -149,7 +157,7 @@ export default function CampaignLandingPage({
 						{campaign.features && (
 							<div className="mt-20">
 								<h2 className="text-2xl font-bold text-center mb-10">
-									What You'll Get
+									What You&apos;ll Get
 								</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 									{campaign.features.map((feature, index) => (
@@ -181,10 +189,12 @@ export default function CampaignLandingPage({
 							<div className="mt-20 max-w-4xl mx-auto">
 								<div className="bg-card p-8 rounded-lg border border-border">
 									<blockquote className="text-xl italic text-center">
-										"{campaign.testimonial.quote}"
+										&ldquo;{campaign.testimonial.quote}&rdquo;
 									</blockquote>
 									<div className="mt-6 text-center">
-										<p className="font-semibold">{campaign.testimonial.author}</p>
+										<p className="font-semibold">
+											{campaign.testimonial.author}
+										</p>
 										<p className="text-sm text-muted-foreground">
 											{campaign.testimonial.role}
 										</p>
@@ -220,7 +230,7 @@ export default function CampaignLandingPage({
 }
 
 export function generateStaticParams() {
-	return Object.keys(campaigns).map((campaign) => ({
+	return Object.keys(campaigns).map(campaign => ({
 		campaign,
 	}))
 }

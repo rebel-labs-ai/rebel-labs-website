@@ -234,7 +234,8 @@ export default async function Home() {
 							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-1 sm:mt-6 leading-relaxed text-center">
-							We deploy digital workforces that execute your entire revenue operation 24/7, at scale, without adding headcount.
+							We deploy digital workforces that execute your entire revenue
+							operation 24/7, at scale, without adding headcount.
 						</p>
 						<div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 sm:justify-center items-center">
 							<a
@@ -267,7 +268,11 @@ export default async function Home() {
 							The Only Revenue Operations System That Actually Runs Itself
 						</h2>
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-							Stop buying tools that still need humans to operate them. Novosapien deploys complete digital workforces that execute revenue operations end-to-end, from first touch to booked appointment to content at scale, while your team focuses on strategy and growth.
+							Stop buying tools that still need humans to operate them.
+							Novosapien deploys complete digital workforces that execute
+							revenue operations end-to-end, from first touch to booked
+							appointment to content at scale, while your team focuses on
+							strategy and growth.
 						</p>
 					</div>
 
@@ -304,7 +309,8 @@ export default async function Home() {
 										Always On, Always Working
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Works every lead, every hour, every day. No meetings, no lunch breaks, no timezone limitations.
+										Works every lead, every hour, every day. No meetings, no
+										lunch breaks, no timezone limitations.
 									</p>
 								</div>
 							</div>
@@ -332,7 +338,8 @@ export default async function Home() {
 										Flawless Execution
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										No cherry-picking accounts, no forgotten follow-ups, no data entry errors. Perfect consistency across every interaction.
+										No cherry-picking accounts, no forgotten follow-ups, no data
+										entry errors. Perfect consistency across every interaction.
 									</p>
 								</div>
 							</div>
@@ -347,7 +354,8 @@ export default async function Home() {
 										Self-Optimizing Performance
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Tracks what converts, tests what doesn't, improves automatically. Your conversion rates go up while you sleep.
+										Tracks what converts, tests what doesn&apos;t, improves
+										automatically. Your conversion rates go up while you sleep.
 									</p>
 								</div>
 							</div>
@@ -408,8 +416,8 @@ export default async function Home() {
 										Redeploy Your A-Players
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Move your best people from data entry to deal strategy.
-										From list building to relationship building.
+										Move your best people from data entry to deal strategy. From
+										list building to relationship building.
 									</p>
 								</div>
 							</div>
@@ -437,7 +445,9 @@ export default async function Home() {
 										Scale Without Limits
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Process unlimited leads, create endless content, and book meetings 24/7. Handle 10x the volume without hiring a single person.
+										Process unlimited leads, create endless content, and book
+										meetings 24/7. Handle 10x the volume without hiring a single
+										person.
 									</p>
 								</div>
 							</div>
@@ -465,7 +475,9 @@ export default async function Home() {
 										True Revenue Acceleration
 									</h3>
 									<p className="text-muted-foreground text-xs sm:text-sm">
-										Deploy AI workforces across your entire revenue function. From content that drives traffic to lead nurturing that books meetings.
+										Deploy AI workforces across your entire revenue function.
+										From content that drives traffic to lead nurturing that
+										books meetings.
 									</p>
 								</div>
 							</div>
@@ -508,10 +520,11 @@ export default async function Home() {
 								What is a Digital Workforce?
 							</h2>
 							<p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-								It's an AI team that runs your revenue operations 24/7. No training,
-								no management, no downtime. While ChatGPT answers questions, a Digital
-								Workforce completes entire jobs: qualifying leads, booking meetings,
-								creating content. You get measurable outcomes, not just outputs.
+								It&apos;s an AI team that runs your revenue operations 24/7. No
+								training, no management, no downtime. While ChatGPT answers
+								questions, a Digital Workforce completes entire jobs: qualifying
+								leads, booking meetings, creating content. You get measurable
+								outcomes, not just outputs.
 							</p>
 						</div>
 
@@ -555,9 +568,9 @@ export default async function Home() {
 						</h2>
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto mt-3 sm:mt-4 leading-relaxed px-2 sm:px-0">
 							Your competitors juggle 42 different tools and burn cash on
-							headcount, you'll run a single unified workforce that converts visitors,
-							creates content, and captures revenue 24/7. No integration headaches.
-							No management overhead. Just results.
+							headcount, you&apos;ll run a single unified workforce that
+							converts visitors, creates content, and captures revenue 24/7. No
+							integration headaches. No management overhead. Just results.
 						</p>
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -567,9 +580,10 @@ export default async function Home() {
 									Inbound Conversion Workforce
 								</h3>
 								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
-									Convert more leads into booked appointments. Qualify
-									prospects from any source in real-time, trigger multi-channel sequences within
-									5 minutes, and never lose another opportunity to slow follow-up.
+									Convert more leads into booked appointments. Qualify prospects
+									from any source in real-time, trigger multi-channel sequences
+									within 5 minutes, and never lose another opportunity to slow
+									follow-up.
 								</p>
 								{/* Light mode image */}
 								<Image
@@ -643,19 +657,21 @@ export default async function Home() {
 									Workforce Lab
 								</h3>
 								<p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 flex-1 text-center md:text-left">
-									Access cutting-edge experimental workforces before they hit the market. Test new capabilities, shape product development, and get first-mover advantage on emerging use cases.
+									Access cutting-edge experimental workforces before they hit
+									the market. Test new capabilities, shape product development,
+									and get first-mover advantage on emerging use cases.
 								</p>
-								{/* Light mode image */}
+
 								<Image
-									src="/home/lab-workforce.png"
+									src="/home/lab-workforce.svg"
 									alt="Experimental AI workforce testing environment showing cutting-edge capabilities and development preview features"
 									width={400}
 									height={320}
 									className="w-full h-48 sm:h-56 md:h-96 object-contain rounded-lg mb-4 sm:mb-6 block dark:hidden"
 								/>
-								{/* Dark mode image */}
+
 								<Image
-									src="/home/lab-workforce-dark.png"
+									src="/home/lab-workforce-dark.svg"
 									alt="Experimental AI workforce testing environment showing cutting-edge capabilities and development preview features"
 									width={400}
 									height={320}
@@ -864,7 +880,9 @@ export default async function Home() {
 						Built Different From Day One
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg text-left sm:text-center max-w-3xl sm:mx-auto mb-8 sm:mb-16">
-					Your Digital Workforce is built on an architecture designed to deliver outcomes, not just automate tasks. These are its core capabilities.
+						Your Digital Workforce is built on an architecture designed to
+						deliver outcomes, not just automate tasks. These are its core
+						capabilities.
 					</p>
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto">
@@ -1017,7 +1035,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Fixed headcount burns $30K-50K monthly whether pipeline is full or empty.
+											Fixed headcount burns $30K-50K monthly whether pipeline is
+											full or empty.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1031,7 +1050,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Pipeline velocity capped at 8 hours/day, 5 days/week of human bandwidth.
+											Pipeline velocity capped at 8 hours/day, 5 days/week of
+											human bandwidth.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1045,7 +1065,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Scaling means 3-6 month hiring cycles that miss quarterly targets.
+											Scaling means 3-6 month hiring cycles that miss quarterly
+											targets.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1059,7 +1080,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											20-30% of leads leak through process gaps and handoff errors.
+											20-30% of leads leak through process gaps and handoff
+											errors.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1073,7 +1095,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Testing new plays requires retraining teams and risking current performance.
+											Testing new plays requires retraining teams and risking
+											current performance.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1087,7 +1110,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Paying for activity metrics while conversion rates stay flat.
+											Paying for activity metrics while conversion rates stay
+											flat.
 										</span>
 									</li>
 								</ul>
@@ -1120,7 +1144,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Pay for work performed: content published, leads contacted, conversations held.
+											Pay for work performed: content published, leads
+											contacted, conversations held.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1134,7 +1159,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Content creation runs parallel to lead outreach while you focus on strategy.
+											Content creation runs parallel to lead outreach while you
+											focus on strategy.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1148,7 +1174,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Scale from 10 to 1,000 agents instantly when opportunity strikes.
+											Scale from 10 to 1,000 agents instantly when opportunity
+											strikes.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1162,7 +1189,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Maintain consistent brand voice across 10,000 pieces of content or conversations.
+											Maintain consistent brand voice across 10,000 pieces of
+											content or conversations.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1176,7 +1204,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Test campaign variations simultaneously without risking core operations.
+											Test campaign variations simultaneously without risking
+											core operations.
 										</span>
 									</li>
 									<li className="flex items-start">
@@ -1190,7 +1219,8 @@ export default async function Home() {
 											</svg>
 										</div>
 										<span className="text-muted-foreground">
-											Every dollar translates to measurable execution, not monthly salaries.
+											Every dollar translates to measurable execution, not
+											monthly salaries.
 										</span>
 									</li>
 								</ul>
@@ -1217,9 +1247,10 @@ export default async function Home() {
 						</h2>
 
 						<p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
-							See exactly how digital workforces are generating 3x more qualified
-							pipeline for companies like yours. In 30 minutes, we'll show you real
-							workflows, actual results, and ROI calculations based on your current metrics.
+							See exactly how digital workforces are generating 3x more
+							qualified pipeline for companies like yours. In 30 minutes,
+							we&apos;ll show you real workflows, actual results, and ROI
+							calculations based on your current metrics.
 						</p>
 
 						<div className="flex justify-center">
@@ -1270,7 +1301,10 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									AI agents that run complete revenue operations from lead capture to booked appointment or from idea to published campaign. Not a chatbot. Not basic automation. Full execution of your playbooks, 24/7, at 10x the speed of human teams.
+									AI agents that run complete revenue operations from lead
+									capture to booked appointment or from idea to published
+									campaign. Not a chatbot. Not basic automation. Full execution
+									of your playbooks, 24/7, at 10x the speed of human teams.
 								</p>
 							</div>
 						</details>
@@ -1297,7 +1331,11 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Your team gets elevated, not replaced. Instead of data entry and follow-ups, they focus on strategy, relationships, and high-value deals. Digital workforces handle the repetitive work so your people can do what humans do best: create, strategize, and build relationships.
+									Your team gets elevated, not replaced. Instead of data entry
+									and follow-ups, they focus on strategy, relationships, and
+									high-value deals. Digital workforces handle the repetitive
+									work so your people can do what humans do best: create,
+									strategize, and build relationships.
 								</p>
 							</div>
 						</details>
@@ -1324,7 +1362,9 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Pay-per-execution model: You pay for every piece of content created, every lead spoken to, every appointment booked. No fixed costs, no idle time. Scale up during busy periods, scale down when needed. Most clients see 70% cost reduction versus human teams with 3x the output.
+									Pay-per-execution model, for every lead that they speak to or
+									piece of content they create. Scale up during busy periods,
+									scale down when needed.
 								</p>
 							</div>
 						</details>
@@ -1351,7 +1391,11 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									We can integrate with almost anything that has an API. Salesforce, HubSpot, Marketo, and 50+ other platforms. We handle all the setup and configuration for you - no IT involvement needed. Your workforce becomes a seamless extension of your existing tech stack.
+									We can integrate with almost anything that has an API.
+									Salesforce, HubSpot, Marketo, and 50+ other platforms. We
+									handle all the setup and configuration for you - no IT
+									involvement needed. Your workforce becomes a seamless
+									extension of your existing tech stack.
 								</p>
 							</div>
 						</details>
@@ -1378,7 +1422,10 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Zero. You see a dashboard showing meetings booked, leads qualified, content created. Weekly performance reports in plain English. It's like having a revenue team, not managing software.
+									Zero. You see a dashboard showing meetings booked, leads
+									qualified, content created. Weekly performance reports in
+									plain English. It&apos;s like having a revenue team, not
+									managing software.
 								</p>
 							</div>
 						</details>
@@ -1405,7 +1452,10 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									ChatGPT helps you write. We execute. Our workforce makes 50+ touches per lead, remembers every interaction, books appointments directly into calendars, and improves conversion rates weekly based on what's working.
+									ChatGPT helps you write. We execute. Our workforce makes 50+
+									touches per lead, remembers every interaction, books
+									appointments directly into calendars, and improves conversion
+									rates weekly based on what&apos;s working.
 								</p>
 							</div>
 						</details>

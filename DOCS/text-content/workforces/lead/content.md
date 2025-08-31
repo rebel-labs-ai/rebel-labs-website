@@ -13,6 +13,7 @@ source_file: /Users/georgewestbrook/Programming/novosapien/novosapien-website-v2
 Never lose another inbound lead with an AI workforce that owns your entire lead conversion process.
 
 **CTA Buttons:**
+
 - See It In Action
 - Talk to Us
 
@@ -23,18 +24,22 @@ A Self-Managing Team for Your Pipeline.
 Your inbound sales workforce operates 24/7 without supervision. Multiple specialized agents research every lead, craft personalized outreach, manage follow-up sequences, and book qualified meetings directly on your calendar. They handle the entire lead lifecycle autonomously while your human reps focus on closing deals. Scale from 10 leads to 10,000 without hiring another SDR.
 
 ### Input Sources
+
 - Website Form
-- Ads  
+- Ads
 - CRM
 - API
 
 ### Central Workforce
+
 **Inbound Conversion Workforce**
+
 - Research
 - Strategy
 - Outreach
 
 ### Output
+
 - Qualified Meeting
 - Booked & Briefed
 
@@ -45,6 +50,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 ### Research & Planning Agents
 
 #### Individual Profile Agent
+
 **Role:** Building Lead Blueprints
 
 **Core Function:** Builds a deep, actionable blueprint of the individual lead's professional history, motivations, and behavioral patterns.
@@ -52,6 +58,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I specialize in gathering and organizing behavioral insights, preferences, and professional data to create a detailed, personalized profile for each lead."
 
 **Responsibilities:**
+
 - Studies the lead's professional profile, job title, and career history.
 - Identifies key behavioral patterns, decision-making styles, and personal motivations.
 - Builds a complete, actionable blueprint for personalized engagement.
@@ -61,6 +68,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Collaboration:** I work closely with the Company Profile Agent to create a holistic view of each lead, which the Strategy Agents then use to craft tailored approaches.
 
 #### Company Profile Agent
+
 **Role:** Mapping Business Landscapes
 
 **Core Function:** Maps the target company's structure, priorities, and pain points to ensure perfect strategic alignment.
@@ -68,6 +76,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I focus on collecting critical information about target companies to ensure our outreach aligns with organizational priorities and pain points."
 
 **Responsibilities:**
+
 - Researches company structures, hierarchies, and industries.
 - Analyzes organizational challenges, growth opportunities, and market positioning.
 - Identifies the key stakeholders and decision-makers within the company.
@@ -77,6 +86,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Collaboration:** I provide crucial business context that complements the Individual Profile Agent's data, helping create more targeted and effective engagement plans.
 
 #### Personalized Offering Agent
+
 **Role:** Crafting Tailored Solutions
 
 **Core Function:** Crafts a hyper-relevant value proposition by mapping your solution to the lead's specific needs.
@@ -84,6 +94,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I craft value-driven, highly relevant offers by blending insights from individual and company profiles."
 
 **Responsibilities:**
+
 - Analyzes data to identify which products, services, and features best fit the lead's needs.
 - Develops customized value propositions and pain-point narratives.
 - Generates offers that align perfectly with both individual and business challenges.
@@ -95,6 +106,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 ### Strategy & Analysis Agents
 
 #### Initial Strategy Agent
+
 **Role:** Crafting Engagement Blueprints
 
 **Core Function:** Designs the optimal, multi-step engagement plan for each unique lead.
@@ -102,6 +114,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I develop the first touchpoint plan, tailoring the initial outreach strategy based on lead profiles and business needs."
 
 **Responsibilities:**
+
 - Determines the optimal outreach method based on the lead's profile.
 - Customizes the tone and style to fit the lead's preferences.
 - Develops a step-by-step plan that sets clear goals and timelines.
@@ -111,6 +124,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Collaboration:** I work closely with the Research Agents to translate their insights into actionable strategies, which are then executed by the Outreach Agents.
 
 #### Strategy Optimization Agent
+
 **Role:** Refining Engagement Approaches
 
 **Core Function:** Continuously analyzes interaction data to refine and improve the sales strategy in real-time.
@@ -118,6 +132,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I continuously improve strategies in real-time based on data from previous outreach interactions."
 
 **Responsibilities:**
+
 - Monitors key metrics, like open rates, click rates, and engagement levels.
 - Identifies underperforming elements and adjusts for higher conversion rates.
 - Refines timing, tone, and content for follow-ups to ensure relevance.
@@ -127,6 +142,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Collaboration:** I work hand-in-hand with the Interactions Analysis Agent, using their insights to make data-driven improvements to our strategies.
 
 #### Interactions Analysis Agent
+
 **Role:** Decoding Engagement
 
 **Core Function:** Pinpoints patterns of success by analyzing sentiment and engagement in every reply.
@@ -134,6 +150,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I track and analyze every interaction to pinpoint engagement patterns and illuminate pathways for success."
 
 **Responsibilities:**
+
 - Analyzes lead responses, sentiment, and engagement data.
 - Discovers patterns in successful outreach campaigns.
 - Provides actionable insights that inform future interactions.
@@ -145,6 +162,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 ### Outreach & Execution Agents
 
 #### Phone Call Agent
+
 **Role:** Orchestrating Targeted Conversations
 
 **Core Function:** Executes intelligent, context-aware phone outreach to foster connections and drive action.
@@ -152,6 +170,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I automate and personalize follow-up calls to engage leads directly, fostering connections and next steps."
 
 **Responsibilities:**
+
 - Schedules and conducts phone calls based on the lead's profile.
 - Customizes scripts to address the lead's pain points and motivations.
 - Tracks call outcomes and refines the approach over time.
@@ -161,6 +180,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Collaboration:** I work closely with the Email Agent to coordinate multi-channel outreach, and rely on the Strategy Agents for guidance on timing and content.
 
 #### Email Agent
+
 **Role:** Delivering Personalized Messaging
 
 **Core Function:** Delivers a sequence of personalized, context-aware emails designed to resonate and convert.
@@ -168,6 +188,7 @@ Your workforce operates as a coordinated team of specialized AI agents, each a m
 **Introduction:** "I strategically craft and execute email campaigns designed to resonate with leads."
 
 **Responsibilities:**
+
 - Develops targeted email content based on lead and company profiles.
 - Optimizes timing to maximize open and click-through rates.
 - Analyzes results to continuously improve future email outreach.
@@ -183,12 +204,15 @@ Your roster operates as a unified team, with each agent playing a critical role 
 ### Team Benefits
 
 #### Instant Response, Every Time
+
 Engage leads within 5 minutes of their first interaction, 24/7/365—while your human team sleeps, vacations, or focuses on closing deals
 
 #### Intelligent Lead Prioritization
+
 Automatically surface your hottest opportunities while systematically nurturing every lead in your pipeline
 
 #### Performance That Improves Daily
+
 Every interaction makes your entire system smarter, compounding your competitive advantage over time
 
 ## The Four Systemic Failures of Your Inbound Funnel.
@@ -271,15 +295,18 @@ The old model measures your team on effort and activity. The new model measures 
 Join companies that are transforming their lead conversion with an autonomous Digital Workforce. See the impact in your pipeline within days.
 
 **CTA Buttons:**
+
 - Deploy This Workforce
 - See It In Action
 
 ## Related AI Workforces
 
 ### Content Workforce
+
 Generate high-quality blog posts, social media content, and marketing copy at scale with AI-powered content creation.
 
 ### Workforce Lab
+
 Experiment with cutting-edge AI capabilities and preview upcoming workforce features in our innovation lab.
 
 ## Frequently Asked Questions

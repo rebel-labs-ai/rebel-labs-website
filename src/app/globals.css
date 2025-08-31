@@ -279,7 +279,8 @@ html {
 }
 
 /* Ensure no horizontal scrollbar appears */
-html, body {
+html,
+body {
 	max-width: 100%;
 }
 

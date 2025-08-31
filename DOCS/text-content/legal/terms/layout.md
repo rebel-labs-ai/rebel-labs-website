@@ -3,6 +3,7 @@
 ## Component Structure
 
 ### Overall Architecture
+
 - **Framework**: Next.js 15 App Router page with SEO optimization
 - **Schema Markup**: JSON-LD for WebPage and FAQ structured data
 - **SEO Components**: Breadcrumbs (hidden for SEO), comprehensive meta tags
@@ -50,17 +51,20 @@ TermsPage
 ## Responsive Behavior
 
 ### Desktop (>= 768px)
+
 - Full 4-column max-width layout (max-w-4xl)
 - Theme toggle visible in fixed top-right position
 - FAQ accordion with hover states and smooth animations
 - Related policies in 2-column grid
 
 ### Tablet (768px - 1024px)
+
 - Content maintains max-width constraint
 - Related policies remain in 2-column grid
 - Theme toggle remains visible
 
 ### Mobile (< 768px)
+
 - Theme toggle hidden (accessible via navigation)
 - Related policies stack to single column (grid-cols-1)
 - FAQ items maintain full-width accordion behavior
@@ -69,18 +73,21 @@ TermsPage
 ## Key Components Used
 
 ### Core UI Components
+
 - **Navigation**: Shared navigation component with dropdown menus
 - **Footer**: Shared footer component with multi-column layout
 - **ThemeToggle**: Theme switcher with sun/moon icons
 - **Breadcrumbs**: SEO-focused breadcrumb navigation (visually hidden)
 
 ### Interactive Elements
+
 - **Details/Summary**: Native HTML accordion for FAQ items
   - Smooth rotation animation for chevron icons (180deg on open)
   - Hover states with color transitions
   - Proper ARIA labeling for accessibility
 
 ### Custom Styling
+
 - **Prose Layout**: Custom prose styling with dark mode support
 - **Card Backgrounds**: Uses `bg-card-background` with border accents
 - **Hover Effects**: Subtle shadow and border color changes
@@ -88,18 +95,21 @@ TermsPage
 ## Content Guidelines
 
 ### Legal Content Structure
+
 - **Comprehensive Coverage**: 12 major legal sections covering all standard terms
 - **Clear Hierarchy**: H2 for main sections, H3 for subsections
 - **Readable Length**: Sections range from 15-75 words for optimal readability
 - **List Formatting**: Bulleted lists for service features and restrictions
 
 ### FAQ Section Guidelines
+
 - **User-Focused Questions**: 6 practical questions covering common concerns
 - **Concise Answers**: 35-65 words per answer for quick comprehension
 - **Interactive Design**: Collapsible accordion with visual feedback
 - **SEO Optimization**: Structured data markup for rich snippets
 
 ### Related Policies Section
+
 - **Clear Navigation**: Direct links to related legal documents
 - **Descriptive Content**: Brief explanations of what each policy covers
 - **Consistent CTAs**: Action-oriented link text with arrow indicators
@@ -107,17 +117,20 @@ TermsPage
 ## SEO and Technical Features
 
 ### Metadata Optimization
+
 - **Open Graph**: Complete social sharing tags
 - **Twitter Cards**: Large image card format
 - **Canonical URLs**: Proper canonical link structure
 - **Robot Directives**: Optimized indexing instructions
 
 ### Structured Data
+
 - **WebPage Schema**: Complete page identification
 - **FAQ Schema**: Rich snippets for FAQ section
 - **Breadcrumb Schema**: Navigation structure for search engines
 
 ### Performance Considerations
+
 - **Static Generation**: Page pre-rendered at build time
 - **Optimized Images**: OG image optimization with proper dimensions
 - **Clean Markup**: Semantic HTML structure for accessibility
@@ -125,12 +138,14 @@ TermsPage
 ## Layout Measurements
 
 ### Content Density
+
 - **Total Word Count**: ~1,200+ words of legal content
 - **Reading Time**: ~5-7 minutes
 - **Sections**: 12 main terms + 6 FAQ items + 2 related policies
 - **Interactive Elements**: 8 collapsible FAQ items + 2 CTA cards
 
 ### Spacing and Typography
+
 - **Header Spacing**: pt-32 pb-24 for proper navigation clearance
 - **Content Spacing**: space-y-8 between major sections
 - **Typography Scale**: 6xl/7xl for main heading, 2xl for section headings

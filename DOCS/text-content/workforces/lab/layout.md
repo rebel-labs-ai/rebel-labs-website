@@ -71,6 +71,7 @@
 - Footer
 
 ## Responsive Behavior
+
 - Desktop: Full layout with scrollytelling animations, 2-column grids
 - Tablet: Adjusted column counts, maintained hierarchy
 - Mobile: Single column stack, simplified animations
@@ -79,6 +80,7 @@
   - Possibility cards stack in single column
 
 ## Key Components Used
+
 - Navigation (from @/components/navigation)
 - Footer (from @/components/footer)
 - Card (from @/components/ui/card)
@@ -91,6 +93,7 @@
 - Interactive mockup components (ForgeMockup, MissionControlMockup)
 
 ## Content Guidelines
+
 - Hero section: High-impact, conversion-focused messaging
 - Division of labor: Clear partnership definition and value proposition
 - Engagement protocol: Process-driven, transparent methodology
@@ -101,6 +104,7 @@
 - Technical content: Balanced depth with accessibility
 
 ## Interactive Features
+
 - Scrollytelling engagement protocol with mockup transitions
 - FAQ accordion expand/collapse functionality
 - Card hover effects with border and shadow transitions

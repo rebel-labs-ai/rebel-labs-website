@@ -23,7 +23,7 @@ export function CookieConsentBanner() {
 		// Check if consent has already been given
 		const consentValue = getCookieConsentValue("novosapien-cookie-consent")
 		const savedConsent = getCookie("cookie-consent-state")
-		
+
 		if (savedConsent) {
 			try {
 				const parsed = JSON.parse(savedConsent as string)
@@ -35,16 +35,19 @@ export function CookieConsentBanner() {
 				console.error("Failed to parse cookie consent state", e)
 			}
 		}
-		
+
 		// Only show banner if no consent has been given
-		if (!consentValue || (consentValue !== "true" && consentValue !== "false")) {
+		if (
+			!consentValue ||
+			(consentValue !== "true" && consentValue !== "false")
+		) {
 			setShowBanner(true)
 		}
-		
+
 		// Cleanup function to remove any lingering overlays
 		return () => {
 			// Remove any overlay elements that might have been left behind
-			const overlays = document.querySelectorAll('.CookieConsent')
+			const overlays = document.querySelectorAll(".CookieConsent")
 			overlays.forEach(overlay => overlay.remove())
 		}
 	}, [])
@@ -146,13 +149,13 @@ export function CookieConsentBanner() {
 				<div className="flex flex-col gap-3">
 					<p className="text-base font-semibold">🍪 Cookie Preferences</p>
 					<p className="text-sm">
-						We use cookies to enhance your browsing experience, analyze site traffic,
-						and personalize content. By clicking &quot;Accept All&quot;, you consent
-						to our use of cookies.
+						We use cookies to enhance your browsing experience, analyze site
+						traffic, and personalize content. By clicking &quot;Accept
+						All&quot;, you consent to our use of cookies.
 					</p>
 					<button
 						type="button"
-						onClick={(e) => {
+						onClick={e => {
 							e.preventDefault()
 							e.stopPropagation()
 							setShowSettings(true)
@@ -196,8 +199,11 @@ export function CookieConsentBanner() {
 								<input
 									type="checkbox"
 									checked={consentState.analytics}
-									onChange={(e) =>
-										setConsentState({ ...consentState, analytics: e.target.checked })
+									onChange={e =>
+										setConsentState({
+											...consentState,
+											analytics: e.target.checked,
+										})
 									}
 									className="mt-1 h-4 w-4 cursor-pointer"
 								/>
@@ -214,8 +220,11 @@ export function CookieConsentBanner() {
 								<input
 									type="checkbox"
 									checked={consentState.marketing}
-									onChange={(e) =>
-										setConsentState({ ...consentState, marketing: e.target.checked })
+									onChange={e =>
+										setConsentState({
+											...consentState,
+											marketing: e.target.checked,
+										})
 									}
 									className="mt-1 h-4 w-4 cursor-pointer"
 								/>

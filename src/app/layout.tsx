@@ -5,7 +5,11 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { GoogleAnalytics, GoogleTagManager, GoogleTagManagerNoscript } from "@/components/google-tag-manager"
+import {
+	GoogleAnalytics,
+	GoogleTagManager,
+	GoogleTagManagerNoscript,
+} from "@/components/google-tag-manager"
 import { CookieConsentBanner } from "@/components/cookie-consent"
 import { AnalyticsManager } from "@/components/analytics/analytics-manager"
 import { ClarityProvider } from "@/components/analytics/clarity-provider"
@@ -201,7 +205,9 @@ export default function RootLayout({
 			>
 				{/* Google Tag Manager (noscript) - Must be immediately after body tag */}
 				{analyticsConfig.googleTagManager.enabled && (
-					<GoogleTagManagerNoscript gtmId={analyticsConfig.googleTagManager.containerId} />
+					<GoogleTagManagerNoscript
+						gtmId={analyticsConfig.googleTagManager.containerId}
+					/>
 				)}
 
 				{/* Skip Navigation Link for Accessibility */}
@@ -212,7 +218,7 @@ export default function RootLayout({
 					Skip to main content
 				</a>
 				<ThemeProvider>{children}</ThemeProvider>
-				
+
 				{/* Vercel Analytics */}
 				<Analytics />
 				<SpeedInsights />
@@ -222,28 +228,32 @@ export default function RootLayout({
 					<Suspense fallback={null}>
 						{/* Cookie Consent Banner */}
 						<CookieConsentBanner />
-						
+
 						{/* Google Analytics - Conditionally loaded based on consent */}
 						{analyticsConfig.googleAnalytics.enabled && (
-							<GoogleAnalytics gaId={analyticsConfig.googleAnalytics.measurementId} />
+							<GoogleAnalytics
+								gaId={analyticsConfig.googleAnalytics.measurementId}
+							/>
 						)}
-						
+
 						{/* Google Tag Manager - Conditionally loaded based on consent */}
 						{analyticsConfig.googleTagManager.enabled && (
-							<GoogleTagManager gtmId={analyticsConfig.googleTagManager.containerId} />
+							<GoogleTagManager
+								gtmId={analyticsConfig.googleTagManager.containerId}
+							/>
 						)}
-						
+
 						{/* Microsoft Clarity - Conditionally loaded based on consent */}
 						{analyticsConfig.microsoftClarity.enabled && (
-							<ClarityProvider 
-								projectId={analyticsConfig.microsoftClarity.projectId} 
+							<ClarityProvider
+								projectId={analyticsConfig.microsoftClarity.projectId}
 								enabled={analyticsConfig.microsoftClarity.enabled}
 							/>
 						)}
-						
+
 						{/* Analytics Manager for unified tracking */}
 						<AnalyticsManager />
-						
+
 						{/* GTM Page Tracker for route changes */}
 						<GTMPageTracker />
 					</Suspense>

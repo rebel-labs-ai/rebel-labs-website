@@ -10,7 +10,10 @@ interface CampaignTrackerProps {
 	searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export function CampaignTracker({ campaign, searchParams }: CampaignTrackerProps) {
+export function CampaignTracker({
+	campaign,
+	searchParams,
+}: CampaignTrackerProps) {
 	useEffect(() => {
 		const utmSource = searchParams.utm_source || searchParams.source
 		const utmMedium = searchParams.utm_medium || searchParams.medium

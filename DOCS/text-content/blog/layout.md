@@ -17,7 +17,7 @@
     - Card Layout: 2-column grid (image + content)
     - Badge: "Featured Post" + Category label
     - Title (h2): Variable length from CMS
-    - Excerpt (p): Variable length from CMS 
+    - Excerpt (p): Variable length from CMS
     - Meta info: Author, read time, date
     - CTA Button: "Read More" with arrow icon
   - Blog Posts Grid
@@ -38,7 +38,7 @@
 ## Responsive Behavior
 
 - Desktop (lg+): 3-column blog grid, full featured post layout
-- Tablet (md): 2-column blog grid, maintained featured layout  
+- Tablet (md): 2-column blog grid, maintained featured layout
 - Mobile (sm): Single column, theme toggle hidden, simplified spacing
 
 ## Key Components Used
@@ -58,27 +58,32 @@
 ## Content Guidelines
 
 ### Page Header
+
 - Title: Brand name + "Blog" - direct and recognizable
 - Description: Value proposition focused on AI workforces - ~20 words
 
-### Search and Filtering  
+### Search and Filtering
+
 - Search: Intuitive placeholder, debounced input, clear functionality
 - Categories: Business-focused labels, post counts for context
 - Results: Clear empty states with helpful guidance
 
 ### Featured Post Section
+
 - Layout: Prominent card design with visual hierarchy
 - Content: Highlight most important/recent content
 - Meta info: Author credibility, reading time, recency
 - CTA: Clear call-to-action with visual indicator
 
 ### Blog Post Cards
+
 - Imagery: Consistent aspect ratios, fallback handling
 - Content: Scannable titles, informative excerpts
 - Meta data: Author, reading time, publication date
 - Interaction: Hover effects, clear navigation paths
 
 ### Content Strategy Notes
+
 - Focus on AI workforce and automation topics
 - Educational and actionable insights
 - Mix of technical depth and business value
@@ -87,6 +92,7 @@
 ## Dynamic Content Integration
 
 ### Sanity CMS Integration
+
 - Real-time content fetching with revalidation (60s)
 - Structured content queries (POSTS_QUERY)
 - Image optimization through Sanity CDN
@@ -94,13 +100,15 @@
 - Category taxonomy system
 
 ### Content Processing
+
 - Automatic read time calculation from body text
 - Date formatting for different contexts
 - Search functionality across title/excerpt/author
 - Category filtering with post counts
 - Featured post logic and conditional rendering
 
-### Performance Considerations  
+### Performance Considerations
+
 - Image lazy loading and optimization
 - Content caching and revalidation strategy
 - Responsive image sizing
@@ -109,12 +117,14 @@
 ## SEO and Accessibility
 
 ### Structured Data
+
 - Blog schema with organization publisher
 - Individual BlogPosting schemas
 - Author Person entities
 - Proper URL structure and canonical tags
 
 ### Navigation and UX
+
 - Breadcrumb navigation for context
 - Theme toggle for user preference
 - Clear content hierarchy
@@ -124,6 +134,7 @@
 ## Interactive Features
 
 ### Client-Side Functionality
+
 - Real-time search with debouncing (300ms)
 - Category filtering with URL state management
 - Responsive dropdown interactions
@@ -131,6 +142,7 @@
 - Smooth transitions and hover effects
 
 ### Content Discovery
+
 - Featured content prominence
 - Category-based organization
 - Search across multiple content fields
@@ -140,19 +152,22 @@
 ## Layout Constraints
 
 ### Container Sizing
+
 - Max width: 7xl (1280px) for main content
 - Responsive padding: 4 (16px) on mobile
 - Section spacing: 12-16 units between major sections
 - Card spacing: 8 units in grid layouts
 
 ### Typography Scale
+
 - Page title: 4xl-5xl responsive
-- Section headings: 2xl-4xl responsive  
+- Section headings: 2xl-4xl responsive
 - Post titles: xl-3xl responsive
 - Body text: base-lg responsive
 - Meta text: xs-sm responsive
 
 ### Visual Hierarchy
+
 - Featured content gets premium placement and sizing
 - Clear content grouping with cards and sections
 - Consistent spacing and alignment patterns

@@ -21,30 +21,35 @@ Cookies are small text files that are placed on your computer or mobile device w
 ## Types of Cookies We Use
 
 ### Essential Cookies
+
 These cookies are necessary for the website to function properly. They enable basic functions like page navigation, secure area access, and remembering your cookie preferences. The website cannot function properly without these cookies.
 
 ### Performance Cookies
+
 These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve how our website works.
 
 ### Functionality Cookies
+
 These cookies allow the website to remember choices you make (such as your username, language, or region) and provide enhanced, more personalized features.
 
 ### Marketing Cookies
+
 These cookies track your online activity to help advertisers deliver more relevant advertising or limit how many times you see an ad. These cookies can share that information with other organizations or advertisers.
 
 ## Specific Cookies We Use
 
-| Cookie Name | Type | Purpose | Duration |
-|------------|------|---------|----------|
-| sessionId | Essential | Maintains user session | Session |
-| _ga | Performance | Google Analytics tracking | 2 years |
-| preferences | Functionality | Stores user preferences | 1 year |
+| Cookie Name | Type          | Purpose                   | Duration |
+| ----------- | ------------- | ------------------------- | -------- |
+| sessionId   | Essential     | Maintains user session    | Session  |
+| \_ga        | Performance   | Google Analytics tracking | 2 years  |
+| preferences | Functionality | Stores user preferences   | 1 year   |
 
 ## How to Manage Cookies
 
 You can control and manage cookies in various ways. Please note that removing or blocking cookies can impact your user experience and parts of our website may no longer be fully accessible.
 
 ### Browser Controls
+
 Most browsers allow you to control cookies through their settings preferences. Here are links to cookie management instructions for popular browsers:
 
 - Chrome: Settings → Privacy and security → Cookies
@@ -66,31 +71,39 @@ Address: Novosapien, Inc.
 ## Frequently Asked Questions
 
 ### What are cookies and why does Novosapien use them?
+
 Cookies are small text files stored on your device when you visit our website. We use them to remember your preferences, analyze site usage, provide personalized experiences, and ensure our platform functions properly.
 
 ### What types of cookies does Novosapien use?
+
 We use essential cookies (required for site functionality), performance cookies (to analyze usage), functionality cookies (to remember your preferences), and marketing cookies (to deliver relevant advertisements).
 
 ### How can I manage or disable cookies?
+
 You can manage cookies through your browser settings. Most browsers allow you to block or delete cookies. However, disabling essential cookies may affect the functionality of our platform.
 
 ### Does Novosapien use third-party cookies?
+
 Yes, we use third-party cookies from trusted partners for analytics (Google Analytics), marketing, and to improve user experience. These partners have their own privacy policies governing their use of cookies.
 
 ### How long do cookies remain on my device?
+
 Session cookies are deleted when you close your browser. Persistent cookies remain on your device for a set period (typically 30 days to 2 years) or until you delete them manually.
 
 ## Related Policies
 
 ### Privacy Policy
+
 Learn how we collect, use, and protect your personal information.
 [Link to /privacy]
 
 ### Terms of Service
+
 Review our terms and conditions for using the Novosapien platform.
 [Link to /terms]
 
 ### Dynamic Content
+
 - Effective date is dynamically generated using current date
 - Schema markup for SEO with structured data
 - FAQ schema for enhanced search results

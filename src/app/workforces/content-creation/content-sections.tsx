@@ -48,7 +48,9 @@ export function HeroSection() {
 							</h1>
 						</div>
 						<p className="text-muted-foreground text-base sm:text-lg md:text-xl mt-4 sm:mt-6 leading-relaxed text-center max-w-3xl mx-auto px-2 sm:px-0">
-							Turn one strategic brief into 50+ pieces of content across every channel. Your self-managing workforce operates 24/7 at machine scale.
+							Turn one strategic brief into 50+ pieces of content across every
+							channel. Your self-managing workforce operates 24/7 at machine
+							scale.
 						</p>
 						<Button className=" mt-4 sm:mt-8 mx-auto block bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">
 							Talk to Us
@@ -87,7 +89,10 @@ export function MethodSection() {
 						Your Content Operating System
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-						This is not a one-size-fits-all tool. Deploy a self-directing workforce that learns your business, masters your voice, and scales your best thinking. Each agent specializes. Together they deliver the results.
+						This is not a one-size-fits-all tool. Deploy a self-directing
+						workforce that learns your business, masters your voice, and scales
+						your best thinking. Each agent specializes. Together they deliver
+						the results.
 					</p>
 				</div>
 
@@ -112,7 +117,8 @@ export function MethodSection() {
 											Absorbs Your Strategic Foundation:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											Studies positioning and go-to-market priorities. 48 hours to fluency.
+											Studies positioning and go-to-market priorities. 48 hours
+											to fluency.
 										</span>
 									</div>
 								</div>
@@ -167,7 +173,8 @@ export function MethodSection() {
 											Studies Your Subject Matter Experts:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											Analyzes how your top people think and write. Scales their perspectives.
+											Analyzes how your top people think and write. Scales their
+											perspectives.
 										</span>
 									</div>
 								</div>
@@ -178,7 +185,8 @@ export function MethodSection() {
 											Develops Specialized Capabilities:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											Each agent masters distinct competencies. Available on demand.
+											Each agent masters distinct competencies. Available on
+											demand.
 										</span>
 									</div>
 								</div>
@@ -219,7 +227,10 @@ export function ImpactAmplifierSection() {
 						The New Definition of Leverage
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-						Your old model gives you a 1:1 return on strategic effort. Your new model is an amplifier, systematically transforming one unit of your team's strategic input into an overwhelming multi-platform market presence.
+						Your old model gives you a 1:1 return on strategic effort. Your new
+						model is an amplifier, systematically transforming one unit of your
+						team&apos;s strategic input into an overwhelming multi-platform
+						market presence.
 					</p>
 				</div>
 
@@ -458,7 +469,10 @@ export function FinalCTASection() {
 					</h2>
 
 					<p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-						Your competitors hire their 5th content manager. You deploy a workforce producing 10x output at 30% cost. Every week you wait: 50+ pieces you're not publishing. 50+ opportunities your competition claims.
+						Your competitors hire their 5th content manager. You deploy a
+						workforce producing 10x output at 30% cost. Every week you wait: 50+
+						pieces you&apos;re not publishing. 50+ opportunities your
+						competition claims.
 					</p>
 
 					<Button className="bg-accent dark:bg-accent/60 text-white dark:text-white dark:border border-foreground dark:border-accent shadow-md hover:shadow-lg transition-all duration-200 hover:bg-accent/60 hover:dark:bg-accent/30 text-sm sm:text-base">

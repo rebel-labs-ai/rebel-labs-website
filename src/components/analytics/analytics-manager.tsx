@@ -2,13 +2,15 @@
 
 import { useEffect, useState } from "react"
 import { getCookie } from "cookies-next"
-import { GoogleAnalytics, GoogleTagManager, GoogleTagManagerNoscript } from "@/components/google-tag-manager"
+import {
+	GoogleAnalytics,
+	GoogleTagManager,
+	GoogleTagManagerNoscript,
+} from "@/components/google-tag-manager"
 import { ClarityProvider } from "./clarity-provider"
 import { analyticsConfig } from "@/lib/analytics/config"
 
 export function AnalyticsManager() {
-	const gaId = analyticsConfig.googleAnalytics.measurementId
-	const gtmId = analyticsConfig.googleTagManager.containerId
 	const clarityId = analyticsConfig.microsoftClarity.projectId
 
 	useEffect(() => {

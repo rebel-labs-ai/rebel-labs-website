@@ -45,23 +45,27 @@
 ## Content Guidelines
 
 ### Header Section
+
 - Large, prominent heading: ~6xl-7xl text size, light weight, Geist Sans font
 - Centered layout with substantial padding
 - Dynamic effective date with proper formatting
 
 ### Policy Content
+
 - Prose styling with large text: ~lg size for readability
 - Proper heading hierarchy: h2 for main sections, h3 for subsections
 - Sectioned content with clear spacing between topics
 - Table for specific cookie details with responsive overflow handling
 
 ### FAQ Section
+
 - Interactive details/summary elements for collapsible content
 - Card-style background with border for visual separation
 - Hover effects and smooth transitions for better UX
 - Rotating chevron icons to indicate expand/collapse state
 
 ### Related Links
+
 - Two-column grid layout on desktop
 - Card-style links with hover effects
 - Clear call-to-action text with arrow indicators
@@ -73,7 +77,7 @@
 - **Spacing**: pt-32 pb-24 px-4 for main content area
 - **Background**: Theme-aware background color
 - **Typography**: Prose layout with dark mode support
-- **Interactive Elements**: 
+- **Interactive Elements**:
   - Details/summary for FAQ expansion
   - Hover effects on links and cards
   - Theme toggle functionality
@@ -91,7 +95,7 @@
 ## Content Length Estimates
 
 - **Introduction**: ~50-60 words
-- **What Are Cookies**: ~40-50 words  
+- **What Are Cookies**: ~40-50 words
 - **Cookie Types**: ~200-250 words total (4 subsections)
 - **Cookie Table**: 3 rows of specific cookie data
 - **Management Instructions**: ~150-200 words

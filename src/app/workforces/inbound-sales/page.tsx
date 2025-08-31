@@ -456,11 +456,12 @@ export default function LeadWorkforcePage() {
 						</h2>
 						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl sm:mx-auto leading-relaxed">
 							Your inbound sales workforce operates 24/7 without supervision.
-							Multiple specialized agents research every lead, craft personalized
-							outreach, manage follow-up sequences, and book qualified meetings
-							directly on your calendar. They handle the entire lead lifecycle
-							autonomously while your human reps focus on closing deals.
-							Scale from 10 leads to 10,000 without hiring another SDR.
+							Multiple specialized agents research every lead, craft
+							personalized outreach, manage follow-up sequences, and book
+							qualified meetings directly on your calendar. They handle the
+							entire lead lifecycle autonomously while your human reps focus on
+							closing deals. Scale from 10 leads to 10,000 without hiring
+							another SDR.
 						</p>
 					</div>
 
@@ -681,9 +682,9 @@ export default function LeadWorkforcePage() {
 								Meet Your Autonomous Sales Team
 							</h2>
 							<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto mt-4 leading-relaxed">
-								Your workforce operates as a coordinated team of specialized AI agents,
-								each a master of its domain, working together seamlessly to deliver
-								your outcome.
+								Your workforce operates as a coordinated team of specialized AI
+								agents, each a master of its domain, working together seamlessly
+								to deliver your outcome.
 							</p>
 						</div>
 
@@ -726,7 +727,8 @@ export default function LeadWorkforcePage() {
 									</h4>
 									<p className="text-muted-foreground text-sm">
 										Engage leads within 5 minutes of their first interaction,
-										24/7/365—while your human team sleeps, vacations, or focuses on closing deals
+										24/7/365—while your human team sleeps, vacations, or focuses
+										on closing deals
 									</p>
 								</div>
 								<div className="text-center">
@@ -800,10 +802,10 @@ export default function LeadWorkforcePage() {
 							The Four Systemic Failures of Your Inbound Funnel.
 						</h2>
 						<p className="text-muted-foreground text-base sm:text-lg max-w-4xl sm:mx-auto leading-relaxed">
-							Human-led follow-up breaks at every critical stage. You're
-							bleeding revenue from speed gaps, follow-up failures, and
-							scaling limits while your competitors close deals with the
-							leads you're still trying to assign.
+							Human-led follow-up breaks at every critical stage. You&apos;re
+							bleeding revenue from speed gaps, follow-up failures, and scaling
+							limits while your competitors close deals with the leads
+							you&apos;re still trying to assign.
 						</p>
 					</div>
 
@@ -911,9 +913,9 @@ export default function LeadWorkforcePage() {
 						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 							The old model measures your team on effort and activity. The new
 							model measures them on results. By augmenting your team with an
-							autonomous workforce, you eliminate the constraints of headcount—no
-							more $75-90k salaries for inconsistent performance, 30% annual churn,
-							or 3-6 month ramp times. 
+							autonomous workforce, you eliminate the constraints of
+							headcount—no more $75-90k salaries for inconsistent performance,
+							30% annual churn, or 3-6 month ramp times.
 						</p>
 					</div>
 
@@ -937,10 +939,10 @@ export default function LeadWorkforcePage() {
 						/>
 					</div>
 					<div className="text-left sm:text-center  mt-12 mb-16">
-						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
-							Your sales operation transforms from a
-							high-cost activity center into a high-leverage growth engine where
-							every rep performs at their peak.
+						<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto hidden sm:block">
+							Your sales operation transforms from a high-cost activity center
+							into a high-leverage growth engine where every rep performs at
+							their peak.
 						</p>
 					</div>
 				</div>
@@ -1101,14 +1103,15 @@ export default function LeadWorkforcePage() {
 							</summary>
 							<div className="px-6 pb-6 pt-2">
 								<p className="text-muted-foreground leading-relaxed">
-									You get a complete autonomous workforce with specialized agents
-									handling distinct roles—deep lead research, strategic planning,
-									multi-channel outreach, and qualification. These agents collaborate
-									in real-time, analyzing patterns across thousands of interactions
-									to continuously refine their approach. They manage your entire lead
-									lifecycle from first touch to booked meeting, working 24/7 at a scale
-									and consistency human teams can't match. Think of it as hiring an
-									entire SDR team that never sleeps.
+									You get a complete autonomous workforce with specialized
+									agents handling distinct roles—deep lead research, strategic
+									planning, multi-channel outreach, and qualification. These
+									agents collaborate in real-time, analyzing patterns across
+									thousands of interactions to continuously refine their
+									approach. They manage your entire lead lifecycle from first
+									touch to booked meeting, working 24/7 at a scale and
+									consistency human teams can&apos;t match. Think of it as
+									hiring an entire SDR team that never sleeps.
 								</p>
 							</div>
 						</details>
@@ -1137,11 +1140,11 @@ export default function LeadWorkforcePage() {
 								<p className="text-muted-foreground leading-relaxed">
 									The workforce executes 8-12 touchpoints on average, matching
 									what&apos;s required for 80% of successful sales. Every lead
-									gets persistent, personalized follow-ups across email and phone
-									channels until they&apos;re either qualified for a meeting or
-									definitively not a fit. The system maintains perfect follow-up
-									discipline that human teams struggle to match—44% of human
-									reps give up after one &quot;no.&quot;
+									gets persistent, personalized follow-ups across email and
+									phone channels until they&apos;re either qualified for a
+									meeting or definitively not a fit. The system maintains
+									perfect follow-up discipline that human teams struggle to
+									match—44% of human reps give up after one &quot;no.&quot;
 								</p>
 							</div>
 						</details>

@@ -112,7 +112,7 @@ const agents = {
 			name: "Iteration Agent",
 			role: "Your Instant Revision Engine",
 			coreFunction:
-				"Translates vague feedback into precise improvements. \"Make it punchier\" becomes publishable content. In seconds.",
+				'Translates vague feedback into precise improvements. "Make it punchier" becomes publishable content. In seconds.',
 			introduction:
 				"I speak executive feedback. 'Needs edge' means 20% shorter sentences, 2x data points, controversial opener. 10,000 revision cycles taught me what 'almost there' means. Feedback to final: 3 minutes.",
 			responsibilities: [
@@ -257,7 +257,10 @@ export function AgentRoster() {
 								Meet Your Self-Managing Content Team
 							</h2>
 							<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto mt-4">
-								Your Digital Workforce operates as a coordinated unit of specialized AI Employees. Each masters a distinct phase. Together, they generate emergent intelligence that evolves with every campaign. No management required. Just outcomes delivered.
+								Your Digital Workforce operates as a coordinated unit of
+								specialized AI Employees. Each masters a distinct phase.
+								Together, they generate emergent intelligence that evolves with
+								every campaign. No management required. Just outcomes delivered.
 							</p>
 						</div>
 

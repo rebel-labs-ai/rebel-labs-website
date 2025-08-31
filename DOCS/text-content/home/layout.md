@@ -3,6 +3,7 @@
 ## Component Structure
 
 ### Navigation
+
 - Fixed positioned navigation bar with backdrop blur
 - Logo (text-based: "novosapien")
 - Navigation links (Home, Workforces dropdown, Mission)
@@ -10,11 +11,13 @@
 - Mobile-responsive with hamburger menu
 
 ### Theme Toggle
+
 - Fixed positioned in top-right corner
 - Hidden on mobile devices
 - Switches between light and dark themes
 
 ### Hero Section (Full Screen)
+
 - Background: AnimatedDots component with gradient overlay
 - Layout: Centered content with responsive padding
 - Badge: ~6-8 words with special styling and border
@@ -27,6 +30,7 @@
 - Min height: 85vh on mobile, full screen on desktop
 
 ### Revenue Operations Full Stack Section
+
 - Background: Accent color with opacity
 - Layout: 3-column grid on desktop (1-column on mobile)
 - Section header: ~10-12 words with text shadow effect
@@ -45,6 +49,7 @@
   - 3 feature items (same structure as left)
 
 ### Digital Workforce Definition Section
+
 - Background: Gradient from accent
 - Layout: 2-column grid (text left, image right)
 - Badge: "In a nutshell" with icon
@@ -54,6 +59,7 @@
 - Responsive: Stacks on mobile
 
 ### Solution Overview Section
+
 - Background: White/default
 - Layout: 2-card grid
 - Badge: "The Solution" (~2 words)
@@ -72,11 +78,13 @@
     - CTA link: "Explore Content Workforce →"
 
 ### How We Do It Section
+
 - Component: ScrollAnimatedSteps
 - Animated scroll-triggered content
 - Process steps with visual transitions
 
 ### Core Capabilities Section
+
 - Layout: Mixed grid (1 large card + 5 smaller cards)
 - Section heading (h2): ~2 words
 - Section description: ~25-30 words
@@ -104,6 +112,7 @@
     - Description: ~20-25 words
 
 ### Value Proposition Section
+
 - Layout: 2-column comparison layout
 - Section heading (h2): ~6 words
 - Before column: "Rigid Operations"
@@ -116,6 +125,7 @@
   - Green color scheme and enhanced shadow
 
 ### Final CTA Section
+
 - Layout: Centered card with backdrop blur
 - Badge: ~5 words
 - Headline: Split across 2 lines
@@ -125,12 +135,14 @@
 - CTA button: "Book a Demo"
 
 ### Blog Section (Conditional)
+
 - Component: SimpleBlogSection
 - Shows 3 recent blog posts from Sanity CMS
 - Only renders if posts are available
 - Dynamic content with error handling
 
 ### FAQ Section
+
 - Section heading (h2): ~3 words
 - 5 FAQ items using details/summary elements
 - Questions: ~8-12 words each
@@ -139,6 +151,7 @@
 - Schema markup for SEO
 
 ### Footer
+
 - Component: Footer
 - Multi-column layout with company information
 - Navigation links and legal pages
@@ -146,6 +159,7 @@
 ## Responsive Behavior
 
 ### Desktop (lg: 1024px+)
+
 - Full 3-column grids
 - Side-by-side layouts
 - Large typography (text-4xl to text-7xl)
@@ -153,12 +167,14 @@
 - Theme toggle visible
 
 ### Tablet (md: 768px - 1023px)
+
 - 2-column grids where applicable
 - Reduced typography sizes
 - Maintained visual hierarchy
 - Simplified animations
 
 ### Mobile (< 768px)
+
 - Single column layouts
 - Stacked content sections
 - Smaller typography (text-2xl to text-4xl)
@@ -169,11 +185,13 @@
 ## Key Components Used
 
 ### UI Components
+
 - Button (from @/components/ui/button)
 - Card (from @/components/ui/card)
 - ThemeToggle (from @/components/theme-toggle)
 
 ### Custom Components
+
 - Navigation (from @/components/navigation)
 - AnimatedDots (background animation)
 - AnimatedText (rotating text effect)
@@ -183,6 +201,7 @@
 - SimpleBlogSection (blog post display)
 
 ### External Libraries
+
 - Lucide React (TrendingUp icon)
 - Next.js (Image, Link components)
 - Sanity client (blog post data)
@@ -190,6 +209,7 @@
 ## Content Guidelines
 
 ### Typography Hierarchy
+
 - Hero: Largest text (text-7xl on desktop)
 - Section headings: text-4xl
 - Subsections: text-xl
@@ -197,12 +217,14 @@
 - Descriptions: text-muted-foreground
 
 ### Content Length Estimates
+
 - Hero section: ~25 words
 - Section descriptions: ~30-50 words
 - Feature descriptions: ~15-25 words
 - FAQ answers: ~40-60 words
 
 ### Interactive Elements
+
 1. Animated text rotation (4 phrases)
 2. Scroll-triggered animations
 3. Card hover effects
@@ -213,7 +235,9 @@
 8. Elastic infrastructure graph animation
 
 ### Visual Assets
+
 All images have light and dark theme variants:
+
 - workforce-stack.svg / workforce-stack-dark.svg
 - digital-workforce.png / digital-workforce-dark.png
 - lead-workforce.png / lead-workforce-dark.png
@@ -222,6 +246,7 @@ All images have light and dark theme variants:
 - understand.svg / understand-dark.svg
 
 ### SEO Optimization
+
 - Single H1 tag (fixed from dual H1 issue)
 - Structured data for Organization, WebPage, SoftwareApplication
 - FAQ schema markup

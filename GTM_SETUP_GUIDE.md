@@ -13,6 +13,7 @@ Your GTM container (GTM-NBC26J83) is now properly installed and configured. Here
 ## 🎯 GTM Dashboard Overview
 
 ### Main Areas:
+
 - **Workspace**: Where you make changes
 - **Tags**: Your tracking scripts (GA, Clarity, pixels)
 - **Triggers**: When tags should fire
@@ -25,6 +26,7 @@ Your GTM container (GTM-NBC26J83) is now properly installed and configured. Here
 Let's track when someone clicks "Get Started" buttons:
 
 ### Step 1: Create the Tag
+
 1. Click **Tags** → **New**
 2. Name it: `Click - Get Started Button`
 3. Click **Tag Configuration**
@@ -37,6 +39,7 @@ Let's track when someone clicks "Get Started" buttons:
      - Value: `{{Page Path}}`
 
 ### Step 2: Create the Trigger
+
 1. Click **Triggering**
 2. Click **+** to create new trigger
 3. Name it: `Trigger - Get Started Click`
@@ -47,6 +50,7 @@ Let's track when someone clicks "Get Started" buttons:
 7. Save
 
 ### Step 3: Test with Preview Mode
+
 1. Click **Preview** (top right)
 2. Enter your website URL
 3. A new tab opens with your site + Tag Assistant
@@ -54,6 +58,7 @@ Let's track when someone clicks "Get Started" buttons:
 5. Check Tag Assistant to see if your tag fired
 
 ### Step 4: Publish
+
 1. If test successful, click **Submit**
 2. Add version name: `Added Get Started tracking`
 3. Click **Publish**
@@ -61,30 +66,35 @@ Let's track when someone clicks "Get Started" buttons:
 ## 📈 Common Tags to Set Up
 
 ### 1. Scroll Depth Tracking
+
 **What**: Track how far users scroll
 **Tag Configuration**: GA4 Event
 **Event Name**: `scroll`
 **Trigger**: Scroll Depth (25%, 50%, 75%, 90%)
 
 ### 2. Contact Form Submission
+
 **What**: Track form completions
 **Tag Configuration**: GA4 Event
 **Event Name**: `form_submit`
 **Trigger**: Form Submission
 
 ### 3. Outbound Link Clicks
+
 **What**: Track when users leave your site
 **Tag Configuration**: GA4 Event
 **Event Name**: `outbound_click`
 **Trigger**: Click - Just Links where URL doesn't contain your domain
 
 ### 4. Video Engagement
+
 **What**: Track video plays
 **Tag Configuration**: GA4 Event
 **Event Name**: `video_play`
 **Trigger**: YouTube Video trigger
 
 ### 5. Page View Timer
+
 **What**: Track engaged users
 **Tag Configuration**: GA4 Event
 **Event Name**: `engaged_user`
@@ -95,23 +105,25 @@ Let's track when someone clicks "Get Started" buttons:
 Your code can send custom events to GTM. Here's how:
 
 ### From Any Component:
+
 ```javascript
 import { sendGTMEvent } from "@/lib/analytics/gtm"
 
 // Track a custom event
 sendGTMEvent("special_offer_viewed", {
-  offer_name: "Summer Sale",
-  discount_percentage: 30
+	offer_name: "Summer Sale",
+	discount_percentage: 30,
 })
 ```
 
 ### Available Helper Functions:
+
 ```javascript
-import { 
-  trackGTMClick,
-  trackGTMFormSubmit,
-  trackGTMScroll,
-  trackGTMConversion
+import {
+	trackGTMClick,
+	trackGTMFormSubmit,
+	trackGTMScroll,
+	trackGTMConversion,
 } from "@/lib/analytics/gtm"
 
 // Track a click
@@ -127,6 +139,7 @@ trackGTMConversion("trial_started", 0)
 ## 🎨 GTM Variables You Can Use
 
 ### Built-in Variables (Enable in Variables section):
+
 - `{{Page Path}}` - Current page path
 - `{{Page URL}}` - Full URL
 - `{{Referrer}}` - Where user came from
@@ -135,6 +148,7 @@ trackGTMConversion("trial_started", 0)
 - `{{Form ID}}` - ID of submitted form
 
 ### Custom Variables You Can Create:
+
 - User Type (new vs returning)
 - Page Category (blog, landing page, etc.)
 - Scroll Percentage
@@ -143,6 +157,7 @@ trackGTMConversion("trial_started", 0)
 ## 🚦 Best Practices
 
 ### Naming Convention:
+
 ```
 Tags: [Type] - [Description]
   ✅ "GA4 - Page View"
@@ -161,6 +176,7 @@ Variables: Var - [Description]
 ```
 
 ### Testing Checklist:
+
 - [ ] Always use Preview mode first
 - [ ] Test on multiple pages
 - [ ] Check both desktop and mobile
@@ -170,24 +186,31 @@ Variables: Var - [Description]
 ## 🎯 Quick Wins to Try Now
 
 ### 1. See Your Data Layer
+
 Open browser console and type:
+
 ```javascript
 dataLayer
 ```
+
 You'll see all events being tracked!
 
 ### 2. Track Rage Clicks
+
 Create trigger for multiple clicks in same spot - indicates user frustration
 
 ### 3. Track Dead Clicks
+
 Clicks that don't do anything - might indicate broken elements
 
 ### 4. Landing Page Performance
+
 Your landing pages already send events! In GTM, create tags that listen for `landing_page_view` events
 
 ## 🔍 Debugging Tips
 
 ### If Tags Don't Fire:
+
 1. Check trigger conditions
 2. Verify element selectors
 3. Look for JavaScript errors
@@ -195,7 +218,9 @@ Your landing pages already send events! In GTM, create tags that listen for `lan
 5. Disable ad blockers
 
 ### See What GTM Captures:
+
 In Preview mode, click any element and Tag Assistant shows:
+
 - All variables available
 - Which triggers activated
 - Why tags did/didn't fire

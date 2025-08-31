@@ -1,16 +1,19 @@
-import { trackClarityEvent, setClarityCustomTag } from "@/components/analytics/clarity-provider"
+import {
+	trackClarityEvent,
+	setClarityCustomTag,
+} from "@/components/analytics/clarity-provider"
 import { hasAnalyticsConsent } from "./consent"
 
 declare global {
 	interface Window {
-		gtag?: (...args: any[]) => void
-		dataLayer?: any[]
+		gtag?: (...args: unknown[]) => void
+		dataLayer?: Array<Record<string, unknown>>
 	}
 }
 
 export const trackEvent = (
 	eventName: string,
-	parameters?: Record<string, any>
+	parameters?: Record<string, unknown>
 ) => {
 	if (!hasAnalyticsConsent()) return
 
@@ -60,14 +63,21 @@ export const trackCampaignLanding = (campaignData: {
 	})
 }
 
-export const trackFormSubmission = (formName: string, formData?: Record<string, any>) => {
+export const trackFormSubmission = (
+	formName: string,
+	formData?: Record<string, unknown>
+) => {
 	trackEvent("form_submit", {
 		form_name: formName,
 		...formData,
 	})
 }
 
-export const trackConversion = (conversionType: string, value?: number, currency?: string) => {
+export const trackConversion = (
+	conversionType: string,
+	value?: number,
+	currency?: string
+) => {
 	trackEvent("conversion", {
 		conversion_type: conversionType,
 		value,
@@ -75,7 +85,12 @@ export const trackConversion = (conversionType: string, value?: number, currency
 	})
 }
 
-export const trackEngagement = (action: string, category: string, label?: string, value?: number) => {
+export const trackEngagement = (
+	action: string,
+	category: string,
+	label?: string,
+	value?: number
+) => {
 	trackEvent("engagement", {
 		action,
 		category,

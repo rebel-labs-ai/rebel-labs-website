@@ -24,7 +24,7 @@ const faqs = [
 	{
 		question: "Won't I lose the human creativity and strategic thinking?",
 		answer:
-			"Workforce amplifies creativity, doesn't replace it. Your team provides strategy, concepts, insights. Workforce handles execution at scale. Film director vs production crew. One CMO: \"My team finally works at the level they were hired for.\"",
+			'Workforce amplifies creativity, doesn\'t replace it. Your team provides strategy, concepts, insights. Workforce handles execution at scale. Film director vs production crew. One CMO: "My team finally works at the level they were hired for."',
 	},
 	{
 		question: "How do you ensure content quality at scale?",

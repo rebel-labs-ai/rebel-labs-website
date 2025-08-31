@@ -6,7 +6,7 @@ import { usePathname, useSearchParams } from "next/navigation"
 
 declare global {
 	interface Window {
-		clarity?: (action: string, ...args: any[]) => void
+		clarity?: (action: string, ...args: unknown[]) => void
 	}
 }
 
@@ -15,7 +15,10 @@ interface ClarityProviderProps {
 	enabled?: boolean
 }
 
-export function ClarityProvider({ projectId, enabled = true }: ClarityProviderProps) {
+export function ClarityProvider({
+	projectId,
+	enabled = true,
+}: ClarityProviderProps) {
 	const pathname = usePathname()
 	const searchParams = useSearchParams()
 
@@ -49,23 +52,41 @@ export function ClarityProvider({ projectId, enabled = true }: ClarityProviderPr
 			try {
 				// Initialize Clarity using the traditional script injection method
 				if (!window.clarity) {
-					(function(c,l,a,r,i,t,y){
-						c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments) };
-						t = l.createElement(r);
-						t.async = 1;
-						t.src = "https://www.clarity.ms/tag/" + i;
-						y = l.getElementsByTagName(r)[0];
-						y.parentNode!.insertBefore(t, y);
-					})(window as any, document, "clarity", "script", projectId);
+					/* eslint-disable @typescript-eslint/no-explicit-any */
+					;(function (
+						c: any,
+						l: any,
+						a: any,
+						r: any,
+						i: any,
+						t?: any,
+						y?: any
+					) {
+						c[a] =
+							c[a] ||
+							function () {
+								// eslint-disable-next-line prefer-rest-params
+								;(c[a].q = c[a].q || []).push(arguments)
+							}
+						t = l.createElement(r)
+						t.async = 1
+						t.src = "https://www.clarity.ms/tag/" + i
+						y = l.getElementsByTagName(r)[0]
+						y.parentNode!.insertBefore(t, y)
+					})(window, document, "clarity", "script", projectId)
+					/* eslint-enable @typescript-eslint/no-explicit-any */
 					console.log("📊 Microsoft Clarity initialized")
 				}
 
 				// Wait a bit for Clarity to be ready, then set custom tags
 				setTimeout(() => {
-					if (window.clarity) {
-						const campaign = searchParams.get("utm_campaign") || searchParams.get("campaign")
-						const source = searchParams.get("utm_source") || searchParams.get("source")
-						const medium = searchParams.get("utm_medium") || searchParams.get("medium")
+					if (window.clarity && searchParams) {
+						const campaign =
+							searchParams.get("utm_campaign") || searchParams.get("campaign")
+						const source =
+							searchParams.get("utm_source") || searchParams.get("source")
+						const medium =
+							searchParams.get("utm_medium") || searchParams.get("medium")
 
 						if (campaign) {
 							window.clarity("set", "campaign", campaign)
@@ -77,7 +98,7 @@ export function ClarityProvider({ projectId, enabled = true }: ClarityProviderPr
 							window.clarity("set", "medium", medium)
 						}
 
-						if (pathname.startsWith("/lp/")) {
+						if (pathname && pathname.startsWith("/lp/")) {
 							const landingPage = pathname.split("/lp/")[1]
 							window.clarity("set", "landing_page", landingPage)
 							window.clarity("event", "landing_page_view")
@@ -105,7 +126,10 @@ export function ClarityProvider({ projectId, enabled = true }: ClarityProviderPr
 
 		return () => {
 			window.removeEventListener("cookie-consent-granted", handleConsentGranted)
-			window.removeEventListener("cookie-consent-declined", handleConsentDeclined)
+			window.removeEventListener(
+				"cookie-consent-declined",
+				handleConsentDeclined
+			)
 		}
 	}, [projectId, enabled, pathname, searchParams])
 
@@ -126,7 +150,11 @@ export function ClarityProvider({ projectId, enabled = true }: ClarityProviderPr
 	return null
 }
 
-export const trackClarityEvent = (eventName: string, data?: Record<string, any>) => {
+export const trackClarityEvent = (
+	eventName: string,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	data?: Record<string, unknown>
+) => {
 	try {
 		const consentState = getCookie("cookie-consent-state")
 		if (consentState) {
@@ -140,7 +168,12 @@ export const trackClarityEvent = (eventName: string, data?: Record<string, any>)
 	}
 }
 
-export const identifyClarityUser = (userId: string, sessionId?: string, pageId?: string, friendlyName?: string) => {
+export const identifyClarityUser = (
+	userId: string,
+	sessionId?: string,
+	pageId?: string,
+	friendlyName?: string
+) => {
 	try {
 		const consentState = getCookie("cookie-consent-state")
 		if (consentState) {
