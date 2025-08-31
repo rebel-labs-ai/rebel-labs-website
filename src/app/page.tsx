@@ -1279,7 +1279,7 @@ export default async function Home() {
 						<details className="group bg-card-background border border-accent/20 rounded-lg">
 							<summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-accent/5 transition-colors">
 								<h3 className="text-foreground text-lg font-semibold pr-4">
-									How quickly can I deploy a Digital Workforce?
+									What happens to my existing team?
 								</h3>
 								<svg
 									className="w-5 h-5 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
@@ -1297,7 +1297,7 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									14 days from kickoff to live deployment. Week 1: We map your processes. Week 2: Configure and test with your actual data. Day 15: Workforce starts booking appointments.
+									Your team gets elevated, not replaced. Instead of data entry and follow-ups, they focus on strategy, relationships, and high-value deals. Digital workforces handle the repetitive work so your people can do what humans do best: create, strategize, and build relationships.
 								</p>
 							</div>
 						</details>
@@ -1324,7 +1324,7 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Pay per outcome: qualified lead, booked appointment, or content piece. No salaries, benefits, or idle time costs. Most clients see 70% cost reduction versus human teams with 3x the output.
+									Pay-per-execution model: You pay for every piece of content created, every lead spoken to, every appointment booked. No fixed costs, no idle time. Scale up during busy periods, scale down when needed. Most clients see 70% cost reduction versus human teams with 3x the output.
 								</p>
 							</div>
 						</details>
@@ -1351,7 +1351,7 @@ export default async function Home() {
 							</summary>
 							<div className="px-6 pb-6">
 								<p className="text-muted-foreground">
-									Native integration with Salesforce, HubSpot, Marketo, and 50+ tools. Setup takes 2 hours. No APIs to build, no IT involvement needed.
+									We can integrate with almost anything that has an API. Salesforce, HubSpot, Marketo, and 50+ other platforms. We handle all the setup and configuration for you - no IT involvement needed. Your workforce becomes a seamless extension of your existing tech stack.
 								</p>
 							</div>
 						</details>
@@ -1430,10 +1430,10 @@ export default async function Home() {
 								},
 								{
 									"@type": "Question",
-									name: "How quickly can I deploy a Digital Workforce?",
+									name: "What happens to my existing team?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "14 days from kickoff to live deployment. Week 1: We map your processes. Week 2: Configure and test with your actual data. Day 15: Workforce starts booking appointments.",
+										text: "Your team gets elevated, not replaced. Instead of data entry and follow-ups, they focus on strategy, relationships, and high-value deals. Digital workforces handle the repetitive work so your people can do what humans do best: create, strategize, and build relationships.",
 									},
 								},
 								{
@@ -1441,7 +1441,7 @@ export default async function Home() {
 									name: "How does pricing work?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Pay per outcome: qualified lead, booked appointment, or content piece. No salaries, benefits, or idle time costs. Most clients see 70% cost reduction versus human teams with 3x the output.",
+										text: "Pay-per-execution model: You pay for every piece of content created, every lead spoken to, every appointment booked. No fixed costs, no idle time. Scale up during busy periods, scale down when needed. Most clients see 70% cost reduction versus human teams with 3x the output.",
 									},
 								},
 								{
@@ -1449,7 +1449,7 @@ export default async function Home() {
 									name: "What systems does a Digital Workforce integrate with?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Native integration with Salesforce, HubSpot, Marketo, and 50+ tools. Setup takes 2 hours. No APIs to build, no IT involvement needed.",
+										text: "We can integrate with almost anything that has an API. Salesforce, HubSpot, Marketo, and 50+ other platforms. We handle all the setup and configuration for you - no IT involvement needed. Your workforce becomes a seamless extension of your existing tech stack.",
 									},
 								},
 								{

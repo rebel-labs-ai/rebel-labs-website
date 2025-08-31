@@ -35,6 +35,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	}
 
 	// Static pages
+	// NOTE: Landing pages (/lp/*) are intentionally excluded from the sitemap
+	// as they are campaign-specific and should not be indexed by search engines
 	const staticPages: MetadataRoute.Sitemap = [
 		{
 			url: baseUrl,

@@ -251,6 +251,38 @@ h6 {
 	}
 }
 
+/* Fix for cookie consent banner overflow issues */
+.CookieConsent {
+	position: fixed !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	width: 100% !important;
+	z-index: 999 !important;
+}
+
+/* Prevent any overlay from causing scroll issues */
+.CookieConsent__overlay {
+	display: none !important;
+}
+
+/* Fix body overflow without breaking sticky positioning */
+body {
+	overflow-x: clip;
+	position: relative;
+	min-height: 100vh;
+}
+
+/* Keep smooth scrolling but don't break sticky with overflow-x */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Ensure no horizontal scrollbar appears */
+html, body {
+	max-width: 100%;
+}
+
 @keyframes draw-line {
 	from {
 		stroke-dashoffset: 100;
