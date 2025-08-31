@@ -904,10 +904,9 @@ export default async function Home() {
 						{/* Feature Two - Seamless Integration (moved from Feature Five) */}
 						<div className="hidden md:block md:col-span-2 bg-card-background border border-accent/30 shadow-lg rounded-xl p-8 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-							Complete processes end-to-end without supervision
+								Complete processes end-to-end without supervision
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-								
 								Your workforce manages complex, multi-step processes from end to
 								end, executing its mission without the need for your constant
 								intervention or management.
@@ -917,11 +916,11 @@ export default async function Home() {
 						{/* Feature Three - Autonomous Execution */}
 						<div className="bg-card-background border border-accent/30 shadow-lg rounded-xl p-6 min-h-[170px]">
 							<h3 className="text-foreground text-xl font-semibold mb-3">
-								 Works with your existing stack
+								Works with your existing stack
 							</h3>
 							<p className="text-muted-foreground text-base leading-relaxed">
-							Your workforce connects natively to your core systems, acting as a seamless
-							extension of your existing tech stack.
+								Your workforce connects natively to your core systems, acting as
+								a seamless extension of your existing tech stack.
 							</p>
 						</div>
 
