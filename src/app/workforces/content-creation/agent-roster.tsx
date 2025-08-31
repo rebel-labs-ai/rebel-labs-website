@@ -245,12 +245,13 @@ export function AgentRoster() {
 							    Agent: Assistant
 							*/}
 							<h2 className="text-foreground text-2xl sm:text-4xl font-bold tracking-tight mt-4">
-								Meet Your On-Demand Content Team.
+								Meet Your Self-Managing Content Team
 							</h2>
 							<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto mt-4">
-								Your workforce is a coordinated team of specialized AI agents,
-								each a master of the content lifecycle, working in concert to
-								execute your strategy.
+								Your Digital Workforce operates as a coordinated team of specialized
+								agents, each mastering distinct phases of the content lifecycle.
+								Through seamless collaboration, they generate emergent intelligence
+\t\t\t\t\t\tthat evolves and self-manages your entire content operation.
 							</p>
 						</div>
 

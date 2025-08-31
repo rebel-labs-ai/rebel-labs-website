@@ -143,9 +143,13 @@ export function MethodSection() {
 									ref={el => {
 										stepRefs.current[index] = el
 									}}
-									className={`${
-										index === 0 ? "min-h-[50vh]" : "min-h-screen"
-									} flex items-center`}
+									className={`flex items-center ${
+										index === 0 
+											? "min-h-[60vh] pt-20" 
+											: index === methodSteps.length - 1 
+											? "min-h-[60vh] pb-20"
+											: "min-h-[60vh]"
+									}`}
 								>
 									<div
 										className={`transition-all duration-500 ${

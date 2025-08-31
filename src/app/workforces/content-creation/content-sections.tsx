@@ -86,7 +86,7 @@ export function MethodSection() {
 					    Agent: Assistant
 					*/}
 					<h2 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4">
-						We Build Your Custom Content Operating System.
+						Your Content Operating System
 					</h2>
 					<p className="text-muted-foreground text-base sm:text-lg max-w-3xl sm:mx-auto">
 						This is not a one-size-fits-all tool. We work with you to architect
@@ -185,8 +185,8 @@ export function MethodSection() {
 											Create Voice Profiles:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											It creates unique models that capture their individual
-											style and perspective.
+											It builds specialized agents that replicate their unique
+											writing style and perspective.
 										</span>
 									</div>
 								</div>
@@ -194,11 +194,11 @@ export function MethodSection() {
 									<div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
 									<div>
 										<span className="font-semibold text-foreground">
-											Generate Authentic Content:
+											Scale Expert Insights:
 										</span>
 										<span className="text-muted-foreground ml-2">
-											The system can now generate new, original content that
-											sounds authentically like them.
+											The system transforms your experts' knowledge into unlimited
+											content that preserves their authentic voice and expertise.
 										</span>
 									</div>
 								</div>
