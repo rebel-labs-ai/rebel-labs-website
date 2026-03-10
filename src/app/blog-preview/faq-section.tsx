@@ -2,7 +2,7 @@
 
 const faqs = [
 	{
-		question: "What topics does the NovoSapien blog cover?",
+		question: "What topics does the Novosapien blog cover?",
 		answer:
 			"Our blog focuses on AI workforces, automation strategies, digital transformation, and practical insights for businesses looking to scale with intelligent automation. We cover case studies, technical deep-dives, implementation guides, and industry trends.",
 	},

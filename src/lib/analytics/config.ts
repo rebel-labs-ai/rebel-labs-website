@@ -1,15 +1,17 @@
+import { siteConfig } from "@/config/site.config"
+
 export const analyticsConfig = {
 	googleAnalytics: {
-		measurementId: process.env.NEXT_PUBLIC_GA_ID || "",
-		enabled: !!process.env.NEXT_PUBLIC_GA_ID,
+		measurementId: siteConfig.analytics.gaId,
+		enabled: !!siteConfig.analytics.gaId,
 	},
 	googleTagManager: {
-		containerId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-NBC26J83",
-		enabled: !!process.env.NEXT_PUBLIC_GTM_ID || true,
+		containerId: siteConfig.analytics.gtmId,
+		enabled: !!siteConfig.analytics.gtmId,
 	},
 	microsoftClarity: {
-		projectId: process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "",
-		enabled: !!process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID,
+		projectId: siteConfig.analytics.clarityId,
+		enabled: !!siteConfig.analytics.clarityId,
 	},
 	general: {
 		requireCookieConsent:
@@ -33,7 +35,7 @@ export const isAnalyticsEnabled = () => {
 
 export const campaignConfig = {
 	defaultTags: {
-		site: "novosapien",
+		site: siteConfig.name.toLowerCase(),
 		version: "v2",
 	},
 	utmParams: [

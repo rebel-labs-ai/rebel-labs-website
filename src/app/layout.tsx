@@ -15,6 +15,7 @@ import { AnalyticsManager } from "@/components/analytics/analytics-manager"
 import { ClarityProvider } from "@/components/analytics/clarity-provider"
 import { GTMPageTracker } from "@/components/analytics/gtm-page-tracker"
 import { analyticsConfig, isAnalyticsEnabled } from "@/lib/analytics/config"
+import { siteConfig } from "@/config/site.config"
 import { Suspense } from "react"
 
 const geistSans = Geist({
@@ -81,30 +82,16 @@ const satoshi = localFont({
 })
 
 export const metadata: Metadata = {
-	metadataBase: new URL(
-		process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
-	),
+	metadataBase: new URL(siteConfig.url),
 	title: {
-		template: "%s | Novosapien",
-		default: "Novosapien - Digital Workforces for Revenue Generation",
+		template: siteConfig.seo.titleTemplate,
+		default: siteConfig.seo.defaultTitle,
 	},
-	description:
-		"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue. Transform your operations with AI-powered automation.",
-	keywords: [
-		"AI workforces",
-		"automation",
-		"revenue generation",
-		"digital transformation",
-		"business automation",
-		"AI agents",
-		"workflow automation",
-		"revenue operations",
-		"lead generation",
-		"content automation",
-	],
-	authors: [{ name: "Novosapien" }],
-	creator: "Novosapien",
-	publisher: "Novosapien",
+	description: siteConfig.description,
+	keywords: [...siteConfig.seo.keywords],
+	authors: [{ name: siteConfig.name }],
+	creator: siteConfig.name,
+	publisher: siteConfig.name,
 	formatDetection: {
 		email: false,
 		address: false,
@@ -129,29 +116,27 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai",
-		siteName: "Novosapien",
-		title: "Novosapien - Digital Workforces for Revenue Generation",
-		description:
-			"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue. Transform your operations with AI-powered automation.",
+		url: siteConfig.url,
+		siteName: siteConfig.name,
+		title: siteConfig.seo.defaultTitle,
+		description: siteConfig.description,
 		images: [
 			{
-				url: "/og-image.jpg",
+				url: siteConfig.ogImage.default,
 				width: 1200,
 				height: 630,
-				alt: "Novosapien - Digital Workforces for Revenue Generation",
+				alt: siteConfig.seo.defaultTitle,
 				type: "image/jpeg",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Novosapien - Digital Workforces for Revenue Generation",
-		description:
-			"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue.",
-		images: ["/og-image.jpg"],
-		creator: "@novosapien",
-		site: "@novosapien",
+		title: siteConfig.seo.defaultTitle,
+		description: siteConfig.description,
+		images: [siteConfig.ogImage.default],
+		creator: siteConfig.social.twitter,
+		site: siteConfig.social.twitter,
 	},
 	icons: {
 		icon: [
@@ -170,13 +155,13 @@ export const metadata: Metadata = {
 			{
 				rel: "mask-icon",
 				url: "/favicons/safari-pinned-tab.svg",
-				color: "#A1BCD1",
+				color: siteConfig.favicon.themeColor,
 			},
 		],
 	},
 	manifest: "/favicons/site.webmanifest",
 	alternates: {
-		canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai",
+		canonical: siteConfig.url,
 	},
 	category: "technology",
 }

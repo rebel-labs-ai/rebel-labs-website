@@ -1,4 +1,5 @@
 import { CSSProperties } from "react"
+import { siteConfig } from "@/config/site.config"
 
 /**
  * Preserves visual styles when converting heading tags for SEO
@@ -83,7 +84,7 @@ export function extractTextContent(
  * Generates canonical URL for a given path
  */
 export function getCanonicalUrl(path: string): string {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+	const baseUrl = siteConfig.url
 	// Ensure path starts with /
 	const cleanPath = path.startsWith("/") ? path : `/${path}`
 	// Remove trailing slash except for root
@@ -95,7 +96,7 @@ export function getCanonicalUrl(path: string): string {
  * Generates Open Graph image URL
  */
 export function getOgImageUrl(imagePath?: string): string {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+	const baseUrl = siteConfig.url
 	const defaultImage = "/og-image.jpg"
 	const image = imagePath || defaultImage
 	// Handle absolute URLs
@@ -122,18 +123,17 @@ export function getOrganizationSchema() {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		name: "Novosapien",
-		url: "https://novosapien.ai",
-		logo: "https://novosapien.ai/logo.svg",
-		description:
-			"We deploy digital workforces into your business so you can stop managing tools and start scaling revenue.",
+		name: siteConfig.name,
+		url: siteConfig.url,
+		logo: `${siteConfig.url}${siteConfig.logo.path}`,
+		description: siteConfig.description,
 		sameAs: [
 			// Add social media URLs when available
 		],
 		contactPoint: {
 			"@type": "ContactPoint",
 			contactType: "customer service",
-			email: "hello@novosapien.com", // Update with actual contact
+			email: siteConfig.emails.general,
 		},
 	}
 }

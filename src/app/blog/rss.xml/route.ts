@@ -1,7 +1,8 @@
 import { client } from "@/sanity/client"
 import { type SanityDocument } from "next-sanity"
+import { siteConfig } from "@/config/site.config"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+const baseUrl = siteConfig.url
 
 // Type definitions for Portable Text
 interface PortableTextChild {
@@ -76,20 +77,20 @@ export async function GET() {
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>NovoSapien Blog - AI Insights &amp; Automation</title>
+    <title>${siteConfig.name} Blog - AI Insights &amp; Automation</title>
     <description>Stay updated with the latest insights on AI workforces, automation strategies, and digital transformation. Learn how to scale your business with intelligent automation.</description>
     <link>${baseUrl}/blog</link>
     <language>en-US</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/blog/rss.xml" rel="self" type="application/rss+xml"/>
-    <copyright>© ${new Date().getFullYear()} NovoSapien. All rights reserved.</copyright>
+    <copyright>${siteConfig.copyright}</copyright>
     <generator>Next.js/Sanity CMS</generator>
-    <webMaster>team@novosapien.ai (NovoSapien Team)</webMaster>
-    <managingEditor>team@novosapien.ai (NovoSapien Editorial)</managingEditor>
+    <webMaster>${siteConfig.emails.team} (${siteConfig.name} Team)</webMaster>
+    <managingEditor>${siteConfig.emails.team} (${siteConfig.name} Editorial)</managingEditor>
     <ttl>3600</ttl>
     <image>
       <url>${baseUrl}/logo.png</url>
-      <title>NovoSapien</title>
+      <title>${siteConfig.name}</title>
       <link>${baseUrl}</link>
       <width>144</width>
       <height>144</height>
@@ -115,7 +116,7 @@ export async function GET() {
       <category>${escapeXml(post.category)}</category>
       <pubDate>${pubDate}</pubDate>
       <lastBuildDate>${lastModified}</lastBuildDate>
-      <source url="${baseUrl}/blog/rss.xml">NovoSapien Blog</source>
+      <source url="${baseUrl}/blog/rss.xml">${siteConfig.name} Blog</source>
     </item>`
 			})
 			.join("")}
@@ -138,7 +139,7 @@ export async function GET() {
 		const errorRss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>NovoSapien Blog</title>
+    <title>${siteConfig.name} Blog</title>
     <link>${baseUrl}/blog</link>
     <description>AI Insights & Automation Blog</description>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>

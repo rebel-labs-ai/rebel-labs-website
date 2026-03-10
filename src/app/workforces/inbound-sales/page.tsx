@@ -32,7 +32,7 @@ import { MethodSection } from "./method-section"
    Date: 2025-08-28
 */
 export const metadata: Metadata = {
-	title: "Inbound Sales Workforce - AI Lead Conversion | NovoSapien",
+	title: "Inbound Sales Workforce - AI Lead Conversion | Novosapien",
 	description:
 		"Never lose an inbound lead again. Deploy an autonomous AI workforce that converts raw leads into qualified meetings 24/7. 85% faster response, maximum efficiency.",
 	keywords:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en_US",
 		url: "https://novosapien.ai/workforces/inbound-sales",
-		siteName: "NovoSapien",
+		siteName: "Novosapien",
 		title: "Inbound Sales Workforce - Never Lose a Lead Again",
 		description:
 			"Transform your lead conversion with autonomous AI agents. 85% faster response time, 3.5x conversion rate, 24/7 operation.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 				url: "/og-inbound-sales.jpg",
 				width: 1200,
 				height: 630,
-				alt: "NovoSapien Inbound Sales Workforce Dashboard",
+				alt: "Novosapien Inbound Sales Workforce Dashboard",
 			},
 		],
 	},
@@ -257,7 +257,7 @@ export default function LeadWorkforcePage() {
 		name: "Inbound Sales Workforce",
 		provider: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: "Novosapien",
 			url: "https://novosapien.ai",
 		},
 		description:

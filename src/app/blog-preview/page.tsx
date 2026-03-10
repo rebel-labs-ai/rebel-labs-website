@@ -92,7 +92,7 @@ const blogPosts = [
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
 
 export const metadata: Metadata = {
-	title: "AI Insights & Automation Blog | NovoSapien",
+	title: "AI Insights & Automation Blog | Novosapien",
 	description:
 		"Stay updated with the latest insights on AI workforces, automation strategies, and digital transformation. Learn how to scale your business with intelligent automation.",
 	keywords: [
@@ -104,13 +104,13 @@ export const metadata: Metadata = {
 		"lead generation",
 		"sales automation",
 	].join(", "),
-	authors: [{ name: "NovoSapien Team" }],
+	authors: [{ name: "Novosapien Team" }],
 	openGraph: {
 		type: "website",
 		locale: "en_US",
 		url: `${baseUrl}/blog-preview`,
-		siteName: "NovoSapien",
-		title: "AI Insights & Automation Blog | NovoSapien",
+		siteName: "Novosapien",
+		title: "AI Insights & Automation Blog | Novosapien",
 		description:
 			"Explore the latest in AI workforces, automation strategies, and success stories from the frontier of autonomous business operations.",
 		images: [
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
 				url: "/og-blog.jpg",
 				width: 1200,
 				height: 630,
-				alt: "NovoSapien Blog - AI Insights & Automation",
+				alt: "Novosapien Blog - AI Insights & Automation",
 			},
 		],
 	},
@@ -154,12 +154,12 @@ export default function BlogPage() {
 		"@type": "Blog",
 		"@id": `${baseUrl}/blog-preview#blog`,
 		url: `${baseUrl}/blog-preview`,
-		name: "NovoSapien AI Insights Blog",
+		name: "Novosapien AI Insights Blog",
 		description:
 			"Explore insights on AI workforces, automation strategies, and digital transformation",
 		publisher: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: "Novosapien",
 			url: baseUrl,
 			logo: {
 				"@type": "ImageObject",

@@ -7,11 +7,19 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
+import { siteConfig } from "@/config/site.config"
+import {
+	mainNavItems,
+	mobileOnlyLinks,
+	isDropdown,
+	type NavLink,
+	type NavDropdown,
+} from "@/config/navigation.config"
 
 export function Navigation() {
 	const pathname = usePathname()
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-	const [isMobileWorkforceOpen, setIsMobileWorkforceOpen] = useState(false)
+	const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false)
 	const { theme, setTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
 
@@ -20,24 +28,36 @@ export function Navigation() {
 	}, [])
 
 	const isActive = (path: string) => pathname === path
-	const isWorkforceActive = () => pathname?.startsWith("/workforces")
+	const isPathActive = (basePath: string) => pathname?.startsWith(basePath)
 
-	const getButtonVariant = (path: string) => {
-		if (path === "/workforces") {
-			return isWorkforceActive() ? "outline" : "ghost"
+	const getButtonVariant = (item: NavLink | NavDropdown) => {
+		if ("basePath" in item) {
+			return isPathActive(item.basePath) ? "outline" : "ghost"
 		}
-		return isActive(path) ? "outline" : "ghost"
+		return isActive(item.href) ? "outline" : "ghost"
 	}
 
-	const getButtonClassName = (path: string) => {
+	const getButtonClassName = (item: NavLink | NavDropdown) => {
 		const isCurrentlyActive =
-			path === "/workforces" ? isWorkforceActive() : isActive(path)
+			"basePath" in item ? isPathActive(item.basePath) : isActive(item.href)
 
 		if (isCurrentlyActive) {
 			return "rounded-md px-4 py-1.5 bg-white/70 dark:bg-accent/10 text-foreground dark:text-white border border-accent dark:border-accent/30 hover:bg-accent/30 dark:hover:bg-accent/20 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 		}
 		return "rounded-md px-4 py-2 text-foreground dark:text-white hover:bg-white/50 dark:hover:bg-accent/10 hover:text-foreground dark:hover:text-white hover:py-1.5 transition-all duration-200 font-medium"
 	}
+
+	const getMobileLinkClassName = (path: string) =>
+		`block px-3 py-2 rounded-md transition-colors text-sm ${
+			isActive(path)
+				? "bg-accent/20 text-foreground font-medium"
+				: "hover:bg-accent/10"
+		}`
+
+	/** The dropdown item (if any) for mobile */
+	const mobileDropdown = mainNavItems.find(isDropdown) as
+		| NavDropdown
+		| undefined
 
 	return (
 		<nav className="fixed top-0 left-0 right-0 z-50">
@@ -51,87 +71,61 @@ export function Navigation() {
 							className="flex items-center space-x-2 px-3 hover:opacity-80 transition-opacity"
 						>
 							<Image
-								src="/logo.svg"
-								alt="Novosapien Logo"
+								src={siteConfig.logo.path}
+								alt={siteConfig.logo.alt}
 								width={24}
 								height={24}
 								className="w-6 h-6"
 							/>
 							<span className="text-xl font-reddit-sans lowercase font-medium">
-								<span className="text-accent">novo</span>
+								<span className="text-accent">
+									{siteConfig.nameStyled.prefix}
+								</span>
 								<span className="text-[#09142f] dark:text-[#09142f]/80-">
-									sapien
+									{siteConfig.nameStyled.suffix}
 								</span>
 							</span>
 						</Link>
 						<div className="w-px h-6 bg-border mx-2"></div>
-						<Link href="/">
-							<Button
-								variant={getButtonVariant("/")}
-								className={getButtonClassName("/")}
-							>
-								Home
-							</Button>
-						</Link>
-						{/* Workforces Dropdown using CSS hover */}
-						<div className="relative group">
-							<Button
-								variant={getButtonVariant("/workforces")}
-								className={`${getButtonClassName("/workforces")} flex items-center gap-1`}
-							>
-								Workforces
-								<ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
-							</Button>
-							{/* Invisible bridge to prevent gap issues */}
-							<div className="absolute top-full left-0 right-0 h-2 invisible group-hover:visible" />
-							{/* Dropdown Menu */}
-							<div className="absolute top-full left-0 mt-1 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100">
-								<div className="bg-background/95 backdrop-blur-sm border border-accent rounded-md shadow-lg overflow-hidden">
-									<Link
-										href="/workforces/inbound-sales"
-										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
+
+						{mainNavItems.map(item =>
+							isDropdown(item) ? (
+								<div key={item.label} className="relative group">
+									<Button
+										variant={getButtonVariant(item) as "outline" | "ghost"}
+										className={`${getButtonClassName(item)} flex items-center gap-1`}
 									>
-										Inbound Sales
-									</Link>
-									<Link
-										href="/workforces/content-creation"
-										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
-									>
-										Content Creation
-									</Link>
-									<Link
-										href="/workforces/lab"
-										className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
-									>
-										The Lab
-									</Link>
+										{item.label}
+										<ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+									</Button>
+									{/* Invisible bridge to prevent gap issues */}
+									<div className="absolute top-full left-0 right-0 h-2 invisible group-hover:visible" />
+									{/* Dropdown Menu */}
+									<div className="absolute top-full left-0 mt-1 min-w-[150px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100">
+										<div className="bg-background/95 backdrop-blur-sm border border-accent rounded-md shadow-lg overflow-hidden">
+											{item.items.map(subItem => (
+												<Link
+													key={subItem.href}
+													href={subItem.href}
+													className="block px-4 py-2 text-sm text-foreground hover:bg-accent/20 transition-colors"
+												>
+													{subItem.label}
+												</Link>
+											))}
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<Link href="/mission">
-							<Button
-								variant={getButtonVariant("/mission")}
-								className={getButtonClassName("/mission")}
-							>
-								Mission
-							</Button>
-						</Link>
-						<Link href="/blog">
-							<Button
-								variant={getButtonVariant("/blog")}
-								className={getButtonClassName("/blog")}
-							>
-								Blog
-							</Button>
-						</Link>
-						<Link href="/contact">
-							<Button
-								variant="ghost"
-								className={getButtonClassName("/contact")}
-							>
-								Contact
-							</Button>
-						</Link>
+							) : (
+								<Link key={item.href} href={item.href}>
+									<Button
+										variant={getButtonVariant(item) as "outline" | "ghost"}
+										className={getButtonClassName(item)}
+									>
+										{item.label}
+									</Button>
+								</Link>
+							)
+						)}
 					</div>
 				</div>
 
@@ -145,16 +139,18 @@ export function Navigation() {
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							<Image
-								src="/logo.svg"
-								alt="Novosapien Logo"
+								src={siteConfig.logo.path}
+								alt={siteConfig.logo.alt}
 								width={24}
 								height={24}
 								className="w-6 h-6"
 							/>
 							<span className="text-xl font-reddit-sans lowercase font-medium">
-								<span className="text-accent">novo</span>
+								<span className="text-accent">
+									{siteConfig.nameStyled.prefix}
+								</span>
 								<span className="text-[#09142f] dark:text-[#09142f]/80">
-									sapien
+									{siteConfig.nameStyled.suffix}
 								</span>
 							</span>
 						</Link>
@@ -175,114 +171,82 @@ export function Navigation() {
 					{isMobileMenuOpen && (
 						<div className="absolute top-full left-0 right-0 mt-2 backdrop-blur-md rounded-lg border border-accent bg-background/95 dark:bg-background/75 z-50 shadow-lg max-h-[calc(100vh-100px)] overflow-y-auto">
 							<div className="p-3 space-y-1">
+								{/* Home link (first in list) */}
 								<Link
 									href="/"
 									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
-										isActive("/")
-											? "bg-accent/20 text-foreground font-medium"
-											: "hover:bg-accent/10"
-									}`}
+									className={getMobileLinkClassName("/")}
 								>
 									Home
 								</Link>
 
-								{/* Workforces Dropdown */}
-								<div>
-									<button
-										onClick={() =>
-											setIsMobileWorkforceOpen(!isMobileWorkforceOpen)
-										}
-										className={`w-full flex items-center justify-between px-3 py-2 rounded-md transition-colors text-sm ${
-											isWorkforceActive()
-												? "bg-accent/20 text-foreground font-medium"
-												: "hover:bg-accent/10"
-										}`}
-									>
-										<span>Workforces</span>
-										<ChevronDown
-											className={`h-4 w-4 transition-transform ${
-												isMobileWorkforceOpen ? "rotate-180" : ""
+								{/* Dropdown section (Workforces) */}
+								{mobileDropdown && (
+									<div>
+										<button
+											onClick={() =>
+												setIsMobileDropdownOpen(!isMobileDropdownOpen)
+											}
+											className={`w-full flex items-center justify-between px-3 py-2 rounded-md transition-colors text-sm ${
+												isPathActive(mobileDropdown.basePath)
+													? "bg-accent/20 text-foreground font-medium"
+													: "hover:bg-accent/10"
 											}`}
-										/>
-									</button>
-									{isMobileWorkforceOpen && (
-										<div className="mt-1 ml-4 space-y-1">
+										>
+											<span>{mobileDropdown.label}</span>
+											<ChevronDown
+												className={`h-4 w-4 transition-transform ${
+													isMobileDropdownOpen ? "rotate-180" : ""
+												}`}
+											/>
+										</button>
+										{isMobileDropdownOpen && (
+											<div className="mt-1 ml-4 space-y-1">
+												{mobileDropdown.items.map(subItem => (
+													<Link
+														key={subItem.href}
+														href={subItem.href}
+														onClick={() => setIsMobileMenuOpen(false)}
+														className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
+													>
+														{subItem.label}
+													</Link>
+												))}
+											</div>
+										)}
+									</div>
+								)}
+
+								{/* Remaining main nav links (skip Home and dropdown) */}
+								{mainNavItems
+									.filter(
+										item => !isDropdown(item) && (item as NavLink).href !== "/"
+									)
+									.map(item => {
+										const link = item as NavLink
+										return (
 											<Link
-												href="/workforces/inbound-sales"
+												key={link.href}
+												href={link.href}
 												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
+												className={getMobileLinkClassName(link.href)}
 											>
-												Inbound Sales
+												{link.label}
 											</Link>
-											<Link
-												href="/workforces/content-creation"
-												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
-											>
-												Content Creation
-											</Link>
-											<Link
-												href="/workforces/lab"
-												onClick={() => setIsMobileMenuOpen(false)}
-												className="block px-3 py-2 rounded-md hover:bg-accent/10 transition-colors text-sm"
-											>
-												The Lab
-											</Link>
-										</div>
-									)}
-								</div>
+										)
+									})}
 
-								<Link
-									href="/mission"
-									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
-										isActive("/mission")
-											? "bg-accent/20 text-foreground font-medium"
-											: "hover:bg-accent/10"
-									}`}
-								>
-									Mission
-								</Link>
-
-								{/* Blog */}
-								<Link
-									href="/blog"
-									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
-										isActive("/blog")
-											? "bg-accent/20 text-foreground font-medium"
-											: "hover:bg-accent/10"
-									}`}
-								>
-									Blog
-								</Link>
-
-								{/* Careers */}
-								<Link
-									href="/careers"
-									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
-										isActive("/careers")
-											? "bg-accent/20 text-foreground font-medium"
-											: "hover:bg-accent/10"
-									}`}
-								>
-									Careers
-								</Link>
-
-								{/* Contact */}
-								<Link
-									href="/contact"
-									onClick={() => setIsMobileMenuOpen(false)}
-									className={`block px-3 py-2 rounded-md transition-colors text-sm ${
-										isActive("/contact")
-											? "bg-accent/20 text-foreground font-medium"
-											: "hover:bg-accent/10"
-									}`}
-								>
-									Contact
-								</Link>
+								{/* Mobile-only links */}
+								{mobileOnlyLinks.map(link => (
+									<Link
+										key={link.href}
+										href={link.href}
+										onClick={() => setIsMobileMenuOpen(false)}
+										className={getMobileLinkClassName(link.href)}
+									>
+										{link.label}
+									</Link>
+								))}
 
 								{/* Divider */}
 								<div className="h-px bg-border my-2"></div>

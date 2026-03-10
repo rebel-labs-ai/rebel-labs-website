@@ -19,8 +19,10 @@ import {
 	ArrowRight,
 	ArrowLeft,
 } from "lucide-react"
+import { siteConfig } from "@/config/site.config"
+import { getCategoryLabel } from "@/config/blog.config"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+const baseUrl = siteConfig.url
 
 // Type definitions
 interface BlogPost {
@@ -70,15 +72,15 @@ export async function generateMetadata({
 
 	if (!author) {
 		return {
-			title: "Author Not Found | NovoSapien",
+			title: "Author Not Found | ${siteConfig.name}",
 			description: "The author you're looking for could not be found.",
 		}
 	}
 
-	const title = `${author.name} - ${author.role} | NovoSapien`
+	const title = `${author.name} - ${author.role} | ${siteConfig.name}`
 	const description =
 		author.bio ||
-		`Read articles and insights from ${author.name}, ${author.role} at NovoSapien.`
+		`Read articles and insights from ${author.name}, ${author.role} at ${siteConfig.name}.`
 
 	return {
 		title,
@@ -102,8 +104,10 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: "summary_large_image",
-			site: "@novosapien",
-			creator: author.twitter ? `@${author.twitter}` : "@novosapien",
+			site: siteConfig.social.twitter,
+			creator: author.twitter
+				? `@${author.twitter}`
+				: siteConfig.social.twitter,
 			title,
 			description,
 			images: author.image
@@ -159,12 +163,12 @@ export default async function AuthorPage({
 		knowsAbout: author.expertise || [],
 		worksFor: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: siteConfig.name,
 			url: baseUrl,
 		},
 		memberOf: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: siteConfig.name,
 			url: baseUrl,
 		},
 	}
@@ -174,7 +178,7 @@ export default async function AuthorPage({
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
 		name: `Articles by ${author.name}`,
-		description: `All articles written by ${author.name}, ${author.role} at NovoSapien`,
+		description: `All articles written by ${author.name}, ${author.role} at ${siteConfig.name}`,
 		url: `${baseUrl}/author/${author.slug.current}`,
 		author: {
 			"@id": `${baseUrl}/author/${author.slug.current}#person`,
@@ -194,23 +198,6 @@ export default async function AuthorPage({
 	const combinedSchema = {
 		"@context": "https://schema.org",
 		"@graph": [personSchema, articlesSchema],
-	}
-
-	// Helper function to get category label
-	const getCategoryLabel = (category: string | undefined): string => {
-		if (!category) return "General"
-		const categoryMap: Record<string, string> = {
-			product: "Product Updates",
-			"case-studies": "Case Studies",
-			"sales-marketing": "Sales & Marketing",
-			"content-ai-creation": "Content & AI Creation",
-			"ai-automation": "AI & Automation",
-			"future-of-work": "Future of Work",
-			"guides-tutorials": "Guides & Tutorials",
-			"news-updates": "News & Updates",
-			"research-data": "Research & Data",
-		}
-		return categoryMap[category] || category
 	}
 
 	return (

@@ -11,12 +11,13 @@ import { BlogFilters } from "@/components/blog/blog-filters"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
 import { User, ArrowRight } from "lucide-react"
 import { Metadata } from "next"
+import { siteConfig } from "@/config/site.config"
+import { blogCategories, getCategoryLabel } from "@/config/blog.config"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
+const baseUrl = siteConfig.url
 
 export const metadata: Metadata = {
-	title:
-		"NovoSapien Blog | AI Workforces & AI Employees for Sales and Marketing",
+	title: `${siteConfig.name} Blog | AI Workforces & AI Employees for Sales and Marketing`,
 	description:
 		"Explore the latest trends in AI workforces and AI employees for sales and marketing. Learn how to scale your business with intelligent automation.",
 	keywords: [
@@ -28,13 +29,13 @@ export const metadata: Metadata = {
 		"lead generation",
 		"sales automation",
 	].join(", "),
-	authors: [{ name: "NovoSapien Team" }],
+	authors: [{ name: `${siteConfig.name} Team` }],
 	openGraph: {
 		type: "website",
 		locale: "en_US",
 		url: `${baseUrl}/blog`,
-		siteName: "NovoSapien",
-		title: "AI Insights & Automation Blog | NovoSapien",
+		siteName: siteConfig.name,
+		title: `AI Insights & Automation Blog | ${siteConfig.name}`,
 		description:
 			"Explore the latest in AI workforces, automation strategies, and success stories from the frontier of autonomous business operations.",
 		images: [
@@ -42,14 +43,14 @@ export const metadata: Metadata = {
 				url: "/og-blog.jpg",
 				width: 1200,
 				height: 630,
-				alt: "NovoSapien Blog - AI Insights & Automation",
+				alt: `${siteConfig.name} Blog - AI Insights & Automation`,
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		site: "@novosapien",
-		creator: "@novosapien",
+		site: siteConfig.social.twitter,
+		creator: siteConfig.social.twitter,
 		title: "AI Insights & Automation Blog",
 		description:
 			"Latest insights on AI workforces, automation strategies, and digital transformation.",
@@ -74,18 +75,7 @@ export const metadata: Metadata = {
 	},
 }
 
-// Categories with code-friendly names and human-readable labels
-const BLOG_CATEGORIES = [
-	{ value: "product", label: "Product Updates" },
-	{ value: "case-studies", label: "Case Studies" },
-	{ value: "sales-marketing", label: "Sales & Marketing" },
-	{ value: "content-ai-creation", label: "Content & AI Creation" },
-	{ value: "ai-automation", label: "AI & Automation" },
-	{ value: "future-of-work", label: "Future of Work" },
-	{ value: "guides-tutorials", label: "Guides & Tutorials" },
-	{ value: "news-updates", label: "News & Updates" },
-	{ value: "research-data", label: "Research & Data" },
-]
+const BLOG_CATEGORIES = blogCategories
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -109,12 +99,6 @@ const POSTS_QUERY = `*[
 
 // Revalidate every 60 seconds
 export const revalidate = 60
-
-// Helper function to get category label
-function getCategoryLabel(category: string): string {
-	const cat = BLOG_CATEGORIES.find(c => c.value === category)
-	return cat?.label || category
-}
 
 export default async function BlogPage({
 	searchParams,
@@ -172,16 +156,16 @@ export default async function BlogPage({
 		"@type": "Blog",
 		"@id": `${baseUrl}/blog#blog`,
 		url: `${baseUrl}/blog`,
-		name: "NovoSapien AI Insights Blog",
+		name: `${siteConfig.name} AI Insights Blog`,
 		description:
 			"Explore insights on AI workforces, automation strategies, and digital transformation",
 		publisher: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: siteConfig.name,
 			url: baseUrl,
 			logo: {
 				"@type": "ImageObject",
-				url: `${baseUrl}/logo.png`,
+				url: `${baseUrl}${siteConfig.logo.pngPath}`,
 			},
 		},
 		blogPost: filteredPosts.map(post => ({

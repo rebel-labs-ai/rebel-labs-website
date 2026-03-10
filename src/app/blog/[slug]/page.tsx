@@ -12,24 +12,10 @@ import { Button } from "@/components/ui/button"
 import Breadcrumbs from "@/components/seo/Breadcrumbs"
 import { Calendar, Clock, User, ArrowLeft, ArrowRight } from "lucide-react"
 import { portableTextComponents } from "@/components/portable-text-components"
+import { siteConfig } from "@/config/site.config"
+import { getCategoryLabel } from "@/config/blog.config"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://novosapien.ai"
-
-// Helper function to get human-readable category label
-function getCategoryLabel(category: string): string {
-	const categoryMap: Record<string, string> = {
-		product: "Product Updates",
-		"case-studies": "Case Studies",
-		"sales-marketing": "Sales & Marketing",
-		"content-ai-creation": "Content & AI Creation",
-		"ai-automation": "AI & Automation",
-		"future-of-work": "Future of Work",
-		"guides-tutorials": "Guides & Tutorials",
-		"news-updates": "News & Updates",
-		"research-data": "Research & Data",
-	}
-	return categoryMap[category] || category
-}
+const baseUrl = siteConfig.url
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   _id,
@@ -101,17 +87,17 @@ export async function generateMetadata({
 
 	return {
 		title: post.seoTitle
-			? `${post.seoTitle} | NovoSapien Blog`
-			: `${post.title} | NovoSapien Blog`,
+			? `${post.seoTitle} | ${siteConfig.name} Blog`
+			: `${post.title} | ${siteConfig.name} Blog`,
 		description:
 			post.metaDescription ||
 			post.excerpt ||
-			`Read ${post.title} on the NovoSapien blog`,
+			`Read ${post.title} on the ${siteConfig.name} blog`,
 		openGraph: {
 			type: "article",
 			locale: "en_US",
 			url: `${baseUrl}/blog/${slug}`,
-			siteName: "NovoSapien",
+			siteName: siteConfig.name,
 			title: post.title,
 			description: post.excerpt,
 			images: post.image
@@ -136,8 +122,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: "summary_large_image",
-			site: "@novosapien",
-			creator: "@novosapien",
+			site: siteConfig.social.twitter,
+			creator: siteConfig.social.twitter,
 			title: post.title,
 			description: post.excerpt,
 		},
@@ -225,11 +211,11 @@ export default async function PostPage({
 		},
 		publisher: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: siteConfig.name,
 			url: baseUrl,
 			logo: {
 				"@type": "ImageObject",
-				url: `${baseUrl}/logo.png`,
+				url: `${baseUrl}${siteConfig.logo.pngPath}`,
 			},
 		},
 		image: postImageUrl || `${baseUrl}/og-blog-post.jpg`,

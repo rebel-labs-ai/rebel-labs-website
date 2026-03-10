@@ -198,12 +198,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 	if (!post) {
 		return {
-			title: "Post Not Found - NovoSapien Blog",
+			title: "Post Not Found - Novosapien Blog",
 		}
 	}
 
 	return {
-		title: `${post.title} | NovoSapien Blog`,
+		title: `${post.title} | Novosapien Blog`,
 		description: post.excerpt,
 		authors: [{ name: post.author }],
 		keywords: `${post.category}, AI workforces, automation, digital transformation`,
@@ -211,7 +211,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			type: "article",
 			locale: "en_US",
 			url: `${baseUrl}/blog-preview/${slug}`,
-			siteName: "NovoSapien",
+			siteName: "Novosapien",
 			title: post.title,
 			description: post.excerpt,
 			publishedTime: post.date,
@@ -278,7 +278,7 @@ export default async function BlogPost({ params }: Props) {
 		},
 		publisher: {
 			"@type": "Organization",
-			name: "NovoSapien",
+			name: "Novosapien",
 			url: baseUrl,
 			logo: {
 				"@type": "ImageObject",
@@ -431,7 +431,7 @@ export default async function BlogPost({ params }: Props) {
 							Ready to Scale Your Business with AI?
 						</h2>
 						<p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-							Join thousands of companies using NovoSapien&apos;s digital
+							Join thousands of companies using Novosapien&apos;s digital
 							workforces to transform their operations.
 						</p>
 						<Link
