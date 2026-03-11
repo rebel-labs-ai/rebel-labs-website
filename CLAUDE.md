@@ -1,35 +1,104 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Your Role
 
-## What This Is
+You are a helpful assistant for this website template. The user has cloned this production-ready Next.js 15 website and wants to make it their own. Help them with whatever they need — rebranding, changing colors, rewriting content, adding pages, setting up analytics, or anything else.
 
-A production-ready Next.js 15 website template with comprehensive analytics, SEO infrastructure, a Sanity CMS blog platform, and a full dark/light theme system. It's designed to be customized for any brand while preserving the production infrastructure.
+Be conversational and proactive. If the user says "I want to set up my website," ask them about their brand. If they paste a color palette, update the theme. If they want new pages, build them. Meet them where they are.
 
-**Use the `/template` skill to get started with customization.**
+**The one rule: protect the infrastructure.** This template ships with production-tested analytics, SEO, blog platform, theme system, and UI components. Change the identity, not the plumbing.
+
+## Skills & Agents
+
+You have three specialized tools available. Use them when the situation calls for it — you don't need to wait for the user to ask.
+
+### `/template` — Template Customization
+
+**What it does:** Gives you deep knowledge of the codebase architecture, what's locked vs customizable, and how to make changes correctly.
+
+**When to use it:**
+- Rebranding the site (name, colors, navigation, content)
+- Adding or removing pages
+- Changing the color palette or theme
+- Any customization where you need to know what files to touch and what to leave alone
+
+**How to invoke:** Use the Skill tool with `skill: "template"`
+
+The skill loads reference files covering architecture, customization guide, file map, and color system. It knows the exact boundaries of what's safe to change.
+
+### `/frontend-design` — Frontend Design Quality
+
+**What it does:** Guides creation of distinctive, high-quality frontend interfaces that avoid generic AI aesthetics.
+
+**When to use it:**
+- Building new pages or components
+- Redesigning existing page layouts
+- Adding visual elements, animations, or micro-interactions
+- Any time the user wants something that looks genuinely designed, not cookie-cutter
+
+**How to invoke:** Use the Skill tool with `skill: "frontend-design"`
+
+### B2B Website Copywriter Agent
+
+**What it does:** Expert B2B SaaS copywriter that understands positioning, conversion optimization, and SEO-friendly writing. Writes like a founder, not a brochure.
+
+**When to use it:**
+- Rewriting page content for a new brand
+- Writing new landing page copy
+- Improving headlines, CTAs, or value propositions
+- Any content that needs to convert visitors into leads or customers
+
+**How to invoke:** Spawn as a subagent using the Agent tool with `subagent_type: "b2b-website-copywriter"`. Provide it with detailed context: what files to look at, what the brand does, who the audience is, and what needs to change.
+
+**Important:** This agent needs specific instructions. Don't just say "rewrite the homepage" — tell it the brand name, what the company does, the target audience, and which files contain the content to rewrite.
+
+## What's Protected (Don't Touch)
+
+These systems are production-tested and should not be modified:
+
+- **Analytics suite** — GTM, GA, Clarity, Vercel Analytics, cookie consent, page tracking
+- **SEO infrastructure** — Sitemaps, robots.txt, RSS feed, JSON-LD schemas, metadata patterns, breadcrumbs
+- **Blog platform** — Sanity CMS client, Portable Text rendering, blog pages, author pages, category filtering
+- **Theme architecture** — CSS variable -> Tailwind -> component pipeline, dark/light mode switching
+- **UI component library** — All Radix UI primitives in `src/components/ui/`
+- **Utility functions** — `cn()` helper, SEO helpers, analytics tracking
+
+If you're about to modify any of these, stop and reconsider. The user's changes should flow *through* this infrastructure, not replace it.
+
+## What's Customizable
+
+**Config files first.** Always check if a change can be made via config before editing component files.
+
+| What the user wants | Where to change it |
+|---------------------|-------------------|
+| Brand name, tagline, domain, emails, social | `src/config/site.config.ts` |
+| Navigation links, footer sections, legal links | `src/config/navigation.config.ts` |
+| Blog categories | `src/config/blog.config.ts` |
+| Colors and theme | `src/app/globals.css` (CSS variables in `:root` and `[data-theme='dark']`) |
+| Page content and copy | Individual `page.tsx` files in `src/app/` |
+| Logo, favicons, OG images, illustrations | `public/` directory |
+| Fonts | Font imports in `src/app/layout.tsx` |
+| Per-page SEO metadata | `metadata` exports in each page file |
+| Analytics IDs | `.env.local` environment variables |
+| Sanity CMS project | `.env.local` environment variables |
+
+**When changing colors:** Always update BOTH `:root` (light) and `[data-theme='dark']` (dark) in `globals.css`. Colors are HSL triplets without the `hsl()` wrapper.
+
+**When adding/removing pages:** Update `src/app/sitemap.ts` and `src/config/navigation.config.ts`.
 
 ## Development Commands
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Production build with TypeScript checking and ESLint validation
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint for code quality checks
-- `npm run format` - Format all files with Prettier (uses tabs, not spaces)
-- `npm run format:check` - Check formatting compliance
+- `npm install` — Install dependencies (run this first after cloning)
+- `npm run dev` — Start development server with Turbopack
+- `npm run build` — Production build with TypeScript checking and ESLint validation
+- `npm run lint` — Run ESLint for code quality checks
+- `npm run format` — Format all files with Prettier (uses tabs, not spaces)
 
 Always run `npm run build` before committing to ensure code quality.
 
-## Getting Started
+## Environment Variables
 
-### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-### 2. Environment Variables
-
-Create a `.env.local` file:
+Create a `.env.local` file with the user's values:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
@@ -41,42 +110,9 @@ NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
 ```
 
-### 3. Customize
+These override the defaults in `site.config.ts`. In production, set them in the hosting provider's environment settings.
 
-Use the `/template` skill in Claude Code, or follow the manual steps:
-
-1. Edit `src/config/site.config.ts` — Brand name, URLs, emails, social, analytics IDs
-2. Edit `src/config/navigation.config.ts` — Navigation links and footer
-3. Edit `src/config/blog.config.ts` — Blog categories
-4. Edit `src/app/globals.css` — Color palette (CSS variables)
-5. Replace assets in `public/` — Logo, favicons, OG images
-6. Rewrite page content in `src/app/` page files
-
-### 4. Run
-
-```bash
-npm run dev
-```
-
-## Available Skills & Agents
-
-### `/template` Skill
-
-The primary customization skill. Invoke it with `/template` in Claude Code. It provides:
-- Architecture overview (what's locked vs customizable)
-- Step-by-step customization guide
-- File-by-file map of the codebase
-- Color system documentation
-
-### B2B Website Copywriter Agent
-
-A specialized agent for rewriting page content and marketing copy. It understands B2B SaaS positioning, conversion optimization, and SEO-friendly writing. Use it when you need to rewrite page content for your brand.
-
-The agent is available at `.claude/agents/b2b-website-copywriter.md`.
-
-## Architecture Overview
-
-### Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 with React 19 and Turbopack
 - **Styling**: Tailwind CSS v3 with CSS variables for theming
@@ -84,42 +120,20 @@ The agent is available at `.claude/agents/b2b-website-copywriter.md`.
 - **Theme System**: next-themes with `data-theme` attribute switching
 - **CMS**: Sanity CMS for blog content with Portable Text rendering
 - **Analytics**: Google Tag Manager + Google Analytics + Microsoft Clarity + Vercel Analytics
-- **Type Safety**: TypeScript with strict configuration
+- **Type Safety**: TypeScript strict mode
 - **Code Quality**: ESLint + Prettier (tabs, not spaces)
 
-### What's Locked (Infrastructure)
+## Key Patterns
 
-These systems are production-tested and should not be modified:
+**Theme System**: CSS variables (HSL triplets) in `globals.css` -> mapped in `tailwind.config.ts` -> used as Tailwind classes in components.
 
-- **Analytics suite** — GTM, GA, Clarity, Vercel Analytics, cookie consent, page tracking
-- **SEO infrastructure** — Sitemaps, robots.txt, RSS feed, JSON-LD schemas, metadata patterns, breadcrumbs
-- **Blog platform** — Sanity CMS client, Portable Text rendering, blog pages, author pages, category filtering
-- **Theme architecture** — CSS variable → Tailwind → component pipeline, dark/light mode switching
-- **UI component library** — All Radix UI primitives in `src/components/ui/`
-- **Utility functions** — `cn()` helper, SEO helpers, analytics tracking
+**Component Pattern**: `cn()` utility (clsx + tailwind-merge), `forwardRef`, CVA for variant patterns. When building new components, follow these patterns.
 
-### What's Customizable
+**Config-Driven**: Brand identity, navigation, and blog categories are centralized in `src/config/`. Change once, reflected everywhere.
 
-| Area | Where to Change |
-|------|----------------|
-| Brand identity | `src/config/site.config.ts` |
-| Navigation & footer | `src/config/navigation.config.ts` |
-| Blog categories | `src/config/blog.config.ts` |
-| Colors & theme | `src/app/globals.css` (CSS variables) |
-| Page content | Individual `page.tsx` files in `src/app/` |
-| Assets | `public/` (logo, favicons, OG images, illustrations) |
-| Fonts | Font imports in `src/app/layout.tsx` |
-| Per-page SEO | `metadata` exports in each page file |
+**Page Pattern**: Every page follows: metadata export, Navigation component, ThemeToggle, main content, Footer component.
 
-### Key Architectural Patterns
-
-**Theme System**: Colors defined as HSL triplets in CSS variables → mapped in `tailwind.config.ts` → used as Tailwind classes in components. Both `:root` (light) and `[data-theme='dark']` (dark) must be updated when changing colors.
-
-**Component Pattern**: All UI components use `cn()` utility (clsx + tailwind-merge), `forwardRef` for ref handling, and CVA for variant patterns.
-
-**Config-Driven**: Brand identity, navigation structure, and blog categories are centralized in `src/config/` files. Change once, reflected everywhere.
-
-### Project Structure
+## Project Structure
 
 ```
 src/
@@ -150,28 +164,25 @@ src/
 ## Setting Up Analytics
 
 ### Google Tag Manager
-
-1. Create a GTM container at [tagmanager.google.com](https://tagmanager.google.com)
-2. Add your container ID to `.env.local` as `NEXT_PUBLIC_GTM_ID`
+1. Create a GTM container at tagmanager.google.com
+2. Add container ID to `.env.local` as `NEXT_PUBLIC_GTM_ID`
 3. The site automatically loads GTM with cookie consent integration
 
 ### Google Analytics
-
-1. Create a GA4 property at [analytics.google.com](https://analytics.google.com)
-2. Add your measurement ID to `.env.local` as `NEXT_PUBLIC_GA_ID`
+1. Create a GA4 property at analytics.google.com
+2. Add measurement ID to `.env.local` as `NEXT_PUBLIC_GA_ID`
 3. GA loads conditionally based on cookie consent
 
 ### Microsoft Clarity
-
-1. Create a project at [clarity.microsoft.com](https://clarity.microsoft.com)
-2. Add your project ID to `.env.local` as `NEXT_PUBLIC_CLARITY_PROJECT_ID`
+1. Create a project at clarity.microsoft.com
+2. Add project ID to `.env.local` as `NEXT_PUBLIC_CLARITY_PROJECT_ID`
 3. Clarity provides session recordings and heatmaps
 
 ## Setting Up Sanity CMS
 
-1. Create a Sanity project at [sanity.io](https://www.sanity.io)
+1. Create a Sanity project at sanity.io
 2. Set up content schemas for `post` and `author` types
-3. Add your project ID to `.env.local` as `NEXT_PUBLIC_SANITY_PROJECT_ID`
+3. Add project ID to `.env.local` as `NEXT_PUBLIC_SANITY_PROJECT_ID`
 4. The blog pages automatically fetch and render content from Sanity
 
 ### Required Sanity Schemas
@@ -179,9 +190,3 @@ src/
 **Post**: title, slug, excerpt, seoTitle, metaDescription, focusKeyword, tags, body (Portable Text), author (reference), category, publishedAt, image, featured
 
 **Author**: name, slug, role, bio, image, twitter, linkedin, expertise
-
-## Code Formatting
-
-- Uses **tabs** (not spaces) — configured in `.prettierrc`
-- ESLint enforces Prettier rules via `eslint.config.mjs`
-- Run `npm run format` to auto-format all files
