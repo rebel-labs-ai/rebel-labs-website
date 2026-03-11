@@ -2,136 +2,186 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## What This Is
+
+A production-ready Next.js 15 website template with comprehensive analytics, SEO infrastructure, a Sanity CMS blog platform, and a full dark/light theme system. It's designed to be customized for any brand while preserving the production infrastructure.
+
+**Use the `/template` skill to get started with customization.**
+
 ## Development Commands
 
-- `npm run dev` - Start development server with Turbopack enabled (faster builds)
+- `npm run dev` - Start development server with Turbopack
 - `npm run build` - Production build with TypeScript checking and ESLint validation
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint for code quality checks
 - `npm run format` - Format all files with Prettier (uses tabs, not spaces)
-- `npm run format:check` - Check if files are properly formatted
+- `npm run format:check` - Check formatting compliance
 
-Always run `npm run lint` and `npm run build` before committing changes to ensure code quality. But only run it if the user asks you to commit your work. You do not need to run the dev server, or the build process or linting unless committing changes or unless asked to.
+Always run `npm run build` before committing to ensure code quality.
+
+## Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Environment Variables
+
+Create a `.env.local` file:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_CLARITY_PROJECT_ID=your-clarity-id
+NEXT_PUBLIC_SANITY_PROJECT_ID=your-sanity-project-id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+```
+
+### 3. Customize
+
+Use the `/template` skill in Claude Code, or follow the manual steps:
+
+1. Edit `src/config/site.config.ts` — Brand name, URLs, emails, social, analytics IDs
+2. Edit `src/config/navigation.config.ts` — Navigation links and footer
+3. Edit `src/config/blog.config.ts` — Blog categories
+4. Edit `src/app/globals.css` — Color palette (CSS variables)
+5. Replace assets in `public/` — Logo, favicons, OG images
+6. Rewrite page content in `src/app/` page files
+
+### 4. Run
+
+```bash
+npm run dev
+```
+
+## Available Skills & Agents
+
+### `/template` Skill
+
+The primary customization skill. Invoke it with `/template` in Claude Code. It provides:
+- Architecture overview (what's locked vs customizable)
+- Step-by-step customization guide
+- File-by-file map of the codebase
+- Color system documentation
+
+### B2B Website Copywriter Agent
+
+A specialized agent for rewriting page content and marketing copy. It understands B2B SaaS positioning, conversion optimization, and SEO-friendly writing. Use it when you need to rewrite page content for your brand.
+
+The agent is available at `.claude/agents/b2b-website-copywriter.md`.
 
 ## Architecture Overview
 
-This is a Next.js 15 application using the App Router with a complete design system built on Radix UI primitives.
-
 ### Tech Stack
 
-- **Framework**: Next.js 15.4.6 with React 19.1.0 and Turbopack
+- **Framework**: Next.js 15 with React 19 and Turbopack
 - **Styling**: Tailwind CSS v3 with CSS variables for theming
-- **UI Components**: Radix UI primitives with custom styled components
-- **Theme System**: next-themes with data-theme attribute switching
-- **CMS Integration**: Sanity CMS for blog content with Portable Text rendering
+- **UI Components**: Radix UI primitives (button, card, input, label, textarea, switch, badge, dropdown)
+- **Theme System**: next-themes with `data-theme` attribute switching
+- **CMS**: Sanity CMS for blog content with Portable Text rendering
+- **Analytics**: Google Tag Manager + Google Analytics + Microsoft Clarity + Vercel Analytics
 - **Type Safety**: TypeScript with strict configuration
-- **Code Quality**: ESLint + Prettier (configured for tabs)
+- **Code Quality**: ESLint + Prettier (tabs, not spaces)
 
-### Environment Configuration
+### What's Locked (Infrastructure)
 
-Create a `.env.local` file with:
+These systems are production-tested and should not be modified:
 
-```
-NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id_here  # Defaults to "3nnkhkhz" if not set
-NEXT_PUBLIC_SANITY_DATASET=production
-NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
+- **Analytics suite** — GTM, GA, Clarity, Vercel Analytics, cookie consent, page tracking
+- **SEO infrastructure** — Sitemaps, robots.txt, RSS feed, JSON-LD schemas, metadata patterns, breadcrumbs
+- **Blog platform** — Sanity CMS client, Portable Text rendering, blog pages, author pages, category filtering
+- **Theme architecture** — CSS variable → Tailwind → component pipeline, dark/light mode switching
+- **UI component library** — All Radix UI primitives in `src/components/ui/`
+- **Utility functions** — `cn()` helper, SEO helpers, analytics tracking
+
+### What's Customizable
+
+| Area | Where to Change |
+|------|----------------|
+| Brand identity | `src/config/site.config.ts` |
+| Navigation & footer | `src/config/navigation.config.ts` |
+| Blog categories | `src/config/blog.config.ts` |
+| Colors & theme | `src/app/globals.css` (CSS variables) |
+| Page content | Individual `page.tsx` files in `src/app/` |
+| Assets | `public/` (logo, favicons, OG images, illustrations) |
+| Fonts | Font imports in `src/app/layout.tsx` |
+| Per-page SEO | `metadata` exports in each page file |
 
 ### Key Architectural Patterns
 
-**Theme System Architecture**:
+**Theme System**: Colors defined as HSL triplets in CSS variables → mapped in `tailwind.config.ts` → used as Tailwind classes in components. Both `:root` (light) and `[data-theme='dark']` (dark) must be updated when changing colors.
 
-- CSS variables defined in `src/app/globals.css` for both `:root` and `[data-theme='dark']`
-- Tailwind config extends colors to use `hsl(var(--variable-name))` pattern
-- `ThemeProvider` wraps entire app and manages `data-theme` attribute on HTML element
-- All colors automatically theme-aware through CSS variable system
-- Application-specific color palette includes brand colors, status indicators, and semantic tokens
-- Variable cascade: CSS variable → Tailwind config → Component classes
+**Component Pattern**: All UI components use `cn()` utility (clsx + tailwind-merge), `forwardRef` for ref handling, and CVA for variant patterns.
 
-**Component Architecture**:
+**Config-Driven**: Brand identity, navigation structure, and blog categories are centralized in `src/config/` files. Change once, reflected everywhere.
 
-- `src/components/ui/` - Radix UI-based primitives with consistent styling
-- `src/components/providers/` - React context providers (theme management)
-- Components use `cn()` utility (`clsx` + `tailwind-merge`) for className merging
-- Styled with `class-variance-authority` (CVA) for consistent variant patterns
-- Custom components in `src/components/` include animations, forms, and page-specific elements
-- All Radix components use `forwardRef` for proper ref handling and composition
+### Project Structure
 
-**Project Structure**:
+```
+src/
+├── app/                    # Pages and routes (App Router)
+│   ├── layout.tsx          # Root layout (fonts, metadata, analytics)
+│   ├── globals.css         # CSS variables and theme colors
+│   ├── page.tsx            # Homepage
+│   ├── blog/               # Blog listing + post pages
+│   ├── author/             # Author profile pages
+│   └── ...                 # Other page routes
+├── components/
+│   ├── ui/                 # Radix UI primitives (LOCKED)
+│   ├── seo/                # SEO components (LOCKED)
+│   ├── analytics/          # Analytics components (LOCKED)
+│   ├── providers/          # Theme provider (LOCKED)
+│   ├── navigation.tsx      # Main navigation (reads from config)
+│   └── footer.tsx          # Footer (reads from config)
+├── config/
+│   ├── site.config.ts      # Brand identity & settings
+│   ├── navigation.config.ts # Nav links & footer structure
+│   └── blog.config.ts      # Blog categories
+├── lib/                    # Utilities and analytics
+├── sanity/                 # CMS client
+├── utils/                  # SEO helpers
+└── types/                  # TypeScript definitions
+```
 
-- Uses `src/` directory organization
-- `@/*` import alias configured for clean imports
-- App Router with `src/app/` for pages and layouts
-- Page-specific components colocated with their routes
-- Utility functions in `src/lib/utils.ts`
+## Setting Up Analytics
 
-**Key Pages and Features**:
+### Google Tag Manager
 
-- `/` - Homepage
-- `/workforces/content` - Content workforce page with contact modal
-- `/workforces/lead` - Lead workforce page with agent roster and method sections
-- `/workforces/lab` - Lab/experimental features
-- `/blog` - Blog with category filters, posts grid, and newsletter form
-- `/careers` - Careers page with application form
-- `/mission` - Mission page with animated hero and scroll effects
-- `/contact`, `/privacy`, `/terms`, `/cookies` - Standard pages
+1. Create a GTM container at [tagmanager.google.com](https://tagmanager.google.com)
+2. Add your container ID to `.env.local` as `NEXT_PUBLIC_GTM_ID`
+3. The site automatically loads GTM with cookie consent integration
 
-### Component Development Guidelines
+### Google Analytics
 
-**When creating new UI components**:
+1. Create a GA4 property at [analytics.google.com](https://analytics.google.com)
+2. Add your measurement ID to `.env.local` as `NEXT_PUBLIC_GA_ID`
+3. GA loads conditionally based on cookie consent
 
-1. Extend existing Radix primitives when possible
-2. Use the `cn()` utility for className composition
-3. Follow the CVA variant pattern established in `src/components/ui/button.tsx`:
-   ```typescript
-   const componentVariants = cva("base-classes", {
-     variants: { variant: {...}, size: {...} },
-     defaultVariants: { variant: "default", size: "default" }
-   })
-   ```
-4. Ensure components work with both light and dark themes
-5. Use `forwardRef` for proper ref handling with Radix primitives
-6. Support the `asChild` prop pattern for composition flexibility
+### Microsoft Clarity
 
-**Styling Guidelines**:
+1. Create a project at [clarity.microsoft.com](https://clarity.microsoft.com)
+2. Add your project ID to `.env.local` as `NEXT_PUBLIC_CLARITY_PROJECT_ID`
+3. Clarity provides session recordings and heatmaps
 
-- Use CSS variables from the theme system (e.g., `bg-primary`, `text-foreground`)
-- Prefer semantic color tokens over literal colors
-- All components should work seamlessly with theme switching
-- Use `data-theme` attribute for theme-specific styling when needed
-- Application palette includes specialized colors:
-  - Brand: `primary-blue`, `secondary-blue`, `accent-teal`
-  - Status: `hot-lead`, `warm-lead`, `cold-lead`, `success-alive`, `appointment-booked`
-  - Errors: `error-red`, `error-background`, `error-text`
-  - Backgrounds: `main-background`, `card-background`, `section-background`
+## Setting Up Sanity CMS
 
-**Code Formatting**:
+1. Create a Sanity project at [sanity.io](https://www.sanity.io)
+2. Set up content schemas for `post` and `author` types
+3. Add your project ID to `.env.local` as `NEXT_PUBLIC_SANITY_PROJECT_ID`
+4. The blog pages automatically fetch and render content from Sanity
 
-- Project uses tabs (not spaces) - configured in `.prettierrc`
-- Format-on-save enabled in `.vscode/settings.json`
-- ESLint enforces Prettier formatting rules through `eslint.config.mjs`
-- All formatting rules respect tab indentation
+### Required Sanity Schemas
 
-### Sanity CMS Integration
+**Post**: title, slug, excerpt, seoTitle, metaDescription, focusKeyword, tags, body (Portable Text), author (reference), category, publishedAt, image, featured
 
-**Content Management**:
+**Author**: name, slug, role, bio, image, twitter, linkedin, expertise
 
-- Blog posts are managed through Sanity CMS
-- Client configured in `src/sanity/client.ts` with image URL builder
-- Portable Text components in `src/components/portable-text-components.tsx` handle rich content rendering
-- Blog pages fetch content dynamically with Next.js caching (CDN disabled for fresh content)
+## Code Formatting
 
-**Image Handling**:
-
-- Sanity images use the `urlFor()` helper for optimization
-- External image domains configured in `next.config.ts`: `cdn.sanity.io`, `novosapien.ai`
-
-### Testing and Quality Assurance
-
-- **Note**: No test framework is currently configured
-- Always validate TypeScript types with `npm run build` before committing
-- ESLint validation is integrated into the build process
-- Use `npm run format:check` to verify formatting compliance
-
-- Don't run the build process or run the dev server unless explicitly requested.
+- Uses **tabs** (not spaces) — configured in `.prettierrc`
+- ESLint enforces Prettier rules via `eslint.config.mjs`
+- Run `npm run format` to auto-format all files
