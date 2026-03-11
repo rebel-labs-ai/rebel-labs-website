@@ -161,6 +161,58 @@ src/
 └── types/                  # TypeScript definitions
 ```
 
+## Git Conventions
+
+Commits are structured so anyone (human or AI) can quickly understand what changed, why, and how.
+
+### When to Commit
+
+| DO Commit | DON'T Commit |
+|-----------|-------------|
+| After each meaningful task is complete | Mid-task before it's working |
+| Before switching to a different task | Incomplete or broken states |
+| Only the specific files you changed | Unrelated files you didn't work on |
+
+**Rule:** One task = one commit. Only stage specific files — never use `git add -A` or `git add .`.
+
+### Commit Message Format
+
+```
+<action-verb> <what> [<scope>]
+
+WHAT:
+- <change 1>
+- <change 2>
+
+WHY: <1-2 sentence rationale>
+
+HOW: <key technical approach or decision>
+```
+
+| Section | Required | Purpose |
+|---------|----------|---------|
+| `<summary>` | Yes | Quick scan in `git log --oneline` |
+| `WHAT:` | Yes | Bulleted list of concrete changes |
+| `WHY:` | Yes | Context for why this change was made |
+| `HOW:` | If non-obvious | Technical decisions worth knowing |
+
+### Branch Management
+
+Work on `main` by default. If the user wants to work on a separate branch:
+
+**Branch Naming:** `<type>/<short-description>`
+
+| Type | Use For |
+|------|---------|
+| `feature/` | New functionality |
+| `bugfix/` | Bug fixes |
+| `refactor/` | Code improvements |
+| `chore/` | Config, deps, tooling |
+
+Never change branches without user confirmation.
+
+---
+
 ## Setting Up Analytics
 
 ### Google Tag Manager
